@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - stable
+install:
+  - npm install
+cache:
+  directories:
+  - node_modules
+script:
+  - echo OK
