@@ -50,9 +50,11 @@ process.stdin.on('readable', () => {
 process.stdin.on('end', () => {
   tweetItems = JSON.parse(tweetItems)
 
-  tweetItems.reduce((items, item) =>
-    Promise.all(items)
-      .then(() => wait(5000))
-      .then(() => tweet(item))
-  , [])
+  tweetItems.reduce((items, item) => (
+    items.concat(
+      Promise.all(items)
+        .then(() => wait(5000))
+        .then(() => tweet(item))
+    )
+  ), [])
 })
