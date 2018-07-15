@@ -7,7 +7,7 @@ cache:
   directories:
   - node_modules
 script:
-- node scripts/generate-data.js | node scripts/publish
+- node scripts/generate-data | node scripts/publish
 env:
   global:
   - secure: c1c31Z4XRuuzQhLQ+MU/03i7sJbh7I9nuX7AvwPgI+530zsCQ8l9QmkOvMoHaeW260k1fSTPRS1kHb1WW5uj7t3QupGF92s6TmJnP+KC2uXrIST2KzM09PH91T7xU49qwDGe1ENcJvR4Ocw/dEdKsNY1pe4RcEXxnfZ1heM4qYl0Uo6uv+d4nt7mAN9vDFq0HV71rNNH8HbYK7kGhv+KKQMgloOVys0Jhb3/5fBULnCF/95MfGQEfaCXU0jTgla/wZn/xwvO/NlW1l27Mbu88XMSQdTdUTruaE4LEe03esNgyB/6/Q9taIYfoJorMIFMpM+q4d4qcQdEe22WX7lEBqzqF+0YUynoxDDC2pKCr1wWYxTiotymc6kM5jIs7kxu2gUW/bj84EAIWFf71rueEknvHhyfZ0GMkzmVGmIcVGJVZb0cUFBo/ZD7Qh6KFg/tw/5+O9dN/deX4mkso4V8kljKIWW3LRtrHhpXzAqT0uPo9CFnbaNTX8iT8i+H/WWDo14lpu65ketmqbdgeQIpQU1jjvKPSUYApvgiZdYP/WdMWpMBS/rXIE/dBGrDxmXBFHETa6Hx6v+U460F2dQjgb2Nf+Pc+hAjmNNQ0elyi5NPrcIFXyDxuJADY6G45rd9dpB3K0yuqrzvX1amctBZpFdWkK0UnYj3rfWBaq4b/Ko=

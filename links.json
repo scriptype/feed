@@ -1,7 +1,7 @@
 [
   {
-    "title": "Hello Earth",
-    "url": "https://enes.in/feed/",
+    "title": "Hello World",
+    "url": "https://twitter.com/reads_feed",
     "tags": [
       "great",
       "wow",
@@ -10,8 +10,8 @@
     ]
   },
   {
-    "title": "Bilmem ne hakkında hiçbir şey",
-    "url": "https://blog.enes.in/",
+    "title": "Bilmem ne",
+    "url": "https://blog.enes.in",
     "turkish": true,
     "tags": [
       "güzel",

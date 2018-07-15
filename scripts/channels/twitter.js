@@ -25,9 +25,9 @@ const tweet = data => new Promise((resolve, reject) => {
   }
   client.post(endpoint, params, (err, tweet, response) => {
     if (err) {
-      console.error(err)
-      process.exit(1)
+      return reject(err)
     }
+    resolve({ tweet, response })
   })
 })
 
