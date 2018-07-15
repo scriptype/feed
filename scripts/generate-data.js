@@ -2,26 +2,13 @@ const fs = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
 const _ = require('lodash')
+const { last, splitByLimit, createFile } = require('./helpers')
 
-// Get list of links
+// Get fresh list of links.
 const links = require('../links')
 
-// Get all of old links
+// Get all of old links, we'll use this to detect newly added links.
 const all = require('../data/all')
-
-// Helper: Get the last item of an array
-const last = array => array[array.length - 1]
-
-// Helper: Split an array into parts using a limit.
-const splitByLimit = (array, limit) =>
-  array.reduce((result, item, index) => {
-    if (!(index % limit)) {
-      return result.concat([[item]])
-    }
-    return Object.assign([], result, {
-      [result.length - 1]: last(result).concat(item)
-    })
-  }, [])
 
 const cleanOldDataFolder = folderPath => new Promise((resolve, reject) => {
   // Delete of data directory
@@ -42,45 +29,43 @@ const cleanOldDataFolder = folderPath => new Promise((resolve, reject) => {
   })
 })
 
-const createAllFile = data => new Promise((resolve, reject) => {
-  fs.writeFile('data/all.json', JSON.stringify(data), err => {
-    if (err) {
-      console.error('error creating all.json', err)
-      return reject(err)
-    }
-    resolve()
-  })
-})
+// Purpose of this file is to keep all links together.
+// So, we can take a diff using this file and the new links file in the next turn.
+const createAllFile = data =>
+  createFile('data/all.json', JSON.stringify(data))
 
-const createPages = pages => pages.map((page, index) =>
-  new Promise((resolve, reject) => {
-    const fileName = `page-${index + 1}.json`
-    const filePath = `data/${fileName}`
-    const content = JSON.stringify(page)
-    fs.writeFile(filePath, content, err => {
-      if (err) {
-        console.error(`Error creating ${fileName}.`)
-        return reject(err)
-      }
-      resolve()
-    })
-  })
-)
+// So that front-end will know how many pages and links are there.
+const createStatsFile = data =>
+  createFile('data/stats.json', JSON.stringify(data))
 
-// Used for splitting links into multiple files,
-// each of which will include this many links
+// Create individual page documents.
+const createPages = pages =>
+  pages.map((page, index) =>
+    createFile( `data/page-${index + 1}.json`, JSON.stringify(page) )
+  )
+
+// Used for splitting links into multiple files.
 const pageLimit = 15
 
 // Get pages of links
 const pages = splitByLimit(links.reverse(), pageLimit)
 
+const stats = {
+  total: links.length,
+  pages: pages.length
+}
+
 cleanOldDataFolder('data')
-  .then(() => createAllFile(links))
-  .then(() => Promise.all(createPages(pages)))
+  .then(() =>
+    Promise.all([
+      createAllFile(links),
+      createStatsFile(stats),
+      ...createPages(pages)
+    ])
+  )
   .then(() => {
-    const newlyAdded = _.differenceBy(links, all, 'href')
+    const newlyAdded = _.differenceBy(links, all, 'url')
     process.stdout.write(JSON.stringify(newlyAdded))
-    process.exit(0)
   })
   .catch(err => {
     console.error('error', err)
