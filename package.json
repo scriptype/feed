@@ -1,0 +1,27 @@
+{
+  "name": "feed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptype/feed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scriptype/feed/issues"
+  },
+  "homepage": "https://github.com/scriptype/feed#readme"
+}
