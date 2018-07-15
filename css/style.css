@@ -1,0 +1,21 @@
+@import url("reset.css");
+
+body {
+    font: 100 normal 16px/1.5 helvetica, sans-serif;
+}
+
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 4em;
+    font-weight: bold;
+}
