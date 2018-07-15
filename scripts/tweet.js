@@ -53,7 +53,8 @@ process.stdin.on('end', () => {
   tweetItems.reduce((items, item) => (
     items.concat(
       Promise.all(items)
-        .then(() => wait(5000))
+        // wait between 2-3 minutes. (minimum 2 minutes)
+        .then(() => wait(120000 + Math.random() * 60000))
         .then(() => tweet(item))
     )
   ), [])
