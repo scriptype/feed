@@ -22,6 +22,7 @@ const tweet = data => new Promise((resolve, reject) => {
   const params = {
     status: statusTemplate(data)
   }
+  console.log('tweeting', data.title)
   client.post(endpoint, params, (err, tweet, response) => {
     if (err) {
       console.error(err)
@@ -50,12 +51,15 @@ process.stdin.on('readable', () => {
 process.stdin.on('end', () => {
   tweetItems = JSON.parse(tweetItems)
 
-  tweetItems.reduce((items, item) => (
+  tweetItems.reduce((items, item, index) => (
     items.concat(
-      Promise.all(items)
-        // wait between 2-3 minutes. (minimum 2 minutes)
-        .then(() => wait(120000 + Math.random() * 60000))
-        .then(() => tweet(item))
+      index === 0
+        ? tweet(item)
+        : Promise.all(items)
+          // wait between 2-3 minutes. (minimum 2 minutes)
+          .then(() => wait(120000 + Math.random() * 60000))
+          .then(() => tweet(item))
+          .catch(err => console.error('couldnt tweet item', item.title, err))
     )
   ), [])
 })
