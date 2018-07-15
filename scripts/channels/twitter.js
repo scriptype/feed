@@ -1,4 +1,5 @@
 const Twitter = require('twitter')
+const Channel = require('../lib/Channel')
 
 const client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -22,7 +23,6 @@ const tweet = data => new Promise((resolve, reject) => {
   const params = {
     status: statusTemplate(data)
   }
-  console.log('tweeting', data.title)
   client.post(endpoint, params, (err, tweet, response) => {
     if (err) {
       console.error(err)
@@ -31,35 +31,8 @@ const tweet = data => new Promise((resolve, reject) => {
   })
 })
 
-const wait = timeout => new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve()
-  }, timeout)
-})
-
-let tweetItems = ''
-
-process.stdin.setEncoding('utf8')
-
-process.stdin.on('readable', () => {
-  const chunk = process.stdin.read()
-  if (chunk !== null) {
-    tweetItems += chunk
-  }
-})
-
-process.stdin.on('end', () => {
-  tweetItems = JSON.parse(tweetItems)
-
-  tweetItems.reduce((items, item, index) => (
-    items.concat(
-      index === 0
-        ? tweet(item)
-        : Promise.all(items)
-          // wait between 2-3 minutes. (minimum 2 minutes)
-          .then(() => wait(120000 + Math.random() * 60000))
-          .then(() => tweet(item))
-          .catch(err => console.error('couldnt tweet item', item.title, err))
-    )
-  ), [])
+module.exports = new Channel({
+  name: 'twitter',
+  waitBetween: 1000 * 60,
+  method: tweet
 })
