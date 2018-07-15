@@ -7,14 +7,20 @@ const client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
-const tweetTemplate = data => (
-  `I've just read: "${data.title}": ${data.url}`
+const statusTemplate = data => (
+  data.turkish
+    ? `Şunu okudum: "${data.title}": ${data.url} ${tagsTemplate(data.tags)}`
+    : `I've just read: "${data.title}": ${data.url} ${tagsTemplate(data.tags)}`
+)
+
+const tagsTemplate = tags => (
+  tags.reduce((result, tag) => `${result} #${tag}`, '')
 )
 
 const tweet = data => new Promise((resolve, reject) => {
   const endpoint = 'statuses/update'
   const params = {
-    status: tweetTemplate(data)
+    status: statusTemplate(data)
   }
   client.post(endpoint, params, (err, tweet, response) => {
     if (err) {

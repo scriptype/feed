@@ -1,6 +1,21 @@
 [
   {
     "title": "Hello World",
-    "url": "https://enes.in/feed/"
+    "url": "https://enes.in/feed/",
+    "tags": [
+      "great",
+      "wow",
+      "such",
+      "link"
+    ]
+  },
+  {
+    "title": "Güzel bi yazı",
+    "url": "https://blog.enes.in/",
+    "turkish": true,
+    "tags": [
+      "güzel",
+      "hoş"
+    ]
   }
 ]
