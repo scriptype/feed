@@ -1,9 +1,13 @@
 const fs = require('fs')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
+const _ = require('lodash')
 
 // Get list of links
 const links = require('../links')
+
+// Get all of old links
+const all = require('../data/all')
 
 // Helper: Get the last item of an array
 const last = array => array[array.length - 1]
@@ -19,6 +23,50 @@ const splitByLimit = (array, limit) =>
     })
   }, [])
 
+const cleanOldDataFolder = folderPath => new Promise((resolve, reject) => {
+  // Delete of data directory
+  rimraf('data', err => {
+    if (err) {
+      console.error('error deleting old data folder:', err)
+      return reject(err)
+    }
+
+    // Ensure data directory exists
+    mkdirp('data', err => {
+      if (err) {
+        console.error('error creating data folder:', err)
+        return reject(err)
+      }
+      resolve()
+    })
+  })
+})
+
+const createAllFile = data => new Promise((resolve, reject) => {
+  fs.writeFile('data/all.json', JSON.stringify(data), err => {
+    if (err) {
+      console.error('error creating all.json', err)
+      return reject(err)
+    }
+    resolve()
+  })
+})
+
+const createPages = pages => pages.map((page, index) =>
+  new Promise((resolve, reject) => {
+    const fileName = `page-${index + 1}.json`
+    const filePath = `data/${fileName}`
+    const content = JSON.stringify(page)
+    fs.writeFile(filePath, content, err => {
+      if (err) {
+        console.error(`Error creating ${fileName}.`)
+        return reject(err)
+      }
+      resolve()
+    })
+  })
+)
+
 // Used for splitting links into multiple files,
 // each of which will include this many links
 const pageLimit = 15
@@ -26,42 +74,15 @@ const pageLimit = 15
 // Get pages of links
 const pages = splitByLimit(links, pageLimit)
 
-const cleanOldDataFolder = folderPath => {
-  return new Promise((resolve, reject) => {
-    // Delete of data directory
-    rimraf('data', err => {
-      if (err) {
-        console.error('error deleting old data folder:', err)
-        return reject(err)
-      }
-      console.log('old data folder deleted.')
-
-      // Ensure data directory exists
-      mkdirp('data', err => {
-        if (err) {
-          console.error('error creating data folder:', err)
-          return reject(err)
-        }
-        console.log('data folder created.')
-        resolve()
-      })
-    })
-  })
-}
-
 cleanOldDataFolder('data')
+  .then(() => createAllFile(links))
+  .then(() => Promise.all(createPages(pages)))
   .then(() => {
-    // For each page, create a file in data directory
-    pages.forEach((page, index) => {
-      const fileName = `page-${index + 1}.json`
-      const filePath = `data/${fileName}`
-      const content = JSON.stringify(page)
-      fs.writeFile(filePath, content, err => {
-        if (err) console.error(`Error creating ${fileName}.`)
-        else console.log(`${fileName} created.`)
-      })
-    })
+    const newlyAdded = _.differenceBy(links, all, 'href')
+    process.stdout.write(JSON.stringify(newlyAdded))
+    process.exit(0)
   })
   .catch(err => {
     console.error('error', err)
+    process.exit(1)
   })
