@@ -48,5 +48,5 @@ process.stdin.on('end', () => {
     Promise.all(items)
       .then(() => wait(5000))
       .then(() => tweet(item))
-  ), [])
+  , [])
 })
