@@ -72,7 +72,7 @@ const createPages = pages => pages.map((page, index) =>
 const pageLimit = 15
 
 // Get pages of links
-const pages = splitByLimit(links, pageLimit)
+const pages = splitByLimit(links.reverse(), pageLimit)
 
 cleanOldDataFolder('data')
   .then(() => createAllFile(links))
