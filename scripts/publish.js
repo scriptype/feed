@@ -1,4 +1,5 @@
 const twitter = require('./channels/twitter')
+const github = require('./channels/github')
 
 let data = ''
 
@@ -14,4 +15,5 @@ process.stdin.on('readable', () => {
 process.stdin.on('end', () => {
   const items = JSON.parse(data)
   twitter.publish(items)
+  github.publish(items)
 })
