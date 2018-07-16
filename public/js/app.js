@@ -1,6 +1,6 @@
 import createApi from './api.js'
 
-const api = createApi({ baseUrl: '' })
+const api = createApi({ baseUrl: '.' })
 
 const container = document.getElementById('list')
 
