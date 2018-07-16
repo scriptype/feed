@@ -14,6 +14,10 @@ module.exports = class Channel {
     console.error(`error ${this.name}: ${message}`, ...args)
   }
 
+  logNotStarting() {
+    this.log('nothing to publish')
+  }
+
   logStart(item) {
     this.log('publishing', item)
   }
@@ -33,6 +37,10 @@ module.exports = class Channel {
   }
 
   async publish(items, once) {
+    if (items.length === 0) {
+      this.logNotStarting()
+      return
+    }
     if (once) {
       try {
         this.logStart('')

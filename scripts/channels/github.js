@@ -12,9 +12,9 @@ const push = items => {
     cmd: `sh ${scriptPath}`,
     outStream: process.stdout,
     errStream: process.stderr,
-    env: {
+    env: Object.assign({}, process.env, {
       LINKS_ADDED: items.length ? commitMessageTemplate(items) : ''
-    }
+    })
   })
 }
 
