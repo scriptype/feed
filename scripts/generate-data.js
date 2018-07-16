@@ -1,7 +1,6 @@
-const fs = require('fs')
 const path = require('path')
 const _ = require('lodash')
-const { last, splitByLimit, createFile, cleanFolder } = require('./helpers')
+const { splitByLimit, createFile, cleanFolder } = require('./helpers')
 
 // Get fresh list of links.
 const links = require('../links')
@@ -23,7 +22,10 @@ const createStatsFile = data =>
 // Create individual page documents.
 const createPages = pages =>
   pages.map((page, index) =>
-    createFile( path.join(dataFolderPath, `page-${index + 1}.json`), JSON.stringify(page) )
+    createFile(
+      path.join(dataFolderPath, `page-${index + 1}.json`),
+      JSON.stringify(page)
+    )
   )
 
 // Used for splitting links into multiple files.

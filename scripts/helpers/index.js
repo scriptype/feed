@@ -40,13 +40,13 @@ const cleanFolder = folderPath => new Promise((resolve, reject) => {
     // Ensure data directory exists
     mkdirp(folderPath, err => {
       if (err) {
-      console.error(`error creating ${folderPath}`, err)
+        console.error(`error creating ${folderPath}`, err)
         return reject(err)
       }
       resolve()
     })
   })
-}
+})
 
 // Execute a command and supply output stream, error stream and accept env.
 const execute = options => new Promise((resolve, reject) => {
@@ -62,7 +62,7 @@ const execute = options => new Promise((resolve, reject) => {
     if (code === 0) {
       resolve()
     } else {
-      reject({ code, errData })
+      reject(new Error(`Error executing ${cmd}. Code: ${code}, Error: ${errData}.`))
     }
   })
 })
