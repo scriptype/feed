@@ -1,5 +1,7 @@
 const fs = require('fs')
 const cp = require('child_process')
+const mkdirp = require('mkdirp')
+const rimraf = require('rimraf')
 
 // Get the last item of an array
 const last = array => array[array.length - 1]
@@ -15,6 +17,7 @@ const splitByLimit = (array, limit) =>
     })
   }, [])
 
+// Create a file with a given path and data.
 const createFile = (path, data) => new Promise((resolve, reject) => {
   fs.writeFile(path, data, err => {
     if (err) {
@@ -25,6 +28,27 @@ const createFile = (path, data) => new Promise((resolve, reject) => {
   })
 })
 
+// Remove and re-create a folder.
+const cleanFolder folderPath => new Promise((resolve, reject) => {
+  // Delete of data directory
+  rimraf(folderPath, err => {
+    if (err) {
+      console.error(`error deleting ${folderPath}`, err)
+      return reject(err)
+    }
+
+    // Ensure data directory exists
+    mkdirp(folderPath, err => {
+      if (err) {
+      console.error(`error creating ${folderPath}`, err)
+        return reject(err)
+      }
+      resolve()
+    })
+  })
+}
+
+// Execute a command and supply output stream, error stream and accept env.
 const execute = options => new Promise((resolve, reject) => {
   const { cmd, outStream, errStream, env } = options
   const ps = cp.exec(cmd, { env })
@@ -47,5 +71,6 @@ module.exports = {
   last,
   splitByLimit,
   createFile,
+  cleanFolder,
   execute
 }

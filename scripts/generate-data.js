@@ -1,47 +1,29 @@
 const fs = require('fs')
-const mkdirp = require('mkdirp')
-const rimraf = require('rimraf')
+const path = require('path')
 const _ = require('lodash')
-const { last, splitByLimit, createFile } = require('./helpers')
+const { last, splitByLimit, createFile, cleanFolder } = require('./helpers')
 
 // Get fresh list of links.
 const links = require('../links')
 
+const dataFolderPath = path.join(__dirname, '..', 'data')
+
 // Get all of old links, we'll use this to detect newly added links.
-const all = require('../data/all')
-
-const cleanOldDataFolder = folderPath => new Promise((resolve, reject) => {
-  // Delete of data directory
-  rimraf('data', err => {
-    if (err) {
-      console.error('error deleting old data folder:', err)
-      return reject(err)
-    }
-
-    // Ensure data directory exists
-    mkdirp('data', err => {
-      if (err) {
-        console.error('error creating data folder:', err)
-        return reject(err)
-      }
-      resolve()
-    })
-  })
-})
+const all = require(path.join(dataFolderPath, 'all'))
 
 // Purpose of this file is to keep all links together.
 // So, we can take a diff using this file and the new links file in the next turn.
 const createAllFile = data =>
-  createFile('data/all.json', JSON.stringify(data))
+  createFile(path.join(dataFolderPath, 'all.json'), JSON.stringify(data))
 
 // So that front-end will know how many pages and links are there.
 const createStatsFile = data =>
-  createFile('data/stats.json', JSON.stringify(data))
+  createFile(path.join(dataFolderPath, 'stats.json'), JSON.stringify(data))
 
 // Create individual page documents.
 const createPages = pages =>
   pages.map((page, index) =>
-    createFile( `data/page-${index + 1}.json`, JSON.stringify(page) )
+    createFile( path.join(dataFolderPath, `page-${index + 1}.json`), JSON.stringify(page) )
   )
 
 // Used for splitting links into multiple files.
@@ -55,7 +37,7 @@ const stats = {
   pages: pages.length
 }
 
-cleanOldDataFolder('data')
+cleanFolder(dataFolderPath)
   .then(() =>
     Promise.all([
       createAllFile(links),
