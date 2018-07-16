@@ -5,7 +5,7 @@ const { splitByLimit, createFile, cleanFolder } = require('./helpers')
 // Get fresh list of links.
 const links = require('../links')
 
-const dataFolderPath = path.join(__dirname, '..', 'data')
+const dataFolderPath = path.join(__dirname, '..', 'public', 'data')
 
 // Get all of old links, we'll use this to detect newly added links.
 const all = require(path.join(dataFolderPath, 'all'))
