@@ -15,15 +15,15 @@ module.exports = class Channel {
   }
 
   logStart(item) {
-    this.log('publishing:', item)
+    this.log('publishing', item)
   }
 
   logSuccess(item) {
-    this.log('published:', item)
+    this.log('published', item)
   }
 
   logError(item, error) {
-    this.error('couldnt publish:', item, error)
+    this.error('couldnt publish', item, error)
   }
 
   wait(timeout) {
@@ -32,7 +32,17 @@ module.exports = class Channel {
     })
   }
 
-  async publish(items) {
+  async publish(items, once) {
+    if (once) {
+      try {
+        this.logStart('')
+        await this.method(items)
+        this.logSuccess('')
+      } catch (e) {
+        this.logError('', e)
+      }
+      return
+    }
     for (const [index, item] of items.entries()) {
       this.logStart(item)
       try {

@@ -1,4 +1,5 @@
 const fs = require('fs')
+const cp = require('child_process')
 
 // Get the last item of an array
 const last = array => array[array.length - 1]
@@ -24,8 +25,27 @@ const createFile = (path, data) => new Promise((resolve, reject) => {
   })
 })
 
+const execute = options => new Promise((resolve, reject) => {
+  const { cmd, outStream, errStream, env } = options
+  const ps = cp.exec(cmd, { env })
+  let errData = ''
+  ps.stdout.pipe(outStream)
+  ps.stderr.pipe(errStream)
+  ps.stderr.on('data', data => {
+    errData += data
+  })
+  ps.on('close', code => {
+    if (code === 0) {
+      resolve()
+    } else {
+      reject({ code, errData })
+    }
+  })
+})
+
 module.exports = {
   last,
   splitByLimit,
-  createFile
+  createFile,
+  execute
 }
