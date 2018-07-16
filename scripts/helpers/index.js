@@ -29,7 +29,7 @@ const createFile = (path, data) => new Promise((resolve, reject) => {
 })
 
 // Remove and re-create a folder.
-const cleanFolder folderPath => new Promise((resolve, reject) => {
+const cleanFolder = folderPath => new Promise((resolve, reject) => {
   // Delete of data directory
   rimraf(folderPath, err => {
     if (err) {
