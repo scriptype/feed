@@ -15,5 +15,5 @@ process.stdin.on('readable', () => {
 process.stdin.on('end', () => {
   const items = JSON.parse(data)
   twitter.publish(items)
-  github.publish(items, true)
+  // github.publish(items, true)
 })
