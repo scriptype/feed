@@ -8,10 +8,8 @@ const client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
-const statusTemplate = data => (
-  data.turkish
-    ? `Şunu okudum: "${data.title}": ${data.url} ${tagsTemplate(data.tags)}`
-    : `I've just read: "${data.title}": ${data.url} ${tagsTemplate(data.tags)}`
+const statusTemplate = link => (
+  `"${link.title}": ${link.url} ${tagsTemplate(link.tags)}`
 )
 
 const tagsTemplate = tags => (

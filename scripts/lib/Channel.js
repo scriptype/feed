@@ -14,20 +14,20 @@ module.exports = class Channel {
     console.error(`error ${this.name}: ${message}`, ...args)
   }
 
-  logNotStarting() {
-    this.log('nothing to publish')
+  logNotStarting(...args) {
+    this.log(...['nothing to publish', ...args])
   }
 
-  logStart(item) {
-    this.log('publishing', item)
+  logStart(...args) {
+    this.log(...['publishing', ...args])
   }
 
-  logSuccess(item) {
-    this.log('published', item)
+  logSuccess(...args) {
+    this.log(...['published', ...args])
   }
 
-  logError(item, error) {
-    this.error('couldnt publish', item, error)
+  logError(...args) {
+    this.error(...['couldnt publish', ...args])
   }
 
   wait(timeout) {
@@ -38,14 +38,13 @@ module.exports = class Channel {
 
   async publish(items, once) {
     if (items.length === 0) {
-      this.logNotStarting()
-      return
+      return this.logNotStarting()
     }
     if (once) {
       try {
-        this.logStart('')
+        this.logStart()
         await this.method(items)
-        this.logSuccess('')
+        this.logSuccess()
       } catch (e) {
         this.logError('', e)
       }

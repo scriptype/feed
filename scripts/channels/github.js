@@ -6,9 +6,10 @@ const commitMessageTemplate = items => `
   ${items.reduce((result, item) => `${result}\n - ${item.url}`, '')}
 `
 
-const push = items => {
-  const scriptPath = path.join(__dirname, '..', 'push-to-github.sh')
-  return execute({
+const scriptPath = path.join(__dirname, '..', 'push-to-github.sh')
+
+const push = items =>
+  execute({
     cmd: `sh ${scriptPath}`,
     outStream: process.stdout,
     errStream: process.stderr,
@@ -16,7 +17,6 @@ const push = items => {
       LINKS_ADDED: items.length ? commitMessageTemplate(items) : ''
     })
   })
-}
 
 module.exports = new Channel({
   name: 'github',
