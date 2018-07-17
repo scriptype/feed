@@ -1,6 +1,11 @@
 const path = require('path')
 const _ = require('lodash')
-const { splitByLimit, createFile, cleanFolder } = require('./helpers')
+const {
+  reverseNew,
+  splitByLimit,
+  createFile,
+  cleanFolder
+} = require('./helpers')
 
 // Get fresh list of links.
 const links = require('../links')
@@ -32,7 +37,7 @@ const createPages = pages =>
 const pageLimit = 15
 
 // Get pages of links
-const pages = splitByLimit(links.reverse(), pageLimit)
+const pages = splitByLimit(reverseNew(links), pageLimit)
 
 const stats = {
   total: links.length,

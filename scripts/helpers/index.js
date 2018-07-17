@@ -6,6 +6,9 @@ const rimraf = require('rimraf')
 // Get the last item of an array
 const last = array => array[array.length - 1]
 
+// Returns a reversed copy array, without mutating it.
+const reverseNew = array => Object.assign([], array).reverse()
+
 // Split an array into parts using a limit.
 const splitByLimit = (array, limit) =>
   array.reduce((result, item, index) => {
@@ -69,6 +72,7 @@ const execute = options => new Promise((resolve, reject) => {
 
 module.exports = {
   last,
+  reverseNew,
   splitByLimit,
   createFile,
   cleanFolder,
