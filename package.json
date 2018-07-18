@@ -16,11 +16,14 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "http-server": "^0.11.1",
+    "opn-cli": "^3.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "dev": "http-server public & opn http://localhost:8080?dev"
   },
   "repository": {
     "type": "git",
