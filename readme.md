@@ -18,7 +18,7 @@ Concept of this project is:
 
 ### Node and npm versions
 
-```
+```sh
 $ npm -v
 6.1.0
 
@@ -27,18 +27,18 @@ v10.6.0
 ```
 
 ### Clone the repo
-```
+```sh
 git clone git@github.com:scriptype/feed.git
 ```
 
 ### Install dependencies
-```
+```sh
 cd feed
 npm i
 ```
 
 ### Run dev server to serve `/public`
-```
+```sh
 npm run dev
 ```
 
@@ -67,7 +67,7 @@ exposing tokens to `/scripts` is:
 
 This is the command I used to accomplish the above tasks:
 
-```
+```sh
 travis encrypt MY_SECRET_TOKEN_NAME="secret content here" --add
 ```
 
@@ -78,3 +78,12 @@ You can safely commit `.travis.yml` to version control.
 ## Tests
 
 No tests.
+
+## Licence
+
+```
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+```
