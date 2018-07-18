@@ -1,20 +1,18 @@
 import {
-  START_GET_LINKS,
   GET_LINKS,
   ERROR_GET_LINKS,
 
-  START_GET_STATS,
   GET_STATS,
   ERROR_GET_STATS
 } from './Constants.js'
 
 export default ({ dispatch }, api) => ({
   getLinks({ page }) {
-    dispatch(START_GET_LINKS)
-    api.getLinks({ page })
+    return api.getLinks({ page })
       .then(links => {
         dispatch(GET_LINKS, {
-          links
+          links,
+          page
         })
       })
       .catch(error => {
@@ -25,8 +23,7 @@ export default ({ dispatch }, api) => ({
   },
 
   getStats() {
-    dispatch(START_GET_STATS)
-    api.getStats()
+    return api.getStats()
       .then(stats => {
         dispatch(GET_STATS, {
           stats

@@ -1,9 +1,11 @@
-import linksTemplate from './Links.js'
-import paginationTemplate from './Pagination.js'
+import headerTemplate from './Header.js'
+import contentTemplate from './Content.js'
+import footerTemplate from './Footer.js'
 
-export default ({ links, stats }) => `
-  <div class="app-container">
-    ${ linksTemplate({ links }) }
-    ${ paginationTemplate({ stats }) }
+export default (state) => `
+  <div class="app">
+    ${ headerTemplate(state) }
+    ${ contentTemplate(state) }
+    ${ footerTemplate(state) }
   </div>
 `

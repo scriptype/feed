@@ -1,21 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin-ext');
 @import url("reset.css");
 
-body {
-    font: 100 normal 16px/1.5 helvetica, sans-serif;
+:root {
+    --primary-color: #ff4545;
 }
 
-.container {
-    width: 720px;
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+strong {
+    font-weight: bold;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+}
+
+body {
+    font: 100 normal 16px/1.5 'Playfair Display', serif;
+    background: repeating-linear-gradient(
+        60deg,
+        #fcfcfc,
+        #f4f2f0 1px,
+        #fcfcfc 2px,
+        #fcfcfc 3px
+    )
+}
+
+.content-container {
+    width: 640px;
     margin: 0 auto;
 }
 
-@media (max-width: 720px) {
-    .container {
+@media (max-width: 640px) {
+    .content-container{
         width: 100%;
     }
+}
+
+.app {}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 256px;
+}
+
+.logo-container {
+    display: block;
+    width: 256px;
+    height: 256px;
+    background: #fff;
+    border-radius: 100%;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    transform: scale(.75, .75);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.logo-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, .5);
+    transform:
+        rotate(-45deg)
+        translateY(-110%);
+    transition: inherit;
+}
+
+.logo-container:hover,
+.logo-container:focus {
+    background: #fafafa;
+    transform: scale(.85, .85);
+}
+
+.logo-container:hover::after,
+.logo-container:focus::after {
+    transform:
+        rotate(-45deg)
+        translateY(-85%)
+}
+
+.logo-container:focus {
+    outline: none;
+}
+
+.logo-container:active {
+    background: #fff;
+    transform: scale(.75, .75);
+}
+
+.logo-container:active::after {
+    transform:
+        rotate(-45deg)
+        translateY(-110%)
+}
+
+.logo {
+    max-width: 100%;
+    border-radius: inherit;
 }
 
 .title {
     font-size: 4em;
     font-weight: bold;
+}
+
+.content {
+    padding: 3em;
+    background: #fff;
+    border-radius: 3px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.link-container {
+    padding-bottom: 2em;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: 100;
+    text-decoration: none;
+    border-radius: 1px;
+    box-shadow:
+        0 0 0 15px #fff,
+        0 0 0 20px transparent;
+}
+
+.link:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 10px #fff,
+        0 0 0 12px var(--primary-color);
+    transition: box-shadow .3s;
+}
+
+.link-title {
+    text-decoration: underline;
+}
+
+.link-url {
+    font-size: .5em;
+    color: #a88;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagination-buttons {
+    display: flex;
+    margin: 3em 0 2em;
+}
+
+.pagination-button {
+    width: 36px;
+    padding: .4em 0;
+    margin-right: .75em;
+    background: #f0f0f0;
+    border-radius: 3px;
+    box-shadow:
+        0 0 0 4px #fff,
+        0 0 0 8px transparent;
+    transition:
+        background .3s,
+        color .3s;
+}
+
+.pagination-button:hover,
+.pagination-button:focus,
+.pagination-button--active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.pagination-button:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px var(--primary-color);
+    transition: all .3s;
+}
+
+.pagination-button:active {
+    background: #a00;
+}
+
+.pagination-info {
+    color: #555;
+}
+
+.footer {}
+
+.description {
+    font-size: 1em;
+    padding: 4em 0;
+    color: #555;
+    text-align: center;
 }
