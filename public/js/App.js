@@ -12,17 +12,7 @@ const init = (actions, store) => {
     onChangePage(page, event) {
       Actions.getLinks({ page })
         .then(() => {
-          if (!event) {
-            return
-          }
-          const focusable = (
-            event.target.nodeName === 'BUTTON' ||
-            event.target.nodeName === 'A'
-          )
-          if (focusable) {
-            const element = document.getElementById(event.target.id)
-            element.focus()
-          }
+          restoreFocus(event)
         })
     }
   }
@@ -31,9 +21,22 @@ const init = (actions, store) => {
   Actions.getStats()
 }
 
-const render = () => {
-  container.innerHTML = appTemplate(Store.getState())
+const restoreFocus = event => {
+  if (!event) {
+    return
+  }
+  const focusable = (
+    event.target.nodeName === 'BUTTON' ||
+    event.target.nodeName === 'A'
+  )
+  if (focusable) {
+    const element = document.getElementById(event.target.id)
+    element.focus()
+  }
 }
+
+const render = () =>
+  container.innerHTML = appTemplate(Store.getState())
 
 export default () =>
   Object.freeze({

@@ -49,7 +49,7 @@ body {
 }
 
 @media (max-width: 640px) {
-    .content-container{
+    .content-container {
         width: 100%;
     }
 }

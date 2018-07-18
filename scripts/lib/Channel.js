@@ -46,7 +46,7 @@ module.exports = class Channel {
         await this.method(items)
         this.logSuccess()
       } catch (e) {
-        this.logError('', e)
+        this.logError(e)
       }
       return
     }
