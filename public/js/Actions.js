@@ -1,35 +1,40 @@
+import {
+  START_GET_LINKS,
+  GET_LINKS,
+  ERROR_GET_LINKS,
+
+  START_GET_STATS,
+  GET_STATS,
+  ERROR_GET_STATS
+} from './Constants.js'
+
 export default ({ dispatch }, api) => ({
   getLinks({ page }) {
-    dispatch({ isLoadingLinks: true })
+    dispatch(START_GET_LINKS)
     api.getLinks({ page })
       .then(links => {
-        dispatch({
-          links,
-          activePage: page,
-          isLoadingLinks: false
+        dispatch(GET_LINKS, {
+          links
         })
       })
-      .catch(err => {
-        dispatch({
-          errorGettingStats: err,
-          isLoadingLinks: false
+      .catch(error => {
+        dispatch(ERROR_GET_LINKS, {
+          error
         })
       })
   },
 
   getStats() {
-    dispatch({ isLoadingStats: true })
+    dispatch(START_GET_STATS)
     api.getStats()
       .then(stats => {
-        dispatch({
-          stats,
-          isLoadingStats: false
+        dispatch(GET_STATS, {
+          stats
         })
       })
-      .catch(err => {
-        dispatch({
-          errorGettingStats: err,
-          isLoadingStats: false
+      .catch(error => {
+        dispatch(ERROR_GET_STATS, {
+          error
         })
       })
   }

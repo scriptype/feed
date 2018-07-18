@@ -1,12 +1,12 @@
 import createApp from './App.js'
 import createApi from './Api.js'
-import createState from './State.js'
+import createStore from './Store.js'
 import createActions from './Actions.js'
-import initialState from './initialState.js'
+import Reducer from './Reducer.js'
 
 const App = createApp()
 const Api = createApi({ baseUrl: '.' })
-const State = createState(initialState, App.render)
-const Actions = createActions(State, Api)
+const Store = createStore(Reducer, App.render)
+const Actions = createActions(Store, Api)
 
-App.init(Actions, State)
+App.init(Actions, Store)

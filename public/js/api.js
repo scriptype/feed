@@ -3,10 +3,10 @@ export default ({ baseUrl = '/' }) => {
     fetch(endpoint).then(res => res.json())
 
   const getLinks = ({ page = 1 }) =>
-    getJSON(`${baseUrl}/data/page-${page}.json`)
+    getJSON(`${baseUrl}/test-data/page-${page}.json`)
 
   const getStats = () =>
-    getJSON(`${baseUrl}/data/stats.json`)
+    getJSON(`${baseUrl}/test-data/stats.json`)
 
   return {
     getLinks,

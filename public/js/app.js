@@ -2,11 +2,11 @@ import appTemplate from './components/App.js'
 
 const container = document.getElementById('list')
 
-let Actions, State
+let Actions, Store
 
-const init = (actions, state) => {
+const init = (actions, store) => {
   Actions = actions
-  State = state
+  Store = store
 
   window.__appEventHandlers = {
     onChangePage(page) {
@@ -14,12 +14,12 @@ const init = (actions, state) => {
     }
   }
 
-  Actions.getLinks({ page: 1 }),
+  Actions.getLinks({ page: 1 })
   Actions.getStats()
 }
 
 const render = () =>
-  container.innerHTML = appTemplate(State.getState())
+  container.innerHTML = appTemplate(Store.getState())
 
 export default () =>
   Object.freeze({
