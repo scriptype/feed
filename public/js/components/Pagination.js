@@ -1,11 +1,11 @@
-export default ({ links, stats, ...state }) => `
+export default ({ links, stats, activePage }) => `
   <div class="pagination">
     <div class="pagination-buttons">
       ${ [...Array(stats.pages + 1).keys()].slice(1).map(page => `
         <button
           type="button"
           class="pagination-button ${
-            state.activePage === page
+            activePage === page
               ? 'pagination-button--active'
               : ''
             }"
