@@ -75,7 +75,7 @@ body {
     transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.logo-container::after {
+.shine {
     content: "";
     position: absolute;
     top: 0;
@@ -84,6 +84,7 @@ body {
     height: 200%;
     border-radius: 100%;
     background: rgba(255, 255, 255, .5);
+    opacity: 0;
     transform:
         rotate(-45deg)
         translateY(-110%);
@@ -96,8 +97,9 @@ body {
     transform: scale(.85, .85);
 }
 
-.logo-container:hover::after,
-.logo-container:focus::after {
+.logo-container:hover .shine,
+.logo-container:focus .shine {
+    opacity: 1;
     transform:
         rotate(-45deg)
         translateY(-85%)
@@ -112,7 +114,8 @@ body {
     transform: scale(.75, .75);
 }
 
-.logo-container:active::after {
+.logo-container:active .shine {
+    opacity: 0;
     transform:
         rotate(-45deg)
         translateY(-110%)
