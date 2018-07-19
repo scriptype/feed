@@ -132,39 +132,35 @@ body {
 }
 
 .content {
-    padding: 3em;
+    padding: 2em 0;
     background: #fff;
     border-radius: 3px;
     border-bottom: 1px solid #eaeaea;
 }
 
-.link-container {
-    padding-bottom: 2em;
-}
+.link-container {}
 
 .link {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: .8em 2em;
     font-size: 1.8em;
     font-weight: 100;
     text-decoration: none;
-    border-radius: 1px;
-    box-shadow:
-        0 0 0 15px #fff,
-        0 0 0 20px transparent;
+    color: #333;
+    transition: all .3s;
 }
 
+.link:hover,
 .link:focus {
-    outline: none;
-    box-shadow:
-        0 0 0 10px #fff,
-        0 0 0 12px var(--primary-color);
-    transition: box-shadow .3s;
+    color: var(--primary-color);
+    background: #f2f2f2;
 }
 
-.link-title {
-    text-decoration: underline;
+.link:active {
+    background: #eaeaea;
+    box-shadow: none;
 }
 
 .link-url {
