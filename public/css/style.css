@@ -154,6 +154,12 @@ body {
     transition: all .3s;
 }
 
+@media (max-width: 640px) {
+    .link {
+        padding: .7em 1em 1em;
+    }
+}
+
 .link:hover,
 .link:focus {
     background: #f2f2f2;
