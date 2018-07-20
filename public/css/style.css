@@ -138,13 +138,15 @@ body {
     border-bottom: 1px solid #eaeaea;
 }
 
+.links {}
+
 .link-container {}
 
 .link {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: .8em 2em;
+    padding: .8em 2em 1.1em;
     font-size: 1.8em;
     font-weight: 100;
     text-decoration: none;
@@ -154,7 +156,6 @@ body {
 
 .link:hover,
 .link:focus {
-    color: var(--primary-color);
     background: #f2f2f2;
 }
 
@@ -164,11 +165,27 @@ body {
 }
 
 .link-url {
-    font-size: .5em;
-    color: #a88;
+    font-size: .6em;
+    color: var(--primary-color);
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.link-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: .25em;
+    margin-bottom: -.2em;
+}
+
+.link-tag {
+    font-size: 0.55em;
+    margin: 0 .5em .25em 0;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: .05em;
+    color: #666;
 }
 
 .pagination {
