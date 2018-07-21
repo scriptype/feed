@@ -60,5 +60,12 @@
       "feed",
       "good reads"
     ]
+  },
+  {
+    "url": "https://soundcloud.com/",
+    "title": "SoundCloud",
+    "tags": [
+      "music"
+    ]
   }
 ]
