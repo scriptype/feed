@@ -17,5 +17,40 @@
       "hoş",
       "meh"
     ]
+  },
+  {
+    "url": "https://developer.mozilla.org/",
+    "title": "MDN",
+    "tags": [
+      "developer",
+      "documentation",
+      "mdn",
+      "mozilla"
+    ]
+  },
+  {
+    "url": "https://github.com/",
+    "title": "GitHub",
+    "tags": [
+      "github",
+      "developer",
+      "git"
+    ]
+  },
+  {
+    "url": "https://codepen.io/",
+    "title": "CodePen",
+    "tags": [
+      "codepen",
+      "developer",
+      "front-end"
+    ]
+  },
+  {
+    "url": "https://codepen.io/pavlovsk",
+    "title": "Mustafa Enes on CodePen",
+    "tags": [
+      "developer"
+    ]
   }
 ]
