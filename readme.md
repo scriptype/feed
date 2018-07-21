@@ -7,14 +7,16 @@ Reads Feed also on [Twitter](https://twitter.com/reads_feed) and
 [Tumblr](https://readsfeed.tumblr.com). Also it's alive in its own static website:
 [Github Pages](https://scriptype.github.io/feed)
 
-## Development
+## Purpose
 
 Concept of this project is:
 
  - You add some links to a json file
  - Push the changes
- - And the links you just added will be automatically published in your Twitter
+ - And the links you just added will be automatically published to your Twitter
    and Tumblr accounts. Plus, a static site will be deployed to Github Pages.
+
+## Development
 
 ### Node and npm versions
 
@@ -31,6 +33,16 @@ v10.6.0
 git clone git@github.com:scriptype/feed.git
 ```
 
+I recommend deleting my personal "Add link" commits before starting to your own.
+And most simple way of doing that would be:
+
+```sh
+cd feed
+rm -rf .git
+```
+
+This way, you can start with a fresh git for your project.
+
 ### Install dependencies
 ```sh
 cd feed
@@ -42,21 +54,42 @@ npm i
 npm run dev
 ```
 
-### Adding Links
+### Adding Links using `./add`
 
-You need to append your links to `links.json`. Then just commit the change and
-push to the repository. Make sure you've enabled travis for the repo. Travis
-will handle the rest.
+Use the `add` helper in the root of the project. Run:
 
-TODO: Create a cli helper to add links more easily.
+```sh
+./add
+```
+
+It will ask url, title, tags and whether to publish the link now.
+
+### Adding links manualy
+
+If, for any reason, you can't or don't want to use `./add` helper, you can manually
+add links by appending this for each link to `links.json`:
+
+```js
+{
+  "url": "link url",
+  "title": "link title",
+  "tags": ["some", "tags", "here"]
+}
+```
+
+Then you need to commit the changes and push to your repo.
 
 ### Before adding links
 
-Of course, you will need to register OAUTH applications on
+You need to enable travis integration for you repo.
+
+Configure github pages to serve `public` directory.
+
+And, of course, you will need to register OAUTH applications on
 [Twitter](https://developer.twitter.com/en/docs/basics/getting-started#get-started-app)
 and [Tumblr](https://www.tumblr.com/docs/en/api/v2).
 
-Once you get the necessary auth tokens and secrets, make sure to keep them safe
+When you got the necessary auth tokens and secrets, make sure to keep them safe
 and never commit them to the version control.
 
 Since this project uses Travis to build and publish things, the proper way of
