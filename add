@@ -13,7 +13,11 @@ const questions = [
     name: 'url',
     message: 'URL',
     validate: function(value) {
-      const alreadyAdded = links.find(link => link.url === value)
+      const alreadyAdded = links.find(link =>
+        link.url === value || (
+          link.url.match(/\/$/) && link.url.slice(0, -1) === value
+        )
+      )
       return !alreadyAdded || 'This link already exists.'
     },
     filter: String
@@ -32,7 +36,7 @@ const questions = [
   },
   {
     type: 'confirm',
-    name: 'publish',
+    name: 'publishNow',
     message: 'Publish links now?',
     default: false
   }
@@ -60,10 +64,13 @@ inquirer.prompt(questions).then(answers => {
       const commitMessage = 'Add new links'
       execute({
         cmd: `\\
+          git pull && \\
           git add links.json && \\
           git commit -m "${commitMessage}" && \\
           git push\\
-        `
+        `,
+        outStream: process.stdout,
+        errStream: process.stderr
       })
     }
   })
