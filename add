@@ -1,0 +1,70 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const inquirer = require('inquirer')
+const links = require('./links')
+const { execute } = require('./scripts/helpers')
+
+console.log('Add a new link 🤖')
+
+const questions = [
+  {
+    type: 'input',
+    name: 'url',
+    message: 'URL',
+    validate: function(value) {
+      const alreadyAdded = links.find(link => link.url === value)
+      return !alreadyAdded || 'This link already exists.'
+    },
+    filter: String
+  },
+  {
+    type: 'input',
+    name: 'title',
+    message: 'Title',
+    filter: String
+  },
+  {
+    type: 'input',
+    name: 'tags',
+    message: 'Tags',
+    filter: String
+  },
+  {
+    type: 'confirm',
+    name: 'publish',
+    message: 'Publish links now?',
+    default: false
+  }
+]
+
+inquirer.prompt(questions).then(answers => {
+  const tags = answers.tags
+    .split(',')
+    .map(tag => tag.trim())
+    .filter(tag => tag.length)
+
+  const link = {
+    url: answers.url,
+    title: answers.title,
+    tags
+  }
+
+  const content = JSON.stringify(links.concat(link), null, 2)
+  fs.writeFile('./links.json', content, err => {
+    if (err) {
+      throw err
+    }
+    console.log('Added link:', JSON.stringify(link, null, 2))
+    if (answers.publishNow) {
+      const commitMessage = 'Add new links'
+      execute({
+        cmd: `\\
+          git add links.json && \\
+          git commit -m "${commitMessage}" && \\
+          git push\\
+        `
+      })
+    }
+  })
+})
