@@ -5,7 +5,7 @@ const inquirer = require('inquirer')
 const links = require('./links')
 const { execute } = require('./scripts/helpers')
 
-console.log('Add a new link 🤖')
+console.log('Add a new link')
 
 const questions = [
   {
