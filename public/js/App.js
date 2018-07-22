@@ -35,8 +35,9 @@ const restoreFocus = event => {
   }
 }
 
-const render = () =>
+const render = () => {
   container.innerHTML = appTemplate(Store.getState())
+}
 
 export default () =>
   Object.freeze({

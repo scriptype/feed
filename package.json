@@ -22,7 +22,7 @@
     "opn-cli": "^3.1.0"
   },
   "scripts": {
-    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "lint": "eslint scripts/**/*.js && eslint public/**/*.js",
     "dev": "http-server public & opn http://localhost:8080?dev"
   },
   "repository": {
