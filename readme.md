@@ -109,6 +109,8 @@ travis encrypt MY_SECRET_TOKEN_NAME="secret content here" --add
 
 This will encrypt the secret and put it into `.travis.yml`.
 
+If you cloned the repo, I recommend cleaning my own encrypted keys from `.travis.yml` before adding yours. Those will not work for you and will unnecessarily pollute your `.travis.yml`.
+
 You can safely commit `.travis.yml` to version control.
 
 ## Tests
