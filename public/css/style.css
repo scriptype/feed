@@ -162,11 +162,11 @@ body {
 
 .link:hover,
 .link:focus {
-    background: #f2f2f2;
+    background: #f4f4f4;
 }
 
 .link:active {
-    background: #eaeaea;
+    background: #e8e8e8;
     box-shadow: none;
 }
 
