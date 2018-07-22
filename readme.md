@@ -33,7 +33,7 @@ v10.6.0
 git clone git@github.com:scriptype/feed.git
 ```
 
-I recommend deleting my personal "Add link" commits before starting to your own.
+I recommend you to delete my personal "Add link" commits before starting to your own.
 And most simple way of doing that would be:
 
 ```sh
@@ -77,7 +77,10 @@ add links by appending this for each link to `links.json`:
 }
 ```
 
-Then you need to commit the changes and push to your repo.
+Then you need to commit the changes and push to your repo. You'll need to
+`git pull` before adding new links, because once you push, travis will make another
+commit and push it to your repo. So, you will be 1 commit behind of origin after
+publishing is done. The `./add` helper handles this step too.
 
 ### Before adding links
 
