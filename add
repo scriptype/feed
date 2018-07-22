@@ -31,7 +31,7 @@ const questions = [
   {
     type: 'input',
     name: 'tags',
-    message: 'Tags',
+    message: 'Tags (comma separated)',
     filter: String
   },
   {
