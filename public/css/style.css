@@ -248,11 +248,9 @@ body {
     color: #555;
 }
 
-.footer {}
-
-.description {
+.footer {
     font-size: 1em;
-    padding: 4em 0;
+    padding: 2em 0;
     color: #555;
     text-align: center;
 }
