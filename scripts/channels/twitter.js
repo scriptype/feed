@@ -1,5 +1,6 @@
 const Twitter = require('twitter')
 const Channel = require('../lib/Channel')
+const { stripQuotes } = require('../helpers')
 
 const client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -9,7 +10,7 @@ const client = new Twitter({
 })
 
 const statusTemplate = link => (
-  `"${link.title}": ${link.url} ${tagsTemplate(link.tags)}`
+  `"${stripQuotes(link.title)}": ${link.url} ${tagsTemplate(link.tags)}`
 )
 
 const tagsTemplate = tags => (

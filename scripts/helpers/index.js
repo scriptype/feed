@@ -70,11 +70,17 @@ const execute = options => new Promise((resolve, reject) => {
   })
 })
 
+const stripQuotes = text =>
+  text
+    .replace(/^"/, '')
+    .replace(/"$/, '')
+
 module.exports = {
   last,
   reverseNew,
   splitByLimit,
   createFile,
   cleanFolder,
-  execute
+  execute,
+  stripQuotes
 }
