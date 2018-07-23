@@ -126,11 +126,6 @@ body {
     border-radius: inherit;
 }
 
-.title {
-    font-size: 4em;
-    font-weight: bold;
-}
-
 .content {
     padding: 2em 0;
     background: #fff;
