@@ -5,6 +5,7 @@ module.exports = {
       "node": true
     },
     "rules": {
-      "space-before-function-paren": ["error", "never"]
+      "space-before-function-paren": ["error", "never"],
+      "template-curly-spacing": ["error", "never"]
     }
 };

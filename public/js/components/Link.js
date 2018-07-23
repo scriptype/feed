@@ -1,6 +1,6 @@
 const truncateTitle = (title, charLimit) =>
   title.length > charLimit
-    ?  `${ title.slice(0, charLimit).trim() }...`
+    ? `${ title.slice(0, charLimit).trim() }...`
     : title
 
 const TagsTemplate = (tags) => `
@@ -14,7 +14,7 @@ const TagsTemplate = (tags) => `
 export default (link) => `
   <div class="link-container">
     <a class="link" target="_blank" href="${link.url}">
-      <span class="link-title">${truncateTitle(link.title, 40)}</span>
+      <span class="link-title">${truncateTitle(link.title, 70)}</span>
       <span class="link-url">${link.url}</span>
       ${ link.tags.length ? TagsTemplate(link.tags) : '' }
     </a>
