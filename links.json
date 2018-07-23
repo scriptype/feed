@@ -44,5 +44,14 @@
       "nodejs",
       "hackernews"
     ]
+  },
+  {
+    "url": "https://www.smashingmagazine.com/2018/07/writing-code-poems/",
+    "title": "Learning To Code By Writing Code Poems",
+    "tags": [
+      "programming",
+      "javascript",
+      "learning"
+    ]
   }
 ]
