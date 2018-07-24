@@ -165,18 +165,23 @@ body {
     box-shadow: none;
 }
 
+.link-title {
+    line-height: 1.4;
+}
+
 .link-url {
     font-size: .6em;
     color: var(--primary-color);
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top: .25rem;
 }
 
 .link-tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: .25em;
+    margin-top: .35rem;
     margin-bottom: -.2em;
 }
 
