@@ -170,12 +170,9 @@ body {
 }
 
 .link-url {
+    margin-top: .25rem;
     font-size: .6em;
     color: var(--primary-color);
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: .25rem;
 }
 
 .link-tags {
