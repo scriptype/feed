@@ -3,5 +3,5 @@ export const isDev = () =>
 
 export const truncate = (text, limit, ellipsis) =>
   text.length > limit
-    ? `${text.slice(0, limit).trim()}${ellipsis ? '...' : ''}`
+    ? `${ text.slice(0, limit).trim() }${ ellipsis ? '...' : '' }`
     : text
