@@ -34,7 +34,7 @@ const createPages = pages =>
   )
 
 // Used for splitting links into multiple files.
-const pageLimit = 15
+const pageLimit = 10
 
 // Get pages of links
 const pages = splitByLimit(reverseNew(links), pageLimit)
