@@ -125,5 +125,14 @@
       "horror",
       "story"
     ]
+  },
+  {
+    "url": "http://2ality.com/2017/11/currying-in-js.html",
+    "title": "Currying is not idiomatic in JavaScript",
+    "tags": [
+      "javascript",
+      "functional",
+      "programming"
+    ]
   }
 ]
