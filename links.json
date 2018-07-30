@@ -149,5 +149,13 @@
       "react",
       "video"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/building-serverless-cms-powered-vue-js/",
+    "title": "Building a Serverless CMS Powered by Vue.js",
+    "tags": [
+      "vue",
+      "serverless"
+    ]
   }
 ]
