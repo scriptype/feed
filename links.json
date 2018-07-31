@@ -165,5 +165,13 @@
       "generative",
       "art"
     ]
+  },
+  {
+    "url": "https://www.w3.org/TR/WCAG20/",
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.0",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
