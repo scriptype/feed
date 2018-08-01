@@ -173,5 +173,13 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://webaim.org/standards/wcag/checklist",
+    "title": "WebAIM's WCAG 2 Checklist",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
