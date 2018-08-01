@@ -181,5 +181,14 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/ud891",
+    "title": "Free Web Accessibility Course by Google at Udacity",
+    "tags": [
+      "web",
+      "accessibility",
+      "course"
+    ]
   }
 ]
