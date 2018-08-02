@@ -190,5 +190,15 @@
       "accessibility",
       "course"
     ]
+  },
+  {
+    "url": "https://developers.google.com/machine-learning/crash-course/",
+    "title": "Machine Learning Crash Course",
+    "tags": [
+      "machine",
+      "learning",
+      "ai",
+      "course"
+    ]
   }
 ]
