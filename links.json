@@ -200,5 +200,14 @@
       "ai",
       "course"
     ]
+  },
+  {
+    "url": "https://medium.com/javascript-scene/functors-categories-61e031bac53f",
+    "title": "Functors & Categories",
+    "tags": [
+      "javascript",
+      "functional",
+      "programming"
+    ]
   }
 ]
