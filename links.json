@@ -222,5 +222,22 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://zeit.co/blog/deploy-github-forks",
+    "title": "Deploying Pull Requests from Forks with Now + GitHub",
+    "tags": [
+      "github",
+      "open",
+      "source",
+      "security"
+    ]
+  },
+  {
+    "url": "https://dev.to/twhite/what-is-business-logic-1gdf",
+    "title": "What Is Business Logic?",
+    "tags": [
+      "programming"
+    ]
   }
 ]
