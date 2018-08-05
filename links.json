@@ -247,5 +247,21 @@
       "horror",
       "story"
     ]
+  },
+  {
+    "url": "https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1",
+    "title": "Why you should stop using Git rebase",
+    "tags": [
+      "git",
+      "rebase"
+    ]
+  },
+  {
+    "url": "https://hackernoon.com/dont-fear-the-rebase-bca683888dae",
+    "title": "Don’t Fear The Rebase",
+    "tags": [
+      "git",
+      "rebase"
+    ]
   }
 ]
