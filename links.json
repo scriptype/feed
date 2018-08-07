@@ -290,5 +290,13 @@
       "motion",
       "design"
     ]
+  },
+  {
+    "url": "https://www.w3.org/TR/wai-aria-practices-1.1/#kbd_roving_tabindex",
+    "title": "Managing Focus Within Components Using a Roving tabindex",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
