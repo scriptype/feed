@@ -308,5 +308,13 @@
     "url": "https://medium.com/palantir/code-review-best-practices-19e02780015f",
     "title": "Code Review Best Practices",
     "tags": []
+  },
+  {
+    "url": "https://medium.com/@abdullahmara/vuex-module-generator-f48077326ea1",
+    "title": "Vuex module generator",
+    "tags": [
+      "vue",
+      "vuex"
+    ]
   }
 ]
