@@ -316,5 +316,12 @@
       "vue",
       "vuex"
     ]
+  },
+  {
+    "url": "https://medium.freecodecamp.org/responsible-disclosure-how-i-could-have-hacked-all-facebook-accounts-f47c0252ae4d",
+    "title": "I figured out a way to hack any of Facebook’s 2 billion accounts, and they paid me a $15,000 bounty for it",
+    "tags": [
+      "security"
+    ]
   }
 ]
