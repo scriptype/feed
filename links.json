@@ -344,5 +344,12 @@
     "url": "http://www.openbenches.org/blog/2018/05/twitter-suspended-our-account-and-wiped-all-our-followers/",
     "title": "Twitter suspended our account and wiped all our followers!",
     "tags": []
+  },
+  {
+    "url": "https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4",
+    "title": "The Cost Of JavaScript In 2018",
+    "tags": [
+      "javascript"
+    ]
   }
 ]
