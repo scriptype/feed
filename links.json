@@ -367,5 +367,12 @@
       "horror",
       "story"
     ]
+  },
+  {
+    "url": "https://medium.com/@vesirin/how-i-gained-commit-access-to-homebrew-in-30-minutes-2ae314df03ab",
+    "title": "How I gained commit access to Homebrew in 30 minutes",
+    "tags": [
+      "security"
+    ]
   }
 ]
