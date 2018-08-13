@@ -383,5 +383,21 @@
       "grid",
       "layout"
     ]
+  },
+  {
+    "url": "https://blog.safia.rocks/post/173241985600/unraveling-rm-what-happens-when-you-run-it",
+    "title": "Unraveling `rm`: what happens when you run it?",
+    "tags": [
+      "unix",
+      "rm"
+    ]
+  },
+  {
+    "url": "https://www.npr.org/sections/health-shots/2018/05/07/607782359/lyme-disease-is-on-the-rise-again-heres-how-to-prevent-it",
+    "title": "Lyme Disease Is On The Rise Again. Here's How To Prevent It",
+    "tags": [
+      "lyme",
+      "disease"
+    ]
   }
 ]
