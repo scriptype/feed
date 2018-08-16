@@ -426,5 +426,13 @@
     "url": "https://medium.com/@Imaginary_Cloud/why-we-should-all-be-using-windows-95-5b63ad50e9e8",
     "title": "Why we should all be using Windows 95",
     "tags": []
+  },
+  {
+    "url": "https://www.infoq.com/news/2009/08/enabling-lrm",
+    "title": "Enabling the Last Responsible Moment in Deployment",
+    "tags": [
+      "continuous",
+      "integration"
+    ]
   }
 ]
