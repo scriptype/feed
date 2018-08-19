@@ -466,5 +466,13 @@
       "evolution",
       "biology"
     ]
+  },
+  {
+    "url": "https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5",
+    "title": "I’m harvesting credit card numbers and passwords from your site. Here’s how.",
+    "tags": [
+      "security",
+      "npm"
+    ]
   }
 ]
