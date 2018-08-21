@@ -490,5 +490,13 @@
       "epigenetics",
       "evolution"
     ]
+  },
+  {
+    "url": "https://medium.freecodecamp.org/building-the-2018-world-cup-graphql-api-fab40ccecb9e",
+    "title": "How we built the 2018 World Cup GraphQL API",
+    "tags": [
+      "graphql",
+      "api"
+    ]
   }
 ]
