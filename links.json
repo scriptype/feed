@@ -538,5 +538,12 @@
     "tags": [
       "color"
     ]
+  },
+  {
+    "url": "https://github.com/phillipi/pix2pix",
+    "title": "pix2pix",
+    "tags": [
+      "ai"
+    ]
   }
 ]
