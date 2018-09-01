@@ -581,5 +581,13 @@
     "tags": [
       "tcp"
     ]
+  },
+  {
+    "url": "https://www.thoughtworks.com/insights/blog/dividing-frontend-backend-antipattern",
+    "title": "Dividing frontend from backend is an antipattern",
+    "tags": [
+      "frontend",
+      "backend"
+    ]
   }
 ]
