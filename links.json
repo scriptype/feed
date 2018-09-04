@@ -602,5 +602,12 @@
       "türkçe",
       "determinizm"
     ]
+  },
+  {
+    "url": "https://pragprog.com/articles/tell-dont-ask",
+    "title": "Tell, Don't Ask",
+    "tags": [
+      "programming"
+    ]
   }
 ]
