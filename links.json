@@ -618,5 +618,12 @@
       "django",
       "celery"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/your-brain-on-front-end-development/",
+    "title": "Your Brain on Front-End Development",
+    "tags": [
+      "front-end"
+    ]
   }
 ]
