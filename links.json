@@ -640,5 +640,12 @@
       "css",
       "html"
     ]
+  },
+  {
+    "url": "https://medium.freecodecamp.org/understanding-memoize-in-javascript-51d07d19430e",
+    "title": "How to use Memoize to cache JavaScript function results and speed up your code",
+    "tags": [
+      "javascript"
+    ]
   }
 ]
