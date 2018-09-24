@@ -707,5 +707,13 @@
     "tags": [
       "macbook"
     ]
+  },
+  {
+    "url": "https://gregable.com/2010/09/why-you-should-know-just-little-awk.html",
+    "title": "Why you should learn just a little Awk: An Awk tutorial by Example",
+    "tags": [
+      "awk",
+      "unix"
+    ]
   }
 ]
