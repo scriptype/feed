@@ -715,5 +715,15 @@
       "awk",
       "unix"
     ]
+  },
+  {
+    "url": "https://www.defensecode.com/public/DefenseCode_Unix_WildCards_Gone_Wild.txt",
+    "title": "Back To The Future: Unix Wildcards Gone Wild",
+    "tags": [
+      "unix",
+      "wildcard",
+      "security",
+      "hack"
+    ]
   }
 ]
