@@ -725,5 +725,13 @@
       "security",
       "hack"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/introducing-trashy-css/",
+    "title": "Introducing Trashy.css",
+    "tags": [
+      "accessibility",
+      "css"
+    ]
   }
 ]
