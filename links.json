@@ -749,5 +749,12 @@
       "art",
       "graffiti"
     ]
+  },
+  {
+    "url": "https://blog.webf.zone/vue-js-considerations-and-tricks-fa7e0e4bb7bb",
+    "title": "Vue.js — Considerations and Tricks",
+    "tags": [
+      "vue"
+    ]
   }
 ]
