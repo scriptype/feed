@@ -756,5 +756,14 @@
     "tags": [
       "vue"
     ]
+  },
+  {
+    "url": "https://www.smashingmagazine.com/2018/06/placeholder-attribute/",
+    "title": "Don’t Use The Placeholder Attribute",
+    "tags": [
+      "html",
+      "accessibility",
+      "web"
+    ]
   }
 ]
