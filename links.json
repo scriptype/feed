@@ -765,5 +765,13 @@
       "accessibility",
       "web"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/drawing-images-with-css-gradients/",
+    "title": "Drawing Images with CSS Gradients",
+    "tags": [
+      "css",
+      "art"
+    ]
   }
 ]
