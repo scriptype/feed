@@ -781,5 +781,14 @@
       "caching",
       "tutorial"
     ]
+  },
+  {
+    "url": "https://itnext.io/a-minimal-guide-to-ecmascript-decorators-55b70338215e",
+    "title": "A minimal guide to ECMAScript Decorators",
+    "tags": [
+      "ecmascript",
+      "programming",
+      "language"
+    ]
   }
 ]
