@@ -790,5 +790,14 @@
       "programming",
       "language"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/one-offs/",
+    "title": "One-Offs",
+    "tags": [
+      "atomic",
+      "components",
+      "design patterns"
+    ]
   }
 ]
