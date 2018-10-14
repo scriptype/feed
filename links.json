@@ -799,5 +799,12 @@
       "components",
       "design patterns"
     ]
+  },
+  {
+    "url": "https://developer.atlassian.com/blog/2015/04/force-with-lease/",
+    "title": "--force considered harmful; understanding git's --force-with-lease",
+    "tags": [
+      "git"
+    ]
   }
 ]
