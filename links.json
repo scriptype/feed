@@ -849,5 +849,14 @@
       "software",
       "developer"
     ]
+  },
+  {
+    "url": "https://github.com/mattdesl/canvas-sketch",
+    "title": "canvas-sketch | A framework for making generative artwork in JavaScript and the browser.",
+    "tags": [
+      "generative",
+      "art",
+      "javascript"
+    ]
   }
 ]
