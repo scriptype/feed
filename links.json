@@ -858,5 +858,13 @@
       "art",
       "javascript"
     ]
+  },
+  {
+    "url": "https://reactjs.org/docs/hooks-intro.html",
+    "title": "Introducing Hooks",
+    "tags": [
+      "react",
+      "hooks"
+    ]
   }
 ]
