@@ -934,5 +934,13 @@
       "photography",
       "genocide"
     ]
+  },
+  {
+    "url": "https://twobithistory.org/2018/07/07/cvs.html",
+    "title": "Version Control Before Git with CVS",
+    "tags": [
+      "git",
+      "cvs"
+    ]
   }
 ]
