@@ -942,5 +942,16 @@
       "git",
       "cvs"
     ]
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Winter_War",
+    "title": "Winter War",
+    "tags": [
+      "WWII",
+      "Finland",
+      "USSR",
+      "war",
+      "history"
+    ]
   }
 ]
