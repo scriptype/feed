@@ -964,5 +964,16 @@
       "bio",
       "istanbul"
     ]
+  },
+  {
+    "url": "https://medium.com/@matanbobi/exploring-the-wilderness-whats-new-in-es2018-and-planned-for-es2019-c8494318a67e",
+    "title": "Exploring the wilderness: What’s new in ES2018 and planned for ES2019",
+    "tags": [
+      "javascript",
+      "ecmascript",
+      "es2018",
+      "es2019",
+      "tc39"
+    ]
   }
 ]
