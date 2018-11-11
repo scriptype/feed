@@ -975,5 +975,13 @@
       "es2019",
       "tc39"
     ]
+  },
+  {
+    "url": "https://www.sitepen.com/blog/2018/07/06/web-components-in-2018/",
+    "title": "Web Components in 2018",
+    "tags": [
+      "web",
+      "components"
+    ]
   }
 ]
