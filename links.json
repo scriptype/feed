@@ -983,5 +983,16 @@
       "web",
       "components"
     ]
+  },
+  {
+    "url": "https://blog.bitsrc.io/get-better-type-checking-in-javascript-with-the-maybe-type-e7f70b23b505",
+    "title": "Get Better Type Checking in JavaScript with the Maybe Type",
+    "tags": [
+      "javascript",
+      "maybe",
+      "monad",
+      "functional",
+      "programming"
+    ]
   }
 ]
