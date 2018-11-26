@@ -1054,5 +1054,14 @@
       "modules",
       "javascript"
     ]
+  },
+  {
+    "url": "https://thepowerofserverless.info/",
+    "title": "The Power of Serverless for Front-End Developers",
+    "tags": [
+      "serverless",
+      "cloud",
+      "front-end"
+    ]
   }
 ]
