@@ -40,7 +40,7 @@ const cleanFolder = folderPath => new Promise((resolve, reject) => {
       return reject(err)
     }
 
-    // Ensure data directory exists
+    // Ensure the directory exists
     mkdirp(folderPath, err => {
       if (err) {
         console.error(`error creating ${folderPath}`, err)
