@@ -1102,5 +1102,16 @@
       "chromium",
       "firefox"
     ]
+  },
+  {
+    "url": "https://blog.mozilla.org/blog/2018/12/06/goodbye-edge/",
+    "title": "Goodbye, EdgeHTML",
+    "tags": [
+      "web",
+      "browsers",
+      "mozilla",
+      "firefox",
+      "edge"
+    ]
   }
 ]
