@@ -1172,5 +1172,13 @@
     "url": "https://blog.cloudflare.com/how-a-nigerian-isp-knocked-google-offline/",
     "title": "How a Nigerian ISP Accidentally Knocked Google Offline",
     "tags": []
+  },
+  {
+    "url": "https://jakearchibald.com/2018/when-packages-go-bad/",
+    "title": "What happens when packages go bad? by @jaffathecake",
+    "tags": [
+      "security",
+      "npm"
+    ]
   }
 ]
