@@ -1180,5 +1180,12 @@
       "security",
       "npm"
     ]
+  },
+  {
+    "url": "https://medium.com/@mattholt/its-2019-and-i-still-make-websites-with-my-bare-hands-73d4eec6b7",
+    "title": "It’s 2019 and I Still Make Websites with my Bare Hands",
+    "tags": [
+      "frontend"
+    ]
   }
 ]
