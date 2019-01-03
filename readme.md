@@ -39,6 +39,7 @@ And most simple way of doing that would be:
 ```sh
 cd feed
 rm -rf .git
+git init
 ```
 
 This way, you can start with a fresh git for your project.
