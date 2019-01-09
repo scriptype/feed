@@ -1214,5 +1214,13 @@
       "cors",
       "http"
     ]
+  },
+  {
+    "url": "https://www.24a11y.com/2018/more-than-just-the-tab-key/",
+    "title": "Not Your Father’s Navigation Strategy: There’s More Than Just the TAB Key",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
