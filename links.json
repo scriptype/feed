@@ -1248,5 +1248,15 @@
       "design",
       "frontend"
     ]
+  },
+  {
+    "url": "https://medium.com/@mbostock/why-you-should-use-d3-ae63c276e958",
+    "title": "Why you should use D3",
+    "tags": [
+      "d3",
+      "graph",
+      "data",
+      "visualisation"
+    ]
   }
 ]
