@@ -1394,5 +1394,13 @@
       "climate",
       "change"
     ]
+  },
+  {
+    "url": "https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf",
+    "title": "Prototype pollution attack in NodeJS application",
+    "tags": [
+      "nodejs",
+      "security"
+    ]
   }
 ]
