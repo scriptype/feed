@@ -1485,5 +1485,15 @@
       "extraterrestrial",
       "life"
     ]
+  },
+  {
+    "url": "https://www.nytimes.com/interactive/2019/02/13/science/opportunity-rover-mars-map.html",
+    "title": "NASA’s Opportunity Rover Dies on Mars",
+    "tags": [
+      "nasa",
+      "mars",
+      "rover",
+      "opportunity"
+    ]
   }
 ]
