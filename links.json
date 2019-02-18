@@ -1495,5 +1495,14 @@
       "rover",
       "opportunity"
     ]
+  },
+  {
+    "url": "https://blog.data.gov.sg/bringing-black-and-white-photos-to-life-using-colourise-sg-435ae5cc5036",
+    "title": "Bringing black and white photos to life using Colourise.sg — a deep learning colouriser trained with old Singaporean photos",
+    "tags": [
+      "deep",
+      "learning",
+      "photography"
+    ]
   }
 ]
