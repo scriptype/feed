@@ -85,7 +85,7 @@ publishing is done. The `./add` helper handles this step too.
 
 ### Before adding links
 
-You need to enable travis integration for you repo.
+You need to enable travis integration for your repo.
 
 Configure github pages to serve `public` directory.
 
