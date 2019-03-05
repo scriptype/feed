@@ -1581,5 +1581,15 @@
       "fractal",
       "paradox"
     ]
+  },
+  {
+    "url": "https://www.npmjs.com/advisories/725",
+    "title": "Missing Origin Validation",
+    "tags": [
+      "webpack",
+      "npm",
+      "security",
+      "vulnerability"
+    ]
   }
 ]
