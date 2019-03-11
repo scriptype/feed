@@ -1610,5 +1610,16 @@
       "sözlük",
       "adamasmaca"
     ]
+  },
+  {
+    "url": "https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity",
+    "title": "Designing Safer Web Animation For Motion Sensitivity",
+    "tags": [
+      "web",
+      "design",
+      "accessibility",
+      "animation",
+      "motion"
+    ]
   }
 ]
