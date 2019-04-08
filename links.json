@@ -1733,5 +1733,13 @@
       "privacy",
       "security"
     ]
+  },
+  {
+    "url": "https://addyosmani.com/blog/lazy-loading/",
+    "title": "Native image lazy-loading for the web! - @addyosmani",
+    "tags": [
+      "web",
+      "performance"
+    ]
   }
 ]
