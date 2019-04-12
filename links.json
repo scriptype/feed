@@ -1750,5 +1750,14 @@
       "chrome",
       "privacy"
     ]
+  },
+  {
+    "url": "https://www.bbc.com/news/science-environment-47879538",
+    "title": "Israel's Beresheet spacecraft crashes on Moon",
+    "tags": [
+      "moon",
+      "spacecraft",
+      "israel"
+    ]
   }
 ]
