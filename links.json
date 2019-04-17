@@ -1769,5 +1769,14 @@
       "structures",
       "es6"
     ]
+  },
+  {
+    "url": "https://www.nytimes.com/interactive/2019/04/17/world/europe/notre-dame-cathedral-fire-spread.html",
+    "title": "Why Notre-Dame Was a Tinderbox",
+    "tags": [
+      "news",
+      "story",
+      "NotreDame"
+    ]
   }
 ]
