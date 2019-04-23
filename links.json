@@ -1797,5 +1797,15 @@
       "designer",
       "portfolio"
     ]
+  },
+  {
+    "url": "https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces",
+    "title": "More Transparent UI Code with Namespaces - @csswizardry",
+    "tags": [
+      "programming",
+      "css",
+      "convention",
+      "frontend"
+    ]
   }
 ]
