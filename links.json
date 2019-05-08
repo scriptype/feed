@@ -1866,5 +1866,14 @@
       "geography",
       "astronomy"
     ]
+  },
+  {
+    "url": "https://about.gitlab.com/2019/04/29/avoiding-foreclosure-on-your-technical-debt/",
+    "title": "How to avoid foreclosure on your technical debt",
+    "tags": [
+      "software",
+      "development",
+      "SDLC"
+    ]
   }
 ]
