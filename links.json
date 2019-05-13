@@ -1884,5 +1884,15 @@
       "development",
       "learning"
     ]
+  },
+  {
+    "url": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
+    "title": "CSS Utility Classes and 'Separation of Concerns'",
+    "tags": [
+      "css",
+      "html",
+      "semantic",
+      "coding"
+    ]
   }
 ]
