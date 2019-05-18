@@ -1,5 +1,7 @@
 # Reads Feed
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/scriptype/feed.svg)](https://greenkeeper.io/)
+
 ![Logo](logo.png)
 
 Sharing my "Open tabs / Read Later" list, as I go through it. You can follow
