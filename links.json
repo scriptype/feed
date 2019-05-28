@@ -1925,5 +1925,14 @@
       "graph",
       "algorithm"
     ]
+  },
+  {
+    "url": "https://www.wikiwand.com/en/Micromouse",
+    "title": "Micromouse",
+    "tags": [
+      "robotics",
+      "algorithms",
+      "competition"
+    ]
   }
 ]
