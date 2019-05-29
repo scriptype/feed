@@ -1934,5 +1934,14 @@
       "algorithms",
       "competition"
     ]
+  },
+  {
+    "url": "https://www.fcvl.net/vulnerabilities/macosx-gatekeeper-bypass",
+    "title": "MacOS X GateKeeper Bypass",
+    "tags": [
+      "macos",
+      "security",
+      "vulnerability"
+    ]
   }
 ]
