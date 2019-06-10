@@ -1952,5 +1952,15 @@
       "sigara",
       "tütün"
     ]
+  },
+  {
+    "url": "https://blog.cloudflare.com/randomness-101-lavarand-in-production/",
+    "title": "Randomness 101: LavaRand in Production",
+    "tags": [
+      "cryptography",
+      "random",
+      "security",
+      "algorithms"
+    ]
   }
 ]
