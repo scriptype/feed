@@ -1962,5 +1962,14 @@
       "security",
       "algorithms"
     ]
+  },
+  {
+    "url": "https://thehackernews.com/2019/06/linux-vim-vulnerability.html",
+    "title": "Your Linux Can Get Hacked Just by Opening a File in Vim or Neovim Editor",
+    "tags": [
+      "linux",
+      "vim",
+      "security"
+    ]
   }
 ]
