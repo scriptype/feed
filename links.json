@@ -2009,5 +2009,15 @@
       "physics",
       "universe"
     ]
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=AdNJ3fydeao",
+    "title": "Rich Harris - Rethinking reactivity",
+    "tags": [
+      "svelte",
+      "react",
+      "reactive",
+      "programming"
+    ]
   }
 ]
