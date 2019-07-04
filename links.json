@@ -2019,5 +2019,15 @@
       "reactive",
       "programming"
     ]
+  },
+  {
+    "url": "https://dev.to/richharris/why-i-don-t-use-web-components-2cia",
+    "title": "Why I don't use web components",
+    "tags": [
+      "web",
+      "components",
+      "javascript",
+      "dom"
+    ]
   }
 ]
