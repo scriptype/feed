@@ -2029,5 +2029,15 @@
       "javascript",
       "dom"
     ]
+  },
+  {
+    "url": "https://svelte.dev/blog/write-less-code",
+    "title": "Write less code",
+    "tags": [
+      "programming",
+      "svelte",
+      "react",
+      "vue"
+    ]
   }
 ]
