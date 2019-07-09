@@ -2039,5 +2039,14 @@
       "react",
       "vue"
     ]
+  },
+  {
+    "url": "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+    "title": "Zoom Zero Day: 4+ Million Webcams & maybe an RCE? Just get them to visit your website!",
+    "tags": [
+      "zoom",
+      "security",
+      "vulnerability"
+    ]
   }
 ]
