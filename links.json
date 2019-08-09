@@ -2066,5 +2066,15 @@
       "animals",
       "science"
     ]
+  },
+  {
+    "url": "https://manuel.is/posts/how-emacs-saved-my-wrist/",
+    "title": "Of how Emacs saved my wrist",
+    "tags": [
+      "CTS",
+      "ergonomy",
+      "software",
+      "emacs"
+    ]
   }
 ]
