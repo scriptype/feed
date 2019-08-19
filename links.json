@@ -2112,5 +2112,14 @@
       "styleguide",
       "editorial"
     ]
+  },
+  {
+    "url": "https://slack.engineering/rebuilding-slack-on-the-desktop-308d6fe94ae4",
+    "title": "When a rewrite isn’t: rebuilding Slack on the desktop",
+    "tags": [
+      "slack",
+      "software",
+      "engineering"
+    ]
   }
 ]
