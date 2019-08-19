@@ -2102,5 +2102,15 @@
       "hooks",
       "tutorial"
     ]
+  },
+  {
+    "url": "https://design.theguardian.com/",
+    "title": "The Guardian digital design style guide",
+    "tags": [
+      "web",
+      "design",
+      "styleguide",
+      "editorial"
+    ]
   }
 ]
