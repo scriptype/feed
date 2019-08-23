@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "inquirer": "^6.0.0",
+    "inquirer": "^7.0.0",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "rimraf": "^3.0.0",
