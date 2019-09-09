@@ -2140,5 +2140,15 @@
       "code",
       "google"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/",
+    "title": "Build a state management system with vanilla JavaScript",
+    "tags": [
+      "javascript",
+      "redux",
+      "vuex",
+      "tutorial"
+    ]
   }
 ]
