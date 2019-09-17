@@ -2260,5 +2260,13 @@
       "performance",
       "optimization"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/using-the-little-known-css-element-function-to-create-a-minimap-navigator/",
+    "title": "Using the Little-Known CSS element() Function to Create a Minimap Navigator",
+    "tags": [
+      "css",
+      "ui"
+    ]
   }
 ]
