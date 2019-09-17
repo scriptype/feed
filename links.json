@@ -2268,5 +2268,12 @@
       "css",
       "ui"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/dry-switching-with-css-variables-the-difference-of-one-declaration/",
+    "title": "DRY Switching with CSS Variables: The Difference of One Declaration",
+    "tags": [
+      "css"
+    ]
   }
 ]
