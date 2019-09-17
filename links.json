@@ -2249,5 +2249,16 @@
       "software",
       "MIT"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/a-proof-of-concept-for-making-sass-faster/",
+    "title": "A Proof of Concept for Making Sass Faster",
+    "tags": [
+      "sass",
+      "css",
+      "compiler",
+      "performance",
+      "optimization"
+    ]
   }
 ]
