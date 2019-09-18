@@ -2286,5 +2286,13 @@
       "software",
       "mobile"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/using-custom-properties-to-wrangle-variations-in-keyframe-animations/",
+    "title": "Using Custom Properties to Wrangle Variations in Keyframe Animations @a_sandrina_p",
+    "tags": [
+      "css",
+      "animation"
+    ]
   }
 ]
