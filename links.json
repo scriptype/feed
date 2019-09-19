@@ -2311,5 +2311,15 @@
       "vim",
       "javascript"
     ]
+  },
+  {
+    "url": "https://phabricator.wikimedia.org/phame/live/7/post/175/wikipedia_s_javascript_initialisation_on_a_budget/",
+    "title": "Wikipedia's JavaScript initialisation on a budget - @TimoTijhof",
+    "tags": [
+      "wikipedia",
+      "javascript",
+      "performance",
+      "optimization"
+    ]
   }
 ]
