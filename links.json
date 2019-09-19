@@ -2303,5 +2303,13 @@
       "postmortem",
       "mühendislik"
     ]
+  },
+  {
+    "url": "https://medium.com/vim-drops/javascript-folding-on-vim-119c70d2e872",
+    "title": "JavaScript Folding on Vim - @rossijonas",
+    "tags": [
+      "vim",
+      "javascript"
+    ]
   }
 ]
