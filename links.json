@@ -2351,5 +2351,13 @@
       "unix",
       "terminal"
     ]
+  },
+  {
+    "url": "https://wattenberger.com/blog/react-hooks",
+    "title": "Thinking in React Hooks",
+    "tags": [
+      "react",
+      "hooks"
+    ]
   }
 ]
