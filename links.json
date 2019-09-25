@@ -2359,5 +2359,15 @@
       "react",
       "hooks"
     ]
+  },
+  {
+    "url": "https://aerotwist.com/blog/react-plus-performance-equals-what/",
+    "title": "React + Performance = ?",
+    "tags": [
+      "react",
+      "performance",
+      "javascript",
+      "ux"
+    ]
   }
 ]
