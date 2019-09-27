@@ -2380,5 +2380,15 @@
       "health",
       "healthcare"
     ]
+  },
+  {
+    "url": "https://script-8.github.io",
+    "title": "SCRIPT-8",
+    "tags": [
+      "javascript",
+      "retro",
+      "coding",
+      "demo"
+    ]
   }
 ]
