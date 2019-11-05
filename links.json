@@ -2487,5 +2487,13 @@
       "finland",
       "gesamtkunstwerk"
     ]
+  },
+  {
+    "url": "https://betterexplained.com/articles/understanding-quakes-fast-inverse-square-root/",
+    "title": "Understanding Quake’s Fast Inverse Square Root",
+    "tags": [
+      "math",
+      "algorithms"
+    ]
   }
 ]
