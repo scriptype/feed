@@ -2495,5 +2495,13 @@
       "math",
       "algorithms"
     ]
+  },
+  {
+    "url": "https://codepen.io/topic/react/templates",
+    "title": "React Patterns & Templates @CodePen",
+    "tags": [
+      "react",
+      "codepen"
+    ]
   }
 ]
