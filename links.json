@@ -2572,5 +2572,14 @@
       "javascript",
       "SPA"
     ]
+  },
+  {
+    "url": "https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g",
+    "title": "A11ycasts with Rob Dodson",
+    "tags": [
+      "web",
+      "accessibility",
+      "tutorial"
+    ]
   }
 ]
