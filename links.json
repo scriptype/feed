@@ -2562,5 +2562,15 @@
       "space",
       "sky"
     ]
+  },
+  {
+    "url": "https://nolanlawson.com/2019/11/05/what-ive-learned-about-accessibility-in-spas/",
+    "title": "What I’ve learned about accessibility in SPAs",
+    "tags": [
+      "accessibility",
+      "web",
+      "javascript",
+      "SPA"
+    ]
   }
 ]
