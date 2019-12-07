@@ -2590,5 +2590,13 @@
       "bilgisayar",
       "video"
     ]
+  },
+  {
+    "url": "https://kyleshevlin.com/when-elses-make-your-code-worse",
+    "title": "When 'else's Make Your Code Worse – @kyleshevlin",
+    "tags": [
+      "javascript",
+      "refactor"
+    ]
   }
 ]
