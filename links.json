@@ -2685,5 +2685,15 @@
       "software",
       "tools"
     ]
+  },
+  {
+    "url": "https://www.vincit.fi/en/software-development-450-words-per-minute/",
+    "title": "Software development 450 words per minute",
+    "tags": [
+      "software",
+      "development",
+      "accessibility",
+      "blindness"
+    ]
   }
 ]
