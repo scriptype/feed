@@ -2818,5 +2818,15 @@
       "turkishairlines",
       "thy"
     ]
+  },
+  {
+    "url": "https://www.voorhoede.nl/en/blog/navigating-the-web-with-a-gamepad/",
+    "title": "Navigating the web with a gamepad",
+    "tags": [
+      "web",
+      "html5",
+      "gamepad",
+      "api"
+    ]
   }
 ]
