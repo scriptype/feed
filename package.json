@@ -6,7 +6,7 @@
   "dependencies": {
     "inquirer": "^7.0.0",
     "lodash": "^4.17.11",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.0",
     "rimraf": "^3.0.0",
     "tumblr.js": "^2.0.2",
     "twitter": "^1.7.1"
