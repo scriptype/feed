@@ -2875,5 +2875,14 @@
       "recruitment",
       "tech"
     ]
+  },
+  {
+    "url": "https://docs.brew.sh/Analytics",
+    "title": "Homebrew Starts Collecting \"Anonymous Aggregate User Behaviour Analytics\"",
+    "tags": [
+      "homebrew",
+      "cli",
+      "analytics"
+    ]
   }
 ]
