@@ -243,6 +243,11 @@ body {
     color: #fff;
 }
 
+.pagination-skipped-numbers {
+    padding: .4em 0;
+    margin-right: .75em;
+}
+
 .pagination-info {
     color: #555;
 }
