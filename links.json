@@ -3044,5 +3044,12 @@
     "tags": [
       "astronomy"
     ]
+  },
+  {
+    "url": "https://mathiasbynens.github.io/rel-noopener",
+    "title": "About rel=noopener",
+    "tags": [
+      "security"
+    ]
   }
 ]
