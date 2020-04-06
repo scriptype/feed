@@ -3093,5 +3093,12 @@
     "tags": [
       "privacy"
     ]
+  },
+  {
+    "url": "https://danielcwilson.com/blog/2020/02/motion-path-transforms/",
+    "title": "How They Fit Together: Transform, Translate, Rotate, Scale, and Offset",
+    "tags": [
+      "css"
+    ]
   }
 ]
