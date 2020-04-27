@@ -18,7 +18,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.12.3",
     "opn-cli": "^5.0.0"
   },
   "scripts": {
