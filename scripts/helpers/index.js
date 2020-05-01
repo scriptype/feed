@@ -41,13 +41,12 @@ const cleanFolder = folderPath => new Promise((resolve, reject) => {
     }
 
     // Ensure the directory exists
-    mkdirp(folderPath, err => {
-      if (err) {
+    return resolve(
+      mkdirp(folderPath).catch(err => {
         console.error(`error creating ${folderPath}`, err)
-        return reject(err)
-      }
-      resolve()
-    })
+        return err
+      })
+    )
   })
 })
 
