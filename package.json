@@ -18,12 +18,12 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "http-server": "^0.12.3",
-    "opn-cli": "^5.0.0"
+    "open-cli": "^6.0.1",
+    "serve": "^11.3.0"
   },
   "scripts": {
     "lint": "eslint scripts/**/*.js && eslint public/**/*.js",
-    "dev": "http-server public & opn http://localhost:8080?dev"
+    "dev": "serve -l 8282 public & open-cli http://localhost:8282?dev"
   },
   "repository": {
     "type": "git",
