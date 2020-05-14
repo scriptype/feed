@@ -3183,5 +3183,13 @@
     "url": "https://www.unrealengine.com/en-US/blog/a-first-look-at-unreal-engine-5",
     "title": "A first look at Unreal Engine 5",
     "tags": []
+  },
+  {
+    "url": "https://substack.com/",
+    "title": "A place for independent writing",
+    "tags": [
+      "blog",
+      "publishing"
+    ]
   }
 ]
