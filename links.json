@@ -3290,5 +3290,10 @@
       "geography",
       "quiz"
     ]
+  },
+  {
+    "url": "http://distributedlife.com/til/testing-input-javascript.html",
+    "title": "Testing keyboard, mouse and touch input with JavaScript",
+    "tags": []
   }
 ]
