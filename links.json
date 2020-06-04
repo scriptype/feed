@@ -3295,5 +3295,12 @@
     "url": "http://distributedlife.com/til/testing-input-javascript.html",
     "title": "Testing keyboard, mouse and touch input with JavaScript",
     "tags": []
+  },
+  {
+    "url": "https://www.excavating.ai/",
+    "title": "Excavating AI - The Politics of Images in Machine Learning Training Sets",
+    "tags": [
+      "ai"
+    ]
   }
 ]
