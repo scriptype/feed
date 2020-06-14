@@ -3314,5 +3314,14 @@
     "url": "https://blog.twitter.com/en_us/topics/company/2020/information-operations-june-2020.html",
     "title": "Disclosing networks of state-linked information operations we’ve removed",
     "tags": []
+  },
+  {
+    "url": "https://increment.com/frontend/a-frontend-stack-for-video-games/",
+    "title": "A frontend stack for video games",
+    "tags": [
+      "game",
+      "development",
+      "web"
+    ]
   }
 ]
