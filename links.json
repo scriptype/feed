@@ -3401,5 +3401,13 @@
     "tags": [
       "programming"
     ]
+  },
+  {
+    "url": "http://matt.might.net/articles/bash-by-example/",
+    "title": "Shell programming with bash: by example, by counter-example",
+    "tags": [
+      "unix",
+      "bash"
+    ]
   }
 ]
