@@ -3409,5 +3409,14 @@
       "unix",
       "bash"
     ]
+  },
+  {
+    "url": "https://blog.codepen.io/2018/06/07/need-to-store-some-data/",
+    "title": "Need to store some data?",
+    "tags": [
+      "database",
+      "api",
+      "baas"
+    ]
   }
 ]
