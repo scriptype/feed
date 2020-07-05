@@ -3418,5 +3418,12 @@
       "api",
       "baas"
     ]
+  },
+  {
+    "url": "https://riccardoscalco.it/textures/",
+    "title": "Textures.js – SVG patterns for Data Visualization",
+    "tags": [
+      "svg"
+    ]
   }
 ]
