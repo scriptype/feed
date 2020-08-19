@@ -3486,5 +3486,14 @@
     "tags": [
       "video"
     ]
+  },
+  {
+    "url": "https://frontend.horse/issues/12/",
+    "title": "Frontend Horse Newsletter 12 - Making 3D CSS Art with @rolivaalonso",
+    "tags": [
+      "css",
+      "3d",
+      "art"
+    ]
   }
 ]
