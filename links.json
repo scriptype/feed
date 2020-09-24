@@ -3575,5 +3575,13 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://tabloid.vercel.app/",
+    "title": "Tabloid: The Clickbait Headline Programming Language",
+    "tags": [
+      "programming",
+      "clickbait"
+    ]
   }
 ]
