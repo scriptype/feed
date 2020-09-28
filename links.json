@@ -3608,5 +3608,12 @@
       "space",
       "shuttle"
     ]
+  },
+  {
+    "url": "https://lea.verou.me/2020/09/the-failed-promise-of-web-components/",
+    "title": "The failed promise of Web Components",
+    "tags": [
+      "web"
+    ]
   }
 ]
