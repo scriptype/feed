@@ -3657,5 +3657,12 @@
       "geometry",
       "infinity"
     ]
+  },
+  {
+    "url": "https://a11yresources.webflow.io/",
+    "title": "a11yresources - A growing list of accessibility tools and resources",
+    "tags": [
+      "accessibility"
+    ]
   }
 ]
