@@ -3671,5 +3671,12 @@
     "tags": [
       "git"
     ]
+  },
+  {
+    "url": "https://oncletom.io/2016/travis-ssh-deploy",
+    "title": "SSH deploys with Travis CI",
+    "tags": [
+      "devops"
+    ]
   }
 ]
