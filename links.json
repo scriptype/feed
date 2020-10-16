@@ -3678,5 +3678,13 @@
     "tags": [
       "devops"
     ]
+  },
+  {
+    "url": "https://coderbook.com/@marcus/how-to-do-zero-downtime-deployments-of-docker-containers/",
+    "title": "How to do Zero Downtime Deployments of Docker Containers",
+    "tags": [
+      "docker",
+      "devops"
+    ]
   }
 ]
