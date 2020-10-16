@@ -3694,5 +3694,13 @@
       "devops",
       "docker"
     ]
+  },
+  {
+    "url": "https://mherman.org/blog/dockerizing-a-react-app/",
+    "title": "Dockerizing a React App",
+    "tags": [
+      "devops",
+      "docker"
+    ]
   }
 ]
