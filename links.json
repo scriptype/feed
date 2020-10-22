@@ -3718,5 +3718,12 @@
       "web",
       "app"
     ]
+  },
+  {
+    "url": "https://wiki.nikitavoloboev.xyz/",
+    "title": "Everything I know @nikitavoloboev",
+    "tags": [
+      "wiki"
+    ]
   }
 ]
