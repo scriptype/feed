@@ -2,8 +2,15 @@
 
 const fs = require('fs')
 const inquirer = require('inquirer')
+const axios = require('axios')
+const cheerio = require('cheerio')
 const links = require('./links')
 const { execute } = require('./scripts/helpers')
+
+const loadPage = async(url) => {
+  const { data: html } = await axios.get(url)
+  return cheerio.load(html)
+}
 
 console.log('Add a new link')
 
@@ -28,6 +35,15 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'Title',
+    async default({ url }) {
+      try {
+        const $ = await loadPage(url)
+        return $('title').text()
+      } catch {
+        console.log("Couldn't scrape title, enter manually")
+        return undefined
+      }
+    },
     validate(value) {
       return !!value || 'Title is required'
     },
@@ -43,7 +59,7 @@ const questions = [
     type: 'confirm',
     name: 'publishNow',
     message: 'Publish links now?',
-    default: false
+    default: true
   }
 ]
 
