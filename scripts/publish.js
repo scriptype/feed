@@ -1,3 +1,4 @@
+require('dotenv').config()
 const twitter = require('./channels/twitter')
 const tumblr = require('./channels/tumblr')
 const github = require('./channels/github')

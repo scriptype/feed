@@ -30,8 +30,40 @@ const tweet = data => new Promise((resolve, reject) => {
   })
 })
 
+const retweet = data => new Promise((resolve, reject) => {
+  const endpoint = `statuses/retweet/${data.tweet.id}`
+  client.post(endpoint, (error, tweet, response) => {
+    if (error) {
+      return reject(error)
+    }
+    resolve({ tweet, response })
+  })
+})
+
+const retweetWithQuote = data => new Promise((resolve, reject) => {
+  const endpoint = 'statuses/update'
+  const params = {
+    status: data.tweet.quote,
+    attachment_url: data.tweet.tweetUrl
+  }
+  client.post(endpoint, params, (error, tweet, response) => {
+    if (error) {
+      return reject(error)
+    }
+    resolve({ tweet, response })
+  })
+})
+
 module.exports = new Channel({
   name: 'twitter',
   waitBetween: 1000 * 60,
-  method: tweet
+  method(item) {
+    if (item.tweet) {
+      if (item.tweet.quote) {
+        return retweetWithQuote(item)
+      }
+      return retweet(item)
+    }
+    return tweet(item)
+  }
 })
