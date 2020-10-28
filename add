@@ -111,12 +111,6 @@ const questions = [
     name: 'tags',
     message: 'Tags (comma separated)',
     filter: String
-  },
-  {
-    type: 'confirm',
-    name: 'publishNow',
-    message: 'Publish links now?',
-    default: true
   }
 ]
 
@@ -146,18 +140,17 @@ inquirer.prompt(questions).then(answers => {
       throw err
     }
     console.log('Added link:', JSON.stringify(link, null, 2))
-    if (answers.publishNow) {
-      const commitMessage = 'Add new links'
-      execute({
-        cmd: `\\
-          git pull && \\
-          git add links.json && \\
-          git commit -m "${commitMessage}" && \\
-          git push\\
-        `,
-        outStream: process.stdout,
-        errStream: process.stderr
-      })
-    }
+    const commitMessage = `Add: ${link.url}`
+    execute({
+      cmd: `\\
+        git pull && \\
+        node scripts/generate-data | node scripts/publish && \\
+        git add links.json docs && \\
+        git commit -m "${commitMessage}" && \\
+        git push\\
+      `,
+      outStream: process.stdout,
+      errStream: process.stderr
+    })
   })
 })

@@ -36,31 +36,16 @@ module.exports = class Channel {
     })
   }
 
-  async publish(items, once) {
-    if (items.length === 0) {
+  async publish(item) {
+    if (!item) {
       return this.logNotStarting()
     }
-    if (once) {
-      try {
-        this.logStart()
-        await this.method(items)
-        this.logSuccess()
-      } catch (e) {
-        this.logError(e)
-      }
-      return
-    }
-    for (const [index, item] of items.entries()) {
-      this.logStart(item)
-      try {
-        await this.method(item)
-        this.logSuccess(item)
-      } catch (e) {
-        this.logError(item, e)
-      }
-      if (index < items.length - 1) {
-        await this.wait(this.waitBetween)
-      }
+    try {
+      this.logStart()
+      await this.method(item)
+      this.logSuccess()
+    } catch (e) {
+      this.logError(e)
     }
   }
 }

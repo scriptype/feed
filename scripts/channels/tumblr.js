@@ -19,6 +19,5 @@ const postLink = item =>
 
 module.exports = new Channel({
   name: 'tumblr',
-  method: postLink,
-  waitBetween: 1000 * 60
+  method: postLink
 })

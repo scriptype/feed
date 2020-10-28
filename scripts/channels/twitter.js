@@ -17,10 +17,10 @@ const tagsTemplate = tags => (
   tags.reduce((result, tag) => `${result} #${tag}`, '')
 )
 
-const tweet = data => new Promise((resolve, reject) => {
+const tweet = item => new Promise((resolve, reject) => {
   const endpoint = 'statuses/update'
   const params = {
-    status: statusTemplate(data)
+    status: statusTemplate(item)
   }
   client.post(endpoint, params, (err, tweet, response) => {
     if (err) {
@@ -30,8 +30,8 @@ const tweet = data => new Promise((resolve, reject) => {
   })
 })
 
-const retweet = data => new Promise((resolve, reject) => {
-  const endpoint = `statuses/retweet/${data.tweet.id}`
+const retweet = item => new Promise((resolve, reject) => {
+  const endpoint = `statuses/retweet/${item.tweet.id}`
   client.post(endpoint, (error, tweet, response) => {
     if (error) {
       return reject(error)
@@ -40,11 +40,11 @@ const retweet = data => new Promise((resolve, reject) => {
   })
 })
 
-const retweetWithQuote = data => new Promise((resolve, reject) => {
+const retweetWithQuote = item => new Promise((resolve, reject) => {
   const endpoint = 'statuses/update'
   const params = {
-    status: data.tweet.quote,
-    attachment_url: data.tweet.tweetUrl
+    status: item.tweet.quote,
+    attachment_url: item.tweet.tweetUrl
   }
   client.post(endpoint, params, (error, tweet, response) => {
     if (error) {
@@ -56,7 +56,6 @@ const retweetWithQuote = data => new Promise((resolve, reject) => {
 
 module.exports = new Channel({
   name: 'twitter',
-  waitBetween: 1000 * 60,
   method(item) {
     if (item.tweet) {
       if (item.tweet.quote) {
