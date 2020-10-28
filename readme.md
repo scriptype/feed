@@ -13,7 +13,7 @@ Reads Feed also on [Twitter](https://twitter.com/reads_feed) and
 
 Concept of this project is:
 
- - You add some links to a json file
+ - You add some links to a json file, by using a CLI helper
  - Push the changes
  - And the links you just added will be automatically published to your Twitter
    and Tumblr accounts. Plus, a static site will be deployed to Github Pages.
@@ -30,34 +30,47 @@ $ node -v
 v10.6.0
 ```
 
-### Clone the repo
+### Setting it up for the first time
 ```sh
+# Clone
 git clone git@github.com:scriptype/feed.git
-```
-
-I recommend you to delete my personal "Add link" commits before starting to your own.
-And most simple way of doing that would be:
-
-```sh
 cd feed
+
+# Clean .git
 rm -rf .git
 git init
-```
 
-This way, you can start with a fresh git for your project.
+# Reset the artifacts
+rm links.json
+rm -rf public/data
+mkdir public/data
+echo "[]" > public/data/all.json
+echo "[]" > links.json
 
-### Install dependencies
-```sh
-cd feed
+# This file will have keep secret tokens for Twitter and Tumblr
+cp .env.example .env
+
+# Install dependencies
 npm i
 ```
 
-### Run dev server to serve `/public`
-```sh
-npm run dev
-```
+### More setting up before adding links
 
-### Adding Links using `./add`
+Configure github pages to serve `docs` directory.
+
+And, of course, you will need to register OAUTH applications on
+[Twitter](https://developer.twitter.com/en/docs/basics/getting-started#get-started-app)
+and [Tumblr](https://www.tumblr.com/docs/en/api/v2).
+
+When you got the necessary auth tokens and secrets, make sure to keep them safe
+and never commit them to the version control.
+
+Now, it's the time to replace the placeholder secrets in the .env file you created
+with the actual secrets you obtained from Twitter and Tumblr. .env file is in .gitignore,
+so it's safe to save secrets into this file.
+
+
+### Add some links!
 
 Use the `add` helper in the root of the project. Run:
 
@@ -65,7 +78,23 @@ Use the `add` helper in the root of the project. Run:
 ./add
 ```
 
-It will ask url, title, tags and whether to publish the link now.
+This will ask:
+- Url
+- Title
+- Tags
+
+Shortly after answering these questions, it will:
+- Share the link in a tweet, with tags turned into hashtags,
+- Share the link as a link post in Tumblr,
+- Push changes made in `links.json` file `docs/data` folder to GitHub, effectively
+deploying changes to the GitHub Pages.
+
+However, if you provide a tweet url (that is, a url in the form of: `https://twitter.com/[username]/status/[tweetId]`),
+it will:
+- Also ask for an optional quote (message) for the retweet
+- Retweet the given tweet on Twitter account
+- Attempt to extract link information from the tweet (assuming the tweet is sharing a link)
+- And use this information to save that link and publish that link in other channels as usual.
 
 ### Adding links manualy
 
@@ -80,41 +109,19 @@ add links by appending this for each link to `links.json`:
 }
 ```
 
-Then you need to commit the changes and push to your repo. You'll need to
-`git pull` before adding new links, because once you push, travis will make another
-commit and push it to your repo. So, you will be 1 commit behind of origin after
-publishing is done. The `./add` helper handles this step too.
-
-### Before adding links
-
-You need to enable travis integration for your repo.
-
-Configure github pages to serve `public` directory.
-
-And, of course, you will need to register OAUTH applications on
-[Twitter](https://developer.twitter.com/en/docs/basics/getting-started#get-started-app)
-and [Tumblr](https://www.tumblr.com/docs/en/api/v2).
-
-When you got the necessary auth tokens and secrets, make sure to keep them safe
-and never commit them to the version control.
-
-Since this project uses Travis to build and publish things, the proper way of
-exposing tokens to `/scripts` is:
-
- 1) Encrypting each of them using [travis-cli](https://docs.travis-ci.com/user/encryption-keys/)
- 2) Putting encrypted public keys to `.travis.yml`.
-
-This is the command I used to accomplish the above tasks:
-
+Then you need to run:
 ```sh
-travis encrypt MY_SECRET_TOKEN_NAME="secret content here" --add
+node scripts/generate-data | node scripts/publish
+git add links.json docs
+git commit -m "Add: [url of the link you added]"
+git push
 ```
 
-This will encrypt the secret and put it into `.travis.yml`.
-
-If you cloned the repo, I recommend cleaning my own encrypted keys from `.travis.yml` before adding yours. Those will not work for you and will unnecessarily pollute your `.travis.yml`.
-
-You can safely commit `.travis.yml` to version control.
+### Local development of frontend (gh-pages)
+```sh
+# Run dev server to serve `/docs`
+npm run dev
+```
 
 ## Tests
 
