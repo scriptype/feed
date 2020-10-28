@@ -3797,5 +3797,19 @@
       "water",
       "nasa"
     ]
+  },
+  {
+    "url": "https://github.com/vadimdemedes/ink",
+    "title": "GitHub - vadimdemedes/ink: 🌈 React for interactive command-line apps",
+    "tags": [
+      "react",
+      "cli"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/aleksandrasays/status/1317913138617044994",
+      "id": "1317913138617044994",
+      "linkUrl": "https://github.com/vadimdemedes/ink",
+      "quote": ""
+    }
   }
 ]
