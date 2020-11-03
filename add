@@ -35,10 +35,14 @@ const getTweet = tweetUrl => new Promise((resolve, reject) => {
     if (err) {
       return reject(err)
     }
+    let linkUrl = tweetUrl
+    if (tweet.entities.urls && tweet.entities.urls.length) {
+      linkUrl = tweet.entities.urls[0].expanded_url
+    }
     resolve({
       tweetUrl,
       id: tweetStatusID,
-      linkUrl: tweet.entities.urls[0].expanded_url
+      linkUrl
     })
   })
 })
