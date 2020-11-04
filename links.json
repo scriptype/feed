@@ -3867,5 +3867,18 @@
       "linkUrl": "https://twitter.com/brad_frost/status/1323296707363459072",
       "quote": "Many data backup and sync options suggested in comments"
     }
+  },
+  {
+    "url": "https://css-tricks.com/additive-animations-in-css/",
+    "title": "Additive Animations in CSS | CSS-Tricks",
+    "tags": [
+      "css"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/css/status/1323761778107568128",
+      "id": "1323761778107568128",
+      "linkUrl": "https://css-tricks.com/additive-animations-in-css/",
+      "quote": "Too bad there's no way to achieve this using only CSS"
+    }
   }
 ]
