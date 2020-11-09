@@ -3885,5 +3885,18 @@
     "url": "http://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html",
     "title": "Catalogue of illusions",
     "tags": []
+  },
+  {
+    "url": "https://twitter.com/i/web/status/1325802592325267457",
+    "title": "VisBug, browser extension for visual editor/layout inspector",
+    "tags": [
+      "tool"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/smashingmag/status/1325802592325267457",
+      "id": "1325802592325267457",
+      "linkUrl": "https://twitter.com/i/web/status/1325802592325267457",
+      "quote": "Powerful tool by @argyleink"
+    }
   }
 ]
