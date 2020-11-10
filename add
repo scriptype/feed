@@ -121,6 +121,12 @@ const questions = [
     name: 'tags',
     message: 'Tags (comma separated)',
     filter: String
+  },
+  {
+    type: 'confirm',
+    name: 'isConfirmed',
+    message: 'Sure?',
+    default: true
   }
 ]
 
@@ -142,6 +148,10 @@ inquirer.prompt(questions).then(answers => {
     title: answers.title,
     tags,
     ...twitterOptions
+  }
+
+  if (!answers.isConfirmed) {
+    return console.log('OK, link is not added.')
   }
 
   const content = JSON.stringify(links.concat(link), null, 2)
