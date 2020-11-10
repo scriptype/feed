@@ -31,7 +31,13 @@ const getTweet = tweetUrl => new Promise((resolve, reject) => {
   })
 
   const tweetStatusID = getTweetStatusID(tweetUrl)
-  twitterClient.get(`statuses/show/${tweetStatusID}`, (err, tweet, response) => {
+  const request = {
+    url: `statuses/show/${tweetStatusID}`,
+    options: {
+      tweet_mode: 'extended'
+    }
+  }
+  twitterClient.get(request.url, request.options, (err, tweet, response) => {
     if (err) {
       return reject(err)
     }
