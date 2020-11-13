@@ -47,7 +47,7 @@ mkdir public/data
 echo "[]" > public/data/all.json
 echo "[]" > links.json
 
-# This file will have keep secret tokens for Twitter and Tumblr
+# This file will have secret tokens for Twitter and Tumblr
 cp .env.example .env
 
 # Install dependencies
@@ -111,7 +111,7 @@ add links by appending this for each link to `links.json`:
 
 Then you need to run:
 ```sh
-node scripts/generate-data | node scripts/publish
+node scripts/generate-data.js | node scripts/publish.js
 git add links.json docs
 git commit -m "Add: [url of the link you added]"
 git push
