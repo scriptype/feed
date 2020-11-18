@@ -3961,5 +3961,18 @@
       "linkUrl": "https://tixy.land",
       "quote": ""
     }
+  },
+  {
+    "url": "https://pragmaticpineapple.com/improving-vim-workflow-with-fzf/",
+    "title": "Improving Vim Workflow With fzf | Pragmatic Pineapple 🍍",
+    "tags": [
+      "vim"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/MasteringVim/status/1329125460144513025",
+      "id": "1329125460144513025",
+      "linkUrl": "https://pragmaticpineapple.com/improving-vim-workflow-with-fzf/",
+      "quote": ""
+    }
   }
 ]
