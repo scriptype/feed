@@ -4092,5 +4092,18 @@
       "video",
       "geography"
     ]
+  },
+  {
+    "url": "https://chromeisbad.com",
+    "title": "Chrome is Bad",
+    "tags": [
+      "chrome"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/lorenb/status/1337832978253230081",
+      "id": "1337832978253230081",
+      "linkUrl": "https://chromeisbad.com",
+      "quote": "🤔"
+    }
   }
 ]
