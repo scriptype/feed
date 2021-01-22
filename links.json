@@ -4206,5 +4206,13 @@
     "tags": [
       "css"
     ]
+  },
+  {
+    "url": "https://htmldom.dev/",
+    "title": "HTML DOM - Common tasks of managing HTML DOM with vanilla JavaScript",
+    "tags": [
+      "web",
+      "development"
+    ]
   }
 ]
