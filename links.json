@@ -4214,5 +4214,18 @@
       "web",
       "development"
     ]
+  },
+  {
+    "url": "https://laconicml.com/computer-science-curriculum-youtube-videos/",
+    "title": "Entire Computer Science Curriculum in 1000 YouTube Videos | Laconicml",
+    "tags": [
+      "education"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/SelmanKahyaX/status/1353061090704322562",
+      "id": "1353061090704322562",
+      "linkUrl": "https://laconicml.com/computer-science-curriculum-youtube-videos/",
+      "quote": ""
+    }
   }
 ]
