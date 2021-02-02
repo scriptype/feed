@@ -4255,5 +4255,12 @@
     "tags": [
       "astronomy"
     ]
+  },
+  {
+    "url": "https://jakearchibald.com/2021/function-callback-risks/",
+    "title": "Don't use functions as callbacks unless they're designed for it – @jaffathecake",
+    "tags": [
+      "javascript"
+    ]
   }
 ]
