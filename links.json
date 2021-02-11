@@ -4270,5 +4270,18 @@
       "space",
       "pollution"
     ]
+  },
+  {
+    "url": "https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610?sk=991ef9a180558d25c5c6bc5081c99089",
+    "title": "How I Hacked Into Apple, Microsoft and Dozens of Other Companies",
+    "tags": [
+      "security"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/alxbrsn/status/1359200840876257287",
+      "id": "1359200840876257287",
+      "linkUrl": "https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610?sk=991ef9a180558d25c5c6bc5081c99089",
+      "quote": ""
+    }
   }
 ]
