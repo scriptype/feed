@@ -4291,5 +4291,10 @@
       "web",
       "programming"
     ]
+  },
+  {
+    "url": "https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/",
+    "title": "Adding search to a JAMstack site",
+    "tags": []
   }
 ]
