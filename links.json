@@ -4296,5 +4296,13 @@
     "url": "https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/",
     "title": "Adding search to a JAMstack site",
     "tags": []
+  },
+  {
+    "url": "https://philipwalton.com/articles/css-architecture",
+    "title": "CSS Architecture — Philip Walton",
+    "tags": [
+      "css",
+      "software"
+    ]
   }
 ]
