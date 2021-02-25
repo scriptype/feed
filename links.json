@@ -4321,5 +4321,12 @@
       "perseverence",
       "mars"
     ]
+  },
+  {
+    "url": "https://orta.io/notes/git/commit-scopes-monorepo",
+    "title": "Commit Messages With Monorepo Scopes | Notes",
+    "tags": [
+      "git"
+    ]
   }
 ]
