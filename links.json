@@ -4360,5 +4360,18 @@
       "volcano",
       "iceland"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/taming-blend-modes-difference-and-exclusion/",
+    "title": "Taming Blend Modes: 'difference' and 'exclusion' @css by @anatudor",
+    "tags": [
+      "css"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/anatudor/status/1374012956200071169",
+      "id": "1374012956200071169",
+      "linkUrl": "https://css-tricks.com/taming-blend-modes-difference-and-exclusion/",
+      "quote": ""
+    }
   }
 ]
