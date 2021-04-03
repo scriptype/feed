@@ -4411,5 +4411,18 @@
       "linkUrl": "https://localghost.dev/2020/12/give-yourself-a-break-lessons-from-burnout/",
       "quote": ""
     }
+  },
+  {
+    "url": "https://svgbox.net/",
+    "title": "SVGBox | API for Web Icons",
+    "tags": [
+      "svg"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/smashingmag/status/1327900386309648384",
+      "id": "1327900386309648384",
+      "linkUrl": "https://svgbox.net/",
+      "quote": ""
+    }
   }
 ]
