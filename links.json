@@ -4524,5 +4524,13 @@
     "url": "https://ciechanow.ski/internal-combustion-engine/",
     "title": "Internal Combustion Engine – Bartosz Ciechanowski",
     "tags": []
+  },
+  {
+    "url": "https://dev.to/brianboyko/tailwindcss-adds-complexity-does-nothing-3hpn",
+    "title": "TailwindCSS: Adds complexity, does nothing.",
+    "tags": [
+      "web",
+      "css"
+    ]
   }
 ]
