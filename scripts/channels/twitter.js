@@ -9,11 +9,7 @@ const client = new Twitter({
 })
 
 const statusTemplate = link => (
-  `${link.title}: ${link.url} ${tagsTemplate(link.tags)}`
-)
-
-const tagsTemplate = tags => (
-  tags.reduce((result, tag) => `${result} #${tag}`, '')
+  `${link.title}: ${link.url}`
 )
 
 const tweet = item => new Promise((resolve, reject) => {
