@@ -4616,5 +4616,14 @@
       "linkUrl": "https://twitter.com/florinpop1705/status/1401882160299118594",
       "quote": ""
     }
+  },
+  {
+    "url": "https://laracasts.com/series/webpack-for-everyone",
+    "title": "Webpack for Everyone",
+    "tags": [
+      "webpack",
+      "frontend",
+      "development"
+    ]
   }
 ]
