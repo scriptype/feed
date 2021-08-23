@@ -4625,5 +4625,13 @@
       "frontend",
       "development"
     ]
+  },
+  {
+    "url": "https://refactoring.guru/",
+    "title": "Refactoring and Design Patterns",
+    "tags": [
+      "software",
+      "engineering"
+    ]
   }
 ]
