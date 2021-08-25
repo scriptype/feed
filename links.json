@@ -4647,5 +4647,19 @@
     "tags": [
       "web"
     ]
+  },
+  {
+    "url": "https://github.com/v3ga/Processing",
+    "title": "GitHub - v3ga/Processing: A collection of sketches using various libraries I use during courses.",
+    "tags": [
+      "algorithms",
+      "processing"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/v3ga/status/1390326402231246848",
+      "id": "1390326402231246848",
+      "linkUrl": "https://github.com/v3ga/Processing",
+      "quote": ""
+    }
   }
 ]
