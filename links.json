@@ -4669,5 +4669,12 @@
       "frontend",
       "development"
     ]
+  },
+  {
+    "url": "https://next.github.com/projects/repo-visualization",
+    "title": "GitHub Next | Visualizing a codebase",
+    "tags": [
+      "software"
+    ]
   }
 ]
