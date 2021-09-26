@@ -4736,5 +4736,16 @@
     "url": "https://www.pcjs.org/",
     "title": "PCjs Machines",
     "tags": []
+  },
+  {
+    "url": "https://newsletter.pragmaticengineer.com/p/project-management-in-tech",
+    "title": "How Big Tech Runs Tech Projects and the Curious Absence of Scrum - by Gergely Orosz - The Pragmatic Engineer",
+    "tags": [
+      "software",
+      "engineering",
+      "project",
+      "management",
+      "scrum"
+    ]
   }
 ]
