@@ -4790,5 +4790,14 @@
     "tags": [
       "CSS"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/creating-generative-patterns-with-the-css-paint-api/",
+    "title": "Creating Generative Patterns with The CSS Paint API - CSS-Tricks",
+    "tags": [
+      "css",
+      "generative",
+      "art"
+    ]
   }
 ]
