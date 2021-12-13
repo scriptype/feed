@@ -4804,5 +4804,12 @@
     "url": "https://storybook.js.org/blog/interactive-stories-beta",
     "title": "Interactive stories (beta)",
     "tags": []
+  },
+  {
+    "url": "https://www.lunasec.io/docs/blog/log4j-zero-day/",
+    "title": "Log4Shell: RCE 0-day exploit found in log4j 2, a popular Java logging package | LunaSec",
+    "tags": [
+      "security"
+    ]
   }
 ]
