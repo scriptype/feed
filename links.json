@@ -4811,5 +4811,18 @@
     "tags": [
       "security"
     ]
+  },
+  {
+    "url": "https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute",
+    "title": "enterkeyhint | HTML Standard",
+    "tags": [
+      "html"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/stefanjudis/status/1249958064041734144",
+      "id": "1249958064041734144",
+      "linkUrl": "https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute",
+      "quote": ""
+    }
   }
 ]
