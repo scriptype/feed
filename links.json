@@ -4824,5 +4824,13 @@
       "linkUrl": "https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute",
       "quote": ""
     }
+  },
+  {
+    "url": "https://www.jackfranklin.co.uk/blog/check-in-your-node-dependencies/",
+    "title": "Why you should check-in your node dependencies - @jack_franklin",
+    "tags": [
+      "software",
+      "engineering"
+    ]
   }
 ]
