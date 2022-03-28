@@ -4904,5 +4904,10 @@
       "graphics",
       "programming"
     ]
+  },
+  {
+    "url": "https://www.stroustrup.com/JSF-AV-rules.pdf",
+    "title": "Joint strike fighter air vehicle c++ coding standards",
+    "tags": []
   }
 ]
