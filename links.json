@@ -4934,5 +4934,12 @@
       "web",
       "browser"
     ]
+  },
+  {
+    "url": "https://blog.logrocket.com/deep-dive-css-where-function/",
+    "title": "Deep dive into the CSS :where() function",
+    "tags": [
+      "css"
+    ]
   }
 ]
