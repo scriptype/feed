@@ -4950,5 +4950,12 @@
       "browser",
       "development"
     ]
+  },
+  {
+    "url": "https://ishadeed.com/article/defensive-css/",
+    "title": "Defensive CSS - @shadeed9",
+    "tags": [
+      "css"
+    ]
   }
 ]
