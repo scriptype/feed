@@ -4976,5 +4976,14 @@
     "url": "https://aspect.app/",
     "title": "Aspect – The fastest way to make a website",
     "tags": []
+  },
+  {
+    "url": "https://build.washingtonpost.com/",
+    "title": "The Washington Post Design System",
+    "tags": [
+      "design",
+      "system",
+      "web"
+    ]
   }
 ]
