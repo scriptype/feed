@@ -5060,5 +5060,13 @@
     "url": "https://houdini.how",
     "title": "Houdini.how",
     "tags": []
+  },
+  {
+    "url": "https://dev.to/tigt/making-the-worlds-fastest-website-and-other-mistakes-56na",
+    "title": "Making the world’s fastest website, and other mistakes",
+    "tags": [
+      "web",
+      "performance"
+    ]
   }
 ]
