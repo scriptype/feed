@@ -5222,5 +5222,10 @@
       "geology",
       "science"
     ]
+  },
+  {
+    "url": "https://survey.stackoverflow.co/2022/",
+    "title": "Stack Overflow Developer Survey 2022",
+    "tags": []
   }
 ]
