@@ -5235,5 +5235,13 @@
       "pixelart",
       "icons"
     ]
+  },
+  {
+    "url": "https://deno.com/blog/fresh-is-stable",
+    "title": "Fresh 1.0",
+    "tags": [
+      "web",
+      "framework"
+    ]
   }
 ]
