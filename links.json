@@ -5227,5 +5227,13 @@
     "url": "https://survey.stackoverflow.co/2022/",
     "title": "Stack Overflow Developer Survey 2022",
     "tags": []
+  },
+  {
+    "url": "https://pixelarticons.com/",
+    "title": "Pixelarticons - Beautiful open-source pixel-art icons.",
+    "tags": [
+      "pixelart",
+      "icons"
+    ]
   }
 ]
