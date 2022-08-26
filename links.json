@@ -5282,5 +5282,12 @@
       "marketing",
       "copywriting"
     ]
+  },
+  {
+    "url": "https://shotgun-dungeon.surge.sh/",
+    "title": "Shotgun Dungeon",
+    "tags": [
+      "game"
+    ]
   }
 ]
