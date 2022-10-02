@@ -5342,5 +5342,13 @@
       "physics",
       "science"
     ]
+  },
+  {
+    "url": "https://wave.webaim.org/",
+    "title": "WAVE Web Accessibility Evaluation Tool",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
