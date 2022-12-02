@@ -5468,5 +5468,12 @@
     "tags": [
       "game of life"
     ]
+  },
+  {
+    "url": "https://github.com/Stability-AI/stablediffusion",
+    "title": "Stable Diffusion: High-Resolution Image Synthesis with Latent Diffusion Models",
+    "tags": [
+      "ai"
+    ]
   }
 ]
