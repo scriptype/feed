@@ -5483,5 +5483,13 @@
       "web",
       "tutorials"
     ]
+  },
+  {
+    "url": "https://blocks.githubnext.com/",
+    "title": "GitHub Blocks",
+    "tags": [
+      "software",
+      "development"
+    ]
   }
 ]
