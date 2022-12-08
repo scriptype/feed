@@ -5475,5 +5475,13 @@
     "tags": [
       "ai"
     ]
+  },
+  {
+    "url": "https://blog.openreplay.com/",
+    "title": "OpenReplay Technical Blog",
+    "tags": [
+      "web",
+      "tutorials"
+    ]
   }
 ]
