@@ -20,7 +20,8 @@ Concept of this project is:
 
 ## The look & feel
 
-There's a detailed explanation of this flow later in the development section, if watching a video doesn't work for you.
+If watching a video doesn't work for you, there's a detailed explanation of this flow
+later in the development section.
 
 Adding a link looks like this:
 
@@ -54,9 +55,11 @@ It will result in a retweet. And if you entered a quote, you will see it there:
 
 <img width="480" alt="retweetable-link-on-twitter" src="https://user-images.githubusercontent.com/5516876/207564063-66fdfc25-da27-479c-82b2-54453de484b9.png">
 
-### Tumblr and static site
+### Tumblr and the static site
 
-For obvious reasons, the retweeting won't work outside of Twitter. Instead, `feed` will look for a link in the tweet you provided. If there's a link, it will automagically become the main link on Tumblr and on the static site.
+For obvious reasons, the retweeting won't work outside of Twitter. Instead, `feed` will
+look for a link in the tweet you provided. If there's a link, it will automagically
+become the main link on Tumblr and on the static site.
 
 <img width="480" alt="retweetable-link-on-tumblr" src="https://user-images.githubusercontent.com/5516876/207564578-7a6f1ec6-630b-49b5-9b89-f74d1f2c6eea.png">
 
@@ -92,9 +95,6 @@ mkdir public/data
 echo "[]" > public/data/all.json
 echo "[]" > links.json
 
-# This file will have secret tokens for Twitter and Tumblr
-cp .env.example .env
-
 # Install dependencies
 npm i
 ```
@@ -110,10 +110,9 @@ and [Tumblr](https://www.tumblr.com/docs/en/api/v2).
 When you got the necessary auth tokens and secrets, make sure to keep them safe
 and never commit them to the version control.
 
-Now, it's the time to replace the placeholder secrets in the .env file you created
-with the actual secrets you obtained from Twitter and Tumblr. .env file is in .gitignore,
-so it's safe to save secrets into this file.
-
+Now, it's the time to replace the placeholder secrets in the .env.example file with the actual
+secrets you obtained from Twitter and Tumblr. Save this file as `.env` (remove the `.example` part from the name).
+This file is already in the .gitignore, so it's a safe place for the secret keys.
 
 ### Add some links!
 
@@ -162,7 +161,7 @@ git commit -m "Add: [url of the link you added]"
 git push
 ```
 
-### Local development of frontend (gh-pages)
+### Local development of the static site
 ```sh
 # Run dev server to serve `/docs`
 npm run dev
