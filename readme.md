@@ -18,6 +18,51 @@ Concept of this project is:
  - And the links you just added will be automatically published to your Twitter
    and Tumblr accounts. Plus, a static site will be deployed to Github Pages.
 
+## The look & feel
+
+There's a detailed explanation of this flow later in the development section, if watching a video doesn't work for you.
+
+Adding a link looks like this:
+
+https://user-images.githubusercontent.com/5516876/207561991-00259d33-9ee2-424a-9e3c-26262a3dcb4d.mov
+
+And let's see the results.
+
+### Twitter
+
+Please note that hashtags are omitted on Twitter to avoid trashy looks.
+
+<img width="480" alt="link-on-twitter" src="https://user-images.githubusercontent.com/5516876/207563015-05d71726-9e03-49f2-b80a-712f08a23196.png">
+
+### Tumblr
+
+<img width="480" alt="link-on-tumblr" src="https://user-images.githubusercontent.com/5516876/207563065-1955f50b-c9de-4ce5-b61e-e76254309dfc.png">
+
+### Static site
+
+<img width="480" alt="link-on-site" src="https://user-images.githubusercontent.com/5516876/207563098-285ab0d3-a19b-4555-835f-06781b0b6f77.png">
+
+## What happens when you add a tweet link
+
+You will be asked for an optional retweet quote.
+
+https://user-images.githubusercontent.com/5516876/207567328-d1f103a6-a38d-45a4-91e8-cd42fd19945a.mov
+
+### Twitter
+
+It will result in a retweet. And if you entered a quote, you will see it there:
+
+<img width="480" alt="retweetable-link-on-twitter" src="https://user-images.githubusercontent.com/5516876/207564063-66fdfc25-da27-479c-82b2-54453de484b9.png">
+
+### Tumblr and static site
+
+For obvious reasons, the retweeting won't work outside of Twitter. Instead, `feed` will look for a link in the tweet you provided. If there's a link, it will automagically become the main link on Tumblr and on the static site.
+
+<img width="480" alt="retweetable-link-on-tumblr" src="https://user-images.githubusercontent.com/5516876/207564578-7a6f1ec6-630b-49b5-9b89-f74d1f2c6eea.png">
+
+<img width="480" alt="retweetable-link-on-site" src="https://user-images.githubusercontent.com/5516876/207565078-f6418f2f-bcd3-49ac-bc79-9a88a84d9d91.png">
+
+
 ## Development
 
 ### Node and npm versions
