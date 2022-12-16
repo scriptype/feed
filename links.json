@@ -5583,5 +5583,12 @@
       "product",
       "development"
     ]
+  },
+  {
+    "url": "https://stablediffusionweb.com",
+    "title": "Stable Diffusion Online",
+    "tags": [
+      "ai"
+    ]
   }
 ]
