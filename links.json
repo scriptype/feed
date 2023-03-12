@@ -5842,5 +5842,12 @@
     "url": "https://edwardtufte.github.io/tufte-css/",
     "title": "Tufte CSS",
     "tags": []
+  },
+  {
+    "url": "https://leerob.io/blog/rust",
+    "title": "Rust Is The Future of JavaScript Infrastructure | Lee Robinson",
+    "tags": [
+      "software"
+    ]
   }
 ]
