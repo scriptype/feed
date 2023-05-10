@@ -5913,5 +5913,20 @@
       "ux",
       "design"
     ]
+  },
+  {
+    "url": "https://dev.to/codepo8/the-ongoing-defence-of-frontend-as-a-full-time-job-3dp2",
+    "title": "The ongoing defence of frontend as a full-time job",
+    "tags": [
+      "web",
+      "frontend",
+      "software"
+    ],
+    "tweet": {
+      "tweetUrl": "https://twitter.com/codepo8/status/1655860729784745987",
+      "id": "1655860729784745987",
+      "linkUrl": "https://dev.to/codepo8/the-ongoing-defence-of-frontend-as-a-full-time-job-3dp2",
+      "quote": ""
+    }
   }
 ]
