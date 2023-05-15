@@ -5928,5 +5928,12 @@
       "linkUrl": "https://dev.to/codepo8/the-ongoing-defence-of-frontend-as-a-full-time-job-3dp2",
       "quote": ""
     }
+  },
+  {
+    "url": "https://news.ycombinator.com/item?id=35892250",
+    "title": "TS to JSDoc Conversion",
+    "tags": [
+      "svelte"
+    ]
   }
 ]
