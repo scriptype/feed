@@ -5950,5 +5950,12 @@
       "visualisation",
       "mechanics"
     ]
+  },
+  {
+    "url": "https://threejs.org/docs/index.html#api/en/objects/SkinnedMesh",
+    "title": "SkinnedMesh",
+    "tags": [
+      "3d"
+    ]
   }
 ]
