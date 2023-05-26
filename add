@@ -5,7 +5,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 const axios = require('axios')
 const cheerio = require('cheerio')
-const Twitter = require('twitter')
+const { TwitterApi } = require('twitter-api-v2')
 const links = require('./links')
 const { execute } = require('./scripts/helpers')
 
@@ -23,24 +23,18 @@ const getTweetStatusID = tweetUrl => {
 }
 
 const getTweet = tweetUrl => new Promise((resolve, reject) => {
-  const twitterClient = new Twitter({
-    consumer_key: process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+  const twitterClient = new TwitterApi({
+    appKey: process.env.TWITTER_CONSUMER_KEY,
+    appSecret: process.env.TWITTER_CONSUMER_SECRET,
+    accessToken: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    accessSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   })
 
   const tweetStatusID = getTweetStatusID(tweetUrl)
-  const request = {
-    url: `statuses/show/${tweetStatusID}`,
-    options: {
-      tweet_mode: 'extended'
-    }
-  }
-  twitterClient.get(request.url, request.options, (err, tweet, response) => {
-    if (err) {
-      return reject(err)
-    }
+
+  twitterClient.v2.singleTweet(tweetStatusID, {
+    'tweet.fields': ['entities']
+  }).then(tweet => {
     let linkUrl = tweetUrl
     if (tweet.entities.urls && tweet.entities.urls.length) {
       linkUrl = tweet.entities.urls[0].expanded_url
@@ -50,7 +44,7 @@ const getTweet = tweetUrl => new Promise((resolve, reject) => {
       id: tweetStatusID,
       linkUrl
     })
-  })
+  }).catch(reject)
 })
 
 let tweet = null
@@ -171,6 +165,8 @@ inquirer.prompt(questions).then(answers => {
       `,
       outStream: process.stdout,
       errStream: process.stderr
+    }).catch(e => {
+      console.log('Error during executing cmd', e)
     })
   })
 })

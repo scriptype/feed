@@ -12,7 +12,7 @@
     "mkdirp": "^1.0.4",
     "rimraf": "^3.0.0",
     "tumblr.js": "^2.0.2",
-    "twitter": "^1.7.1"
+    "twitter-api-v2": "^1.14.3"
   },
   "devDependencies": {
     "eslint": "^6.0.0",

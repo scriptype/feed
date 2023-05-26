@@ -15,6 +15,10 @@ process.stdin.on('readable', () => {
 
 process.stdin.on('end', () => {
   const item = JSON.parse(data)[0]
-  twitter.publish(item)
-  tumblr.publish(item)
+  Promise.all([
+    twitter.publish(item),
+    tumblr.publish(item)
+  ]).catch(e => {
+    console.log('error publishing', e)
+  })
 })

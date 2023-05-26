@@ -1,53 +1,32 @@
-const Twitter = require('twitter')
+const { TwitterApi } = require('twitter-api-v2')
 const Channel = require('../lib/Channel')
 
-const client = new Twitter({
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+const userId = '1018316345849630721'
+
+const client = new TwitterApi({
+  appKey: process.env.TWITTER_CONSUMER_KEY,
+  appSecret: process.env.TWITTER_CONSUMER_SECRET,
+  accessToken: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  accessSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
 const statusTemplate = link => (
   `${link.title}: ${link.url}`
 )
 
-const tweet = item => new Promise((resolve, reject) => {
-  const endpoint = 'statuses/update'
-  const params = {
-    status: statusTemplate(item)
-  }
-  client.post(endpoint, params, (err, tweet, response) => {
-    if (err) {
-      return reject(err)
-    }
-    resolve({ tweet, response })
-  })
-})
+const tweet = item => {
+  return client.v2.tweet(statusTemplate(item))
+}
 
-const retweet = item => new Promise((resolve, reject) => {
-  const endpoint = `statuses/retweet/${item.tweet.id}`
-  client.post(endpoint, (error, tweet, response) => {
-    if (error) {
-      return reject(error)
-    }
-    resolve({ tweet, response })
-  })
-})
+const retweet = item => {
+  return client.v2.retweet(userId, item.tweet.id)
+}
 
-const retweetWithQuote = item => new Promise((resolve, reject) => {
-  const endpoint = 'statuses/update'
-  const params = {
-    status: item.tweet.quote,
+const retweetWithQuote = item => {
+  return client.v2.tweet(item.tweet.quote, {
     attachment_url: item.tweet.tweetUrl
-  }
-  client.post(endpoint, params, (error, tweet, response) => {
-    if (error) {
-      return reject(error)
-    }
-    resolve({ tweet, response })
   })
-})
+}
 
 module.exports = new Channel({
   name: 'twitter',
