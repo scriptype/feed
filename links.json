@@ -6016,5 +6016,13 @@
     "tags": [
       "fonts"
     ]
+  },
+  {
+    "url": "https://vanjs.org/",
+    "title": "VanJS (Vanilla JavaScript) - A 1.2kB Reactive UI Framework without JSX",
+    "tags": [
+      "web",
+      "framework"
+    ]
   }
 ]
