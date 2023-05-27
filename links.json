@@ -6164,5 +6164,12 @@
     ],
     "isTweet": true,
     "retweetQuote": ""
+  },
+  {
+    "url": "https://github.com/weiweihuanghuang/Times-New-Bastard",
+    "title": "Times-New-Bastard: It's Times New Roman but every seventh letter is jarringly sans serif",
+    "tags": [
+      "font"
+    ]
   }
 ]
