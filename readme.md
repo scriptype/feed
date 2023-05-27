@@ -49,20 +49,21 @@ https://user-images.githubusercontent.com/5516876/207567328-d1f103a6-a38d-45a4-9
 
 ### Twitter
 
-It will result in a retweet. And if you entered a quote, you will see it there:
+It will result in a retweet. And if you entered a quote, you will see it there (quote omitted here):
 
-<img width="480" alt="retweetable-link-on-twitter" src="https://user-images.githubusercontent.com/5516876/207564063-66fdfc25-da27-479c-82b2-54453de484b9.png">
+<img width="612" alt="retweetable link on twitter" src="https://github.com/scriptype/feed/assets/5516876/63f376c5-8ef9-4f6c-bee8-4ec553e29399">
 
 ### Tumblr and the static site
 
 For obvious reasons, the retweeting won't work outside of Twitter. Instead, `feed` will
-look for a link in the tweet you provided. If there's a link, it will automagically
-become the main link on Tumblr and on the static site.
+use the title you provided and share the link on Tumblr and the static site as usual.
 
-<img width="480" alt="retweetable-link-on-tumblr" src="https://user-images.githubusercontent.com/5516876/207564578-7a6f1ec6-630b-49b5-9b89-f74d1f2c6eea.png">
+<img width="732" alt="tweet link on tumblr" src="https://github.com/scriptype/feed/assets/5516876/f25b2456-0723-40b5-ae41-095c5ddde706">
 
-<img width="480" alt="retweetable-link-on-site" src="https://user-images.githubusercontent.com/5516876/207565078-f6418f2f-bcd3-49ac-bc79-9a88a84d9d91.png">
+<img width="670" alt="tweet link on static site" src="https://github.com/scriptype/feed/assets/5516876/f0287ef0-27b8-4f05-bdcf-ae9a87ee557d">
 
+Previously, feed was able to fetch the link in a tweet and share _that_ link on Tumblr and static site.
+But, with the current free plan, it's not possible any more. Also, the title can't be extracted from a tweet any more.
 
 ## Development
 
