@@ -5,7 +5,6 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 const axios = require('axios')
 const cheerio = require('cheerio')
-const { TwitterApi } = require('twitter-api-v2')
 const links = require('./links')
 const { execute } = require('./scripts/helpers')
 
@@ -18,36 +17,7 @@ const isTweet = url => {
   return /twitter.com\/.+\/status\/\d+$/.test(url)
 }
 
-const getTweetStatusID = tweetUrl => {
-  return tweetUrl.match(/twitter.com\/.+\/status\/(\d+)$/)[1]
-}
-
-const getTweet = tweetUrl => new Promise((resolve, reject) => {
-  const twitterClient = new TwitterApi({
-    appKey: process.env.TWITTER_CONSUMER_KEY,
-    appSecret: process.env.TWITTER_CONSUMER_SECRET,
-    accessToken: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    accessSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-  })
-
-  const tweetStatusID = getTweetStatusID(tweetUrl)
-
-  twitterClient.v2.singleTweet(tweetStatusID, {
-    'tweet.fields': ['entities']
-  }).then(tweet => {
-    let linkUrl = tweetUrl
-    if (tweet.entities.urls && tweet.entities.urls.length) {
-      linkUrl = tweet.entities.urls[0].expanded_url
-    }
-    resolve({
-      tweetUrl,
-      id: tweetStatusID,
-      linkUrl
-    })
-  }).catch(reject)
-})
-
-let tweet = null
+let linkIsTweet
 
 console.log('Add a new link')
 
@@ -61,16 +31,8 @@ const questions = [
         return 'Url is required'
       }
 
-      let url = value
-
-      if (isTweet(value)) {
-        try {
-          tweet = await getTweet(value)
-          url = tweet.linkUrl
-        } catch (e) {
-          console.error(e)
-        }
-      }
+      const url = value
+      linkIsTweet = isTweet(url)
 
       const alreadyAdded = links.find(link =>
         link.url === url || (
@@ -91,7 +53,7 @@ const questions = [
     message: 'Title',
     async default({ url }) {
       try {
-        const $ = await loadPage(tweet ? tweet.linkUrl : url)
+        const $ = await loadPage(url)
         return $('title').text()
       } catch {
         console.log("Couldn't scrape title, enter manually")
@@ -108,7 +70,7 @@ const questions = [
     name: 'RTQuote',
     message: 'Retweet quote',
     filter: String,
-    when: () => tweet
+    when: () => linkIsTweet
   },
   {
     type: 'input',
@@ -130,15 +92,13 @@ inquirer.prompt(questions).then(answers => {
     .map(tag => tag.trim())
     .filter(tag => tag.length)
 
-  const twitterOptions = tweet ? {
-    tweet: {
-      ...tweet,
-      quote: answers.RTQuote
-    }
+  const twitterOptions = linkIsTweet ? {
+    isTweet: true,
+    retweetQuote: answers.RTQuote
   } : {}
 
   const link = {
-    url: tweet ? tweet.linkUrl : answers.url,
+    url: answers.url,
     title: answers.title,
     tags,
     ...twitterOptions
