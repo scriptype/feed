@@ -6265,5 +6265,13 @@
       "javascript",
       "web"
     ]
+  },
+  {
+    "url": "https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html",
+    "title": "Building a Frontend Framework; Reactivity and Composability With Zero Dependencies",
+    "tags": [
+      "javascript",
+      "web"
+    ]
   }
 ]
