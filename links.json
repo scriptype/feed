@@ -6257,5 +6257,13 @@
       "web",
       "javascript"
     ]
+  },
+  {
+    "url": "https://strawberry.quest/",
+    "title": "Strawberry - Zero-Dependency, Build-Free JavaScript Framework",
+    "tags": [
+      "javascript",
+      "web"
+    ]
   }
 ]
