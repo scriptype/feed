@@ -6273,5 +6273,12 @@
       "javascript",
       "web"
     ]
+  },
+  {
+    "url": "https://github.com/prettydiff/wisdom",
+    "title": "Building better developers by specifying criteria of success",
+    "tags": [
+      "software"
+    ]
   }
 ]
