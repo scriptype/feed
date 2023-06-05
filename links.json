@@ -6320,5 +6320,12 @@
       "css",
       "animation"
     ]
+  },
+  {
+    "url": "https://meodai.github.io/color-names/",
+    "title": "Color-Names: All the 18k color names from the color-name-list API",
+    "tags": [
+      "colors"
+    ]
   }
 ]
