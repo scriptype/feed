@@ -6434,5 +6434,13 @@
       "architecture",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://indieweb.org/",
+    "title": "IndieWeb",
+    "tags": [
+      "web",
+      "maker"
+    ]
   }
 ]
