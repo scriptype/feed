@@ -6559,5 +6559,13 @@
       "maps",
       "geography"
     ]
+  },
+  {
+    "url": "http://staff.cs.utu.fi/staff/jouni.smed/doos_06/material/DesignPrinciplesAndPatterns.pdf",
+    "title": "Design Principles and Design Patterns",
+    "tags": [
+      "software",
+      "design patterns"
+    ]
   }
 ]
