@@ -7,17 +7,19 @@ Reads Feed also on [Twitter](https://twitter.com/reads_feed) and
 [Tumblr](https://readsfeed.tumblr.com). Also it's alive in its own static website:
 [Github Pages](https://scriptype.github.io/feed)
 
-## Purpose
-
+<details>
+ <summary><h2>The concept</h2></summary>
+ 
 Concept of this project is:
 
  - You add some links to a json file, by using a CLI helper
  - Push the changes
  - And the links you just added will be automatically published to your Twitter
    and Tumblr accounts. Plus, a static site will be deployed to Github Pages.
+</details>
 
-## The look & feel
-
+<details>
+ <summary><h2>The look & feel</h2></summary>
 If watching a video doesn't work for you, there's a detailed explanation of this flow
 later in the development section.
 
@@ -40,10 +42,12 @@ Please note that hashtags are omitted on Twitter to avoid trashy looks.
 ### Static site
 
 <img width="480" alt="link-on-site" src="https://user-images.githubusercontent.com/5516876/207563098-285ab0d3-a19b-4555-835f-06781b0b6f77.png">
+</details>
 
-## What happens when you add a tweet link
+<details>
+ <summary><h2>Automagical retweeting</h2></summary>
 
-You will be asked for an optional retweet quote.
+If you add a link to a tweet, you will be asked for an optional retweet quote.
 
 https://user-images.githubusercontent.com/5516876/207567328-d1f103a6-a38d-45a4-91e8-cd42fd19945a.mov
 
@@ -64,8 +68,10 @@ use the title you provided and share the link on Tumblr and the static site as u
 
 Previously, feed was able to fetch the link in a tweet and share _that_ link on Tumblr and static site.
 But, with the current free plan, it's not possible any more. Also, the title can't be extracted from a tweet any more.
+</details>
 
-## Development
+<details>
+ <summary><h2>Setup</h2></summary>
 
 ### Node and npm versions
 
@@ -112,7 +118,11 @@ and never commit them to the version control.
 Now, it's the time to replace the placeholder secrets in the .env.example file with the actual
 secrets you obtained from Twitter and Tumblr. Save this file as `.env` (remove the `.example` part from the name).
 This file is already in the .gitignore, so it's a safe place for the secret keys.
+</details>
 
+<details>
+ <summary><h2>Usage</h2></summary>
+ 
 ### Add some links!
 
 Use the `add` helper in the root of the project. Run:
@@ -165,16 +175,15 @@ git push
 # Run dev server to serve `/docs`
 npm run dev
 ```
+</details>
 
-## Tests
-
-No tests.
-
-## Licence
-
+<details>
+ <summary><h2>Licence</h2></summary>
+ 
 ```
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
+</details>
