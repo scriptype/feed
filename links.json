@@ -6602,5 +6602,13 @@
       "development",
       "book"
     ]
+  },
+  {
+    "url": "https://alistapart.com/article/the-illusion-of-control-in-web-design/",
+    "title": "The Illusion of Control in Web Design – A List Apart",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
