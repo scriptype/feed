@@ -6676,5 +6676,15 @@
     "url": "https://codeandcreativity.com/",
     "title": "Code & Creativity",
     "tags": []
+  },
+  {
+    "url": "https://inclusive.microsoft.design/",
+    "title": "Microsoft Inclusive Design",
+    "tags": [
+      "inclusive",
+      "web",
+      "design",
+      "accessibility"
+    ]
   }
 ]
