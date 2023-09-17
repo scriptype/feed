@@ -6704,5 +6704,15 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://inclusive-components.design/",
+    "title": "Inclusive Components",
+    "tags": [
+      "inclusive",
+      "design",
+      "accessibility",
+      "frontend"
+    ]
   }
 ]
