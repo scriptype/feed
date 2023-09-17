@@ -6696,5 +6696,13 @@
       "css",
       "javascript"
     ]
+  },
+  {
+    "url": "https://talks.hiddedevries.nl/7336XA/shifting-left-or-making-accessibility-easier-by-doing-it-earlier",
+    "title": "Shifting left, or: making accessibility easier by doing it earlier",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
