@@ -6757,5 +6757,13 @@
       "design",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://adrianroselli.com/2019/04/details-summary-are-not-insert-control-here.html",
+    "title": "Details / Summary Are Not [insert control here] — Adrian Roselli",
+    "tags": [
+      "accessibility",
+      "html"
+    ]
   }
 ]
