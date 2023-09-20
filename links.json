@@ -6791,5 +6791,13 @@
       "design",
       "web"
     ]
+  },
+  {
+    "url": "https://inclusive-components.design/toggle-button/",
+    "title": "Toggle Buttons",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
