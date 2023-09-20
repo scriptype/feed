@@ -6799,5 +6799,16 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "http://wtfforms.com/",
+    "title": "WTF, forms?",
+    "tags": [
+      "web",
+      "ui",
+      "ux",
+      "design",
+      "accessibility"
+    ]
   }
 ]
