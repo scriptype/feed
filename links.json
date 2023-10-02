@@ -6898,5 +6898,13 @@
       "web",
       "html"
     ]
+  },
+  {
+    "url": "http://structured-data.org/",
+    "title": "Structured Data on the Web",
+    "tags": [
+      "web",
+      "interoperability"
+    ]
   }
 ]
