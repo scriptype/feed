@@ -6906,5 +6906,14 @@
       "web",
       "interoperability"
     ]
+  },
+  {
+    "url": "https://inclusive.microsoft.design/tools-and-activities/Inclusive101Guidebook.pdf",
+    "title": "Microsoft Inclusive Design Guidebook",
+    "tags": [
+      "inclusive",
+      "design",
+      "accessibility"
+    ]
   }
 ]
