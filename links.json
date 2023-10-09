@@ -6924,5 +6924,13 @@
       "design",
       "ux"
     ]
+  },
+  {
+    "url": "https://github.com/whatwg/html/issues/2791",
+    "title": "Client side include feature for HTML · Issue #2791 · whatwg/html · GitHub",
+    "tags": [
+      "html",
+      "web"
+    ]
   }
 ]
