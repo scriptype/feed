@@ -6940,5 +6940,12 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://hidde.blog/",
+    "title": "Hidde's blog",
+    "tags": [
+      "blog"
+    ]
   }
 ]
