@@ -6932,5 +6932,13 @@
       "html",
       "web"
     ]
+  },
+  {
+    "url": "https://www.w3.org/WAI/standards-guidelines/atag/",
+    "title": "Authoring Tool Accessibility Guidelines (ATAG)",
+    "tags": [
+      "web",
+      "accessibility"
+    ]
   }
 ]
