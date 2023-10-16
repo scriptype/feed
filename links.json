@@ -6970,5 +6970,13 @@
       "web",
       "principles"
     ]
+  },
+  {
+    "url": "https://www.w3.org/History/1989/proposal.html",
+    "title": "The original proposal of the WWW, HTMLized",
+    "tags": [
+      "web",
+      "html"
+    ]
   }
 ]
