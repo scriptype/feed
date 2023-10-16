@@ -6987,5 +6987,12 @@
       "design",
       "ux"
     ]
+  },
+  {
+    "url": "https://alistapart.com/article/sprites/",
+    "title": "CSS Sprites: Image Slicing’s Kiss of Death – A List Apart",
+    "tags": [
+      "css"
+    ]
   }
 ]
