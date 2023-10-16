@@ -6978,5 +6978,14 @@
       "web",
       "html"
     ]
+  },
+  {
+    "url": "https://www.nngroup.com/articles/content-dispersion/",
+    "title": "The Negative Impact of Mobile-First Web Design on Desktop",
+    "tags": [
+      "web",
+      "design",
+      "ux"
+    ]
   }
 ]
