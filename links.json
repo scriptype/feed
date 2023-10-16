@@ -7002,5 +7002,12 @@
       "svg",
       "illustration"
     ]
+  },
+  {
+    "url": "https://www.ietf.org/rfc/rfc2119.txt",
+    "title": "Key words for use in RFCs to Indicate Requirement Levels",
+    "tags": [
+      "specifications"
+    ]
   }
 ]
