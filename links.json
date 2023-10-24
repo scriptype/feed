@@ -7026,5 +7026,13 @@
       "design",
       "philosophy"
     ]
+  },
+  {
+    "url": "https://www.gitkraken.com/gitkon/git-for-writers",
+    "title": "Git for Writers | How to Organize Projects with Git and GitKraken",
+    "tags": [
+      "git",
+      "writing"
+    ]
   }
 ]
