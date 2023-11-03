@@ -7179,5 +7179,14 @@
     "url": "https://snook.ca/archives/personal/burnout",
     "title": "Burnout by @snookca",
     "tags": []
+  },
+  {
+    "url": "https://resilientwebdesign.com/",
+    "title": "Resilient Web Design",
+    "tags": [
+      "web",
+      "design",
+      "development"
+    ]
   }
 ]
