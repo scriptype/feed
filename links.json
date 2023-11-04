@@ -7205,5 +7205,12 @@
       "privacy",
       "adblock"
     ]
+  },
+  {
+    "url": "https://jvns.ca/blog/2023/11/01/confusing-git-terminology/",
+    "title": "Confusing git terminology",
+    "tags": [
+      "git"
+    ]
   }
 ]
