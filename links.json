@@ -7196,5 +7196,14 @@
       "web",
       "development"
     ]
+  },
+  {
+    "url": "https://invidious.io/",
+    "title": "Invidious - An open source alternative front-end to YouTube",
+    "tags": [
+      "youtube",
+      "privacy",
+      "adblock"
+    ]
   }
 ]
