@@ -7289,5 +7289,14 @@
       "design",
       "video"
     ]
+  },
+  {
+    "url": "https://css-tricks.com/working-with-web-feeds-its-more-than-rss/",
+    "title": "Working With Web Feeds: It’s More Than RSS",
+    "tags": [
+      "web",
+      "rss",
+      "interoperability"
+    ]
   }
 ]
