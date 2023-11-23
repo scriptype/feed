@@ -7298,5 +7298,14 @@
       "rss",
       "interoperability"
     ]
+  },
+  {
+    "url": "https://www.joshwcomeau.com/css/interactive-guide-to-grid/",
+    "title": "An Interactive Guide to CSS Grid",
+    "tags": [
+      "css",
+      "grid",
+      "layout"
+    ]
   }
 ]
