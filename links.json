@@ -7376,5 +7376,14 @@
     "url": "https://100r.co",
     "title": "Hundred Rabbits",
     "tags": []
+  },
+  {
+    "url": "https://uxmethods.org/",
+    "title": "UX Methods",
+    "tags": [
+      "ux",
+      "design",
+      "research"
+    ]
   }
 ]
