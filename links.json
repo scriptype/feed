@@ -7470,5 +7470,12 @@
     "url": "https://proyekto.net",
     "title": "PROYEKTO",
     "tags": []
+  },
+  {
+    "url": "https://developer.chrome.com/blog/css-wrapped-2023",
+    "title": "CSS Wrapped: 2023!",
+    "tags": [
+      "css"
+    ]
   }
 ]
