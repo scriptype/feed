@@ -7543,5 +7543,12 @@
       "ai",
       "video"
     ]
+  },
+  {
+    "url": "https://blockly.games/",
+    "title": "Blockly Games",
+    "tags": [
+      "programming"
+    ]
   }
 ]
