@@ -7657,5 +7657,13 @@
       "history",
       "beat generation"
     ]
+  },
+  {
+    "url": "https://developer.chrome.com/docs/css-ui/css-linear-easing-function",
+    "title": "Create complex animation curves in CSS with the linear() easing function",
+    "tags": [
+      "css",
+      "animation"
+    ]
   }
 ]
