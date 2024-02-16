@@ -7706,5 +7706,12 @@
       "life",
       "illness"
     ]
+  },
+  {
+    "url": "https://github.com/joshbuchea/HEAD",
+    "title": "A simple guide to HTML <head> elements",
+    "tags": [
+      "html"
+    ]
   }
 ]
