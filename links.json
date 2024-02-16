@@ -7680,5 +7680,14 @@
       "web",
       "3d"
     ]
+  },
+  {
+    "url": "https://daverupert.com/2024/01/focus-visible-love/",
+    "title": "Big, beautiful, beefy focus states with :focus-visible | @davatron5000",
+    "tags": [
+      "web design",
+      "accessibility",
+      "css"
+    ]
   }
 ]
