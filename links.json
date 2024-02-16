@@ -7689,5 +7689,13 @@
       "accessibility",
       "css"
     ]
+  },
+  {
+    "url": "https://daverupert.com/2024/02/ui-states/",
+    "title": "UI = f(statesⁿ)",
+    "tags": [
+      "web",
+      "frontend"
+    ]
   }
 ]
