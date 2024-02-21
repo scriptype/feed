@@ -7713,5 +7713,14 @@
     "tags": [
       "html"
     ]
+  },
+  {
+    "url": "https://www.bram.us/2024/02/18/custom-highlight-api-for-syntax-highlighting/",
+    "title": "Syntax Highlighting code snippets with Prism and the Custom Highlight API",
+    "tags": [
+      "css",
+      "javascript",
+      "dom"
+    ]
   }
 ]
