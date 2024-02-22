@@ -7744,5 +7744,12 @@
       "web",
       "accessibility"
     ]
+  },
+  {
+    "url": "https://jakearchibald.com/2024/view-transitions-handling-aspect-ratio-changes/",
+    "title": "View transitions: Handling aspect ratio changes",
+    "tags": [
+      "css"
+    ]
   }
 ]
