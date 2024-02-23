@@ -7759,5 +7759,12 @@
       "web",
       "colors"
     ]
+  },
+  {
+    "url": "https://ericportis.com/posts/2023/view-transitions-break-incremental-rendering/",
+    "title": "View Transitions Break Incremental Rendering",
+    "tags": [
+      "web development"
+    ]
   }
 ]
