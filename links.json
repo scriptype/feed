@@ -7780,5 +7780,13 @@
     "tags": [
       "inclusive design"
     ]
+  },
+  {
+    "url": "https://matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics",
+    "title": "Removing list styles without affecting semantics",
+    "tags": [
+      "html",
+      "css"
+    ]
   }
 ]
