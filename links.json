@@ -7804,5 +7804,13 @@
       "web",
       "abookapart"
     ]
+  },
+  {
+    "url": "https://heydonworks.com/article/what-is-utility-first-css/",
+    "title": "What is Utility-First CSS?: HeydonWorks",
+    "tags": [
+      "css",
+      "tailwind"
+    ]
   }
 ]
