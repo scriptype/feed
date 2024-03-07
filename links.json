@@ -7826,5 +7826,15 @@
     "tags": [
       "podcasts"
     ]
+  },
+  {
+    "url": "https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md",
+    "title": "So, what's next? - @zloirock",
+    "tags": [
+      "web",
+      "javascript",
+      "open source",
+      "software"
+    ]
   }
 ]
