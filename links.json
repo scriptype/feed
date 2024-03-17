@@ -7996,5 +7996,13 @@
       "accessibility",
       "tools"
     ]
+  },
+  {
+    "url": "https://bottosson.github.io/posts/oklab/",
+    "title": "A perceptual color space for image processing",
+    "tags": [
+      "colors",
+      "oklab"
+    ]
   }
 ]
