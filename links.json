@@ -8070,5 +8070,13 @@
       "licence",
       "gpl"
     ]
+  },
+  {
+    "url": "https://www.localfirst.fm",
+    "title": "localfirst.fm - A podcast about local-first software development.",
+    "tags": [
+      "local-first",
+      "software"
+    ]
   }
 ]
