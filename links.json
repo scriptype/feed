@@ -8059,5 +8059,16 @@
       "web",
       "local-first"
     ]
+  },
+  {
+    "url": "https://martin.kleppmann.com/2021/04/14/goodbye-gpl.html",
+    "title": "It's time to say goodbye to the GPL",
+    "tags": [
+      "foss",
+      "software",
+      "open source",
+      "licence",
+      "gpl"
+    ]
   }
 ]
