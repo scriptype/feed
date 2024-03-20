@@ -1,23 +1,25 @@
-const path = require('path')
-const {
-  reverseNew,
-  splitByLimit,
-  createFile,
-  cleanFolder
-} = require('./helpers')
+const { join } = require('path')
+const { writeFile } = require('fs/promises')
+const { reverseNew, splitByLimit, cleanFolder } = require('./helpers')
 
 const createJSONBuilder = ({ exportDirectory, links, pageLimit }) => {
   const createAll = data => {
-    return createFile(path.join(exportDirectory, 'all.json'), JSON.stringify(data))
+    return writeFile(
+      join(exportDirectory, 'all.json'),
+      JSON.stringify(data)
+    )
   }
 
   const createStats = data => {
-    createFile(path.join(exportDirectory, 'stats.json'), JSON.stringify(data))
+    return writeFile(
+      join(exportDirectory, 'stats.json'),
+      JSON.stringify(data)
+    )
   }
 
   const createPages = pages => {
-    return pages.map((page, index) => createFile(
-      path.join(exportDirectory, `page-${index + 1}.json`),
+    return pages.map((page, index) => writeFile(
+      join(exportDirectory, `page-${index + 1}.json`),
       JSON.stringify(page)
     ))
   }

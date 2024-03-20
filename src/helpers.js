@@ -1,7 +1,5 @@
-const fs = require('fs')
+const { rm, mkdir } = require('fs/promises')
 const cp = require('child_process')
-const mkdirp = require('mkdirp')
-const rimraf = require('rimraf')
 const axios = require('axios')
 const cheerio = require('cheerio')
 
@@ -22,35 +20,12 @@ const splitByLimit = (array, limit) =>
     })
   }, [])
 
-// Create a file with a given path and data.
-const createFile = (path, data) => new Promise((resolve, reject) => {
-  fs.writeFile(path, data, err => {
-    if (err) {
-      console.error(`error creating ${path}`, err)
-      return reject(err)
-    }
-    resolve()
-  })
-})
-
 // Remove and re-create a folder.
-const cleanFolder = folderPath => new Promise((resolve, reject) => {
-  // Delete of data directory
-  rimraf(folderPath, err => {
-    if (err) {
-      console.error(`error deleting ${folderPath}`, err)
-      return reject(err)
-    }
-
-    // Ensure the directory exists
-    return resolve(
-      mkdirp(folderPath).catch(err => {
-        console.error(`error creating ${folderPath}`, err)
-        return err
-      })
-    )
-  })
-})
+const cleanFolder = async (folderPath) => {
+  await rm(folderPath, { recursive: true })
+  await mkdir(folderPath)
+  return Promise.resolve()
+}
 
 // Execute a command and supply output stream, error stream and accept env.
 const execute = options => new Promise((resolve, reject) => {
@@ -96,7 +71,6 @@ module.exports = {
   last,
   reverseNew,
   splitByLimit,
-  createFile,
   cleanFolder,
   execute,
   loadPage,

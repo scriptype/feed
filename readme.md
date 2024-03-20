@@ -179,8 +179,8 @@ git push
 
 ### Local development of the static site
 ```sh
-# Run dev server to serve `/docs`
-npm run dev
+# Run dev server to serve 'docs' directory
+# For example, by using http-server or serve npm modules.
 ```
 
 <h2>Licence</h2>
