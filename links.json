@@ -8078,5 +8078,12 @@
       "local-first",
       "software"
     ]
+  },
+  {
+    "url": "https://blog.danieljanus.pl/2021/07/01/commit-groups/",
+    "title": "Things I wish Git had: Commit groups",
+    "tags": [
+      "git"
+    ]
   }
 ]
