@@ -109,7 +109,7 @@ inquirer.prompt(questions).then(async answers => {
 
   const JSONBuilder = createJSONBuilder({
     exportDirectory: path.join(__dirname, 'docs', 'data'),
-    links
+    links: links.concat(link)
   })
 
   await JSONBuilder.build()
