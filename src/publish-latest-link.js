@@ -1,9 +1,13 @@
+/*
+ * This module is run from npm scripts so it immediately invokes
+ */
+
 const { readFile } = require('fs/promises')
 const path = require('path')
 const { last } = require('./helpers')
 const publish = require('./publish')
 
-module.exports = async () => {
+const publishLatestLink = async () => {
   const linksPath = path.join(__dirname, '..', 'links.json')
   let linksJSON
   try {
@@ -14,3 +18,5 @@ module.exports = async () => {
   const lastLink = last(JSON.parse(linksJSON))
   return publish(lastLink)
 }
+
+publishLatestLink()
