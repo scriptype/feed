@@ -6,8 +6,7 @@ const Git = {
       cmd: `\\
         git pull && \\
         git add ${paths.join(' ')} && \\
-        git commit -m "${message}" && \\
-        git push\\
+        git commit -m "${message}"
       `,
       outStream: process.stdout,
       errStream: process.stderr
