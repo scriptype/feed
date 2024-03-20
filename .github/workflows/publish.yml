@@ -1,0 +1,34 @@
+name: Publish latest link
+
+on:
+  push:
+    branches: [master, main]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[run-publish-workflow]')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run publish script
+        env:
+          TUMBLR_CONSUMER_KEY: ${{ secrets.TUMBLR_CONSUMER_KEY }}
+          TUMBLR_CONSUMER_SECRET: ${{ secrets.TUMBLR_CONSUMER_SECRET }}
+          TUMBLR_REQUEST_TOKEN: ${{ secrets.TUMBLR_REQUEST_TOKEN }}
+          TUMBLR_REQUEST_TOKEN_SECRET: ${{ secrets.TUMBLR_REQUEST_TOKEN_SECRET }}
+          TWITTER_API_VERSION: ${{ secrets.TWITTER_API_VERSION }}
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: npm run publish-latest-link

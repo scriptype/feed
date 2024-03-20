@@ -15,18 +15,12 @@
     "twitter-api-v2": "^1.14.3"
   },
   "devDependencies": {
-    "eslint": "^6.0.0",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
     "open-cli": "^6.0.1",
     "serve": "^11.3.0"
   },
   "scripts": {
-    "lint": "eslint scripts/**/*.js && eslint docs/**/*.js",
-    "dev": "serve -l 8282 docs & open-cli http://localhost:8282?dev"
+    "dev": "serve -l 8282 site & open-cli http://localhost:8282?dev",
+    "publish-latest-link": "node src/publish-latest-link.js"
   },
   "repository": {
     "type": "git",

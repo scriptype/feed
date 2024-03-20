@@ -1,25 +1,15 @@
 #!/usr/bin/env node
-
 require('dotenv').config()
-const fs = require('fs')
+const path = require('path')
 const inquirer = require('inquirer')
-const axios = require('axios')
-const cheerio = require('cheerio')
 const links = require('./links')
-const { execute } = require('./scripts/helpers')
-
-const loadPage = async(url) => {
-  const { data: html } = await axios.get(url)
-  return cheerio.load(html)
-}
-
-const isTweet = url => {
-  return /twitter.com\/.+\/status\/\d+$/.test(url)
-}
+const { parseTags, scrapePageTitle, isTweet } = require('./src/helpers')
+const addLink = require('./src/addLink')
+const createJSONBuilder = require('./src/buildJSON')
+const git = require('./src/git')
+const publish = require('./src/publish')
 
 let linkIsTweet
-
-console.log('Add a new link')
 
 const questions = [
   {
@@ -53,10 +43,9 @@ const questions = [
     message: 'Title',
     async default({ url }) {
       try {
-        const $ = await loadPage(url)
-        return $('title').text()
-      } catch {
-        console.log("Couldn't scrape title, enter manually")
+        return await scrapePageTitle(url)
+      } catch (e) {
+        console.log("Couldn't scrape title, enter manually", e)
         return undefined
       }
     },
@@ -83,14 +72,19 @@ const questions = [
     name: 'isConfirmed',
     message: 'Sure?',
     default: true
+  },
+  {
+    type: 'confirm',
+    name: 'shouldPublish',
+    message: 'Publish link now?',
+    default: true
   }
 ]
 
-inquirer.prompt(questions).then(answers => {
-  const tags = answers.tags
-    .split(',')
-    .map(tag => tag.trim())
-    .filter(tag => tag.length)
+console.log('Add a new link')
+
+inquirer.prompt(questions).then(async answers => {
+  const tags = parseTags(answers.tags)
 
   const twitterOptions = linkIsTweet ? {
     isTweet: true,
@@ -108,25 +102,27 @@ inquirer.prompt(questions).then(answers => {
     return console.log('OK, link is not added.')
   }
 
-  const content = JSON.stringify(links.concat(link), null, 2)
-  fs.writeFile('./links.json', content, err => {
-    if (err) {
-      throw err
-    }
-    console.log('Added link:', JSON.stringify(link, null, 2))
-    const commitMessage = `Add: ${link.url}`
-    execute({
-      cmd: `\\
-        git pull && \\
-        node scripts/generate-data | node scripts/publish && \\
-        git add links.json docs && \\
-        git commit -m "${commitMessage}" && \\
-        git push\\
-      `,
-      outStream: process.stdout,
-      errStream: process.stderr
-    }).catch(e => {
-      console.log('Error during executing cmd', e)
-    })
+  await addLink({
+    outputPath: './links.json',
+    link
   })
+
+  const JSONBuilder = createJSONBuilder({
+    exportDirectory: path.join(__dirname, 'docs', 'data'),
+    links
+  })
+
+  await JSONBuilder.build()
+  console.log('Added link:', JSON.stringify(link, null, 2))
+
+  // Commit msg with this mark will trigger gh-action publish workflow
+  const messagePrefix = answers.shouldPublish ? '[run-publish-workflow]' : ''
+  await git.commit({
+    message: `${messagePrefix}Add: ${link.url}`,
+    paths: ['links.json', 'docs']
+  })
+
+  if (answers.shouldPublish) {
+    await git.push()
+  }
 })

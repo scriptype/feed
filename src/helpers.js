@@ -2,6 +2,8 @@ const fs = require('fs')
 const cp = require('child_process')
 const mkdirp = require('mkdirp')
 const rimraf = require('rimraf')
+const axios = require('axios')
+const cheerio = require('cheerio')
 
 // Get the last item of an array
 const last = array => array[array.length - 1]
@@ -69,11 +71,36 @@ const execute = options => new Promise((resolve, reject) => {
   })
 })
 
+const loadPage = async (url) => {
+  const { data: html } = await axios.get(url)
+  return cheerio.load(html)
+}
+
+const scrapePageTitle = async (url) => {
+  const $ = await loadPage(url)
+  return $('title').text()
+}
+
+const isTweet = url => {
+  return /twitter.com\/.+\/status\/\d+$/.test(url)
+}
+
+const parseTags = (str) => {
+  return str
+    .split(',')
+    .map(tag => tag.trim())
+    .filter(tag => tag.length)
+}
+
 module.exports = {
   last,
   reverseNew,
   splitByLimit,
   createFile,
   cleanFolder,
-  execute
+  execute,
+  loadPage,
+  scrapePageTitle,
+  isTweet,
+  parseTags
 }
