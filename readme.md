@@ -7,8 +7,7 @@ Reads Feed also on [Twitter](https://twitter.com/reads_feed) and
 [Tumblr](https://readsfeed.tumblr.com). Also it's alive in its own static website:
 [Github Pages](https://scriptype.github.io/feed)
 
-<details>
- <summary><h2>The concept</h2></summary>
+<h2>The concept</h2>
  
 Concept of this project is:
 
@@ -16,16 +15,16 @@ Concept of this project is:
  - Push the changes
  - And the links you just added will be automatically published to your Twitter
    and Tumblr accounts. Plus, a static site will be deployed to Github Pages.
-</details>
 
-<details>
- <summary><h2>The look & feel</h2></summary>
+<h2>The look & feel</h2>
 If watching a video doesn't work for you, there's a detailed explanation of this flow
 later in the development section.
 
 Adding a link looks like this:
 
 https://user-images.githubusercontent.com/5516876/207561991-00259d33-9ee2-424a-9e3c-26262a3dcb4d.mov
+
+Update: Now it will also confirm whether to push changes (and trigger publish) or not.
 
 And let's see the results.
 
@@ -42,10 +41,8 @@ Please note that hashtags are omitted on Twitter to avoid trashy looks.
 ### Static site
 
 <img width="480" alt="link-on-site" src="https://user-images.githubusercontent.com/5516876/207563098-285ab0d3-a19b-4555-835f-06781b0b6f77.png">
-</details>
 
-<details>
- <summary><h2>Automagical retweeting</h2></summary>
+<h2>Automagical retweeting</h2>
 
 If you add a link to a tweet, you will be asked for an optional retweet quote.
 
@@ -68,10 +65,8 @@ use the title you provided and share the link on Tumblr and the static site as u
 
 Previously, feed was able to fetch the link in a tweet and share _that_ link on Tumblr and static site.
 But, with the current free plan, it's not possible any more. Also, the title can't be extracted from a tweet any more.
-</details>
 
-<details>
- <summary><h2>Setup</h2></summary>
+<h2>Setup</h2>
 
 ### Node and npm versions
 
@@ -115,13 +110,22 @@ and [Tumblr](https://www.tumblr.com/docs/en/api/v2).
 When you got the necessary auth tokens and secrets, make sure to keep them safe
 and never commit them to the version control.
 
+#### When you want to be able to publish locally
+
 Now, it's the time to replace the placeholder secrets in the .env.example file with the actual
 secrets you obtained from Twitter and Tumblr. Save this file as `.env` (remove the `.example` part from the name).
 This file is already in the .gitignore, so it's a safe place for the secret keys.
-</details>
 
-<details>
- <summary><h2>Usage</h2></summary>
+#### Using Github Workflows to publish
+
+This works around any geo-based access issues to Tumblr and Twitter APIs. To utilize
+this, add the secrets as a repository secret in your GitHub repo. The workflow file
+and everything else is already in place.
+
+I have both the local .env files and the repository secrets in the repo, so I can
+decide to publish however I like.
+
+<h2>Usage</h2>
  
 ### Add some links!
 
@@ -146,6 +150,9 @@ However, if you provide a tweet url (that is, a url in the form of: `https://twi
 it will:
 - Also ask for an optional quote (message) for the retweet
 - Retweet the given tweet on Twitter account
+- Share the link to the tweet on other channels
+
+Prior to the pricing model changes to Twitter API, feed used to be able to:
 - Attempt to extract link information from the tweet (assuming the tweet is sharing a link)
 - And use this information to save that link and publish that link in other channels as usual.
 
@@ -175,10 +182,8 @@ git push
 # Run dev server to serve `/docs`
 npm run dev
 ```
-</details>
 
-<details>
- <summary><h2>Licence</h2></summary>
+<h2>Licence</h2>
  
 ```
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
@@ -186,4 +191,3 @@ npm run dev
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
-</details>
