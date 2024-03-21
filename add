@@ -116,7 +116,7 @@ inquirer.prompt(questions).then(async answers => {
   console.log('Added link:', JSON.stringify(link, null, 2))
 
   // Commit msg with this mark will trigger gh-action publish workflow
-  const messagePrefix = answers.shouldPublish ? '[run-publish-workflow] ' : ''
+  const messagePrefix = answers.shouldPublish ? '[publish] ' : ''
   await git.commit({
     message: `${messagePrefix}Add: ${link.url}`,
     paths: ['links.json', 'docs']
