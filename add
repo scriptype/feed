@@ -76,7 +76,7 @@ const questions = [
   {
     type: 'confirm',
     name: 'shouldPublish',
-    message: 'Publish link now?',
+    message: 'Publish now?',
     default: true
   }
 ]
