@@ -95,6 +95,7 @@ inquirer.prompt(questions).then(async answers => {
     url: answers.url,
     title: answers.title,
     tags,
+    datePublished: Date.now(),
     ...twitterOptions
   }
 
