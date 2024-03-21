@@ -1,6 +1,6 @@
 /*
  * This is a script that was run just once to add datePublished field
- * to links for the forst time.
+ * to links for the first time.
  *
  * Extract UNIX timestamp of the commit that adds the link.
  *
