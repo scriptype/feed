@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin-ext');
 @import url("reset.css");
+@import url("fonts.css");
 
 :root {
     --primary-color: #ff4545;
