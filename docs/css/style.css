@@ -127,7 +127,7 @@ body {
 }
 
 .content {
-    padding: 2em 0;
+    padding: 2em 0 1em;
     background: #fff;
     border-radius: 3px;
     border-bottom: 1px solid #eaeaea;
@@ -192,6 +192,15 @@ body {
     text-transform: lowercase;
     letter-spacing: .05em;
     color: #666;
+}
+
+.graph-container {
+    margin: 2em 0 1em;
+}
+
+.graph {
+    width: 100%;
+    aspect-ratio: 64/5;
 }
 
 .pagination {
