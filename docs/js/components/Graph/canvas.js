@@ -17,6 +17,7 @@ export default ({ selector, data }) => {
     new Color('navy'),
     new Color('#fd5'),
   ]
+  const yearPosition = 'bottom'
   const $el = document.querySelector(selector)
   $el.width = width
   $el.height = height
@@ -75,14 +76,15 @@ export default ({ selector, data }) => {
     firstVisibleYearDate.setYear(firstVisibleYear)
     const timeToFirstYear = firstVisibleYearDate - data[0]
     const startOffset = timeToFirstYear / DAY * dayScale
+    const yearLength = floor(365 * dayScale)
     ctx.font = '22px sans-serif'
     ctx.fillStyle = '#666'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
     for (let i = 0; i < innerWidth + startOffset; i++) {
-      if (i > startOffset && i % floor(365 * dayScale) === 0) {
+      if (i > startOffset && i % yearLength === 0) {
         const x = paddingX + i - startOffset
-        const y = height - 10
+        const y = yearPosition === 'bottom' ? height - 10 : 20
         ctx.fillText(firstVisibleYear, x, y)
         firstVisibleYear++
       }

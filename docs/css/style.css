@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #ff4545;
+    --content-width: 640px;
 }
 
 * {
@@ -43,24 +44,63 @@ body {
     )
 }
 
-.content-container {
-    width: 640px;
-    margin: 0 auto;
+.app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.header {
+    height: 256px;
+    place-self: end;
+    grid-row: 1;
+}
+
+.tags {
+    width: 280px;
+    place-self: end;
+}
+
+.content {
+    width: var(--content-width);
+    grid-row: 1 / span 3;
+}
+
+.footer {
+    width: var(--content-width);
+    grid-column: 2;
 }
 
 @media (max-width: 640px) {
-    .content-container {
-        width: 100%;
+    :root {
+        --content-width: 100%;
     }
 }
 
-.app {}
+@media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 256px;
+    .header, .tags {
+        place-self: center;
+    }
+
+    .tags {
+        width: var(--content-width);
+    }
+
+    .content, .footer {
+        grid-column: 1;
+    }
+
+    .content {
+        grid-row: 3;
+    }
+
+    .footer {
+        grid-row: 4;
+    }
 }
 
 .logo-container {
@@ -126,11 +166,53 @@ body {
     border-radius: inherit;
 }
 
+.tags {
+    margin-right: 3.5em;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.tags-list-item {
+    padding: 0.5em 0 0.5em 1em;
+    margin-left: 3.5em;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+    /*
+    padding: 0.2em 0;
+    color: #7c3b22;
+    margin-left: 5em;
+    */
+}
+
+.tag-count-badge {
+    display: inline-flex;
+    width: 2em;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 1.5px;
+    font-size: 0.8em;
+    font-family: times;
+    font-weight: 100;
+    letter-spacing: -.04em;
+    color: #8907e2;/*#e21207;*/
+    background: #fff0;
+    border-radius: 50%;
+    box-shadow: 0 1px 0px #0000;
+}
+
 .content {
     padding: 2em 0 1em;
     background: #fff;
     border-radius: 3px;
     border-bottom: 1px solid #eaeaea;
+    box-shadow: -0.6em 0 2em #00000009;
 }
 
 .links {}
@@ -198,7 +280,7 @@ body {
 
 .graph {
     width: 100%;
-    aspect-ratio: 64/10;
+    aspect-ratio: 128/20;
 }
 
 .pagination {

@@ -3,7 +3,10 @@ import {
   ERROR_GET_LINKS,
 
   GET_STATS,
-  ERROR_GET_STATS
+  ERROR_GET_STATS,
+
+  GET_TAGS,
+  ERROR_GET_TAGS,
 } from './Constants.js'
 
 export default ({ dispatch }, api) => ({
@@ -31,6 +34,20 @@ export default ({ dispatch }, api) => ({
       })
       .catch(error => {
         dispatch(ERROR_GET_STATS, {
+          error
+        })
+      })
+  },
+
+  getTags() {
+    return api.getTags()
+      .then(tags => {
+        dispatch(GET_TAGS, {
+          tags
+        })
+      })
+      .catch(error => {
+        dispatch(ERROR_GET_TAGS, {
           error
         })
       })

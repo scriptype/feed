@@ -7,6 +7,15 @@ export default ({ links, stats, activePage }) => {
     return request.json()
   }
 
+  window.requestIdleCallback(async () => {
+    const all = await fetchAll()
+    Canvas({
+      selector: '#graph',
+      data: all.map(e => e.datePublished)
+    }).draw()
+  })
+
+  /*
   let fetched = false
 
   window.addEventListener('scroll', () => {
@@ -28,6 +37,7 @@ export default ({ links, stats, activePage }) => {
       }).draw()
     })
   })
+  */
 
   return `
   <div class="graph-container">
