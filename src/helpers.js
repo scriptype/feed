@@ -12,13 +12,15 @@ const reverseNew = array => Object.assign([], array).reverse()
 // Split an array into parts using a limit.
 const splitByLimit = (array, limit) =>
   array.reduce((result, item, index) => {
-    if (!(index % limit)) {
+    if (index % limit === 0) {
       return result.concat([[item]])
     }
     return Object.assign([], result, {
       [result.length - 1]: last(result).concat(item)
     })
   }, [])
+
+const flatten = arr => [].concat(...arr)
 
 // Remove and re-create a folder.
 const cleanFolder = async (folderPath) => {
@@ -70,6 +72,7 @@ const parseTags = (str) => {
 module.exports = {
   last,
   reverseNew,
+  flatten,
   splitByLimit,
   cleanFolder,
   execute,
