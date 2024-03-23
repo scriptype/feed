@@ -194,13 +194,11 @@ body {
     color: #666;
 }
 
-.graph-container {
-    margin: 2em 0 1em;
-}
+.graph-container {}
 
 .graph {
     width: 100%;
-    aspect-ratio: 64/5;
+    aspect-ratio: 64/10;
 }
 
 .pagination {
