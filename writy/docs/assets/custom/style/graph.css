@@ -1,0 +1,8 @@
+.graph-container {
+    margin: 1em 0;
+    overflow: auto;
+}
+
+.graph {
+    height: 100px;
+}

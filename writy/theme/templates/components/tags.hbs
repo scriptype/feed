@@ -1,0 +1,18 @@
+<nav class="tags">
+  <!-- default open=true to avoid data loss if script fails -->
+  <details class="tags-list-toggle" open="true">
+    <!-- State agnostic label useful in case script fails to handle updating it with state -->
+    <summary class="tags-list-toggle-label" aria-label="Topics"></summary>
+    <ol class="tags-list">
+      {{#each tags as |tag|}}
+        <li class="tags-list-item" style="--i: {{@index}}">
+          <a href="{{tag.permalink}}" class="tags-list-item-link">
+            <span class="tag-hash">#</span>
+            {{tag.tag}}
+            <span class="tag-count-badge">{{tag.posts.length}}</span>
+          </a>
+        </li>
+      {{/each}}
+    </ol>
+  </details>
+</nav>

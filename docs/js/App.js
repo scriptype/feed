@@ -36,7 +36,7 @@ const restoreFocus = event => {
 }
 
 const render = () => {
-  container.innerHTML = appTemplate(Store.getState())
+  container.innerHTML = appTemplate(Store.getState(), Actions)
 }
 
 export default () =>

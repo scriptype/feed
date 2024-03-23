@@ -8,8 +8,12 @@ export default ({ baseUrl = '/' }) => {
   const getStats = () =>
     getJSON(`${baseUrl}/stats.json`)
 
+  const getTags = () =>
+    getJSON(`${baseUrl}/tags.json`)
+
   return Object.freeze({
     getLinks,
-    getStats
+    getStats,
+    getTags
   })
 }
