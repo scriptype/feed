@@ -1,3 +1,10 @@
+export const requestIdleCallback = (fn) => {
+  if (typeof window.requestIdleCallback === 'function') {
+    return window.requestIdleCallback.call(window, fn)
+  }
+  return window.requestAnimationFrame.call(window, fn)
+}
+
 export const isDev = () =>
   new URLSearchParams(document.location.search).has('dev')
 

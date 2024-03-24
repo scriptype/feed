@@ -1,3 +1,4 @@
+import { requestIdleCallback } from '../../lib/utils.js'
 import Canvas from './canvas.js'
 
 export default ({ links, stats, activePage }) => {
@@ -19,7 +20,7 @@ export default ({ links, stats, activePage }) => {
     }
     fetched = true
 
-    window.requestIdleCallback(async () => {
+    requestIdleCallback(async () => {
       const all = await fetchAll()
       Canvas({
         selector: '#graph',
