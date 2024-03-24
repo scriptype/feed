@@ -7,7 +7,7 @@ export default ({ links, stats, activePage }) => {
     return request.json()
   }
 
-  window.requestIdleCallback(async () => {
+  requestIdleCallback(async () => {
     const all = await fetchAll()
     Canvas({
       selector: '#graph',
