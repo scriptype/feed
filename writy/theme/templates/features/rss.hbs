@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ feed.title }}</title>
+        <link>{{ feed.link }}</link>
+        <description>{{ feed.description }}</description>
+        <language>{{ settings.language }}</language>
+        <image>
+            <title>{{ settings.site.title }}</title>
+            <url>{{ feed.iconUrl }}</url>
+            <link>{{ settings.site.url }}</link>
+        </image>
+        {{#each categories as |category|}}
+        <category>{{ category.name }}</category>
+        {{/each}}
+        <lastBuildDate>{{ feed.lastBuildDate }}</lastBuildDate>
+        <copyright>All rights reserved 2024, {{ settings.site.title }}</copyright>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <generator>writ-cms</generator>
+        <atom:link href="{{ feed.permalink }}" rel="self" type="application/rss+xml" />
+        {{#each posts as |post|}}
+        <item>
+            <title><![CDATA[{{ title }}]]></title>
+            <link>{{ permalink }}</link>
+            <guid>{{ permalink }}</guid>
+            <pubDate>{{ publishDateUTC }}</pubDate>
+            <description><![CDATA[{{{ title }}}]]></description>
+        </item>
+        {{/each}}
+    </channel>
+</rss>

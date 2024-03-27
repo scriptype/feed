@@ -10,7 +10,8 @@
     "inquirer": "^7.0.0",
     "lodash": "^4.17.11",
     "tumblr.js": "^2.0.2",
-    "twitter-api-v2": "^1.14.3"
+    "twitter-api-v2": "^1.14.3",
+    "writ-cms": "github:scriptype/writ-cms"
   },
   "scripts": {
     "publish-latest-link": "node src/publish-latest-link.js"

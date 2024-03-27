@@ -1,0 +1,76 @@
+.feat-search {
+    --transition-duration: .5s;
+    position: relative;
+    height: 2em;
+    width: 160px;
+    margin: 0 3em 2em auto;
+}
+
+.feat-search-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-right: 32px;
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    box-shadow: inset 0 0px 2em #0001
+}
+
+.feat-search-button {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    line-height: 1;
+    color: #444;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all var(--transition-duration);
+}
+
+.feat-search-button-text {
+    display: inline-block;
+    font-family: helvetica, arial, sans-serif;
+    font-size: .9em;
+    transition: all calc(var(--transition-duration));
+}
+
+.feat-search-icon {
+    width: 18px;
+    aspect-ratio: 1;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.feat-search.has-query .feat-search-input,
+.feat-search:focus-within .feat-search-input {
+    box-shadow: none;
+}
+
+.feat-search.has-query .feat-search-button,
+.feat-search:focus-within .feat-search-button {
+    transform: translate(0, -50%);
+    right: 4px;
+    pointer-events: initial;
+}
+
+.feat-search.has-query .feat-search-button-text,
+.feat-search:focus-within .feat-search-button-text {
+    overflow: hidden;
+    width: 0;
+    opacity: 0;
+}
+
+.feat-search-results-message {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.feat-search-results-count {
+    display: block;
+    color: #555;
+    font-size: .5em;
+    margin-bottom: 1em;
+}

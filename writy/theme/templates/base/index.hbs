@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{settings.language}}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{settings.site.description}}" />
+        <link rel="icon" type="image/png" href="{{assetsPath}}/favicon.ico">
+        <title>{{pageTitle}}</title>
+        {{>base/features}}
+        {{>base/base-style}}
+        {{>base/page-style}}
+        {{>base/custom-style}}
+    </head>
+
+    <body>
+        {{>@partial-block}}
+        {{>base/base-includes}}
+        <script>
+          window.permalinkPrefix = "{{settings.permalinkPrefix}}"
+          const fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
+          window.posts = {{serialize (minifyPosts)}}
+        </script>
+        {{>base/base-script}}
+        {{>base/page-script}}
+        {{>base/custom-script}}
+    </body>
+
+</html>

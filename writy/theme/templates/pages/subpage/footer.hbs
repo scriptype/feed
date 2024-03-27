@@ -1,0 +1,28 @@
+<footer class="subpage-footer">
+    <section class="subpage-footer-section">
+        <table class="subpage-metadata">
+            <tr class="subpage-metadata-date">
+                <td>Published at</td>
+                <td>{{publishDateMedium}}</td>
+            </tr>
+            {{#if tags}}
+            <tr class="subpage-metadata-tags">
+                <td>Tags</td>
+                <td>{{>pages/subpage/tags}}</td>
+            </tr>
+            {{/if}}
+        </table>
+    </section>
+    {{#if links.mentionedBy}}
+      <section class="subpage-footer-section">
+            <h4>{{lookup "mentioned-in"}}</h4>
+            <ul>
+                {{#each links.mentionedBy as |mentioner|}}
+                    <li>
+                        <a href="{{mentioner.permalink}}">{{mentioner.title}}</a>
+                    </li>
+                {{/each}}
+            </ul>
+      </section>
+    {{/if}}
+</footer>

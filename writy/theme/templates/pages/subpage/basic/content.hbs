@@ -1,0 +1,22 @@
+{{#with subpage}}
+<article class="subpage subpage--basic">
+    <header class="subpage-header">
+        <h2>{{title}}</h2>
+    </header>
+    <section class="subpage-content">
+        {{#if cover}}
+          <a href="{{cover}}">
+            <img
+                class="subpage-cover {{#if coverShape}}shape-{{coverShape}}{{/if}}"
+                {{#if coverPosition}}
+                style="--cover-position: {{coverPosition}};"
+                {{/if}}
+                src="{{cover}}"
+                alt="{{coverAlt}}">
+          </a>
+        {{/if}}
+        {{> @partial-block .. }}
+    </section>
+    {{>pages/subpage/footer}}
+</article>
+{{/with}}

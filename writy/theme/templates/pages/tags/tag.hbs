@@ -1,0 +1,12 @@
+{{#>base page="tag"}}
+  {{#>layouts/grid}}
+    {{>components/header}}
+    {{>components/tags tags=(selectedTags)}}
+    <main class="content" {{region "main"}}>
+      <h2 class="tag-header">#{{tag.tag}} <span class="tag-header-post-count">{{tag.posts.length}} links</span></h2>
+      {{>components/graph}}
+      {{>components/links posts=tag.posts}}
+    </main>
+    {{>components/footer}}
+  {{/layouts/grid}}
+{{/base}}

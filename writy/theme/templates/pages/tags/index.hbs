@@ -1,0 +1,13 @@
+{{#>base page="tags"}}
+  <main class="all-tags-listing">
+    {{>components/logo}}
+    {{#if tags.length}}
+      {{#each tags as |tag|}}
+      <a href="{{tag.permalink}}" class="all-tags-listing-item" style="--i: {{@index}}; --importance: {{tagImportance ../tags tag}}">#{{tag.tag}}</a>
+      {{/each}}
+    {{else}}
+      <h2>{{lookup 'tagsNotFoundHeader'}}</h2>
+    {{/if}}
+  </main>
+  <p class="all-tags-listing-end-message">💛</p>
+{{/base}}
