@@ -1,3 +1,36 @@
 {{#if (hasCustomScript)}}
 <script type="module" src="{{assetsPath}}/custom/script.js"></script>
 {{/if}}
+
+{{#if (isHomePage)}}
+  <script type="module">
+    import search from '{{assetsPath}}/common/search/search.js'
+    import graph from '{{assetsPath}}/custom/script/graph.js'
+    import tags from '{{assetsPath}}/custom/script/tags.js'
+
+    graph.init()
+    tags.init()
+    search.init({
+      onReset: () => {
+        graph.init()
+      }
+    })
+  </script>
+{{/if}}
+
+{{#if (isTagPage)}}
+  <script type="module">
+    import search from '{{assetsPath}}/common/search/search.js'
+    import graph from '{{assetsPath}}/custom/script/graph.js'
+    import tags from '{{assetsPath}}/custom/script/tags.js'
+
+    const linkIsTagged = (link) => link.tags.includes('{{tag.tag}}')
+    graph.init(linkIsTagged)
+    tags.init()
+    search.init({
+      onReset: () => {
+        graph.init(linkIsTagged)
+      }
+    })
+  </script>
+{{/if}}

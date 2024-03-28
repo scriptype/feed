@@ -1,5 +1,5 @@
 .feat-search {
-    --transition-duration: .5s;
+    --transition-duration: .25s;
     position: relative;
     height: 2em;
     width: 160px;
@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding-right: 32px;
+    padding-right: 30px;
     border-radius: 5px;
     border: 1px solid #c8c8c8;
     box-shadow: inset 0 0px 2em #0001
@@ -51,8 +51,8 @@
 
 .feat-search.has-query .feat-search-button,
 .feat-search:focus-within .feat-search-button {
-    transform: translate(0, -50%);
-    right: 4px;
+    transform: translate(0, -50%) scale(1.1);
+    right: 2px;
     pointer-events: initial;
 }
 

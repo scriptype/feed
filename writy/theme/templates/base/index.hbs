@@ -7,22 +7,12 @@
         <link rel="icon" type="image/png" href="{{assetsPath}}/favicon.ico">
         <title>{{pageTitle}}</title>
         {{>base/features}}
-        {{>base/base-style}}
-        {{>base/page-style}}
         {{>base/custom-style}}
     </head>
 
     <body>
         {{>@partial-block}}
-        {{>base/base-includes}}
-        <script>
-          window.permalinkPrefix = "{{settings.permalinkPrefix}}"
-          const fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
-          window.posts = {{serialize (minifyPosts)}}
-        </script>
         {{>base/base-script}}
-        {{>base/page-script}}
         {{>base/custom-script}}
     </body>
-
 </html>

@@ -148,5 +148,9 @@ module.exports = {
 
   isTagPage() {
     return this.page === 'tag'
+  },
+
+  isTagsPage() {
+    return this.page === 'tags'
   }
 }

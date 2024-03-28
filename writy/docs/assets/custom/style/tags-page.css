@@ -1,0 +1,26 @@
+.all-tags-listing {
+    background: #222;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.6rem;
+}
+
+.all-tags-listing-item {
+    font-size: calc(1em + 10em * var(--importance));
+    color: hsl(
+        var(--i),
+        80%,
+        calc(70% - 20% * var(--importance))
+    );
+}
+
+.all-tags-listing-end-message {
+    padding: 3em;
+    font-size: 2em;
+    background: #222;
+    color: #eee;
+    text-align: center;
+}
