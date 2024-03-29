@@ -50,10 +50,9 @@
 }
 
 .link-tag {
-    font-size: 0.55em;
-    margin: 0 .5em .25em 0;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    letter-spacing: .05em;
+    font-size: 0.45em;
+    margin: 0.3em .5em .25em 0;
+    text-transform: uppercase;
+    letter-spacing: .07em;
     color: #666;
 }

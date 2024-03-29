@@ -5,9 +5,9 @@
 
 .tags-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.3em;
 }
 
 .tags-list-item {
@@ -18,9 +18,8 @@
     padding: 0;
     margin-left: 1em;
     white-space: nowrap;
-    font-variant: small-caps;
     letter-spacing: 0.1em;
-    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 @keyframes tags-list-item {
@@ -34,27 +33,31 @@
 }
 
 .tags-list-item-link {
+    display: inline-block;
     position: relative;
-    padding-right: 1.5em;
+    padding-right: 1.7em;
+    text-decoration-thickness: 0.04em;
+    text-underline-offset: 0.1em;
+    text-decoration-color: #999;
     color: inherit;
 }
 
 .tag-hash {
-    vertical-align: text-top;
-    opacity: 0.7;
     margin-right: -0.3em;
+    opacity: 0.7;
 }
 
 .tag-count-badge {
     position: absolute;
     top: 50%;
-    transform: translateY(-40%);
+    right: 0;
+    transform: translateY(-45%);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 2em;
     aspect-ratio: 1;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-family: monospace;
     font-weight: 100;
     letter-spacing: -.04em;
