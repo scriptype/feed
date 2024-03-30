@@ -1,26 +1,15 @@
-import Color from "./Color.js"
 const { floor, max } = Math
 
 const DAY = 1000 * 60 * 60 * 24
 
-export default ({ selector, data, daySize }) => {
+export default ({ selector, data, height, dayScale, resolution, colors, lineWidth, padding, yearMarkPosition }) => {
   const firstDataPoint = data[data.length - 1]
   const firstDate = new Date(firstDataPoint)
   const totalDaysElapsed = (Date.now() - firstDate) / DAY
-  const width = totalDaysElapsed * daySize * 2
-  const height = 200
-  const pointSize = 5
-  const resolution = 1/12
+  const width = totalDaysElapsed * dayScale
   const outlierScale = 0.8
-  const paddingX = 0
-  const paddingY = pointSize * 5
-  const innerWidth = width - paddingX * 2
-  const innerHeight = height - paddingY * 2
-  const pointColors = [
-    new Color('navy'),
-    new Color('#fd5'),
-  ]
-  const yearPosition = 'bottom'
+  const innerWidth = width - (padding.left + padding.right)
+  const innerHeight = height - (padding.top + padding.bottom)
   const $el = document.querySelector(selector)
   $el.width = width
   $el.height = height
@@ -52,17 +41,17 @@ export default ({ selector, data, daySize }) => {
   }
 
   const drawLine = ({ heightMap, tallestPoint }) => {
-    const gradient = pointColors[0].range(pointColors[1], {
+    const gradient = colors[0].range(colors[1], {
       space: "lch",
       outputSpace: "srgb"
     })
     ctx.beginPath()
     for (let i = 0; i < heightMap.length - 1; i++) {
       const progress = i / (heightMap.length - 1)
-      const x = paddingX + i / resolution
-      const y = innerHeight - (heightMap[i] / tallestPoint) * innerHeight
+      const x = padding.left + i / resolution
+      const y = padding.top + innerHeight - (heightMap[i] / tallestPoint) * innerHeight
       ctx.lineCap = 'round'
-      ctx.lineWidth = pointSize
+      ctx.lineWidth = lineWidth
       ctx.lineTo(x, y)
       ctx.strokeStyle = gradient(progress).mix('white', 0.66)
       ctx.stroke()
@@ -74,7 +63,6 @@ export default ({ selector, data, daySize }) => {
   }
 
   const drawYearMarks = () => {
-    const dayScale = innerWidth / totalDaysElapsed
     const startDate = new Date(firstDataPoint)
     let firstVisibleYear = startDate.getFullYear() + 1
     const firstVisibleYearDate = new Date(0)
@@ -88,8 +76,8 @@ export default ({ selector, data, daySize }) => {
     ctx.textBaseline = 'middle'
     for (let i = 0; i < innerWidth + startOffset; i++) {
       if (i > startOffset && i % yearLength === 0) {
-        const x = paddingX + i - startOffset
-        const y = yearPosition === 'bottom' ? height - 10 : 20
+        const x = padding.left + i - startOffset
+        const y = yearMarkPosition === 'bottom' ? height - 10 : 20
         ctx.fillText(firstVisibleYear, x, y)
         firstVisibleYear++
       }
