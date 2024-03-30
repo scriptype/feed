@@ -1,8 +1,8 @@
 .graph-container {
-    margin-bottom: 1em;
+    margin: 1em 0;
+    overflow: auto;
 }
 
 .graph {
-    width: 100%;
-    aspect-ratio: 128/20;
+    height: 100px;
 }

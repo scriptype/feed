@@ -5,7 +5,8 @@ const init = async (filter = (f => true)) => {
   const data = posts.filter(filter).map(p => p.datePublished) 
   Canvas({
     selector: '#graph',
-    data
+    data,
+    daySize: 1
   }).draw()
 }
 

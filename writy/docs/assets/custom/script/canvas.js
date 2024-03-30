@@ -3,15 +3,17 @@ const { floor, max } = Math
 
 const DAY = 1000 * 60 * 60 * 24
 
-export default ({ selector, data }) => {
+export default ({ selector, data, daySize }) => {
   const firstDataPoint = data[data.length - 1]
-  const width = 1280
+  const firstDate = new Date(firstDataPoint)
+  const totalDaysElapsed = (Date.now() - firstDate) / DAY
+  const width = totalDaysElapsed * daySize * 2
   const height = 200
   const pointSize = 5
   const resolution = 1/12
   const outlierScale = 0.8
   const paddingX = 0
-  const paddingY = pointSize * 11
+  const paddingY = pointSize * 5
   const innerWidth = width - paddingX * 2
   const innerHeight = height - paddingY * 2
   const pointColors = [
@@ -33,6 +35,9 @@ export default ({ selector, data }) => {
       heightMap[dataPoint] = (heightMap[dataPoint] || 0) + 1
       tallestPoint = max(tallestPoint, heightMap[dataPoint])
     }
+    const timeElapsedUntilNow = Date.now() - data[data.length - 1]
+    const lastDataPoint = floor(timeElapsedUntilNow / timeResolution)
+    heightMap[lastDataPoint] = heightMap[lastDataPoint] || 0
     for (let i = 0; i < heightMap.length; i++) {
       heightMap[i] = heightMap[i] || 0
       if (heightMap[i] === tallestPoint) {
@@ -55,7 +60,7 @@ export default ({ selector, data }) => {
     for (let i = 0; i < heightMap.length - 1; i++) {
       const progress = i / (heightMap.length - 1)
       const x = paddingX + i / resolution
-      const y = paddingY + innerHeight - (heightMap[i] / tallestPoint) * innerHeight
+      const y = innerHeight - (heightMap[i] / tallestPoint) * innerHeight
       ctx.lineCap = 'round'
       ctx.lineWidth = pointSize
       ctx.lineTo(x, y)
@@ -69,8 +74,7 @@ export default ({ selector, data }) => {
   }
 
   const drawYearMarks = () => {
-    const daysElapsed = (Date.now() - firstDataPoint) / DAY
-    const dayScale = innerWidth / daysElapsed
+    const dayScale = innerWidth / totalDaysElapsed
     const startDate = new Date(firstDataPoint)
     let firstVisibleYear = startDate.getFullYear() + 1
     const firstVisibleYearDate = new Date(0)
@@ -93,8 +97,7 @@ export default ({ selector, data }) => {
   }
 
   const draw = () => {
-    const daysElapsed = (Date.now() - firstDataPoint) / DAY
-    const timeResolution = DAY * (daysElapsed / innerWidth / resolution)
+    const timeResolution = DAY * (totalDaysElapsed / innerWidth / resolution)
     const { heightMap, tallestPoint } = getHeightMap({ timeResolution })
     drawLine({
       heightMap,
