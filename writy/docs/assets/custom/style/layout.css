@@ -26,7 +26,7 @@
 
 @media (max-width: 640px) {
     :root {
-        --content-width: 100%;
+        --content-width: 100vw;
     }
 }
 
