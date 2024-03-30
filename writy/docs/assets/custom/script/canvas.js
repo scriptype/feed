@@ -2,7 +2,19 @@ const { floor, max } = Math
 
 const DAY = 1000 * 60 * 60 * 24
 
-export default ({ selector, data, height, dayScale, resolution, colors, lineWidth, padding, yearMarkPosition }) => {
+export default (options) => {
+  const {
+    selector,
+    data,
+    height,
+    dayScale,
+    resolution,
+    colors,
+    lineWidth,
+    padding,
+    yearMarkPosition
+  } = options
+
   const firstDataPoint = data[data.length - 1]
   const firstDate = new Date(firstDataPoint)
   const totalDaysElapsed = (Date.now() - firstDate) / DAY
@@ -10,6 +22,7 @@ export default ({ selector, data, height, dayScale, resolution, colors, lineWidt
   const outlierScale = 0.8
   const innerWidth = width - (padding.left + padding.right)
   const innerHeight = height - (padding.top + padding.bottom)
+
   const $el = document.querySelector(selector)
   $el.width = width
   $el.height = height
