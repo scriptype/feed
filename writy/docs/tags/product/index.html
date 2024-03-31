@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#product <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/product" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://24ways.org/2015/what-i-learned-about-product-design-this-year/">
         <span class="link-title">What I Learned about Product Design This Year ◆ 24 ways</span>
         <span class="link-url">https://24ways.org/2015/what-i-learned-about-produ...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
         <span class="link-title">From idea to product and beyond</span>
         <span class="link-url">https://medium.com/wulkano-friends/from-idea-to-pr...</span>
@@ -192,6 +201,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

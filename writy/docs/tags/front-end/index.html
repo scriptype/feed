@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#front-end <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/front-end" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://thepowerofserverless.info/">
         <span class="link-title">The Power of Serverless for Front-End Developers</span>
         <span class="link-url">https://thepowerofserverless.info/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://css-tricks.com/your-brain-on-front-end-development/">
         <span class="link-title">Your Brain on Front-End Development</span>
         <span class="link-url">https://css-tricks.com/your-brain-on-front-end-dev...</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.smashingmagazine.com/2018/04/best-practices-grid-layout">
         <span class="link-title">Best Practices With CSS Grid Layout</span>
         <span class="link-url">https://www.smashingmagazine.com/2018/04/best-prac...</span>
@@ -202,6 +211,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

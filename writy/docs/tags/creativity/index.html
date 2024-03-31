@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#creativity <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/creativity" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://alistapart.com/article/i-am-a-creative/">
         <span class="link-title">I am a creative. - @zeldman</span>
         <span class="link-url">https://alistapart.com/article/i-am-a-creative/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.ideo.com/blog/why-being-obsessively-organized-makes-you-more-creative">
         <span class="link-title">Why Being Obsessively Organized Makes You More Creative - @rebeccalili...</span>
         <span class="link-url">https://www.ideo.com/blog/why-being-obsessively-or...</span>
@@ -193,6 +202,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

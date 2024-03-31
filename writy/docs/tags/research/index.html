@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#research <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/research" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://uxmethods.org/">
         <span class="link-title">UX Methods</span>
         <span class="link-url">https://uxmethods.org/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://pdfs.semanticscholar.org/3cb2/0df9e075056030103d73f173fa29f8f92f07.pdf?_ga=2.37017120.1076752451.1672779819-279137700.1672779819">
         <span class="link-title">Can Self-Replicating Species Flourish in the Interior of a Star?</span>
         <span class="link-url">https://pdfs.semanticscholar.org/3cb2/0df9e0750560...</span>
@@ -192,6 +201,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#disability <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/disability" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.mollywatt.com/blog/a-time-to-reflect">
         <span class="link-title">A time to reflect</span>
         <span class="link-url">https://www.mollywatt.com/blog/a-time-to-reflect</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Ableism">
         <span class="link-title">Ableism</span>
         <span class="link-url">https://en.wikipedia.org/wiki/Ableism</span>
@@ -193,7 +202,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Disability-adjusted_life_year">
         <span class="link-title">Disability-adjusted life year</span>
         <span class="link-url">https://en.wikipedia.org/wiki/Disability-adjusted_...</span>
@@ -205,6 +214,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

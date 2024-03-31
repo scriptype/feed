@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">##css <span class="tag-header-post-count">1 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/css" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/">
         <span class="link-title">A Complete Guide to Dark Mode on the Web | CSS-Tricks</span>
         <span class="link-url">https://css-tricks.com/a-complete-guide-to-dark-mo...</span>
@@ -181,6 +190,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>
@@ -222,7 +235,7 @@
   </script>
     </body>
 </html>
-odule" src="/assets/custom/script.js"></script>
+<script type="module" src="/assets/custom/script.js"></script>
 
 
   <script type="module">

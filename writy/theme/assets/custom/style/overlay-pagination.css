@@ -1,0 +1,41 @@
+.overlay-pagination {
+    --offset-x: 0;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: var(--offset-x);
+}
+
+.overlay-pagination-item {
+    --width: 30px;
+    width: var(--width);
+}
+
+.overlay-pagination-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-pagination.js-enhanced
+.overlay-pagination-link {
+    text-indent: -2000vw;
+}
+
+.overlay-pagination-link:hover,
+.overlay-pagination-link:focus-within {
+    background: #018;
+    mix-blend-mode: difference;
+}
+
+.overlay-pagination-link.is-current {
+    --color-1: aquamarine;
+    --color-2: paleturquoise;
+    --color-3: blanchedalmond;
+    --color-4: lemonchiffon;
+    --color-5: #89ffe9;
+    background: var(--color-4);
+    mix-blend-mode: multiply;
+    box-shadow: 0 0 0 1px #ca33;
+}

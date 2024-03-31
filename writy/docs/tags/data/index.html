@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#data <span class="tag-header-post-count">5 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/data" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://aperiodical.com/2016/05/are-you-sure-51-isnt-prime-analysing-the-results-of-the-is-this-prime-game/">
         <span class="link-title">Are you sure 51 isn’t prime? – Analysing the results of the 'Is this p...</span>
         <span class="link-url">https://aperiodical.com/2016/05/are-you-sure-51-is...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.ben-evans.com/benedictevans/2018/12/19/does-ai-make-strong-tech-companies-stronger/">
         <span class="link-title">Does AI make strong tech companies stronger?</span>
         <span class="link-url">https://www.ben-evans.com/benedictevans/2018/12/19...</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://areknawo.com/rocking-js-data-structures/">
         <span class="link-title">Rocking JS data structures! - @areknawo</span>
         <span class="link-url">https://areknawo.com/rocking-js-data-structures/</span>
@@ -204,7 +213,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://medium.com/@gokhansengun/base64-encoding-nedir-ve-nerelerde-kullan%C4%B1l%C4%B1r-d82f5307ea6d">
         <span class="link-title">Base64 Encoding nedir ve nerelerde kullanılır? – @gokhansengun</span>
         <span class="link-url">https://medium.com/@gokhansengun/base64-encoding-n...</span>
@@ -216,7 +225,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://medium.com/@mbostock/why-you-should-use-d3-ae63c276e958">
         <span class="link-title">Why you should use D3</span>
         <span class="link-url">https://medium.com/@mbostock/why-you-should-use-d3...</span>
@@ -229,6 +238,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

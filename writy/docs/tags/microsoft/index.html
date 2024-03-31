@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#microsoft <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/microsoft" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/">
         <span class="link-title">Internet Explorer 11 has retired and is officially out of support</span>
         <span class="link-url">https://blogs.windows.com/windowsexperience/2022/0...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://krebsonsecurity.com/2020/02/dangerous-domain-corp-com-goes-up-for-sale/">
         <span class="link-title">Dangerous Domain Corp.com Goes Up for Sale</span>
         <span class="link-url">https://krebsonsecurity.com/2020/02/dangerous-doma...</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.bloomberg.com/news/features/2019-11-13/microsoft-apocalypse-proofs-open-source-code-in-an-arctic-cave">
         <span class="link-title">Open Source Code Will Survive the Apocalypse in an Arctic Cave</span>
         <span class="link-url">https://www.bloomberg.com/news/features/2019-11-13...</span>
@@ -205,6 +214,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

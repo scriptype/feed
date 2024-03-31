@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#web design <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/web-design" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://frankchimero.com/blog/2018/everything-easy/">
         <span class="link-title">Everything Easy is Hard Again</span>
         <span class="link-url">https://frankchimero.com/blog/2018/everything-easy...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://deadsimplesites.com/">
         <span class="link-title">Dead Simple Sites — Minimal Website Inspiration</span>
         <span class="link-url">https://deadsimplesites.com/</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://motion.zajno.com/">
         <span class="link-title">Motion Graphic Design & Animation Principles Website - Zajno Digital S...</span>
         <span class="link-url">https://motion.zajno.com/</span>
@@ -201,7 +210,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://evilmartians.com/chronicles/icon-transcendence-customizing-icons-to-complement-fonts">
         <span class="link-title">Icon transcendence: customizing icons to complement fonts</span>
         <span class="link-url">https://evilmartians.com/chronicles/icon-transcend...</span>
@@ -210,7 +219,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://daverupert.com/2024/01/focus-visible-love/">
         <span class="link-title">Big, beautiful, beefy focus states with :focus-visible | @davatron5000</span>
         <span class="link-url">https://daverupert.com/2024/01/focus-visible-love/</span>
@@ -221,7 +230,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://localghost.dev/blog/building-a-website-like-it-s-1999-in-2022/">
         <span class="link-title">Building a website like it's 1999... in 2022</span>
         <span class="link-url">https://localghost.dev/blog/building-a-website-lik...</span>
@@ -231,6 +240,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

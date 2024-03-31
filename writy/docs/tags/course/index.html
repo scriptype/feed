@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#course <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/course" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://developers.google.com/machine-learning/crash-course/">
         <span class="link-title">Machine Learning Crash Course</span>
         <span class="link-url">https://developers.google.com/machine-learning/cra...</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://classroom.udacity.com/courses/ud891">
         <span class="link-title">Free Web Accessibility Course by Google at Udacity</span>
         <span class="link-url">https://classroom.udacity.com/courses/ud891</span>
@@ -194,6 +203,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

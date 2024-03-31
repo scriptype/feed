@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#vuex <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/vuex" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/">
         <span class="link-title">Build a state management system with vanilla JavaScript</span>
         <span class="link-url">https://css-tricks.com/build-a-state-management-sy...</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://medium.com/@abdullahmara/vuex-module-generator-f48077326ea1">
         <span class="link-title">Vuex module generator</span>
         <span class="link-url">https://medium.com/@abdullahmara/vuex-module-gener...</span>
@@ -193,6 +202,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

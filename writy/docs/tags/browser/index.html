@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#browser <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/browser" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://polypane.app/">
         <span class="link-title">Polypane, The browser for ambitious developers</span>
         <span class="link-url">https://polypane.app/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://spreadprivacy.com/introducing-duckduckgo-for-mac/">
         <span class="link-title">Introducing DuckDuckGo for Mac</span>
         <span class="link-url">https://spreadprivacy.com/introducing-duckduckgo-f...</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://redalemeden.com/blog/2019/we-need-chrome-no-more">
         <span class="link-title">We Need Chrome No More</span>
         <span class="link-url">https://redalemeden.com/blog/2019/we-need-chrome-n...</span>
@@ -205,7 +214,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://www.theverge.com/2019/2/4/18210981/firefox-mute-autoplaying-videos-66-update-web-browser">
         <span class="link-title">Firefox will mute autoplaying videos by default starting next month</span>
         <span class="link-url">https://www.theverge.com/2019/2/4/18210981/firefox...</span>
@@ -217,6 +226,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

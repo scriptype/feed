@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#web development <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/web-development" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.baldurbjarnason.com/2024/the-one-about-the-web-developer-job-market/">
         <span class="link-title">The one about the web developer job market</span>
         <span class="link-url">https://www.baldurbjarnason.com/2024/the-one-about...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://frankchimero.com/blog/2018/everything-easy/">
         <span class="link-title">Everything Easy is Hard Again</span>
         <span class="link-url">https://frankchimero.com/blog/2018/everything-easy...</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://ericportis.com/posts/2023/view-transitions-break-incremental-rendering/">
         <span class="link-title">View Transitions Break Incremental Rendering</span>
         <span class="link-url">https://ericportis.com/posts/2023/view-transitions...</span>
@@ -201,7 +210,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://jakelazaroff.com/words/web-components-will-outlive-your-javascript-framework/">
         <span class="link-title">Web Components Will Outlive Your JavaScript Framework | jakelazaroff.c...</span>
         <span class="link-url">https://jakelazaroff.com/words/web-components-will...</span>
@@ -212,6 +221,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#tutorial <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/tutorial" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://vimeo.com/93206523">
         <span class="link-title">The illusion of life</span>
         <span class="link-url">https://vimeo.com/93206523</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">
         <span class="link-title">A11ycasts with Rob Dodson</span>
         <span class="link-url">https://www.youtube.com/playlist?list=PLNYkxOF6rcI...</span>
@@ -193,7 +202,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://css-tricks.com/build-a-state-management-system-with-vanilla-javascript/">
         <span class="link-title">Build a state management system with vanilla JavaScript</span>
         <span class="link-url">https://css-tricks.com/build-a-state-management-sy...</span>
@@ -205,7 +214,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://kentcdodds.com/blog/react-hooks-pitfalls/">
         <span class="link-title">5 Tips to Help You Avoid React Hooks Pitfalls</span>
         <span class="link-url">https://kentcdodds.com/blog/react-hooks-pitfalls/</span>
@@ -216,7 +225,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://dev.to/kbk0125/web-caching-explained-by-buying-milk-at-the-supermarket-9k4">
         <span class="link-title">Web Caching Explained by Buying Milk at the Supermarket</span>
         <span class="link-url">https://dev.to/kbk0125/web-caching-explained-by-bu...</span>
@@ -226,7 +235,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://medium.freecodecamp.org/an-introduction-to-nginx-for-developers-62179b6a458f">
         <span class="link-title">An Introduction to NGINX for Developers</span>
         <span class="link-url">https://medium.freecodecamp.org/an-introduction-to...</span>
@@ -237,6 +246,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

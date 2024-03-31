@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#tech <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/tech" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.eff.org/deeplinks/2022/06/facebook-says-apple-too-powerful-theyre-right">
         <span class="link-title">Facebook Says Apple is Too Powerful. They're Right.</span>
         <span class="link-url">https://www.eff.org/deeplinks/2022/06/facebook-say...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://julian.digital/2021/12/20/the-power-of-defaults/">
         <span class="link-title">The power of defaults «  julian.digital</span>
         <span class="link-url">https://julian.digital/2021/12/20/the-power-of-def...</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.spakhm.com/p/surviving-disillusionment">
         <span class="link-title">Surviving disillusionment - spakhm's newsletter</span>
         <span class="link-url">https://www.spakhm.com/p/surviving-disillusionment</span>
@@ -201,7 +210,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://erikbern.com/2020/01/13/how-to-hire-smarter-than-the-market-a-toy-model.html">
         <span class="link-title">How to hire smarter than the market: a toy model</span>
         <span class="link-url">https://erikbern.com/2020/01/13/how-to-hire-smarte...</span>
@@ -211,7 +220,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://www.theguardian.com/technology/2019/jun/27/jony-ive-apple-designer-leaves-imac-iphone">
         <span class="link-title">Jony Ive, Apple designer behind iPhone and iMac, to exit company after...</span>
         <span class="link-url">https://www.theguardian.com/technology/2019/jun/27...</span>
@@ -222,7 +231,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://story.californiasunday.com/infosys-india-tech">
         <span class="link-title">After the Miracle: For a generation, Americans have been outsourcing w...</span>
         <span class="link-url">https://story.californiasunday.com/infosys-india-t...</span>
@@ -233,6 +242,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

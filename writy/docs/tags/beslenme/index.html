@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#beslenme <span class="tag-header-post-count">1 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/beslenme" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://evrimagaci.org/insan-turu-otcul-mudur-insanlar-et-de-yemek-uzere-evrimlesmedi-mi-783">
         <span class="link-title">İnsan Türü Otçul Mudur? İnsanlar Et de Yemek Üzere Evrimleşmedi mi?</span>
         <span class="link-url">https://evrimagaci.org/insan-turu-otcul-mudur-insa...</span>
@@ -184,6 +193,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

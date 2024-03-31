@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#cli <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/cli" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://github.com/vadimdemedes/ink">
         <span class="link-title">GitHub - vadimdemedes/ink: 🌈 React for interactive command-line apps</span>
         <span class="link-url">https://github.com/vadimdemedes/ink</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://docs.brew.sh/Analytics">
         <span class="link-title">Homebrew Starts Collecting "Anonymous Aggregate User Behaviour Analyti...</span>
         <span class="link-url">https://docs.brew.sh/Analytics</span>
@@ -192,6 +201,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

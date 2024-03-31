@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#edge <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/edge" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://blog.mozilla.org/blog/2018/12/06/goodbye-edge/">
         <span class="link-title">Goodbye, EdgeHTML</span>
         <span class="link-url">https://blog.mozilla.org/blog/2018/12/06/goodbye-e...</span>
@@ -183,7 +192,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://ferdychristant.com/the-state-of-web-browsers-f5a83a41c1cb">
         <span class="link-title">The State of Web Browsers – Late 2018 edition</span>
         <span class="link-url">https://ferdychristant.com/the-state-of-web-browse...</span>
@@ -199,6 +208,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

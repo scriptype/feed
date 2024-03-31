@@ -1,5 +1,64 @@
-.links {}
-.link-container {}
+.links {
+    perspective: 500vh;
+}
+
+.link-container {
+    --enter-exit-shift-x: 0%;
+    --enter-exit-shift-y: 5%;
+    --enter-exit-scale: .9, .9;
+    --enter-exit-rotate-y: 5deg;
+    --enter-exit-duration: .2s;
+    --enter-exit-stagger: 50ms;
+}
+
+.link-container.entering,
+.link-container.exiting {
+    transform-style: preserve-3d;
+    animation-fill-mode: forwards;
+    animation-duration: var(--enter-exit-duration);
+    animation-delay: calc(var(--i) * var(--enter-exit-stagger));
+}
+
+.link-container.entering {
+    opacity: 0;
+    transform:
+        translate(
+            calc(var(--enter-exit-shift-x) * -1),
+            calc(var(--enter-exit-shift-y) * -1)
+        )
+        scale(var(--enter-exit-scale))
+        rotateY(
+            calc(var(--enter-exit-rotate-y) * -1)
+        );
+    animation-name: link-enter;
+}
+
+@keyframes link-enter {
+    to {
+        transform:
+            translate(0, 0)
+            scale(1, 1)
+            rotateY(0);
+        opacity: 1;
+    }
+}
+
+.link-container.exiting {
+    animation-name: link-exit;
+}
+
+@keyframes link-exit {
+    to {
+        transform:
+            translate(
+                var(--enter-exit-shift-x),
+                var(--enter-exit-shift-y)
+            )
+            scale(var(--enter-exit-scale))
+            rotateY(var(--enter-exit-rotate-y));
+        opacity: 0;
+    }
+}
 
 .link {
     display: flex;

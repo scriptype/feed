@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#sociology <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/sociology" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://kk.org/thetechnium/scenius-or-comm/">
         <span class="link-title">The Technium: Scenius, or Communal Genius</span>
         <span class="link-url">https://kk.org/thetechnium/scenius-or-comm/</span>
@@ -179,7 +188,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://blogs.scientificamerican.com/beautiful-minds/the-role-of-luck-in-life-success-is-far-greater-than-we-realized/">
         <span class="link-title">The Role of Luck in Life Success Is Far Greater Than We Realized - Sci...</span>
         <span class="link-url">https://blogs.scientificamerican.com/beautiful-min...</span>
@@ -188,7 +197,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=nQq_gZiZ-jg">
         <span class="link-title">How Privilege Defines Performance, Tatiana Mac @ #PerfMatters Conferen...</span>
         <span class="link-url">https://www.youtube.com/watch?v=nQq_gZiZ-jg</span>
@@ -202,6 +211,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

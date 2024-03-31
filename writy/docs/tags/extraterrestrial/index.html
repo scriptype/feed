@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#extraterrestrial <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/extraterrestrial" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Ross_128_b">
         <span class="link-title">Ross 128 b</span>
         <span class="link-url">https://en.wikipedia.org/wiki/Ross_128_b</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/science/2018/07/news-lake-found-mars-water-polar-cap-life-space/">
         <span class="link-title">Underground Lake Found on Mars? Get the Facts.</span>
         <span class="link-url">https://www.nationalgeographic.com/science/2018/07...</span>
@@ -194,6 +203,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

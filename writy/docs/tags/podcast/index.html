@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#podcast <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/podcast" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=9Cw8sGBpOcM">
         <span class="link-title">Art of the Beholder - Poetry | Literature | History - The Beat Generat...</span>
         <span class="link-url">https://www.youtube.com/watch?v=9Cw8sGBpOcM</span>
@@ -183,7 +192,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://archive.dconstruct.org/">
         <span class="link-title">dConstruct Audio Archive</span>
         <span class="link-url">https://archive.dconstruct.org/</span>
@@ -193,7 +202,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://thewebahead.net/">
         <span class="link-title">The Web Ahead</span>
         <span class="link-url">https://thewebahead.net/</span>
@@ -203,7 +212,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://art19.com/shows/fularsz-entellik/episodes/55e42c2e-17f9-4579-97dd-33cb6c42d028">
         <span class="link-title">Pandemi 3: Serdar Kuzuloglu ile Toplum Felsefesi (1/2) – @imTolstoyevs...</span>
         <span class="link-url">https://art19.com/shows/fularsz-entellik/episodes/...</span>
@@ -214,6 +223,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

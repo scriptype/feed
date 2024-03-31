@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#space <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/space" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://tylergarrett.com/tech/2022/06/ok-whose-rocket-just-hit-the-moon-techcrunch/">
         <span class="link-title">OK, whose rocket just hit the moon?</span>
         <span class="link-url">https://tylergarrett.com/tech/2022/06/ok-whose-roc...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.astrobin.com/tv03mn/B/">
         <span class="link-title">M106 - ruined by SpaceX Starlink??? "Like" if you hate it.</span>
         <span class="link-url">https://www.astrobin.com/tv03mn/B/</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=JdqZyACCYZc">
         <span class="link-title">Space shuttle Endeavour's trek across LA: Timelapse</span>
         <span class="link-url">https://www.youtube.com/watch?v=JdqZyACCYZc</span>
@@ -201,7 +210,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=dJNGi-bt9NM">
         <span class="link-title">If You Could See Every Satellite, What Would The Sky Look Like? 360/VR</span>
         <span class="link-url">https://www.youtube.com/watch?v=dJNGi-bt9NM</span>
@@ -212,7 +221,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://medium.com/starts-with-a-bang/what-will-happen-when-betelgeuse-explodes-df5b04164b2">
         <span class="link-title">What will happen when Betelgeuse explodes?</span>
         <span class="link-url">https://medium.com/starts-with-a-bang/what-will-ha...</span>
@@ -223,7 +232,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/magazine/2017/08/space-preserving-moon-from-private-industry/">
         <span class="link-title">New Moon Race Endangers Historic Space Artifacts</span>
         <span class="link-url">https://www.nationalgeographic.com/magazine/2017/0...</span>
@@ -235,6 +244,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

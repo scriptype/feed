@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#nft <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/nft" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://reallifemag.com/play-to-lose/">
         <span class="link-title">"Play to Lose" by @netgal_emi on @_reallifemag</span>
         <span class="link-url">https://reallifemag.com/play-to-lose/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.theatlantic.com/ideas/archive/2021/04/nfts-werent-supposed-end-like/618488/">
         <span class="link-title">NFTs Were Supposed to Protect Artists. They Don't. - The Atlantic</span>
         <span class="link-url">https://www.theatlantic.com/ideas/archive/2021/04/...</span>
@@ -191,6 +200,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#trees <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/trees" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.themarginalian.org/2012/09/21/hermann-hesse-trees/">
         <span class="link-title">Hermann Hesse on What Trees Teach Us About Belonging and Life</span>
         <span class="link-url">https://www.themarginalian.org/2012/09/21/hermann-...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.themarginalian.org/2018/09/11/martin-buber-tree/">
         <span class="link-title">Philosopher Martin Buber on How Learning to Look at Trees Teaches Us t...</span>
         <span class="link-url">https://www.themarginalian.org/2018/09/11/martin-b...</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.washingtonpost.com/graphics/2019/national/fall-foliage-atlas/">
         <span class="link-title">Fantastic fall foliage and where to find it</span>
         <span class="link-url">https://www.washingtonpost.com/graphics/2019/natio...</span>
@@ -204,6 +213,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

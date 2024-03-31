@@ -1,3 +1,14 @@
 <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+    {{#each pagination.pages as |page|}}
+      <li class="overlay-pagination-item">
+        <a href="{{page.url}}" class="overlay-pagination-link{{#if page.current}} is-current{{/if}}">
+          {{page.number}}
+        </a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
 </div>

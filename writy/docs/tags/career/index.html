@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#career <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/career" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.figma.com/blog/dan-malls-10-principles-for-a-worthy-design-career/">
         <span class="link-title">Dan Mall’s 10 Principles for a Worthy Design Career</span>
         <span class="link-url">https://www.figma.com/blog/dan-malls-10-principles...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=ZuetrmhojE4">
         <span class="link-title">“The Fault, Dear Brutus” by Jeffrey Zeldman—An Event Apart video - You...</span>
         <span class="link-url">https://www.youtube.com/watch?v=ZuetrmhojE4</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://twitter.com/wes_kao/status/1489992239283683334">
         <span class="link-title">Most people suck at giving feedback</span>
         <span class="link-url">https://twitter.com/wes_kao/status/148999223928368...</span>
@@ -200,7 +209,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://wepresent.wetransfer.com/story/creative-success/">
         <span class="link-title">The pressures of creative success – The minute you think you’ve arrive...</span>
         <span class="link-url">https://wepresent.wetransfer.com/story/creative-su...</span>
@@ -213,6 +222,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

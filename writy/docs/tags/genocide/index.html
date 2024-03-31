@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#genocide <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/genocide" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://blog.paulbiggar.com/i-cant-sleep/">
         <span class="link-title">I can't sleep - @paulbiggar</span>
         <span class="link-url">https://blog.paulbiggar.com/i-cant-sleep/</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.nytimes.com/2018/11/01/opinion/orhan-pamuk-ara-guler-istanbul.html">
         <span class="link-title">‘I Like Your Photographs Because They Are Beautiful’ – Orhan Pamuk rem...</span>
         <span class="link-url">https://www.nytimes.com/2018/11/01/opinion/orhan-p...</span>
@@ -192,6 +201,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

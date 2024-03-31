@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#arctic <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/arctic" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/travel/features/photography/grand-prize-photo-dreamy-arctic-upernavik-greenland/">
         <span class="link-title">This dreamy Arctic scene won National Geographic’s Travel Photo Contes...</span>
         <span class="link-url">https://www.nationalgeographic.com/travel/features...</span>
@@ -182,7 +191,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://earthobservatory.nasa.gov/images/144489/arctic-weather-plunges-into-north-america">
         <span class="link-title">Arctic Weather Plunges into North America</span>
         <span class="link-url">https://earthobservatory.nasa.gov/images/144489/ar...</span>
@@ -194,7 +203,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/environment/2018/08/news-arctic-permafrost-may-thaw-faster-than-expected/">
         <span class="link-title">Some Arctic ground no longer freezing—even in winter</span>
         <span class="link-url">https://www.nationalgeographic.com/environment/201...</span>
@@ -205,6 +214,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

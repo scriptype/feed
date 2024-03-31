@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#inclusive <span class="tag-header-post-count">7 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/inclusive" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://inclusive.microsoft.design/tools-and-activities/RespectingFocus.pdf">
         <span class="link-title">Respecting Focus: A Behavior Guide for Intelligent Systems</span>
         <span class="link-url">https://inclusive.microsoft.design/tools-and-activ...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://inclusive.microsoft.design/tools-and-activities/Inclusive101Guidebook.pdf">
         <span class="link-title">Microsoft Inclusive Design Guidebook</span>
         <span class="link-url">https://inclusive.microsoft.design/tools-and-activ...</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://inclusive-components.design/">
         <span class="link-title">Inclusive Components</span>
         <span class="link-url">https://inclusive-components.design/</span>
@@ -204,7 +213,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://inclusive.microsoft.design/">
         <span class="link-title">Microsoft Inclusive Design</span>
         <span class="link-url">https://inclusive.microsoft.design/</span>
@@ -216,7 +225,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=NixaVVVxlYM">
         <span class="link-title">“Design for Real Life” by Eric Meyer—An Event Apart Denver 2017</span>
         <span class="link-url">https://www.youtube.com/watch?v=NixaVVVxlYM</span>
@@ -229,7 +238,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://bighack.org/the-business-case-for-inclusive-design-big-hack-study-research-digital-accessibility/">
         <span class="link-title">The business case for inclusive design: The Big Hack study findings</span>
         <span class="link-url">https://bighack.org/the-business-case-for-inclusiv...</span>
@@ -240,7 +249,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=nQq_gZiZ-jg">
         <span class="link-title">How Privilege Defines Performance, Tatiana Mac @ #PerfMatters Conferen...</span>
         <span class="link-url">https://www.youtube.com/watch?v=nQq_gZiZ-jg</span>
@@ -254,6 +263,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

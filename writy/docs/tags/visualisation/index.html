@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#visualisation <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/visualisation" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://ciechanow.ski/mechanical-watch">
         <span class="link-title">Mechanical Watch – Bartosz Ciechanowski</span>
         <span class="link-url">https://ciechanow.ski/mechanical-watch</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">
         <span class="link-title">Why outbreaks like coronavirus spread exponentially, and how to “flatt...</span>
         <span class="link-url">https://www.washingtonpost.com/graphics/2020/world...</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://medium.com/@mbostock/why-you-should-use-d3-ae63c276e958">
         <span class="link-title">Why you should use D3</span>
         <span class="link-url">https://medium.com/@mbostock/why-you-should-use-d3...</span>
@@ -203,6 +212,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

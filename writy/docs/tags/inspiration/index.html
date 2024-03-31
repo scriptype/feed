@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#inspiration <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/inspiration" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="http://viznut.fi/en/">
         <span class="link-title">viznut</span>
         <span class="link-url">http://viznut.fi/en/</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://pfolios.net/">
         <span class="link-title">Portfolio Inspiration</span>
         <span class="link-url">https://pfolios.net/</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.bestfolios.com">
         <span class="link-title">Bestfolios</span>
         <span class="link-url">https://www.bestfolios.com</span>
@@ -202,7 +211,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://humans.fyi/">
         <span class="link-title">HUMANS</span>
         <span class="link-url">https://humans.fyi/</span>
@@ -214,6 +223,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

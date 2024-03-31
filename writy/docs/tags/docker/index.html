@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#docker <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/docker" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://mherman.org/blog/dockerizing-a-react-app/">
         <span class="link-title">Dockerizing a React App</span>
         <span class="link-url">https://mherman.org/blog/dockerizing-a-react-app/</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose">
         <span class="link-title">How To Secure a Containerized Node.js Application with Nginx, Let's En...</span>
         <span class="link-url">https://www.digitalocean.com/community/tutorials/h...</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://coderbook.com/@marcus/how-to-do-zero-downtime-deployments-of-docker-containers/">
         <span class="link-title">How to do Zero Downtime Deployments of Docker Containers</span>
         <span class="link-url">https://coderbook.com/@marcus/how-to-do-zero-downt...</span>
@@ -200,7 +209,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://medium.com/@guillaumejacquart/node-js-docker-workflow-12febcc0eed8">
         <span class="link-title">Node.js Docker workflow</span>
         <span class="link-url">https://medium.com/@guillaumejacquart/node-js-dock...</span>
@@ -211,6 +220,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#learning <span class="tag-header-post-count">9 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/learning" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.internetingishard.com/">
         <span class="link-title">Interneting Is Hard | Web Development Tutorials For Complete Beginners</span>
         <span class="link-url">https://www.internetingishard.com/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.degreeless.design">
         <span class="link-title">Degreeless.design - Everything I Learned in Design School - @treggify</span>
         <span class="link-url">https://www.degreeless.design</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://techdevguide.withgoogle.com/">
         <span class="link-title">Grow Your Technical Skills with Google</span>
         <span class="link-url">https://techdevguide.withgoogle.com/</span>
@@ -204,7 +213,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="http://third-bit.com/2019/04/16/what-docs-when.html">
         <span class="link-title">What Docs When</span>
         <span class="link-url">http://third-bit.com/2019/04/16/what-docs-when.htm...</span>
@@ -215,7 +224,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://blog.data.gov.sg/bringing-black-and-white-photos-to-life-using-colourise-sg-435ae5cc5036">
         <span class="link-title">Bringing black and white photos to life using Colourise.sg — a deep le...</span>
         <span class="link-url">https://blog.data.gov.sg/bringing-black-and-white-...</span>
@@ -226,7 +235,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://spectrum.ieee.org/tech-talk/computing/software/winners-announced-for-the-zillow-prize">
         <span class="link-title">Winners Announced for the Zillow Prize</span>
         <span class="link-url">https://spectrum.ieee.org/tech-talk/computing/soft...</span>
@@ -237,7 +246,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://zerotoherojs.com/roadmap/">
         <span class="link-title">How to Be the Next Version of Yourself</span>
         <span class="link-url">https://zerotoherojs.com/roadmap/</span>
@@ -248,7 +257,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 7">
       <a class="link" target="_blank" href="https://developers.google.com/machine-learning/crash-course/">
         <span class="link-title">Machine Learning Crash Course</span>
         <span class="link-url">https://developers.google.com/machine-learning/cra...</span>
@@ -260,7 +269,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 8">
       <a class="link" target="_blank" href="https://www.smashingmagazine.com/2018/07/writing-code-poems/">
         <span class="link-title">Learning To Code By Writing Code Poems</span>
         <span class="link-url">https://www.smashingmagazine.com/2018/07/writing-c...</span>
@@ -272,6 +281,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

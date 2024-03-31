@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#svg <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/svg" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://svg.bradwoods.io/lessons/viewbox">
         <span class="link-title">A creative coding lesson. How the SVG ViewBox works</span>
         <span class="link-url">https://svg.bradwoods.io/lessons/viewbox</span>
@@ -179,7 +188,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://handcrafts.undraw.co/app">
         <span class="link-title">Handcrafts | unDraw</span>
         <span class="link-url">https://handcrafts.undraw.co/app</span>
@@ -189,7 +198,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://svgbox.net/">
         <span class="link-title">SVGBox | API for Web Icons</span>
         <span class="link-url">https://svgbox.net/</span>
@@ -198,7 +207,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://riccardoscalco.it/textures/">
         <span class="link-title">Textures.js – SVG patterns for Data Visualization</span>
         <span class="link-url">https://riccardoscalco.it/textures/</span>
@@ -208,6 +217,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

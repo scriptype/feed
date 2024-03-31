@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#coding <span class="tag-header-post-count">10 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/coding" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.leemartin.com/proof-of-life">
         <span class="link-title">Joy Oladokun: Proof of Life - @leemartin</span>
         <span class="link-url">https://www.leemartin.com/proof-of-life</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://ippsketch.com/posts/chromatic-motion-blur/">
         <span class="link-title">Chromatic Motion Blur :: i++ Sketch</span>
         <span class="link-url">https://ippsketch.com/posts/chromatic-motion-blur/</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://varun.ca/noise/">
         <span class="link-title">Noise in Creative Coding | Varun Vachhar</span>
         <span class="link-url">https://varun.ca/noise/</span>
@@ -200,7 +209,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://tixy.land">
         <span class="link-title">(t,i,x,y) => "creative code golfing"</span>
         <span class="link-url">https://tixy.land</span>
@@ -210,7 +219,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://tylerxhobbs.com/essays/2020/flow-fields">
         <span class="link-title">Flow Fields</span>
         <span class="link-url">https://tylerxhobbs.com/essays/2020/flow-fields</span>
@@ -221,7 +230,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://skillcrush.com/2017/04/03/free-coding-games/">
         <span class="link-title">15 Free Coding Games to Improve and Level Up Your Coding Skills</span>
         <span class="link-url">https://skillcrush.com/2017/04/03/free-coding-game...</span>
@@ -232,7 +241,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://script-8.github.io">
         <span class="link-title">SCRIPT-8</span>
         <span class="link-url">https://script-8.github.io</span>
@@ -244,7 +253,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 7">
       <a class="link" target="_blank" href="https://yuanchuan.dev/2019/05/15/window-lattice-and-css.html">
         <span class="link-title">Chinese Window Lattice And CSS – @yuanchuan23</span>
         <span class="link-url">https://yuanchuan.dev/2019/05/15/window-lattice-an...</span>
@@ -257,7 +266,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 8">
       <a class="link" target="_blank" href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/">
         <span class="link-title">CSS Utility Classes and 'Separation of Concerns'</span>
         <span class="link-url">https://adamwathan.me/css-utility-classes-and-sepa...</span>
@@ -269,7 +278,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 9">
       <a class="link" target="_blank" href="https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread">
         <span class="link-title">Learn the Basics of Coding with a Needle and Thread - @ideo</span>
         <span class="link-url">https://www.ideo.com/blog/learn-the-basics-of-code...</span>
@@ -282,6 +291,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

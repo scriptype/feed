@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#music <span class="tag-header-post-count">7 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/music" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://futureofcoding.org/episodes/045">
         <span class="link-title">Devine Lu Linvega • Orca | Future of Coding</span>
         <span class="link-url">https://futureofcoding.org/episodes/045</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.factmag.com/2019/04/09/streaming-music-emissions-study/">
         <span class="link-title">Streaming music is driving up harmful emissions, according to study</span>
         <span class="link-url">https://www.factmag.com/2019/04/09/streaming-music...</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://everynoise.com/">
         <span class="link-title">Every Noise at Once</span>
         <span class="link-url">https://everynoise.com/</span>
@@ -199,7 +208,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="http://808303.studio">
         <span class="link-title">Roland 808303.studio</span>
         <span class="link-url">http://808303.studio</span>
@@ -208,7 +217,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/travel/article/playing-it-cool-these-artists-make-music-with-ice">
         <span class="link-title">Playing it cool: these artists make music with ice</span>
         <span class="link-url">https://www.nationalgeographic.com/travel/article/...</span>
@@ -218,7 +227,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://learningsynths.ableton.com/">
         <span class="link-title">Learning Synths</span>
         <span class="link-url">https://learningsynths.ableton.com/</span>
@@ -228,7 +237,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://www.nytimes.com/2019/10/04/style/live-code-music.html">
         <span class="link-title">That Music You’re Dancing To? It’s Code</span>
         <span class="link-url">https://www.nytimes.com/2019/10/04/style/live-code...</span>
@@ -240,6 +249,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

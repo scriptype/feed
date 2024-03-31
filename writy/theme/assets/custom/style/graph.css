@@ -6,3 +6,8 @@
 .graph {
     height: 100px;
 }
+
+.canvas-container {
+    width: min-content;
+    position: relative;
+}

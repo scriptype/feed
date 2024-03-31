@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#archive <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/archive" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://jakelazaroff.com/words/preserving-the-web/">
         <span class="link-title">Preserving the Web | jakelazaroff.com</span>
         <span class="link-url">https://jakelazaroff.com/words/preserving-the-web/</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="http://blog.archive.org/2020/11/19/flash-animations-live-forever-at-the-internet-archive/">
         <span class="link-title">Flash Animations Live Forever at the Internet Archive</span>
         <span class="link-url">http://blog.archive.org/2020/11/19/flash-animation...</span>
@@ -191,6 +200,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

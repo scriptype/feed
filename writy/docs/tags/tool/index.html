@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#tool <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/tool" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://felt.com/">
         <span class="link-title">Felt – The best way to make maps on the internet</span>
         <span class="link-url">https://felt.com/</span>
@@ -179,7 +188,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://hue.tools/">
         <span class="link-title">hue.tools</span>
         <span class="link-url">https://hue.tools/</span>
@@ -189,7 +198,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://twitter.com/i/web/status/1325802592325267457">
         <span class="link-title">VisBug, browser extension for visual editor/layout inspector</span>
         <span class="link-url">https://twitter.com/i/web/status/13258025923252674...</span>
@@ -198,7 +207,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://9elements.github.io/fancy-border-radius">
         <span class="link-title">Fancy Border Radius Generator</span>
         <span class="link-url">https://9elements.github.io/fancy-border-radius</span>
@@ -208,7 +217,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://audiomass.co/">
         <span class="link-title">AudioMass - Audio Editor in Browser</span>
         <span class="link-url">https://audiomass.co/</span>
@@ -219,7 +228,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://keyframes.app/">
         <span class="link-title">Keyframes – Dead simple visual tools to help you generate CSS for your...</span>
         <span class="link-url">https://keyframes.app/</span>
@@ -230,6 +239,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

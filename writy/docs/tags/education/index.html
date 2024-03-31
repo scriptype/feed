@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#education <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/education" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://laconicml.com/computer-science-curriculum-youtube-videos/">
         <span class="link-title">Entire Computer Science Curriculum in 1000 YouTube Videos | Laconicml</span>
         <span class="link-url">https://laconicml.com/computer-science-curriculum-...</span>
@@ -179,7 +188,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.linkedin.com/pulse/why-geography-should-part-every-21st-century-vicki-phillips">
         <span class="link-title">Why Geography Should Be Part Of Every 21st Century Education</span>
         <span class="link-url">https://www.linkedin.com/pulse/why-geography-shoul...</span>
@@ -190,6 +199,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#app <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/app" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://downpour.games/">
         <span class="link-title">Downpour</span>
         <span class="link-url">https://downpour.games/</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://mymind.com/">
         <span class="link-title">mymind is the extension for your mind.</span>
         <span class="link-url">https://mymind.com/</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://nolanlawson.com/2022/05/21/the-balance-has-shifted-away-from-spas/">
         <span class="link-title">The balance has shifted away from SPAs | Read the Tea Leaves</span>
         <span class="link-url">https://nolanlawson.com/2022/05/21/the-balance-has...</span>
@@ -201,7 +210,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://dev.to/swyx/svelte-for-sites-react-for-apps-2o8h">
         <span class="link-title">Svelte for Sites, React for Apps</span>
         <span class="link-url">https://dev.to/swyx/svelte-for-sites-react-for-app...</span>
@@ -212,6 +221,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

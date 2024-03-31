@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#backend <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/backend" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://medium.com/@hnasr/threads-and-connections-in-backend-applications-a225eed3eddb">
         <span class="link-title">Threads and Connections in Backend Applications</span>
         <span class="link-url">https://medium.com/@hnasr/threads-and-connections-...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://medium.com/@hnasr/how-to-become-a-good-backend-engineer-fundamentals-4dcc4a16ce55">
         <span class="link-title">How to Become a Good Backend Engineer (Fundamentals)</span>
         <span class="link-url">https://medium.com/@hnasr/how-to-become-a-good-bac...</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://www.thoughtworks.com/insights/blog/dividing-frontend-backend-antipattern">
         <span class="link-title">Dividing frontend from backend is an antipattern</span>
         <span class="link-url">https://www.thoughtworks.com/insights/blog/dividin...</span>
@@ -202,6 +211,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

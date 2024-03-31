@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#astrophotography <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/astrophotography" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.youtube.com/watch?v=P_qqLA0WKJg">
         <span class="link-title">I Made A $30 Tracker, Is It Any Good?</span>
         <span class="link-url">https://www.youtube.com/watch?v=P_qqLA0WKJg</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="http://www.starkeeper.it/">
         <span class="link-title">Astrophotography by Leonardo Orazi</span>
         <span class="link-url">http://www.starkeeper.it/</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="http://www.damianpeach.com/">
         <span class="link-title">@peachastro's Views of the Solar System</span>
         <span class="link-url">http://www.damianpeach.com/</span>
@@ -201,6 +210,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#cancer <span class="tag-header-post-count">2 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/cancer" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.outsideonline.com/health/wellness/sunscreen-sun-exposure-skin-cancer-science/">
         <span class="link-title">Is Sunscreen the New Margarine?</span>
         <span class="link-url">https://www.outsideonline.com/health/wellness/suns...</span>
@@ -183,7 +192,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="http://www.acikbilim.com/2012/01/dosyalar/fukusima-ve-sonrasi.html">
         <span class="link-title">Fukuşima ve sonrası</span>
         <span class="link-url">http://www.acikbilim.com/2012/01/dosyalar/fukusima...</span>
@@ -198,6 +207,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

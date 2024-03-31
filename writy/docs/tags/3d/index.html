@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#3d <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/3d" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://cloudfour.com/thinks/how-to-embed-3d-models-on-the-web/">
         <span class="link-title">How to Embed 3D Models on the Web</span>
         <span class="link-url">https://cloudfour.com/thinks/how-to-embed-3d-model...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://threejs.org/docs/index.html#api/en/objects/SkinnedMesh">
         <span class="link-title">SkinnedMesh</span>
         <span class="link-url">https://threejs.org/docs/index.html#api/en/objects...</span>
@@ -189,7 +198,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://frontend.horse/issues/12/">
         <span class="link-title">Frontend Horse Newsletter 12 - Making 3D CSS Art with @rolivaalonso</span>
         <span class="link-url">https://frontend.horse/issues/12/</span>
@@ -201,6 +210,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

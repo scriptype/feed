@@ -167,10 +167,24 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#html <span class="tag-header-post-count">20 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/html" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+      <li class="overlay-pagination-item">
+        <a href="/tags/html/page/2" class="overlay-pagination-link">
+          2
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://frankchimero.com/blog/2015/the-webs-grain/">
         <span class="link-title">The Web’s Grain - @frank_chimero</span>
         <span class="link-url">https://frankchimero.com/blog/2015/the-webs-grain/</span>
@@ -182,7 +196,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics">
         <span class="link-title">Removing list styles without affecting semantics</span>
         <span class="link-url">https://matuzo.at/blog/2023/removing-list-styles-w...</span>
@@ -192,7 +206,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://github.com/joshbuchea/HEAD">
         <span class="link-title">A simple guide to HTML <head> elements</span>
         <span class="link-url">https://github.com/joshbuchea/HEAD</span>
@@ -201,7 +215,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://www.w3.org/History/1989/proposal.html">
         <span class="link-title">The original proposal of the WWW, HTMLized</span>
         <span class="link-url">https://www.w3.org/History/1989/proposal.html</span>
@@ -211,7 +225,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://github.com/whatwg/html/issues/2791">
         <span class="link-title">Client side include feature for HTML · Issue #2791 · whatwg/html · Git...</span>
         <span class="link-url">https://github.com/whatwg/html/issues/2791</span>
@@ -221,7 +235,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://survey.devographics.com/en-US/survey/state-of-html/2023">
         <span class="link-title">State of HTML 2023</span>
         <span class="link-url">https://survey.devographics.com/en-US/survey/state...</span>
@@ -231,7 +245,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://mdn.github.io/dom-examples/popover-api/">
         <span class="link-title">Popover API examples</span>
         <span class="link-url">https://mdn.github.io/dom-examples/popover-api/</span>
@@ -240,7 +254,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 7">
       <a class="link" target="_blank" href="https://adrianroselli.com/2019/04/details-summary-are-not-insert-control-here.html">
         <span class="link-title">Details / Summary Are Not [insert control here] — Adrian Roselli</span>
         <span class="link-url">https://adrianroselli.com/2019/04/details-summary-...</span>
@@ -250,7 +264,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 8">
       <a class="link" target="_blank" href="https://whistlr.info/2020/control-loading-spinner/">
         <span class="link-title">Control Loading Spinner in HTML</span>
         <span class="link-url">https://whistlr.info/2020/control-loading-spinner/</span>
@@ -261,7 +275,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 9">
       <a class="link" target="_blank" href="https://htmlrev.com">
         <span class="link-title">Free Landing Page HTML Templates by HTMLrev</span>
         <span class="link-url">https://htmlrev.com</span>
@@ -272,7 +286,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 10">
       <a class="link" target="_blank" href="https://calendar.perfplanet.com/2022/an-html-first-mental-model/">
         <span class="link-title">Web Performance Calendar » An HTML-first Mental Model</span>
         <span class="link-url">https://calendar.perfplanet.com/2022/an-html-first...</span>
@@ -283,7 +297,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 11">
       <a class="link" target="_blank" href="https://kittygiraudel.com/2022/09/30/templating-in-html/">
         <span class="link-title">Templating in HTML | Kitty Giraudel</span>
         <span class="link-url">https://kittygiraudel.com/2022/09/30/templating-in...</span>
@@ -292,7 +306,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 12">
       <a class="link" target="_blank" href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute">
         <span class="link-title">enterkeyhint | HTML Standard</span>
         <span class="link-url">https://html.spec.whatwg.org/multipage/interaction...</span>
@@ -301,7 +315,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 13">
       <a class="link" target="_blank" href="https://css-tricks.com/how-to-section-your-html/">
         <span class="link-title">How to Section Your HTML</span>
         <span class="link-url">https://css-tricks.com/how-to-section-your-html/</span>
@@ -311,7 +325,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 14">
       <a class="link" target="_blank" href="https://www.htmhell.dev">
         <span class="link-title">HTMHell - Markup from hell</span>
         <span class="link-url">https://www.htmhell.dev</span>
@@ -322,65 +336,12 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://www.youtube.com/watch?v=aHUtMbJw8iA">
-        <span class="link-title">Why Is CSS So Weird?</span>
-        <span class="link-url">https://www.youtube.com/watch?v=aHUtMbJw8iA</span>
-          <ul class="link-tags">
-              <li class="link-tag">#html</li>
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#javascript</li>
-              <li class="link-tag">#web</li>
-              <li class="link-tag">#programming</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/">
-        <span class="link-title">CSS Utility Classes and 'Separation of Concerns'</span>
-        <span class="link-url">https://adamwathan.me/css-utility-classes-and-sepa...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#html</li>
-              <li class="link-tag">#semantic</li>
-              <li class="link-tag">#coding</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://www.smashingmagazine.com/2018/06/placeholder-attribute/">
-        <span class="link-title">Don’t Use The Placeholder Attribute</span>
-        <span class="link-url">https://www.smashingmagazine.com/2018/06/placehold...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#html</li>
-              <li class="link-tag">#accessibility</li>
-              <li class="link-tag">#web</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://adactio.com/journal/14327">
-        <span class="link-title">Robustness and least power</span>
-        <span class="link-url">https://adactio.com/journal/14327</span>
-          <ul class="link-tags">
-              <li class="link-tag">#programming</li>
-              <li class="link-tag">#html</li>
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#javascript</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://css-tricks.com/where-lines-break-is-complicated-heres-all-the-related-css-and-html/">
-        <span class="link-title">Where Lines Break is Complicated. Here’s all the Related CSS and HTML.</span>
-        <span class="link-url">https://css-tricks.com/where-lines-break-is-compli...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#html</li>
-          </ul>
-      </a>
-    </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+        <a href="/tags/html/page/2">Older »</a>
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

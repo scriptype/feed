@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#performance <span class="tag-header-post-count">7 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/performance" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://calendar.perfplanet.com/2022/an-html-first-mental-model/">
         <span class="link-title">Web Performance Calendar » An HTML-first Mental Model</span>
         <span class="link-url">https://calendar.perfplanet.com/2022/an-html-first...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://dev.to/tigt/making-the-worlds-fastest-website-and-other-mistakes-56na">
         <span class="link-title">Making the world’s fastest website, and other mistakes</span>
         <span class="link-url">https://dev.to/tigt/making-the-worlds-fastest-webs...</span>
@@ -191,7 +200,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://aerotwist.com/blog/react-plus-performance-equals-what/">
         <span class="link-title">React + Performance = ?</span>
         <span class="link-url">https://aerotwist.com/blog/react-plus-performance-...</span>
@@ -203,7 +212,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://phabricator.wikimedia.org/phame/live/7/post/175/wikipedia_s_javascript_initialisation_on_a_budget/">
         <span class="link-title">Wikipedia's JavaScript initialisation on a budget - @TimoTijhof</span>
         <span class="link-url">https://phabricator.wikimedia.org/phame/live/7/pos...</span>
@@ -215,7 +224,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://css-tricks.com/a-proof-of-concept-for-making-sass-faster/">
         <span class="link-title">A Proof of Concept for Making Sass Faster</span>
         <span class="link-url">https://css-tricks.com/a-proof-of-concept-for-maki...</span>
@@ -228,7 +237,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://addyosmani.com/blog/lazy-loading/">
         <span class="link-title">Native image lazy-loading for the web! - @addyosmani</span>
         <span class="link-url">https://addyosmani.com/blog/lazy-loading/</span>
@@ -238,7 +247,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 6">
       <a class="link" target="_blank" href="https://engineering.linkedin.com/blog/2018/04/css-at-scale--linkedins-new-open-source-projects-take-on-stylesh">
         <span class="link-title">CSS at Scale: LinkedIn’s New Open Source Projects Take on Stylesheet P...</span>
         <span class="link-url">https://engineering.linkedin.com/blog/2018/04/css-...</span>
@@ -249,6 +258,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

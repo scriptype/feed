@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#generative <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/generative" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://css-tricks.com/creating-generative-patterns-with-the-css-paint-api/">
         <span class="link-title">Creating Generative Patterns with The CSS Paint API - CSS-Tricks</span>
         <span class="link-url">https://css-tricks.com/creating-generative-pattern...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://inconvergent.net/2019/a-tangle-of-webs/">
         <span class="link-title">A Tangle of Webs - @inconvergent</span>
         <span class="link-url">https://inconvergent.net/2019/a-tangle-of-webs/</span>
@@ -193,7 +202,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://yuanchuan.dev/2019/05/15/window-lattice-and-css.html">
         <span class="link-title">Chinese Window Lattice And CSS – @yuanchuan23</span>
         <span class="link-url">https://yuanchuan.dev/2019/05/15/window-lattice-an...</span>
@@ -206,7 +215,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread">
         <span class="link-title">Learn the Basics of Coding with a Needle and Thread - @ideo</span>
         <span class="link-url">https://www.ideo.com/blog/learn-the-basics-of-code...</span>
@@ -218,7 +227,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://github.com/mattdesl/canvas-sketch">
         <span class="link-title">canvas-sketch | A framework for making generative artwork in JavaScrip...</span>
         <span class="link-url">https://github.com/mattdesl/canvas-sketch</span>
@@ -229,7 +238,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="http://recodeproject.com/">
         <span class="link-title">THE RECODE PROJECT</span>
         <span class="link-url">http://recodeproject.com/</span>
@@ -240,6 +249,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

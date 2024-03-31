@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#horror <span class="tag-header-post-count">4 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/horror" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="http://ezmisery.tumblr.com/post/148451811587/the-wrom-institute">
         <span class="link-title">The Wrom Institute</span>
         <span class="link-url">http://ezmisery.tumblr.com/post/148451811587/the-w...</span>
@@ -180,7 +189,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="http://ezmisery.tumblr.com/post/174849997291/dwell">
         <span class="link-title">Dwell</span>
         <span class="link-url">http://ezmisery.tumblr.com/post/174849997291/dwell</span>
@@ -190,7 +199,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="http://ezmisery.tumblr.com/post/139665442716/the-peeker">
         <span class="link-title">The Peeker</span>
         <span class="link-url">http://ezmisery.tumblr.com/post/139665442716/the-p...</span>
@@ -200,7 +209,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="http://ezmisery.tumblr.com/post/140167154941/as-a-child-i-wanted-to-be-a-mermaid">
         <span class="link-title">As a child, I Wanted to be a Mermaid</span>
         <span class="link-url">http://ezmisery.tumblr.com/post/140167154941/as-a-...</span>
@@ -211,6 +220,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

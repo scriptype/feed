@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#of <span class="tag-header-post-count">3 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/of" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://oimo.io/works/life/">
         <span class="link-title">Life Universe</span>
         <span class="link-url">https://oimo.io/works/life/</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.wikiwand.com/en/Bob_Ross">
         <span class="link-title">Bob Ross</span>
         <span class="link-url">https://www.wikiwand.com/en/Bob_Ross</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://0fps.net/2012/11/19/conways-game-of-life-for-curved-surfaces-part-1/">
         <span class="link-title">Conway’s Game of Life for Curved Surfaces (Part 1)</span>
         <span class="link-url">https://0fps.net/2012/11/19/conways-game-of-life-f...</span>
@@ -205,6 +214,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

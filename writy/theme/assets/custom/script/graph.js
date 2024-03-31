@@ -1,14 +1,20 @@
-import Color from "./Color.js"
+import Color from "./vendor/Color.js"
 import Canvas from './canvas.js'
+import OverlayPagination from './overlay-pagination.js'
+const { min, max } = Math
 
 const init = async (filter = (f => true)) => {
   const posts = await window.posts
-  const data = posts.filter(filter).map(p => p.datePublished) 
+  const data = posts.filter(filter)
+  const minDayScale = 0.61825
+  const maxDayScale = 2
+  const dayScale = min(maxDayScale, max(minDayScale, data.length / 200))
+  console.log({ dayScale })
   Canvas({
     selector: '#graph',
     height: 200,
-    data,
-    dayScale: 2,
+    data: data.map(p => p.datePublished),
+    dayScale,
     lineWidth: 5,
     resolution: 1/12,
     yearMarkPosition: 'bottom',
@@ -23,6 +29,22 @@ const init = async (filter = (f => true)) => {
       new Color('navy'),
     ],
   }).draw()
+
+  OverlayPagination.init({
+    selectors: {
+      list: '#overlay-pagination',
+      scrollContainer: '.graph-container',
+      contentContainer: '.links',
+      currentLink: '.overlay-pagination-link.is-current'
+    },
+    classNames: {
+      link: 'overlay-pagination-link',
+      currentLink: 'is-current'
+    },
+    data,
+    dayScale,
+    pageSize: 15
+  })
 }
 
 export default {

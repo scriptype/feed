@@ -167,10 +167,19 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#change <span class="tag-header-post-count">6 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/change" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
-    <div class="link-container">
+    <div class="link-container" style="--i: 0">
       <a class="link" target="_blank" href="https://www.nationalgeographic.com/science/2019/12/the-decade-we-finally-woke-up-to-climate-change">
         <span class="link-title">The decade we finally woke up to climate change</span>
         <span class="link-url">https://www.nationalgeographic.com/science/2019/12...</span>
@@ -181,7 +190,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 1">
       <a class="link" target="_blank" href="https://www.theguardian.com/environment/2019/feb/04/a-third-of-himalayan-ice-cap-doomed-finds-shocking-report">
         <span class="link-title">A third of Himalayan ice cap doomed, finds report</span>
         <span class="link-url">https://www.theguardian.com/environment/2019/feb/0...</span>
@@ -192,7 +201,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 2">
       <a class="link" target="_blank" href="https://earthobservatory.nasa.gov/images/144489/arctic-weather-plunges-into-north-america">
         <span class="link-title">Arctic Weather Plunges into North America</span>
         <span class="link-url">https://earthobservatory.nasa.gov/images/144489/ar...</span>
@@ -204,7 +213,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 3">
       <a class="link" target="_blank" href="https://www.topic.com/giant-mirrors-ocean-whitening-here-s-how-exxon-wanted-to-save-the-planet">
         <span class="link-title">Giant Mirrors. Ocean Whitening. Here’s How Exxon Wanted to Save the Pl...</span>
         <span class="link-url">https://www.topic.com/giant-mirrors-ocean-whitenin...</span>
@@ -215,7 +224,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 4">
       <a class="link" target="_blank" href="https://earthobservatory.nasa.gov/images/144361/more-glaciers-in-east-antarctica-are-waking-up">
         <span class="link-title">More Glaciers in East Antarctica Are Waking Up</span>
         <span class="link-url">https://earthobservatory.nasa.gov/images/144361/mo...</span>
@@ -227,7 +236,7 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
+    <div class="link-container" style="--i: 5">
       <a class="link" target="_blank" href="https://www.gq.com/story/billionaires-climate-change">
         <span class="link-title">Billionaires Are the Leading Cause of Climate Change</span>
         <span class="link-url">https://www.gq.com/story/billionaires-climate-chan...</span>
@@ -239,6 +248,10 @@
       </a>
     </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>
