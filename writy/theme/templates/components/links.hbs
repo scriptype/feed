@@ -19,3 +19,15 @@
     </div>
   {{/each}}
 </div>
+{{#with pagination}}
+  <div class="pagination">
+    <div class="pagination-buttons">
+      {{#if previousPage}}
+        <a href="{{previousPage}}">« Newer</a>
+      {{/if}}
+      {{#if nextPage}}
+        <a href="{{nextPage}}">Older »</a>
+      {{/if}}
+    </div>
+  </div>
+{{/with}}

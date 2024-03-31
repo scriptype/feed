@@ -167,7 +167,21 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#react <span class="tag-header-post-count">16 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/react" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+      <li class="overlay-pagination-item">
+        <a href="/tags/react/page/2" class="overlay-pagination-link">
+          2
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
     <div class="link-container">
@@ -327,18 +341,12 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://lucasmreis.github.io/blog/simple-react-patterns/">
-        <span class="link-title">Simple React Patterns</span>
-        <span class="link-url">https://lucasmreis.github.io/blog/simple-react-pat...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#programming</li>
-              <li class="link-tag">#javascript</li>
-              <li class="link-tag">#react</li>
-          </ul>
-      </a>
-    </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+        <a href="/tags/react/page/2">Older »</a>
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>

@@ -167,7 +167,21 @@
     <main class="content"  data-region-id="main" >
       <h2 class="tag-header">#art <span class="tag-header-post-count">24 links</span></h2>
       <div class="graph-container">
-  <canvas class="graph" id="graph"></canvas>
+  <div class="canvas-container">
+    <canvas class="graph" id="graph"></canvas>
+    <ul id="overlay-pagination" class="overlay-pagination">
+      <li class="overlay-pagination-item">
+        <a href="/tags/art" class="overlay-pagination-link is-current">
+          1
+        </a>
+      </li>
+      <li class="overlay-pagination-item">
+        <a href="/tags/art/page/2" class="overlay-pagination-link">
+          2
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
       <div class="links">
     <div class="link-container">
@@ -319,109 +333,12 @@
           </ul>
       </a>
     </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://inconvergent.net/2019/a-tangle-of-webs/">
-        <span class="link-title">A Tangle of Webs - @inconvergent</span>
-        <span class="link-url">https://inconvergent.net/2019/a-tangle-of-webs/</span>
-          <ul class="link-tags">
-              <li class="link-tag">#generative</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#graph</li>
-              <li class="link-tag">#algorithm</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://yuanchuan.dev/2019/05/15/window-lattice-and-css.html">
-        <span class="link-title">Chinese Window Lattice And CSS – @yuanchuan23</span>
-        <span class="link-url">https://yuanchuan.dev/2019/05/15/window-lattice-an...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#creative</li>
-              <li class="link-tag">#coding</li>
-              <li class="link-tag">#generative</li>
-              <li class="link-tag">#art</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread">
-        <span class="link-title">Learn the Basics of Coding with a Needle and Thread - @ideo</span>
-        <span class="link-url">https://www.ideo.com/blog/learn-the-basics-of-code...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#coding</li>
-              <li class="link-tag">#generative</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#creative</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://www.ideo.com/blog/why-being-obsessively-organized-makes-you-more-creative">
-        <span class="link-title">Why Being Obsessively Organized Makes You More Creative - @rebeccalili...</span>
-        <span class="link-url">https://www.ideo.com/blog/why-being-obsessively-or...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#creativity</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#design</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://github.com/mattdesl/canvas-sketch">
-        <span class="link-title">canvas-sketch | A framework for making generative artwork in JavaScrip...</span>
-        <span class="link-url">https://github.com/mattdesl/canvas-sketch</span>
-          <ul class="link-tags">
-              <li class="link-tag">#generative</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#javascript</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://css-tricks.com/drawing-images-with-css-gradients/">
-        <span class="link-title">Drawing Images with CSS Gradients</span>
-        <span class="link-url">https://css-tricks.com/drawing-images-with-css-gra...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#css</li>
-              <li class="link-tag">#art</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://medium.com/@howtogeneratealmostanything/human-ai-collaborated-graffiti-4954206efedf">
-        <span class="link-title">Human-AI Collaborated Graffiti</span>
-        <span class="link-url">https://medium.com/@howtogeneratealmostanything/hu...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#ai</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#graffiti</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="http://recodeproject.com/">
-        <span class="link-title">THE RECODE PROJECT</span>
-        <span class="link-url">http://recodeproject.com/</span>
-          <ul class="link-tags">
-              <li class="link-tag">#generative</li>
-              <li class="link-tag">#art</li>
-          </ul>
-      </a>
-    </div>
-    <div class="link-container">
-      <a class="link" target="_blank" href="https://www.wikiwand.com/en/Emergence">
-        <span class="link-title">Emergence</span>
-        <span class="link-url">https://www.wikiwand.com/en/Emergence</span>
-          <ul class="link-tags">
-              <li class="link-tag">#philosophy</li>
-              <li class="link-tag">#science</li>
-              <li class="link-tag">#art</li>
-              <li class="link-tag">#wikiwand</li>
-          </ul>
-      </a>
-    </div>
 </div>
+  <div class="pagination">
+    <div class="pagination-buttons">
+        <a href="/tags/art/page/2">Older »</a>
+    </div>
+  </div>
     </main>
     <footer class="footer">
   <p>
