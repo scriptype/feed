@@ -25,23 +25,87 @@ const setPageLinkProperties = (list, dayScale) => (page, i) => {
   link.style.setProperty('--width', width + 'px')
 }
 
-const init = ({ selector, scrollContainer, data, dayScale, pageSize }) => {
-  const list = document.querySelector(selector)
+const setListProperties = (list, data, dayScale) => {
   list.classList.add('js-enhanced')
   list.style.setProperty('--offset-x', calculateOffsetX(data, dayScale) + 'px')
+}
 
-  const oldestDataPoint = last(data)
-  const totalDaysElapsed = (Date.now() - oldestDataPoint) / DAY
+const scrollToCurrentPageLink = (list, scrollContainerSelector, currentLinkSelector, behavior = 'auto') => {
+  const currentPageLink = list.querySelector(currentLinkSelector)
+  const scrollContainer = document.querySelector(scrollContainerSelector)
+  scrollContainer.scrollTo({
+    top: 0,
+    left: currentPageLink.offsetLeft - (scrollContainer.clientWidth / 2) + currentPageLink.clientWidth / 2,
+    behavior
+  })
+}
+
+const navigateToPage = (pageLink, data, pages, contentContainerSelector) => {
+  const pageNumber = pageLink.href.match(/\/page\/(\d+)/)
+  const links = pageNumber ?
+    pages[pageNumber[1] - 1] :
+    pages[0]
+
+  window.history.pushState(links, '', pageLink.href)
+  const contentContainer = document.querySelector(contentContainerSelector)
+  contentContainer.querySelectorAll('.link-container').forEach(l => l.classList.add('exiting'))
+  setTimeout(() => {
+    const fragment = document.createDocumentFragment()
+    links.forEach((link, i) => {
+      const linkContainer = contentContainer.querySelector('.link-container').cloneNode(true)
+      const linkElement = linkContainer.querySelector('.link')
+      const linkTitle = linkElement.querySelector('.link-title')
+      const linkUrl = linkElement.querySelector('.link-url')
+      const linkTags = linkElement.querySelector('.link-tags')
+      linkContainer.classList.remove('exiting')
+      linkContainer.classList.add('entering')
+      setTimeout(() => {
+        linkContainer.classList.remove('entering')
+      }, 800)
+      linkContainer.style.setProperty('--i', i)
+      linkElement.href = link.url
+      linkTitle.textContent = link.title
+      linkUrl.textContent = link.url
+      linkTags.innerHTML = link.tags.map(t => `<li class="link-tag">#${t}</li>`).join('')
+      fragment.appendChild(linkContainer)
+    })
+    contentContainer.innerHTML = ''
+    contentContainer.appendChild(fragment)
+  }, 200)
+}
+
+const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
+  const list = document.querySelector(selectors.list)
+  setListProperties(
+    list,
+    data.map(e => e.datePublished),
+    dayScale
+  )
 
   const pages = chunk(data, pageSize)
-  pages.forEach(setPageLinkProperties(list, dayScale))
+  pages
+    .map(p => p.map(l => l.datePublished))
+    .forEach(
+      setPageLinkProperties(list, dayScale)
+    )
 
-  const currentPageLink = list.querySelector('.is-current')
-  const container = document.querySelector(scrollContainer)
-  container.scrollTo({
-    top: 0,
-    left: currentPageLink.offsetLeft - (container.clientWidth / 2) + currentPageLink.clientWidth / 2
+  list.addEventListener('click', (e) => {
+    if (!e.target.classList.contains(classNames.link)) {
+      return
+    }
+    e.preventDefault()
+
+    const currentPageLink = list.querySelector(selectors.currentLink)
+    currentPageLink.classList.remove(classNames.currentLink)
+
+    const pageLink = e.target
+    pageLink.classList.add(classNames.currentLink)
+
+    navigateToPage(e.target, data, pages, selectors.contentContainer)
+    scrollToCurrentPageLink(list, selectors.scrollContainer, `.${classNames.currentLink}`, 'smooth')
   })
+
+  scrollToCurrentPageLink(list, selectors.scrollContainer, `.${classNames.currentLink}`)
 }
 
 export default {

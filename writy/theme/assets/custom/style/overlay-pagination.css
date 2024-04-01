@@ -23,12 +23,19 @@
     text-indent: -2000vw;
 }
 
-.overlay-pagination-link:hover {
+.overlay-pagination-link:hover,
+.overlay-pagination-link:focus-within {
     background: #018;
     mix-blend-mode: difference;
 }
 
 .overlay-pagination-link.is-current {
-    background: #89ffe9;
+    --color-1: aquamarine;
+    --color-2: paleturquoise;
+    --color-3: blanchedalmond;
+    --color-4: lemonchiffon;
+    --color-5: #89ffe9;
+    background: var(--color-4);
     mix-blend-mode: multiply;
+    box-shadow: 0 0 0 1px #ca33;
 }
