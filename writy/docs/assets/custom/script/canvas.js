@@ -12,7 +12,8 @@ export default (options) => {
     colors,
     lineWidth,
     padding,
-    yearMarkPosition
+    yearMarkPosition,
+    yearMarkFont
   } = options
 
   const firstDataPoint = data[data.length - 1]
@@ -83,14 +84,14 @@ export default (options) => {
     const timeToFirstYear = firstVisibleYearDate - firstDataPoint
     const startOffset = timeToFirstYear / DAY * dayScale
     const yearLength = floor(365 * dayScale)
-    ctx.font = '22px sans-serif'
+    ctx.font = yearMarkFont
     ctx.fillStyle = '#666'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
     for (let i = 0; i < innerWidth + startOffset; i++) {
       if (i > startOffset && i % yearLength === 0) {
         const x = padding.left + i - startOffset
-        const y = yearMarkPosition === 'bottom' ? height - 10 : 20
+        const y = yearMarkPosition === 'bottom' ? height - 40 : 20
         ctx.fillText(firstVisibleYear, x, y)
         firstVisibleYear++
       }

@@ -183,11 +183,11 @@
       <a class="link" target="_blank" href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">
         <span class="link-title">ES modules: A cartoon deep-dive</span>
         <span class="link-url">https://hacks.mozilla.org/2018/03/es-modules-a-car...</span>
-          <ul class="link-tags">
-              <li class="link-tag">#ecmascript</li>
-              <li class="link-tag">#modules</li>
-              <li class="link-tag">#javascript</li>
-          </ul>
+        <ul class="link-tags">
+            <li class="link-tag">#ecmascript</li>
+            <li class="link-tag">#modules</li>
+            <li class="link-tag">#javascript</li>
+        </ul>
       </a>
     </div>
 </div>
@@ -219,6 +219,8 @@
 </script>
         <script type="module" src="/assets/custom/script.js"></script>
 
+<script src="/assets/custom/script/vendor/scrollbooster.min.js"></script>
+
 
   <script type="module">
     import search from '/assets/common/search/search.js'
@@ -231,12 +233,6 @@
     search.init({
       onReset: () => {
         graph.init(linkIsTagged)
-      }
-    })
-  </script>
-    </body>
-</html>
-
       }
     })
   </script>
