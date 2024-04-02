@@ -24,7 +24,7 @@
 }
 
 .overlay-pagination-link:hover,
-.overlay-pagination-link:focus-within {
+.overlay-pagination-link:focus-visible {
     background: #018;
     mix-blend-mode: difference;
 }
