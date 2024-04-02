@@ -12,13 +12,10 @@ const chunk = (array, size) =>
 
 const DAY = 1000 * 60 * 60 * 24
 
-const calculateOffsetX = (data, dayScale) => {
-  const daysElapsedSinceMostRecentDataPoint = (Date.now() - data[0]) / DAY
-  return daysElapsedSinceMostRecentDataPoint * dayScale / 2
-}
-
 const setPageLinkProperties = (list, dayScale) => (page, i) => {
-  const daysElapsedInPage = (page[0] - last(page)) / DAY
+  const pageStartDate = i === 0 ? Date.now() : page[0]
+  const pageEndDate = last(page)
+  const daysElapsedInPage = (pageStartDate - pageEndDate) / DAY
   const width = daysElapsedInPage * dayScale
   const link = list.querySelector(`li:nth-child(${i + 1})`)
   link.style.setProperty('--i', i)
@@ -27,7 +24,6 @@ const setPageLinkProperties = (list, dayScale) => (page, i) => {
 
 const setListProperties = (list, data, dayScale) => {
   list.classList.add('js-enhanced')
-  list.style.setProperty('--offset-x', calculateOffsetX(data, dayScale) + 'px')
 }
 
 const scrollToCurrentPageLink = (list, scrollContainerSelector, currentLinkSelector, behavior = 'auto') => {
@@ -48,7 +44,7 @@ const setCurrentPageLink = (list, pageNumber, selectors, classNames) => {
     const pageLink = list.querySelector(`[data-page-number="${pageNumber}"]`)
     pageLink.classList.add(classNames.currentLink)
   } else {
-    const pageLink = list.querySelector(classNames.link + ':first-child')
+    const pageLink = list.querySelector(selectors.link + ':first-child')
     pageLink.classList.add(classNames.currentLink)
   }
 }
@@ -101,13 +97,51 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
       setPageLinkProperties(list, dayScale)
     )
 
-  list.addEventListener('click', (e) => {
-    if (!e.target.classList.contains(classNames.link)) {
+  new window.ScrollBooster({
+    viewport: document.querySelector(selectors.scrollContainer),
+    content: document.querySelector(selectors.scrollContainer),
+    scrollMode: 'native',
+
+    onPointerDown(state, event) {
+      event.target.classList.add('faked-active-state')
+    },
+
+    onPointerUp(state, event) {
+      list.querySelectorAll(selectors.link).forEach(link => {
+        link.classList.remove('faked-active-state')
+      })
+    },
+
+    // De-bug using scrollbar to scroll
+    shouldScroll(state, event) {
+      // e.originalTarget is a Restricted object in case it's the scrollbar
+      try {
+        return event.originalTarget.classList.contains(classNames.link)
+      } catch {
+        return false
+      }
+    },
+
+    // Further event handlers will know that drag is in progress
+    onClick(state, event) {
+      if (state.isMoving) {
+        event.isDragScrolling = true
+      }
+    }
+  })
+
+  document.querySelector(selectors.scrollContainer).addEventListener('click', (event) => {
+    if (!event.target.classList.contains(classNames.link)) {
       return
     }
-    e.preventDefault()
 
-    const pageLink = e.target
+    if (event.isDragScrolling) {
+      return
+    }
+
+    event.preventDefault()
+
+    const pageLink = event.target
     const pageNumber = pageLink.href.match(/\/page\/(\d+)/)
 
     setCurrentPageLink(list, pageNumber && pageNumber[1], selectors, classNames)
@@ -117,7 +151,9 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
       pages[0]
 
     navigateToPage(links, selectors.contentContainer)
-    scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
+    requestAnimationFrame(() => {
+      scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
+    })
     const state = {
       links,
       pageNumber: pageNumber && pageNumber[1]

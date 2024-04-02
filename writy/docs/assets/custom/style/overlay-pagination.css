@@ -1,10 +1,8 @@
 .overlay-pagination {
-    --offset-x: 0;
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: row-reverse;
-    padding-right: var(--offset-x);
 }
 
 .overlay-pagination-item {
@@ -18,18 +16,25 @@
     height: 100%;
 }
 
-.overlay-pagination.js-enhanced
-.overlay-pagination-link {
+.js-enhanced .overlay-pagination-link {
+    /*cursor: grab;*/
+}
+
+.js-enhanced .overlay-pagination-link {
     text-indent: -2000vw;
 }
 
-.overlay-pagination-link:hover,
-.overlay-pagination-link:focus-visible {
+.js-enhanced .overlay-pagination-link:hover,
+.js-enhanced .overlay-pagination-link:focus-visible {
     background: #018;
     mix-blend-mode: difference;
 }
 
-.overlay-pagination-link.is-current {
+.overlay-pagination-link.faked-active-state {
+    cursor: grabbing;
+}
+
+.js-enhanced .overlay-pagination-link.is-current {
     --color-1: aquamarine;
     --color-2: paleturquoise;
     --color-3: blanchedalmond;
