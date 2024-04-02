@@ -40,15 +40,27 @@ const scrollToCurrentPageLink = (list, scrollContainerSelector, currentLinkSelec
   })
 }
 
-const navigateToPage = (pageLink, data, pages, contentContainerSelector) => {
-  const pageNumber = pageLink.href.match(/\/page\/(\d+)/)
-  const links = pageNumber ?
-    pages[pageNumber[1] - 1] :
-    pages[0]
+const setCurrentPageLink = (list, pageNumber, selectors, classNames) => {
+  const currentPageLink = list.querySelector(selectors.currentLink)
+  currentPageLink.classList.remove(classNames.currentLink)
 
-  window.history.pushState(links, '', pageLink.href)
+  if (pageNumber) {
+    const pageLink = list.querySelector(`[data-page-number="${pageNumber}"]`)
+    pageLink.classList.add(classNames.currentLink)
+  } else {
+    const pageLink = list.querySelector(classNames.link + ':first-child')
+    pageLink.classList.add(classNames.currentLink)
+  }
+}
+
+const navigateToPage = (links, contentContainerSelector) => {
   const contentContainer = document.querySelector(contentContainerSelector)
-  contentContainer.querySelectorAll('.link-container').forEach(l => l.classList.add('exiting'))
+  contentContainer.querySelectorAll('.link-container').forEach(link => {
+    if (link.classList.contains('entering')) {
+      link.classList.remove('entering')
+    }
+    link.classList.add('exiting')
+  })
   setTimeout(() => {
     const fragment = document.createDocumentFragment()
     links.forEach((link, i) => {
@@ -61,7 +73,7 @@ const navigateToPage = (pageLink, data, pages, contentContainerSelector) => {
       linkContainer.classList.add('entering')
       setTimeout(() => {
         linkContainer.classList.remove('entering')
-      }, 800)
+      }, 300)
       linkContainer.style.setProperty('--i', i)
       linkElement.href = link.url
       linkTitle.textContent = link.title
@@ -71,7 +83,7 @@ const navigateToPage = (pageLink, data, pages, contentContainerSelector) => {
     })
     contentContainer.innerHTML = ''
     contentContainer.appendChild(fragment)
-  }, 200)
+  }, 300)
 }
 
 const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
@@ -95,17 +107,35 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     }
     e.preventDefault()
 
-    const currentPageLink = list.querySelector(selectors.currentLink)
-    currentPageLink.classList.remove(classNames.currentLink)
-
     const pageLink = e.target
-    pageLink.classList.add(classNames.currentLink)
+    const pageNumber = pageLink.href.match(/\/page\/(\d+)/)
 
-    navigateToPage(e.target, data, pages, selectors.contentContainer)
-    scrollToCurrentPageLink(list, selectors.scrollContainer, `.${classNames.currentLink}`, 'smooth')
+    setCurrentPageLink(list, pageNumber && pageNumber[1], selectors, classNames)
+
+    const links = pageNumber ?
+      pages[pageNumber[1] - 1] :
+      pages[0]
+
+    navigateToPage(links, selectors.contentContainer)
+    scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
+    const state = {
+      links,
+      pageNumber: pageNumber && pageNumber[1]
+    }
+    window.history.pushState(state, '', pageLink.href)
   })
 
-  scrollToCurrentPageLink(list, selectors.scrollContainer, `.${classNames.currentLink}`)
+  window.addEventListener("popstate", (event) => {
+    if (event.state) {
+      setCurrentPageLink(list, event.state.pageNumber, selectors, classNames)
+      navigateToPage(event.state.links, selectors.contentContainer)
+      scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
+    } else {
+      console.log('no')
+    }
+  })
+
+  scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink)
 }
 
 export default {
