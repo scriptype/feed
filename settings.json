@@ -1,0 +1,17 @@
+{
+  "theme": "zen",
+  "url": "https://enes.in/feed",
+  "title": "Reads Feed",
+  "permalinkPrefix": "/feed",
+  "revisionHistory": "off",
+  "ignorePaths": [
+    "node_modules",
+    "add",
+    "src",
+    "misc",
+    "logo.png",
+    "package.json",
+    "package.lock.json",
+    "links.json"
+  ]
+}

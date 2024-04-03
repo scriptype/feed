@@ -5,7 +5,7 @@ const inquirer = require('inquirer')
 const links = require('./links')
 const { parseTags, scrapePageTitle, isTweet } = require('./src/helpers')
 const addLink = require('./src/addLink')
-const createJSONBuilder = require('./src/buildJSON')
+const writ = require('./src/writ')
 const git = require('./src/git')
 const publish = require('./src/publish')
 
@@ -108,12 +108,11 @@ inquirer.prompt(questions).then(async answers => {
     link
   })
 
-  const JSONBuilder = createJSONBuilder({
-    exportDirectory: path.join(__dirname, 'docs', 'data'),
-    links: links.concat(link)
+  await writ.build({
+    links: require('./links.json'),
+    rootPath: '.'
   })
 
-  await JSONBuilder.build()
   console.log('Added link:', JSON.stringify(link, null, 2))
 
   // Commit msg with this mark will trigger gh-action publish workflow

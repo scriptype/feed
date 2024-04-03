@@ -1,0 +1,47 @@
+.overlay-pagination {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.overlay-pagination-item {
+    --width: 30px;
+    width: var(--width);
+}
+
+.overlay-pagination-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.js-enhanced .overlay-pagination-link {
+    /* The quickest way to get mix-blend-mode working in safari */
+    -webkit-backdrop-filter: blur();
+}
+
+.js-enhanced .overlay-pagination-link {
+    text-indent: -2000vw;
+}
+
+.js-enhanced .overlay-pagination-link:hover,
+.js-enhanced .overlay-pagination-link:focus-visible {
+    background: #018;
+    mix-blend-mode: difference;
+}
+
+.overlay-pagination-link.faked-active-state {
+    cursor: grabbing;
+}
+
+.js-enhanced .overlay-pagination-link.is-current {
+    --color-1: aquamarine;
+    --color-2: paleturquoise;
+    --color-3: blanchedalmond;
+    --color-4: lemonchiffon;
+    --color-5: #89ffe9;
+    background: var(--color-4);
+    mix-blend-mode: multiply;
+    box-shadow: 0 0 0 1px #ca33;
+}

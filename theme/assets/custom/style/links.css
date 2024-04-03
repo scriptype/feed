@@ -1,0 +1,119 @@
+.links {
+    perspective: 500vh;
+}
+
+.link-container {
+    --enter-rotate-x: 30deg;
+    --enter-rotate-y: 0deg;
+    --enter-exit-shift-x: 0%;
+    --enter-exit-shift-y: 4%;
+    --enter-exit-scale: .95, .95;
+    --enter-exit-duration: .2s;
+    --enter-exit-stagger: 50ms;
+}
+
+.link-container.entering,
+.link-container.exiting {
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    animation-fill-mode: forwards;
+    animation-duration: var(--enter-exit-duration);
+    animation-delay: calc(var(--i) * var(--enter-exit-stagger));
+}
+
+.link-container.entering {
+    opacity: 0;
+    transform:
+        translate(
+            calc(var(--enter-exit-shift-x) * -1),
+            calc(var(--enter-exit-shift-y) * -1)
+        )
+        scale(var(--enter-exit-scale))
+        rotateX(calc(var(--enter-rotate-x) * -1))
+        rotateY(calc(var(--enter-rotate-y) * -1));
+    animation-name: link-enter;
+}
+
+@keyframes link-enter {
+    to {
+        transform:
+            translate(0, 0)
+            scale(1, 1)
+            rotateX(0)
+            rotateY(0);
+        opacity: 1;
+    }
+}
+
+.link-container.exiting {
+    transform-origin: bottom center;
+    animation-name: link-exit;
+}
+
+@keyframes link-exit {
+    to {
+        transform:
+            translate(
+                var(--enter-exit-shift-x),
+                var(--enter-exit-shift-y)
+            )
+            scale(var(--enter-exit-scale));
+        opacity: 0;
+    }
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .8em 2em 1.1em;
+    font-size: 1.8em;
+    font-weight: 100;
+    text-decoration: none;
+    color: #333;
+    transition: all .3s;
+}
+
+@media (max-width: 640px) {
+    .link {
+        padding: .7em 1em 1em;
+    }
+}
+
+.link:hover,
+.link:focus {
+    background: #f4f4f4;
+}
+
+.link:active {
+    background: #e8e8e8;
+    box-shadow: none;
+}
+
+.link-title {
+    line-height: 1.4;
+}
+
+.link-url {
+    margin-top: .25rem;
+    font-size: .6em;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary-color);
+}
+
+.link-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: .35rem;
+    margin-bottom: -.2em;
+}
+
+.link-tag {
+    font-size: 0.45em;
+    margin: 0.3em .5em .25em 0;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: #666;
+}

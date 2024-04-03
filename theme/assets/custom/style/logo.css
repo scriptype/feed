@@ -1,0 +1,62 @@
+.logo-container {
+    display: block;
+    width: 256px;
+    height: 256px;
+    background: #fff;
+    border-radius: 100%;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    transform: scale(.75, .75);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.shine {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    transform:
+        rotate(-45deg)
+        translateY(-110%);
+    transition: inherit;
+}
+
+.logo-container:hover,
+.logo-container:focus {
+    background: #fafafa;
+    transform: scale(.85, .85);
+}
+
+.logo-container:hover .shine,
+.logo-container:focus .shine {
+    opacity: 1;
+    transform:
+        rotate(-45deg)
+        translateY(-85%)
+}
+
+.logo-container:focus {
+    outline: none;
+}
+
+.logo-container:active {
+    background: #fff;
+    transform: scale(.75, .75);
+}
+
+.logo-container:active .shine {
+    opacity: 0;
+    transform:
+        rotate(-45deg)
+        translateY(-110%)
+}
+
+.logo {
+    max-width: 100%;
+    border-radius: inherit;
+}

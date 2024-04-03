@@ -1,0 +1,10 @@
+.tag-header {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.tag-header-post-count {
+    display: block;
+    color: #555;
+    font-size: .5em;
+}
