@@ -99,7 +99,6 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
 
   new window.ScrollBooster({
     viewport: document.querySelector(selectors.scrollContainer),
-    content: document.querySelector(selectors.scrollContainer),
     scrollMode: 'native',
 
     onPointerDown(state, event) {
@@ -122,7 +121,7 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
       }
     },
 
-    // Further event handlers will know that drag is in progress
+    // Later event handlers will know that drag is in progress
     onClick(state, event) {
       if (state.isMoving) {
         event.isDragScrolling = true

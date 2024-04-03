@@ -17,7 +17,8 @@
 }
 
 .js-enhanced .overlay-pagination-link {
-    /*cursor: grab;*/
+    /* The quickest way to get mix-blend-mode working in safari */
+    -webkit-backdrop-filter: blur();
 }
 
 .js-enhanced .overlay-pagination-link {

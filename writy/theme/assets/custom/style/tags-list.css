@@ -1,3 +1,7 @@
+::-webkit-details-marker {
+    display: none;
+}
+
 .tags-list-toggle-label {
     position: absolute;
     bottom: 200vh;

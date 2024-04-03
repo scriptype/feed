@@ -9,7 +9,6 @@ const init = async (filter = (f => true)) => {
   const minDayScale = 0.8
   const maxDayScale = 2
   const dayScale = min(maxDayScale, max(minDayScale, data.length / 200))
-  console.log({ dayScale })
   Canvas({
     selector: '#graph',
     height: 260,
