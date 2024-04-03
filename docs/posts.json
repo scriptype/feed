@@ -1,6 +1,57 @@
 [
   {
     "type": "link",
+    "title": "In Conversation with Gerard Ferrandez",
+    "cover": "",
+    "media": "",
+    "summary": "",
+    "tags": [
+      {
+        "tag": "art",
+        "slug": "art",
+        "permalink": "/feed/tags/art"
+      },
+      {
+        "tag": "generative art",
+        "slug": "generative-art",
+        "permalink": "/feed/tags/generative-art"
+      },
+      {
+        "tag": "creative coding",
+        "slug": "creative-coding",
+        "permalink": "/feed/tags/creative-coding"
+      }
+    ],
+    "slug": "posty",
+    "permalink": "https://beta.cent.co/artblocks/+wqo2nr",
+    "category": {
+      "name": "Unclassified",
+      "permalink": "/feed/unclassified"
+    },
+    "path": "posty.txt",
+    "handle": "posty",
+    "foldered": false,
+    "localAssets": [],
+    "url": "https://beta.cent.co/artblocks/+wqo2nr",
+    "datePublished": 1712176849825,
+    "publishDate": "2024-04-03T20:40:49.825Z",
+    "publishDateUTC": "Wed, 03 Apr 2024 20:40:49 GMT",
+    "publishDateFull": "Wednesday, April 3, 2024",
+    "publishDateLong": "April 3, 2024",
+    "publishDateMedium": "Apr 3, 2024",
+    "publishDateShort": "4/3/24",
+    "links": {
+      "previousPost": {
+        "title": "posty",
+        "permalink": "/feed/posty.html"
+      },
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
+    }
+  },
+  {
+    "type": "link",
     "title": "Do Things The Long, Hard, Stupid Way",
     "cover": "",
     "media": "",
