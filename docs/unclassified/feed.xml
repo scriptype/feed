@@ -11,17 +11,17 @@
             <link>https://enes.in/feed</link>
         </image>
         <category>Unclassified</category>
-        <lastBuildDate>Wed Apr 03 2024 23:46:39 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <lastBuildDate>Wed Apr 03 2024 23:53:15 GMT+0300 (GMT+03:00)</lastBuildDate>
         <copyright>All rights reserved 2024, Reads Feed</copyright>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <generator>writ-cms</generator>
         <atom:link href="https://enes.in/feed/unclassified/feed.xml" rel="self" type="application/rss+xml" />
         <item>
-            <title><![CDATA[In Conversation with Gerard Ferrandez]]></title>
-            <link>https://beta.cent.co/artblocks/+wqo2nr</link>
-            <guid>https://beta.cent.co/artblocks/+wqo2nr</guid>
-            <pubDate>Wed, 03 Apr 2024 20:40:49 GMT</pubDate>
-            <description><![CDATA[In Conversation with Gerard Ferrandez]]></description>
+            <title><![CDATA[Node.js: The Documentary | An origin story]]></title>
+            <link>https://www.youtube.com/watch?v=LB8KwiiUGy0</link>
+            <guid>https://www.youtube.com/watch?v=LB8KwiiUGy0</guid>
+            <pubDate>Wed, 03 Apr 2024 20:53:13 GMT</pubDate>
+            <description><![CDATA[Node.js: The Documentary | An origin story]]></description>
         </item>
     </channel>
 </rss>
