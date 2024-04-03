@@ -6,6 +6,7 @@ const links = require('./links')
 const { parseTags, scrapePageTitle, isTweet } = require('./src/helpers')
 const addLink = require('./src/addLink')
 const writ = require('./src/writ')
+const writSettings = require('./settings.json')
 const git = require('./src/git')
 const publish = require('./src/publish')
 
@@ -108,7 +109,7 @@ inquirer.prompt(questions).then(async answers => {
     link
   })
 
-  await writ.run({
+  await writ.build({
     links: links.concat(link),
     rootPath: '.'
   })
@@ -117,9 +118,12 @@ inquirer.prompt(questions).then(async answers => {
 
   // Commit msg with this mark will trigger gh-action publish workflow
   const messagePrefix = answers.shouldPublish ? '[publish] ' : ''
+  const { exportDirectory: defaultExportDirectory } = writSettings
+  const { exportDirectory: customExportDirectory } = writSettings
+  const exportDirectory = customExportDirectory || defaultExportDirectory
   await git.commit({
     message: `${messagePrefix}Add: ${link.url}`,
-    paths: ['links.json', 'docs']
+    paths: ['links.json', exportDirectory]
   })
 
   if (answers.shouldPublish) {

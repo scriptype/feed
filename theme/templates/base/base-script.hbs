@@ -2,5 +2,5 @@
 <script>
   window.permalinkPrefix = "{{settings.permalinkPrefix}}"
   window.fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
-  window.posts = {{serialize (minifyPosts)}}
+  window.posts = fetch(`${fetchPrefix}/posts.min.json`).then(r => r.json())
 </script>

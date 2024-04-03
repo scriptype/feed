@@ -1,0 +1,1 @@
+require('../writ').build({ rootPath: '.' })

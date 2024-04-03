@@ -14,8 +14,8 @@
     "writ-cms": "github:scriptype/writ-cms#v0.28.0"
   },
   "scripts": {
-    "start": "node ./src/dev",
-    "build": "node ./src/build",
+    "start": "node ./src/scripts/start",
+    "build": "node ./src/scripts/build",
     "publish-latest-link": "node src/publish-latest-link.js"
   },
   "repository": {
