@@ -5,7 +5,7 @@
     {{#each pagination.pages as |page|}}
       <li class="overlay-pagination-item">
         <a href="{{page.url}}" data-page-number="{{page.number}}" class="overlay-pagination-link{{#if page.current}} is-current{{/if}}">
-          {{page.number}}
+          Page {{page.number}}
         </a>
       </li>
     {{/each}}
