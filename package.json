@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "node ./src/dev",
+    "build": "node ./src/build",
     "publish-latest-link": "node src/publish-latest-link.js"
   },
   "repository": {
