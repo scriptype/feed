@@ -108,7 +108,7 @@ inquirer.prompt(questions).then(async answers => {
     link
   })
 
-  await writ.build({
+  await writ.run({
     links: require('./links.json'),
     rootPath: '.'
   })
