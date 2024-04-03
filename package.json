@@ -11,9 +11,10 @@
     "lodash": "^4.17.11",
     "tumblr.js": "^2.0.2",
     "twitter-api-v2": "^1.14.3",
-    "writ-cms": "github:scriptype/writ-cms"
+    "writ-cms": "github:scriptype/writ-cms#v0.28.0"
   },
   "scripts": {
+    "start": "node ./src/dev",
     "publish-latest-link": "node src/publish-latest-link.js"
   },
   "repository": {

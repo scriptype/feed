@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Reads Feed | Unclassified</title>
+        <link>https://enes.in/feed/unclassified</link>
+        <description>Unclassified category on Reads Feed</description>
+        <language>en</language>
+        <image>
+            <title>Reads Feed</title>
+            <url>https://enes.in/feed/assets/common/writ-icon-512.png</url>
+            <link>https://enes.in/feed</link>
+        </image>
+        <category>Unclassified</category>
+        <lastBuildDate>Wed Apr 03 2024 23:18:13 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <copyright>All rights reserved 2024, Reads Feed</copyright>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <generator>writ-cms</generator>
+        <atom:link href="https://enes.in/feed/unclassified/feed.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title><![CDATA[Do Things The Long, Hard, Stupid Way]]></title>
+            <link>https://www.youtube.com/watch?v=WjSOZI90PmE</link>
+            <guid>https://www.youtube.com/watch?v=WjSOZI90PmE</guid>
+            <pubDate>Sat, 23 Mar 2024 23:47:31 GMT</pubDate>
+            <description><![CDATA[Do Things The Long, Hard, Stupid Way]]></description>
+        </item>
+    </channel>
+</rss>
