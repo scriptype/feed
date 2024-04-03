@@ -109,7 +109,7 @@ inquirer.prompt(questions).then(async answers => {
   })
 
   await writ.run({
-    links: require('./links.json'),
+    links: links.concat(link),
     rootPath: '.'
   })
 
