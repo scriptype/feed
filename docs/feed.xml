@@ -11,11 +11,18 @@
             <link>https://enes.in/feed</link>
         </image>
         <category>Unclassified</category>
-        <lastBuildDate>Wed, 03 Apr 2024 20:53:15 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Apr 2024 21:58:35 GMT</lastBuildDate>
         <copyright>All rights reserved 2024, Reads Feed</copyright>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <generator>writ-cms</generator>
         <atom:link href="https://enes.in/feed/feed.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title><![CDATA[Frank Chimero · What Screens Want]]></title>
+            <link>https://frankchimero.com/blog/2013/what-screens-want/</link>
+            <guid>https://frankchimero.com/blog/2013/what-screens-want/</guid>
+            <pubDate>Wed, 03 Apr 2024 21:58:34 GMT</pubDate>
+            <description><![CDATA[Frank Chimero · What Screens Want]]></description>
+        </item>
         <item>
             <title><![CDATA[Node.js: The Documentary | An origin story]]></title>
             <link>https://www.youtube.com/watch?v=LB8KwiiUGy0</link>
@@ -183,13 +190,6 @@
             <guid>https://www.themarginalian.org/2012/09/03/anais-nin-on-emotion-and-writing/</guid>
             <pubDate>Tue, 12 Mar 2024 22:30:24 GMT</pubDate>
             <description><![CDATA[Why Emotional Excess is Essential to Writing and Creativity]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Nothing Fails Like Success]]></title>
-            <link>https://alistapart.com/article/nothing-fails-like-success/</link>
-            <guid>https://alistapart.com/article/nothing-fails-like-success/</guid>
-            <pubDate>Sat, 09 Mar 2024 06:32:54 GMT</pubDate>
-            <description><![CDATA[Nothing Fails Like Success]]></description>
         </item>
     </channel>
 </rss>

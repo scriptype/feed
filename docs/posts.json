@@ -1,6 +1,52 @@
 [
   {
     "type": "link",
+    "title": "Frank Chimero · What Screens Want",
+    "cover": "",
+    "media": "",
+    "summary": "",
+    "tags": [
+      {
+        "tag": "web",
+        "slug": "web",
+        "permalink": "/feed/tags/web"
+      },
+      {
+        "tag": "design",
+        "slug": "design",
+        "permalink": "/feed/tags/design"
+      }
+    ],
+    "slug": "posty",
+    "permalink": "https://frankchimero.com/blog/2013/what-screens-want/",
+    "category": {
+      "name": "Unclassified",
+      "permalink": "/feed/unclassified"
+    },
+    "path": "posty.txt",
+    "handle": "posty",
+    "foldered": false,
+    "localAssets": [],
+    "url": "https://frankchimero.com/blog/2013/what-screens-want/",
+    "datePublished": 1712181514540,
+    "publishDate": "2024-04-03T21:58:34.540Z",
+    "publishDateUTC": "Wed, 03 Apr 2024 21:58:34 GMT",
+    "publishDateFull": "Thursday, April 4, 2024",
+    "publishDateLong": "April 4, 2024",
+    "publishDateMedium": "Apr 4, 2024",
+    "publishDateShort": "4/4/24",
+    "links": {
+      "previousPost": {
+        "title": "posty",
+        "permalink": "/feed/posty.html"
+      },
+      "relevantPosts": [],
+      "mentionedTo": [],
+      "mentionedBy": []
+    }
+  },
+  {
+    "type": "link",
     "title": "Node.js: The Documentary | An origin story",
     "cover": "",
     "media": "",
