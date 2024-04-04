@@ -10,6 +10,8 @@ const chunk = (array, size) =>
     })
   }, [])
 
+const wait = (duration) => new Promise(r => setTimeout(r, duration))
+
 const DAY = 1000 * 60 * 60 * 24
 
 const setPageLinkProperties = (list, dayScale) => (page, i) => {
@@ -90,7 +92,11 @@ const navigateToPage = (links, contentContainerSelector) => {
     }
     link.classList.add('exiting')
   })
-  setTimeout(() => {
+
+  wait(250).then(() => {
+    /*
+     * Put new links in content
+     * */
     const fragment = document.createDocumentFragment()
     links.forEach((link, i) => {
       const linkContainer = contentContainer.querySelector('.link-container').cloneNode(true)
@@ -112,7 +118,7 @@ const navigateToPage = (links, contentContainerSelector) => {
     })
     contentContainer.innerHTML = ''
     contentContainer.appendChild(fragment)
-  }, 300)
+  })
 }
 
 const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
