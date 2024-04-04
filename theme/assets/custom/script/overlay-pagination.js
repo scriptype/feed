@@ -84,7 +84,12 @@ const setCurrentPageLink = (list, pageNumber, selectors, classNames) => {
   }
 }
 
-const navigateToPage = (links, contentContainerSelector) => {
+const navigateToPage = (
+  pages,
+  pageNumber,
+  contentContainerSelector,
+  paginationContainerSelector
+) => {
   const contentContainer = document.querySelector(contentContainerSelector)
   contentContainer.querySelectorAll('.link-container').forEach(link => {
     if (link.classList.contains('entering')) {
@@ -92,6 +97,10 @@ const navigateToPage = (links, contentContainerSelector) => {
     }
     link.classList.add('exiting')
   })
+
+  const links = pageNumber ?
+    pages[pageNumber - 1] :
+    pages[0]
 
   wait(250).then(() => {
     /*
@@ -118,6 +127,28 @@ const navigateToPage = (links, contentContainerSelector) => {
     })
     contentContainer.innerHTML = ''
     contentContainer.appendChild(fragment)
+
+    /*
+     * Change pagination buttons
+     * */
+    const paginationContainer = document.querySelector(paginationContainerSelector)
+    const paginationContainerTemplate = (previousPage, nextPage) => `
+      <div class="pagination-buttons">
+        ${previousPage === 1 ? `
+          <a href="${window.permalinkPrefix}">« Newer</a>
+        ` : `
+          <a href="/page/${previousPage}">« Newer</a>
+        `}
+        ${nextPage ? `
+          <a href="/page/${nextPage}">Older »</a>
+        ` : ''}
+      </div>
+    `
+
+    paginationContainer.innerHTML = paginationContainerTemplate(
+      pageNumber ? (pages[pageNumber - 2] && pageNumber - 1) : 2,
+      pages[pageNumber] && pageNumber + 1
+    )
   })
 }
 
@@ -170,6 +201,19 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     }
   })
 
+  const pageNumber = document.location.pathname.match(/page\/(\d+)/)
+
+  const links = pageNumber ?
+    pages[pageNumber[1] - 1] :
+    pages[0]
+
+  const state = {
+    links,
+    pageNumber: pageNumber && Number(pageNumber[1])
+  }
+
+  window.history.replaceState(state, '', document.location.href)
+
   document.querySelector(selectors.scrollContainer).addEventListener('click', (event) => {
     if (!event.target.classList.contains(classNames.link)) {
       return
@@ -184,28 +228,61 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     const pageLink = event.target
     const pageNumber = pageLink.href.match(/\/page\/(\d+)/)
 
-    setCurrentPageLink(list, pageNumber && pageNumber[1], selectors, classNames)
+    setCurrentPageLink(
+      list,
+      pageNumber && pageNumber[1],
+      selectors,
+      classNames
+    )
+
+    navigateToPage(
+      pages,
+      pageNumber && Number(pageNumber[1]),
+      selectors.contentContainer,
+      selectors.paginationContainer
+    )
+
+    requestAnimationFrame(() => {
+      scrollToCurrentPageLink(
+        list,
+        selectors.scrollContainer,
+        selectors.currentLink,
+        'smooth'
+      )
+    })
 
     const links = pageNumber ?
       pages[pageNumber[1] - 1] :
       pages[0]
 
-    navigateToPage(links, selectors.contentContainer)
-    requestAnimationFrame(() => {
-      scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
-    })
     const state = {
       links,
-      pageNumber: pageNumber && pageNumber[1]
+      pageNumber: pageNumber && Number(pageNumber[1])
     }
+
     window.history.pushState(state, '', pageLink.href)
   })
 
   window.addEventListener("popstate", (event) => {
     if (event.state) {
-      setCurrentPageLink(list, event.state.pageNumber, selectors, classNames)
-      navigateToPage(event.state.links, selectors.contentContainer)
-      scrollToCurrentPageLink(list, selectors.scrollContainer, selectors.currentLink, 'smooth')
+      setCurrentPageLink(
+        list,
+        event.state.pageNumber,
+        selectors,
+        classNames
+      )
+      navigateToPage(
+        pages,
+        event.state.pageNumber,
+        selectors.contentContainer,
+        selectors.paginationContainer
+      )
+      scrollToCurrentPageLink(
+        list,
+        selectors.scrollContainer,
+        selectors.currentLink,
+        'smooth'
+      )
     } else {
       console.log('no')
     }

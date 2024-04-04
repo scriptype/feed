@@ -43,6 +43,7 @@ const init = async (filter = (f => true)) => {
       link: '.overlay-pagination-link',
       scrollContainer: '.graph-container',
       contentContainer: '.links',
+      paginationContainer: '.pagination-buttons',
       currentLink: '.overlay-pagination-link.is-current'
     },
     classNames: {
