@@ -1,11 +1,11 @@
 const prepare = require('./prepare')
 const minifyPostsJSON = require('./minifyPostsJSON')
 
-const run = async ({ links, rootPath, mode, debug }) => {
+const run = async ({ links, rootDirectory, mode, debug }) => {
   const writ = prepare(links)
 
   await writ[mode]({
-    rootDirectory: rootPath,
+    rootDirectory: rootDirectory,
     cli: true,
     debug,
     onFinish({ settings }) {

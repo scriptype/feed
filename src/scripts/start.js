@@ -1,1 +1,1 @@
-require('../writ').start({ rootPath: '.' })
+require('../writ').start({ rootDirectory: '.' })

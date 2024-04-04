@@ -11,17 +11,17 @@
             <link>https://enes.in/feed</link>
         </image>
         <category>Unclassified</category>
-        <lastBuildDate>Thu Apr 04 2024 05:31:28 GMT+0300 (GMT+03:00)</lastBuildDate>
+        <lastBuildDate>Thu Apr 04 2024 05:56:09 GMT+0300 (GMT+03:00)</lastBuildDate>
         <copyright>All rights reserved 2024, Reads Feed</copyright>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <generator>writ-cms</generator>
         <atom:link href="https://enes.in/feed/unclassified/feed.xml" rel="self" type="application/rss+xml" />
         <item>
-            <title><![CDATA[Frank Chimero · What Screens Want]]></title>
-            <link>https://frankchimero.com/blog/2013/what-screens-want/</link>
-            <guid>https://frankchimero.com/blog/2013/what-screens-want/</guid>
-            <pubDate>Wed, 03 Apr 2024 21:58:34 GMT</pubDate>
-            <description><![CDATA[Frank Chimero · What Screens Want]]></description>
+            <title><![CDATA[Dan Cederholm - Handcrafted CSS]]></title>
+            <link>https://vimeo.com/17091905</link>
+            <guid>https://vimeo.com/17091905</guid>
+            <pubDate>Thu, 04 Apr 2024 02:41:07 GMT</pubDate>
+            <description><![CDATA[Dan Cederholm - Handcrafted CSS]]></description>
         </item>
     </channel>
 </rss>
