@@ -110,6 +110,10 @@ module.exports = {
     return value1 !== value2
   },
 
+  not(value) {
+    return !value
+  },
+
   isEnabled(featureName) {
     return this.settings[featureName] !== 'off'
   },

@@ -2,43 +2,28 @@
 <script type="module" src="{{assetsPath}}/custom/script.js"></script>
 {{/if}}
 
+{{#if (not (isTagsPage))}}
 <script src="{{assetsPath}}/custom/script/vendor/scrollbooster.min.js"></script>
+<script type="module">
+  import dictionary from '{{assetsPath}}/common/dictionary.js'
+  import search from '{{assetsPath}}/common/search/search.js'
+  import graph from '{{assetsPath}}/custom/script/graph.js'
+  import tags from '{{assetsPath}}/custom/script/tags.js'
 
-{{#if (isHomePage)}}
-  <script type="module">
-    import dictionary from '{{assetsPath}}/common/dictionary.js'
-    import search from '{{assetsPath}}/common/search/search.js'
-    import graph from '{{assetsPath}}/custom/script/graph.js'
-    import tags from '{{assetsPath}}/custom/script/tags.js'
-
-    graph.init()
-    tags.init()
-    dictionary.ready(() => {
-      search.init({
-        onReset: () => {
-          graph.init()
-        }
-      })
+  let linksFilter
+  const tagInUrl = window.location.pathname.match(/tags\/(.+)/)
+  if (tagInUrl) {
+    const tag = tagInUrl[1].replace(/\/$/, '')
+    linksFilter = (link) => link.tags.includes(tag)
+  }
+  graph.init(linksFilter)
+  tags.init()
+  dictionary.ready(() => {
+    search.init({
+      onReset: () => {
+        graph.init(linksFilter)
+      }
     })
-  </script>
-{{/if}}
-
-{{#if (isTagPage)}}
-  <script type="module">
-    import dictionary from '{{assetsPath}}/common/dictionary.js'
-    import search from '{{assetsPath}}/common/search/search.js'
-    import graph from '{{assetsPath}}/custom/script/graph.js'
-    import tags from '{{assetsPath}}/custom/script/tags.js'
-
-    const linkIsTagged = (link) => link.tags.includes('{{tag.tag}}')
-    graph.init(linkIsTagged)
-    tags.init()
-    dictionary.ready(() => {
-      search.init({
-        onReset: () => {
-          graph.init(linkIsTagged)
-        }
-      })
-    })
-  </script>
+  })
+</script>
 {{/if}}
