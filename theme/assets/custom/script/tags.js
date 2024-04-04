@@ -7,13 +7,13 @@ const init = () => {
   }
 
   const listToggleAutoExpandHandler = () => {
-    if (window.innerWidth <= 900 && listToggle.getAttribute('open') === 'true') {
-      listToggleBtn.textContent = toggleLabels.clickToOpen
+    if (window.innerWidth <= 900 && listToggle.hasAttribute('open')) {
       listToggle.removeAttribute('open')
+      listToggleBtn.textContent = toggleLabels.clickToOpen
     }
-    if (window.innerWidth > 900 && !listToggle.hasAttribute('open')) {
-      listToggleBtn.textContent = toggleLabels.clickToClose
+    if (window.innerWidth > 900) {
       listToggle.setAttribute('open', true)
+      listToggleBtn.textContent = toggleLabels.clickToClose
     }
   }
 
