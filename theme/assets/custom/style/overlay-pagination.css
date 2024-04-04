@@ -1,12 +1,19 @@
 #overlay-pagination-toggle {
     position: fixed;
-    bottom: 200vh;
-    z-index: 1;
-    font-size: 0;
+    width: var(--content-width);
+    text-align: center;
     color: royalblue;
 }
 
-#overlay-pagination-toggle:focus {
+.js-enhanced #overlay-pagination-toggle {
+    bottom: 200vh;
+    z-index: 1;
+    font-size: 0;
+    text-align: initial;
+    width: auto;
+}
+
+.js-enhanced #overlay-pagination-toggle:focus {
     font-size: .9em;
     height: 1.5em;
     top: var(--graph-offset-top);
@@ -14,15 +21,25 @@
 }
 
 .overlay-pagination {
+    display: flex;
+    padding: 1em 0;
+}
+
+.js-enhanced .overlay-pagination {
     position: absolute;
     inset: 0;
-    display: flex;
     flex-direction: row-reverse;
+    padding: 0;
 }
 
 .overlay-pagination-item {
-    --width: 30px;
+    --width: max-content;
     width: var(--width);
+    padding: 1em .5em;
+}
+
+.js-enhanced .overlay-pagination-item {
+    padding: 0;
 }
 
 .overlay-pagination-link {

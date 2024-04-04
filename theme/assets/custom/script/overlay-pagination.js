@@ -25,7 +25,6 @@ const setPageLinkProperties = (list, dayScale) => (page, i) => {
 }
 
 const setListProperties = (list, scrollContainer, data, dayScale) => {
-  list.classList.add('js-enhanced')
   const container = scrollContainer.querySelector('#overlay-pagination-container')
   const toggle = scrollContainer.querySelector('#overlay-pagination-toggle')
   const toggleLabels = {
