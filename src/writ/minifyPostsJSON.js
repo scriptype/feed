@@ -2,12 +2,7 @@ const { readFile, writeFile } = require('fs/promises')
 const { join } = require('path')
 const writSettings = require('../../settings.json')
 
-const minify = async (_writ) => {
-  const writ = _writ || require('writ-cms')
-  const { exportDirectory: customExportDirectory } = writSettings
-  const { exportDirectory: defaultExportDirectory } = writ.getDefaultSettings()
-  const exportDirectory = customExportDirectory || defaultExportDirectory
-
+const minify = async ({ exportDirectory }) => {
   const postsJSONFile = await readFile(
     join(exportDirectory, 'posts.json'),
     { encoding: 'utf-8' }

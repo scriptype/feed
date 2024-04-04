@@ -7,10 +7,11 @@ const run = async ({ links, rootPath, mode, debug }) => {
   await writ[mode]({
     rootDirectory: rootPath,
     cli: true,
-    debug
+    debug,
+    onFinish({ settings }) {
+      return minifyPostsJSON(settings)
+    }
   })
-
-  await minifyPostsJSON()
 }
 
 module.exports = {
