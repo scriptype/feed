@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node ./src/scripts/start",
     "build": "node ./src/scripts/build",
-    "publish-latest-link": "node src/publish-latest-link.js"
+    "publish-latest-link": "node src/scripts/publish-latest-link.js"
   },
   "repository": {
     "type": "git",

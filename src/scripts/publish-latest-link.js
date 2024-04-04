@@ -1,7 +1,3 @@
-/*
- * This module is run from npm scripts so it immediately invokes
- */
-
 const { readFile } = require('fs/promises')
 const path = require('path')
 const { last } = require('./helpers')
