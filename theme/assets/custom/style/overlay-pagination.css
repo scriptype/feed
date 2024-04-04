@@ -22,7 +22,7 @@
 
 .overlay-pagination {
     display: flex;
-    padding: 1em 0;
+    padding: 2em 0 1em;
 }
 
 .js-enhanced .overlay-pagination {
@@ -38,8 +38,15 @@
     padding: 1em .5em;
 }
 
+.overlay-pagination-item:has(.is-current) {
+    background: var(--tag-badge-color);
+    border-radius: .8em;
+}
+
 .js-enhanced .overlay-pagination-item {
     padding: 0;
+    border-radius: 0;
+    background: none;
 }
 
 .overlay-pagination-link {
@@ -65,6 +72,10 @@
 
 .overlay-pagination-link.faked-active-state {
     cursor: grabbing;
+}
+
+.overlay-pagination-link.is-current {
+    background: var(--tag-badge-color);
 }
 
 .js-enhanced .overlay-pagination-link.is-current {
