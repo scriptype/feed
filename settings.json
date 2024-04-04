@@ -4,15 +4,5 @@
   "title": "Reads Feed",
   "permalinkPrefix": "/feed",
   "revisionHistory": "off",
-  "exportDirectory": "site",
-  "ignorePaths": [
-    "node_modules",
-    "add",
-    "src",
-    "misc",
-    "logo.png",
-    "package.json",
-    "package.lock.json",
-    "links.json"
-  ]
+  "exportDirectory": "site"
 }
