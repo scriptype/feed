@@ -1,10 +1,10 @@
 .graph-container {
-    margin: 1em 0 2em;
+    margin: 3em 0 5.6em;
     overflow: auto;
 }
 
 .graph-container:has([open]) {
-    margin: 1em 0;
+    margin: 1em 0 1.1em;
 }
 
 .js-enhanced .graph-container {

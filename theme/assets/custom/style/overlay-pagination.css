@@ -3,6 +3,14 @@
     width: var(--content-width);
     text-align: center;
     color: royalblue;
+    opacity: 0;
+    animation: appear .2s .4s forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
 }
 
 .js-enhanced #overlay-pagination-toggle {
