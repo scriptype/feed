@@ -1,13 +1,4 @@
 module.exports = {
-  minifyPosts() {
-    return (this.allPosts || this.posts).map(post => ({
-      title: post.title,
-      datePublished: post.datePublished,
-      tags: post.tags.map(tag => tag.tag),
-      url: post.url
-    }))
-  },
-
   serialize(obj) {
     return JSON.stringify(obj)
   },
