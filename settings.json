@@ -4,7 +4,7 @@
   "title": "Reads Feed",
   "permalinkPrefix": "/feed",
   "revisionHistory": "off",
-  "exportDirectory": "docs",
+  "exportDirectory": "site",
   "ignorePaths": [
     "node_modules",
     "add",

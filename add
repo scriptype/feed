@@ -6,7 +6,6 @@ const links = require('./links')
 const { parseTags, scrapePageTitle, isTweet } = require('./src/helpers')
 const addLink = require('./src/addLink')
 const writ = require('./src/writ')
-const writSettings = require('./settings.json')
 const git = require('./src/git')
 const publish = require('./src/publish')
 
@@ -118,10 +117,9 @@ inquirer.prompt(questions).then(async answers => {
 
   // Commit msg with this mark will trigger gh-action publish workflow
   const messagePrefix = answers.shouldPublish ? '[publish] ' : ''
-  const { exportDirectory } = writSettings
   await git.commit({
     message: `${messagePrefix}Add: ${link.url}`,
-    paths: ['links.json', exportDirectory]
+    paths: ['links.json']
   })
 
   if (answers.shouldPublish) {
