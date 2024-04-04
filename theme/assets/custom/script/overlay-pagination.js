@@ -29,8 +29,8 @@ const setListProperties = (list, scrollContainer, data, dayScale) => {
   const container = scrollContainer.querySelector('#overlay-pagination-container')
   const toggle = scrollContainer.querySelector('#overlay-pagination-toggle')
   const toggleLabels = {
-    clickToOpen: 'Show graph pagination',
-    clickToClose: 'Hide graph pagination'
+    clickToOpen: 'Show graph pagination links',
+    clickToClose: 'Hide graph pagination links'
   }
   toggle.addEventListener('click', () => {
     if (toggle.textContent === toggleLabels.clickToClose) {
@@ -54,7 +54,7 @@ const setListProperties = (list, scrollContainer, data, dayScale) => {
   window.addEventListener('orientationchange', setTogglePosition)
   setTogglePosition()
   container.setAttribute('open', true)
-  toggle.textContent = 'Hide graph pagination'
+  toggle.textContent = toggleLabels.clickToClose
 }
 
 const scrollToCurrentPageLink = (list, scrollContainerSelector, currentLinkSelector, behavior = 'auto') => {
