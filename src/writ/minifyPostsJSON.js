@@ -1,6 +1,5 @@
 const { readFile, writeFile } = require('fs/promises')
 const { join } = require('path')
-const writSettings = require('../../settings.json')
 
 const minify = async ({ exportDirectory }) => {
   const postsJSONFile = await readFile(
