@@ -23,7 +23,8 @@ module.exports = {
       'life',
       'privacy',
       'video',
-      'git'
+      'git',
+      'colors'
     ]
     return this.tags.filter((tag) => featuredTags.includes(tag.tag))
   },
