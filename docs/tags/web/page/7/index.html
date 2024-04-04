@@ -30,10 +30,8 @@
     <div id="search-form-container"></div>
 </header>
     <nav class="tags">
-  <!-- default open=true to avoid data loss if script fails -->
-  <details class="tags-list-toggle" open="true">
-    <!-- State agnostic label useful in case script fails to handle updating it with state -->
-    <summary class="tags-list-toggle-label" aria-label="Topics"></summary>
+  <details class="tags-list-toggle">
+    <summary class="tags-list-toggle-label">Topics</summary>
     <ol class="tags-list">
         <li class="tags-list-item" style="--i: 0">
           <a href="/feed/tags/web" class="tags-list-item-link">
@@ -154,64 +152,66 @@
       <h2 class="tag-header">#web <span class="tag-header-post-count">162 links</span></h2>
       <div class="graph-container">
   <div class="canvas-container">
-    <canvas class="graph" id="graph"></canvas>
-    <ul id="overlay-pagination" class="overlay-pagination">
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web" data-page-number="1" class="overlay-pagination-link">
-          Page 1
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/2" data-page-number="2" class="overlay-pagination-link">
-          Page 2
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/3" data-page-number="3" class="overlay-pagination-link">
-          Page 3
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/4" data-page-number="4" class="overlay-pagination-link">
-          Page 4
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/5" data-page-number="5" class="overlay-pagination-link">
-          Page 5
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/6" data-page-number="6" class="overlay-pagination-link">
-          Page 6
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/7" data-page-number="7" class="overlay-pagination-link is-current">
-          Page 7
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/8" data-page-number="8" class="overlay-pagination-link">
-          Page 8
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/9" data-page-number="9" class="overlay-pagination-link">
-          Page 9
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/10" data-page-number="10" class="overlay-pagination-link">
-          Page 10
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/web/page/11" data-page-number="11" class="overlay-pagination-link">
-          Page 11
-        </a>
-      </li>
-    </ul>
+    <details id="overlay-pagination-container">
+      <summary id="overlay-pagination-toggle" id="">Pages</summary>
+      <ul id="overlay-pagination" class="overlay-pagination">
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web" data-page-number="1" class="overlay-pagination-link">
+              Page 1
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/2" data-page-number="2" class="overlay-pagination-link">
+              Page 2
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/3" data-page-number="3" class="overlay-pagination-link">
+              Page 3
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/4" data-page-number="4" class="overlay-pagination-link">
+              Page 4
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/5" data-page-number="5" class="overlay-pagination-link">
+              Page 5
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/6" data-page-number="6" class="overlay-pagination-link">
+              Page 6
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/7" data-page-number="7" class="overlay-pagination-link is-current">
+              Page 7
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/8" data-page-number="8" class="overlay-pagination-link">
+              Page 8
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/9" data-page-number="9" class="overlay-pagination-link">
+              Page 9
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/10" data-page-number="10" class="overlay-pagination-link">
+              Page 10
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/web/page/11" data-page-number="11" class="overlay-pagination-link">
+              Page 11
+            </a>
+          </li>
+      </ul>
+    </details>
   </div>
 </div>
       <div class="links">
@@ -390,8 +390,7 @@
   </p>
 </footer>
 </div>
-        <script type="module" src="/feed/assets/common/dictionary.js"></script>
-<script>
+        <script>
   window.permalinkPrefix = "/feed"
   window.fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
   window.posts = fetch(`${fetchPrefix}/posts.min.json`).then(r => r.json())
@@ -402,6 +401,7 @@
 
 
   <script type="module">
+    import dictionary from '/feed/assets/common/dictionary.js'
     import search from '/feed/assets/common/search/search.js'
     import graph from '/feed/assets/custom/script/graph.js'
     import tags from '/feed/assets/custom/script/tags.js'
@@ -409,10 +409,12 @@
     const linkIsTagged = (link) => link.tags.includes('web')
     graph.init(linkIsTagged)
     tags.init()
-    search.init({
-      onReset: () => {
-        graph.init(linkIsTagged)
-      }
+    dictionary.ready(() => {
+      search.init({
+        onReset: () => {
+          graph.init(linkIsTagged)
+        }
+      })
     })
   </script>
     </body>

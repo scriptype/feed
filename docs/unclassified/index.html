@@ -44,8 +44,7 @@
 
     </main>
 </div>
-        <script type="module" src="/feed/assets/common/dictionary.js"></script>
-<script>
+        <script>
   window.permalinkPrefix = "/feed"
   window.fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
   window.posts = fetch(`${fetchPrefix}/posts.min.json`).then(r => r.json())

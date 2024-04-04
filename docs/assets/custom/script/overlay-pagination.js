@@ -24,8 +24,37 @@ const setPageLinkProperties = (list, dayScale) => (page, i) => {
   }
 }
 
-const setListProperties = (list, data, dayScale) => {
+const setListProperties = (list, scrollContainer, data, dayScale) => {
   list.classList.add('js-enhanced')
+  const container = scrollContainer.querySelector('#overlay-pagination-container')
+  const toggle = scrollContainer.querySelector('#overlay-pagination-toggle')
+  const toggleLabels = {
+    clickToOpen: 'Show graph pagination',
+    clickToClose: 'Hide graph pagination'
+  }
+  toggle.addEventListener('click', () => {
+    if (toggle.textContent === toggleLabels.clickToClose) {
+      toggle.textContent = toggleLabels.clickToOpen
+    } else {
+      toggle.textContent = toggleLabels.clickToClose
+    }
+  })
+  const setTogglePosition = () => {
+    console.log('fix me')
+    scrollContainer.style.setProperty(
+      '--graph-offset-top', scrollContainer.offsetTop + 'px'
+    )
+    scrollContainer.style.setProperty(
+      '--graph-offset-left', scrollContainer.offsetLeft + 'px'
+    )
+  }
+  window.removeEventListener('resize', setTogglePosition)
+  window.removeEventListener('orientationchange', setTogglePosition)
+  window.addEventListener('resize', setTogglePosition)
+  window.addEventListener('orientationchange', setTogglePosition)
+  setTogglePosition()
+  container.setAttribute('open', true)
+  toggle.textContent = 'Hide graph pagination'
 }
 
 const scrollToCurrentPageLink = (list, scrollContainerSelector, currentLinkSelector, behavior = 'auto') => {
@@ -89,8 +118,10 @@ const navigateToPage = (links, contentContainerSelector) => {
 
 const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
   const list = document.querySelector(selectors.list)
+  const scrollContainer = document.querySelector(selectors.scrollContainer)
   setListProperties(
     list,
+    scrollContainer,
     data.map(e => e.datePublished),
     dayScale
   )
@@ -120,7 +151,7 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     shouldScroll(state, event) {
       // e.originalTarget is a Restricted object in case it's the scrollbar
       try {
-        return event.originalTarget.classList.contains(classNames.link)
+        return event.originalTarget.classList
       } catch {
         return false
       }

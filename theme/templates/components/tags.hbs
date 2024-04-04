@@ -1,8 +1,6 @@
 <nav class="tags">
-  <!-- default open=true to avoid data loss if script fails -->
-  <details class="tags-list-toggle" open="true">
-    <!-- State agnostic label useful in case script fails to handle updating it with state -->
-    <summary class="tags-list-toggle-label" aria-label="Topics"></summary>
+  <details class="tags-list-toggle">
+    <summary class="tags-list-toggle-label">Topics</summary>
     <ol class="tags-list">
       {{#each tags as |tag|}}
         <li class="tags-list-item" style="--i: {{@index}}">

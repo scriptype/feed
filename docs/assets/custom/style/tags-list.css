@@ -3,8 +3,16 @@
 }
 
 .tags-list-toggle-label {
-    position: absolute;
+    position: relative;
     bottom: 200vh;
+    min-width: 120px;
+    font-size: 0;
+    color: royalblue;
+}
+
+.tags-list-toggle-label:focus {
+    bottom: 0;
+    font-size: .9em;
 }
 
 .tags-list {

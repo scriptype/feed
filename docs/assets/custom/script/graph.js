@@ -9,8 +9,7 @@ const init = async (filter = (f => true)) => {
   const minDayScale = 0.8
   const maxDayScale = 2
   const dayScale = min(maxDayScale, max(minDayScale, data.length / 200))
-  Canvas({
-    selector: '#graph',
+  const canvas = Canvas({
     height: 260,
     data: data.map(p => p.datePublished),
     dayScale,
@@ -28,7 +27,15 @@ const init = async (filter = (f => true)) => {
       new Color('#fd5'),
       new Color('navy'),
     ],
-  }).draw()
+  })
+
+  const canvasContainer = document.querySelector('.canvas-container')
+  const existingCanvas = canvasContainer.querySelector('canvas')
+  if (existingCanvas) {
+    existingCanvas.remove()
+  }
+  const $canvas = canvas.draw()
+  canvasContainer.prepend($canvas)
 
   OverlayPagination.init({
     selectors: {

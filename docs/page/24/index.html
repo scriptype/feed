@@ -30,10 +30,8 @@
     <div id="search-form-container"></div>
 </header>
     <nav class="tags">
-  <!-- default open=true to avoid data loss if script fails -->
-  <details class="tags-list-toggle" open="true">
-    <!-- State agnostic label useful in case script fails to handle updating it with state -->
-    <summary class="tags-list-toggle-label" aria-label="Topics"></summary>
+  <details class="tags-list-toggle">
+    <summary class="tags-list-toggle-label">Topics</summary>
     <ol class="tags-list">
         <li class="tags-list-item" style="--i: 0">
           <a href="/feed/tags/web" class="tags-list-item-link">
@@ -162,344 +160,346 @@
   </div>
   <div class="graph-container">
   <div class="canvas-container">
-    <canvas class="graph" id="graph"></canvas>
-    <ul id="overlay-pagination" class="overlay-pagination">
-      <li class="overlay-pagination-item">
-        <a href="/feed" data-page-number="1" class="overlay-pagination-link">
-          Page 1
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/2" data-page-number="2" class="overlay-pagination-link">
-          Page 2
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/3" data-page-number="3" class="overlay-pagination-link">
-          Page 3
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/4" data-page-number="4" class="overlay-pagination-link">
-          Page 4
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/5" data-page-number="5" class="overlay-pagination-link">
-          Page 5
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/6" data-page-number="6" class="overlay-pagination-link">
-          Page 6
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/7" data-page-number="7" class="overlay-pagination-link">
-          Page 7
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/8" data-page-number="8" class="overlay-pagination-link">
-          Page 8
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/9" data-page-number="9" class="overlay-pagination-link">
-          Page 9
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/10" data-page-number="10" class="overlay-pagination-link">
-          Page 10
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/11" data-page-number="11" class="overlay-pagination-link">
-          Page 11
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/12" data-page-number="12" class="overlay-pagination-link">
-          Page 12
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/13" data-page-number="13" class="overlay-pagination-link">
-          Page 13
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/14" data-page-number="14" class="overlay-pagination-link">
-          Page 14
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/15" data-page-number="15" class="overlay-pagination-link">
-          Page 15
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/16" data-page-number="16" class="overlay-pagination-link">
-          Page 16
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/17" data-page-number="17" class="overlay-pagination-link">
-          Page 17
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/18" data-page-number="18" class="overlay-pagination-link">
-          Page 18
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/19" data-page-number="19" class="overlay-pagination-link">
-          Page 19
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/20" data-page-number="20" class="overlay-pagination-link">
-          Page 20
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/21" data-page-number="21" class="overlay-pagination-link">
-          Page 21
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/22" data-page-number="22" class="overlay-pagination-link">
-          Page 22
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/23" data-page-number="23" class="overlay-pagination-link">
-          Page 23
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/24" data-page-number="24" class="overlay-pagination-link is-current">
-          Page 24
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/25" data-page-number="25" class="overlay-pagination-link">
-          Page 25
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/26" data-page-number="26" class="overlay-pagination-link">
-          Page 26
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/27" data-page-number="27" class="overlay-pagination-link">
-          Page 27
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/28" data-page-number="28" class="overlay-pagination-link">
-          Page 28
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/29" data-page-number="29" class="overlay-pagination-link">
-          Page 29
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/30" data-page-number="30" class="overlay-pagination-link">
-          Page 30
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/31" data-page-number="31" class="overlay-pagination-link">
-          Page 31
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/32" data-page-number="32" class="overlay-pagination-link">
-          Page 32
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/33" data-page-number="33" class="overlay-pagination-link">
-          Page 33
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/34" data-page-number="34" class="overlay-pagination-link">
-          Page 34
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/35" data-page-number="35" class="overlay-pagination-link">
-          Page 35
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/36" data-page-number="36" class="overlay-pagination-link">
-          Page 36
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/37" data-page-number="37" class="overlay-pagination-link">
-          Page 37
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/38" data-page-number="38" class="overlay-pagination-link">
-          Page 38
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/39" data-page-number="39" class="overlay-pagination-link">
-          Page 39
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/40" data-page-number="40" class="overlay-pagination-link">
-          Page 40
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/41" data-page-number="41" class="overlay-pagination-link">
-          Page 41
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/42" data-page-number="42" class="overlay-pagination-link">
-          Page 42
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/43" data-page-number="43" class="overlay-pagination-link">
-          Page 43
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/44" data-page-number="44" class="overlay-pagination-link">
-          Page 44
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/45" data-page-number="45" class="overlay-pagination-link">
-          Page 45
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/46" data-page-number="46" class="overlay-pagination-link">
-          Page 46
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/47" data-page-number="47" class="overlay-pagination-link">
-          Page 47
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/48" data-page-number="48" class="overlay-pagination-link">
-          Page 48
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/49" data-page-number="49" class="overlay-pagination-link">
-          Page 49
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/50" data-page-number="50" class="overlay-pagination-link">
-          Page 50
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/51" data-page-number="51" class="overlay-pagination-link">
-          Page 51
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/52" data-page-number="52" class="overlay-pagination-link">
-          Page 52
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/53" data-page-number="53" class="overlay-pagination-link">
-          Page 53
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/54" data-page-number="54" class="overlay-pagination-link">
-          Page 54
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/55" data-page-number="55" class="overlay-pagination-link">
-          Page 55
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/56" data-page-number="56" class="overlay-pagination-link">
-          Page 56
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/57" data-page-number="57" class="overlay-pagination-link">
-          Page 57
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/58" data-page-number="58" class="overlay-pagination-link">
-          Page 58
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/59" data-page-number="59" class="overlay-pagination-link">
-          Page 59
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/60" data-page-number="60" class="overlay-pagination-link">
-          Page 60
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/61" data-page-number="61" class="overlay-pagination-link">
-          Page 61
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/62" data-page-number="62" class="overlay-pagination-link">
-          Page 62
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/63" data-page-number="63" class="overlay-pagination-link">
-          Page 63
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/64" data-page-number="64" class="overlay-pagination-link">
-          Page 64
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/65" data-page-number="65" class="overlay-pagination-link">
-          Page 65
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/66" data-page-number="66" class="overlay-pagination-link">
-          Page 66
-        </a>
-      </li>
-      <li class="overlay-pagination-item">
-        <a href="/feed/page/67" data-page-number="67" class="overlay-pagination-link">
-          Page 67
-        </a>
-      </li>
-    </ul>
+    <details id="overlay-pagination-container">
+      <summary id="overlay-pagination-toggle" id="">Pages</summary>
+      <ul id="overlay-pagination" class="overlay-pagination">
+          <li class="overlay-pagination-item">
+            <a href="/feed" data-page-number="1" class="overlay-pagination-link">
+              Page 1
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/2" data-page-number="2" class="overlay-pagination-link">
+              Page 2
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/3" data-page-number="3" class="overlay-pagination-link">
+              Page 3
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/4" data-page-number="4" class="overlay-pagination-link">
+              Page 4
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/5" data-page-number="5" class="overlay-pagination-link">
+              Page 5
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/6" data-page-number="6" class="overlay-pagination-link">
+              Page 6
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/7" data-page-number="7" class="overlay-pagination-link">
+              Page 7
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/8" data-page-number="8" class="overlay-pagination-link">
+              Page 8
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/9" data-page-number="9" class="overlay-pagination-link">
+              Page 9
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/10" data-page-number="10" class="overlay-pagination-link">
+              Page 10
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/11" data-page-number="11" class="overlay-pagination-link">
+              Page 11
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/12" data-page-number="12" class="overlay-pagination-link">
+              Page 12
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/13" data-page-number="13" class="overlay-pagination-link">
+              Page 13
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/14" data-page-number="14" class="overlay-pagination-link">
+              Page 14
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/15" data-page-number="15" class="overlay-pagination-link">
+              Page 15
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/16" data-page-number="16" class="overlay-pagination-link">
+              Page 16
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/17" data-page-number="17" class="overlay-pagination-link">
+              Page 17
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/18" data-page-number="18" class="overlay-pagination-link">
+              Page 18
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/19" data-page-number="19" class="overlay-pagination-link">
+              Page 19
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/20" data-page-number="20" class="overlay-pagination-link">
+              Page 20
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/21" data-page-number="21" class="overlay-pagination-link">
+              Page 21
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/22" data-page-number="22" class="overlay-pagination-link">
+              Page 22
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/23" data-page-number="23" class="overlay-pagination-link">
+              Page 23
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/24" data-page-number="24" class="overlay-pagination-link is-current">
+              Page 24
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/25" data-page-number="25" class="overlay-pagination-link">
+              Page 25
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/26" data-page-number="26" class="overlay-pagination-link">
+              Page 26
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/27" data-page-number="27" class="overlay-pagination-link">
+              Page 27
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/28" data-page-number="28" class="overlay-pagination-link">
+              Page 28
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/29" data-page-number="29" class="overlay-pagination-link">
+              Page 29
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/30" data-page-number="30" class="overlay-pagination-link">
+              Page 30
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/31" data-page-number="31" class="overlay-pagination-link">
+              Page 31
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/32" data-page-number="32" class="overlay-pagination-link">
+              Page 32
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/33" data-page-number="33" class="overlay-pagination-link">
+              Page 33
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/34" data-page-number="34" class="overlay-pagination-link">
+              Page 34
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/35" data-page-number="35" class="overlay-pagination-link">
+              Page 35
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/36" data-page-number="36" class="overlay-pagination-link">
+              Page 36
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/37" data-page-number="37" class="overlay-pagination-link">
+              Page 37
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/38" data-page-number="38" class="overlay-pagination-link">
+              Page 38
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/39" data-page-number="39" class="overlay-pagination-link">
+              Page 39
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/40" data-page-number="40" class="overlay-pagination-link">
+              Page 40
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/41" data-page-number="41" class="overlay-pagination-link">
+              Page 41
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/42" data-page-number="42" class="overlay-pagination-link">
+              Page 42
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/43" data-page-number="43" class="overlay-pagination-link">
+              Page 43
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/44" data-page-number="44" class="overlay-pagination-link">
+              Page 44
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/45" data-page-number="45" class="overlay-pagination-link">
+              Page 45
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/46" data-page-number="46" class="overlay-pagination-link">
+              Page 46
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/47" data-page-number="47" class="overlay-pagination-link">
+              Page 47
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/48" data-page-number="48" class="overlay-pagination-link">
+              Page 48
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/49" data-page-number="49" class="overlay-pagination-link">
+              Page 49
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/50" data-page-number="50" class="overlay-pagination-link">
+              Page 50
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/51" data-page-number="51" class="overlay-pagination-link">
+              Page 51
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/52" data-page-number="52" class="overlay-pagination-link">
+              Page 52
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/53" data-page-number="53" class="overlay-pagination-link">
+              Page 53
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/54" data-page-number="54" class="overlay-pagination-link">
+              Page 54
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/55" data-page-number="55" class="overlay-pagination-link">
+              Page 55
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/56" data-page-number="56" class="overlay-pagination-link">
+              Page 56
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/57" data-page-number="57" class="overlay-pagination-link">
+              Page 57
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/58" data-page-number="58" class="overlay-pagination-link">
+              Page 58
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/59" data-page-number="59" class="overlay-pagination-link">
+              Page 59
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/60" data-page-number="60" class="overlay-pagination-link">
+              Page 60
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/61" data-page-number="61" class="overlay-pagination-link">
+              Page 61
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/62" data-page-number="62" class="overlay-pagination-link">
+              Page 62
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/63" data-page-number="63" class="overlay-pagination-link">
+              Page 63
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/64" data-page-number="64" class="overlay-pagination-link">
+              Page 64
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/65" data-page-number="65" class="overlay-pagination-link">
+              Page 65
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/66" data-page-number="66" class="overlay-pagination-link">
+              Page 66
+            </a>
+          </li>
+          <li class="overlay-pagination-item">
+            <a href="/feed/page/67" data-page-number="67" class="overlay-pagination-link">
+              Page 67
+            </a>
+          </li>
+      </ul>
+    </details>
   </div>
 </div>
   <div class="links">
@@ -662,8 +662,7 @@
   </p>
 </footer>
 </div>
-        <script type="module" src="/feed/assets/common/dictionary.js"></script>
-<script>
+        <script>
   window.permalinkPrefix = "/feed"
   window.fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
   window.posts = fetch(`${fetchPrefix}/posts.min.json`).then(r => r.json())
@@ -673,16 +672,19 @@
 <script src="/feed/assets/custom/script/vendor/scrollbooster.min.js"></script>
 
   <script type="module">
+    import dictionary from '/feed/assets/common/dictionary.js'
     import search from '/feed/assets/common/search/search.js'
     import graph from '/feed/assets/custom/script/graph.js'
     import tags from '/feed/assets/custom/script/tags.js'
 
     graph.init()
     tags.init()
-    search.init({
-      onReset: () => {
-        graph.init()
-      }
+    dictionary.ready(() => {
+      search.init({
+        onReset: () => {
+          graph.init()
+        }
+      })
     })
   </script>
 

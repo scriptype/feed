@@ -30,10 +30,8 @@
     <div id="search-form-container"></div>
 </header>
     <nav class="tags">
-  <!-- default open=true to avoid data loss if script fails -->
-  <details class="tags-list-toggle" open="true">
-    <!-- State agnostic label useful in case script fails to handle updating it with state -->
-    <summary class="tags-list-toggle-label" aria-label="Topics"></summary>
+  <details class="tags-list-toggle">
+    <summary class="tags-list-toggle-label">Topics</summary>
     <ol class="tags-list">
         <li class="tags-list-item" style="--i: 0">
           <a href="/feed/tags/web" class="tags-list-item-link">
@@ -154,14 +152,16 @@
       <h2 class="tag-header">#migros <span class="tag-header-post-count">1 links</span></h2>
       <div class="graph-container">
   <div class="canvas-container">
-    <canvas class="graph" id="graph"></canvas>
-    <ul id="overlay-pagination" class="overlay-pagination">
-      <li class="overlay-pagination-item">
-        <a href="/feed/tags/migros" data-page-number="1" class="overlay-pagination-link is-current">
-          Page 1
-        </a>
-      </li>
-    </ul>
+    <details id="overlay-pagination-container">
+      <summary id="overlay-pagination-toggle" id="">Pages</summary>
+      <ul id="overlay-pagination" class="overlay-pagination">
+          <li class="overlay-pagination-item">
+            <a href="/feed/tags/migros" data-page-number="1" class="overlay-pagination-link is-current">
+              Page 1
+            </a>
+          </li>
+      </ul>
+    </details>
   </div>
 </div>
       <div class="links">
@@ -197,8 +197,7 @@
   </p>
 </footer>
 </div>
-        <script type="module" src="/feed/assets/common/dictionary.js"></script>
-<script>
+        <script>
   window.permalinkPrefix = "/feed"
   window.fetchPrefix = window.permalinkPrefix === '/' ? '' : window.permalinkPrefix
   window.posts = fetch(`${fetchPrefix}/posts.min.json`).then(r => r.json())
@@ -209,6 +208,7 @@
 
 
   <script type="module">
+    import dictionary from '/feed/assets/common/dictionary.js'
     import search from '/feed/assets/common/search/search.js'
     import graph from '/feed/assets/custom/script/graph.js'
     import tags from '/feed/assets/custom/script/tags.js'
@@ -216,10 +216,12 @@
     const linkIsTagged = (link) => link.tags.includes('migros')
     graph.init(linkIsTagged)
     tags.init()
-    search.init({
-      onReset: () => {
-        graph.init(linkIsTagged)
-      }
+    dictionary.ready(() => {
+      search.init({
+        onReset: () => {
+          graph.init(linkIsTagged)
+        }
+      })
     })
   </script>
     </body>

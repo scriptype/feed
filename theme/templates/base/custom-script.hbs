@@ -6,22 +6,26 @@
 
 {{#if (isHomePage)}}
   <script type="module">
+    import dictionary from '{{assetsPath}}/common/dictionary.js'
     import search from '{{assetsPath}}/common/search/search.js'
     import graph from '{{assetsPath}}/custom/script/graph.js'
     import tags from '{{assetsPath}}/custom/script/tags.js'
 
     graph.init()
     tags.init()
-    search.init({
-      onReset: () => {
-        graph.init()
-      }
+    dictionary.ready(() => {
+      search.init({
+        onReset: () => {
+          graph.init()
+        }
+      })
     })
   </script>
 {{/if}}
 
 {{#if (isTagPage)}}
   <script type="module">
+    import dictionary from '{{assetsPath}}/common/dictionary.js'
     import search from '{{assetsPath}}/common/search/search.js'
     import graph from '{{assetsPath}}/custom/script/graph.js'
     import tags from '{{assetsPath}}/custom/script/tags.js'
@@ -29,10 +33,12 @@
     const linkIsTagged = (link) => link.tags.includes('{{tag.tag}}')
     graph.init(linkIsTagged)
     tags.init()
-    search.init({
-      onReset: () => {
-        graph.init(linkIsTagged)
-      }
+    dictionary.ready(() => {
+      search.init({
+        onReset: () => {
+          graph.init(linkIsTagged)
+        }
+      })
     })
   </script>
 {{/if}}

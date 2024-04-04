@@ -2,9 +2,15 @@ const { floor, max } = Math
 
 const DAY = 1000 * 60 * 60 * 24
 
+const createCanvas = () => {
+  const canvas = document.createElement('canvas')
+  canvas.classList.add('graph')
+  canvas.id = 'graph'
+  return canvas
+}
+
 export default (options) => {
   const {
-    selector,
     data,
     height,
     dayScale,
@@ -23,11 +29,6 @@ export default (options) => {
   const outlierScale = 0.8
   const innerWidth = width - (padding.left + padding.right)
   const innerHeight = height - (padding.top + padding.bottom)
-
-  const $el = document.querySelector(selector)
-  $el.width = width
-  $el.height = height
-  const ctx = $el.getContext('2d')
 
   const getHeightMap = ({ timeResolution }) => {
     const heightMap = []
@@ -54,7 +55,7 @@ export default (options) => {
     }
   }
 
-  const drawLine = ({ heightMap, tallestPoint }) => {
+  const drawLine = ({ ctx, heightMap, tallestPoint }) => {
     const gradient = colors[0].range(colors[1], {
       space: "lch",
       outputSpace: "srgb"
@@ -76,7 +77,7 @@ export default (options) => {
     ctx.closePath()
   }
 
-  const drawYearMarks = () => {
+  const drawYearMarks = ({ ctx }) => {
     const startDate = new Date(firstDataPoint)
     let firstVisibleYear = startDate.getFullYear() + 1
     const firstVisibleYearDate = new Date(0)
@@ -99,13 +100,19 @@ export default (options) => {
   }
 
   const draw = () => {
+    const $el = createCanvas()
+    $el.width = width
+    $el.height = height
+    const ctx = $el.getContext('2d')
     const timeResolution = DAY * (totalDaysElapsed / innerWidth / resolution)
     const { heightMap, tallestPoint } = getHeightMap({ timeResolution })
     drawLine({
+      ctx,
       heightMap,
       tallestPoint
     })
-    drawYearMarks()
+    drawYearMarks({ ctx })
+    return $el
   }
 
   return {

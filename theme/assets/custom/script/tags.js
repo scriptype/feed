@@ -8,26 +8,26 @@ const init = () => {
 
   const listToggleAutoExpandHandler = () => {
     if (window.innerWidth <= 900 && listToggle.getAttribute('open') === 'true') {
+      listToggleBtn.textContent = toggleLabels.clickToOpen
       listToggle.removeAttribute('open')
     }
     if (window.innerWidth > 900 && !listToggle.hasAttribute('open')) {
+      listToggleBtn.textContent = toggleLabels.clickToClose
       listToggle.setAttribute('open', true)
     }
   }
 
   listToggleBtn.addEventListener('click', () => {
-    if (listToggleBtn.getAttribute('aria-label') === toggleLabels.clickToClose) {
-      listToggleBtn.setAttribute('aria-label', toggleLabels.clickToOpen)
+    if (listToggleBtn.textContent === toggleLabels.clickToClose) {
+      listToggleBtn.textContent = toggleLabels.clickToOpen
     } else {
-      listToggleBtn.setAttribute('aria-label', toggleLabels.clickToClose)
+      listToggleBtn.textContent = toggleLabels.clickToClose
     }
   })
 
   window.addEventListener('resize', listToggleAutoExpandHandler)
   window.addEventListener('orientationchange', listToggleAutoExpandHandler)
   listToggleAutoExpandHandler()
-
-  listToggleBtn.setAttribute('aria-label', toggleLabels.clickToOpen)
 }
 
 export default {

@@ -1,3 +1,18 @@
+#overlay-pagination-toggle {
+    position: fixed;
+    bottom: 200vh;
+    z-index: 1;
+    font-size: 0;
+    color: royalblue;
+}
+
+#overlay-pagination-toggle:focus {
+    font-size: .9em;
+    height: 1.5em;
+    top: var(--graph-offset-top);
+    left: var(--graph-offset-left);
+}
+
 .overlay-pagination {
     position: absolute;
     inset: 0;
