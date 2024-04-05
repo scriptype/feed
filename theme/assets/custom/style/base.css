@@ -26,7 +26,7 @@ button {
 }
 
 body {
-    font: 100 normal 16px/1.5 'Playfair Display', serif;
+    font: 100 normal 16px/1.5 "Playfair Display", times, serif;
     background: repeating-linear-gradient(
         60deg,
         #fcfcfc,
