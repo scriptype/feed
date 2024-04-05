@@ -1,3 +1,16 @@
 .homepage-content {
     text-align: center;
 }
+
+.homepage-title {
+    font-size: 2em;
+}
+
+.homepage-social-links {
+    margin-bottom: 1em;
+}
+
+.homepage-links-count {
+    font-size: 1.25em;
+    color: #555;
+}
