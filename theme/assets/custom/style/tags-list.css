@@ -1,18 +1,24 @@
-::-webkit-details-marker {
-    display: none;
-}
-
 .tags-list-toggle-label {
     position: relative;
-    bottom: 200vh;
-    min-width: 120px;
-    font-size: 0;
+    display: list-item;
+    min-width: 190px;
+    width: 100%;
+    margin-bottom: 2em;
+    padding-left: 30px;
+    text-align: center;
     color: royalblue;
 }
 
-.tags-list-toggle-label:focus {
-    bottom: 0;
-    font-size: .9em;
+@media (min-width: 901px) {
+    .js-enhanced .tags-list-toggle-label {
+        bottom: 200vh;
+        font-size: 0;
+    }
+
+    .tags-list-toggle-label:focus {
+        bottom: 0;
+        font-size: 1em;
+    }
 }
 
 .tags-list {
@@ -79,6 +85,18 @@
 }
 
 @media (max-width: 900px) {
+    ::-webkit-details-marker {
+        display: none;
+    }
+
+    body:has(.tags-list-container[open]) {
+        overflow: hidden;
+    }
+
+    body.tags-list-is-open {
+        overflow: hidden;
+    }
+
     .tags-list-toggle-label {
         --animation-duration: 1s;
         display: inline-block;
@@ -86,6 +104,9 @@
         right: 1em;
         bottom: 1em;
         width: 2.5em;
+        min-width: auto;
+        margin: 0;
+        text-indent: -2000vw;
         aspect-ratio: 1;
         border-radius: 50%;
         cursor: pointer;
@@ -144,10 +165,10 @@
         justify-content: flex-start;
         align-items: center;
         gap: 2em;
+        height: 100vh;
         overflow: auto;
-        max-height: 100vh;
         flex-wrap: nowrap;
-        padding: 8em 0 4em;
+        padding-bottom: 4em;
     }
 
     .tags-list::after {
@@ -157,10 +178,22 @@
         width: 100%;
         height: 30%;
         pointer-events: none;
-        background: linear-gradient(to bottom, #fffd, transparent);
+        background: radial-gradient(
+            circle at center top,
+            #fff,
+            transparent
+        );
     }
 
     .tags-list-item {
         font-size: 1.6em;
+    }
+
+    .tags-list-item:last-child::before {
+        content: "";
+        display: block;
+        height: 30vh;
+        width: 100%;
+        pointer-events: none;
     }
 }

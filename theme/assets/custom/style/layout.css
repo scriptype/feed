@@ -36,7 +36,8 @@
         justify-items: center;
     }
 
-    .header, .tags {
+    .header,
+    .tags {
         place-self: center;
     }
 
