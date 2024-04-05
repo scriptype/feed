@@ -5,7 +5,7 @@
     "tags": [
       "css",
       "grid",
-      "front-end"
+      "frontend"
     ],
     "datePublished": 1532221014000
   },
@@ -605,7 +605,7 @@
     "url": "https://medium.com/@caseorganic/why-the-color-of-technology-must-change-caae7f1ca061",
     "title": "Why the Color of Technology Must Change",
     "tags": [
-      "color"
+      "colors"
     ],
     "datePublished": 1535288022000
   },
@@ -704,7 +704,7 @@
     "url": "https://css-tricks.com/your-brain-on-front-end-development/",
     "title": "Your Brain on Front-End Development",
     "tags": [
-      "front-end"
+      "frontend"
     ],
     "datePublished": 1536232461000
   },
@@ -936,7 +936,7 @@
     "tags": [
       "accessibility",
       "design",
-      "color"
+      "colors"
     ],
     "datePublished": 1540153491000
   },
@@ -1193,7 +1193,7 @@
     "tags": [
       "serverless",
       "cloud",
-      "front-end"
+      "frontend"
     ],
     "datePublished": 1543236026000
   },
@@ -1702,7 +1702,7 @@
     "url": "https://www.dw.com/tr/türkiyede-üniversitelerin-büyüyen-sorunu-parayla-tez-yazımı/a-47610349",
     "title": "Türkiye'de üniversitelerin büyüyen sorunu: Parayla tez yazımı",
     "tags": [
-      "#türkçe",
+      "türkçe",
       "üniversite",
       "yozlaşma",
       "çürüme"
@@ -1797,7 +1797,7 @@
     "url": "https://mehmetkut.com//2018/06/moonstar-sozluk-mujdat-ozalp-anisina-tr/",
     "title": "MoonStar sözlük ve Müjdat Özalp anısına – @mehmetkut",
     "tags": [
-      "#türkçe",
+      "türkçe",
       "moonstar",
       "sözlük",
       "adamasmaca"
@@ -4744,7 +4744,7 @@
     "url": "https://t24.com.tr/haber/yeni-kamusallik,929397",
     "title": "Yeni Kamusallık – @bdalgin",
     "tags": [
-      "#türkçe",
+      "türkçe",
       "siyaset"
     ],
     "datePublished": 1611861717000
@@ -5115,7 +5115,7 @@
     "url": "https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/",
     "title": "A Complete Guide to Dark Mode on the Web | CSS-Tricks",
     "tags": [
-      "#css",
+      "css",
       "web"
     ],
     "datePublished": 1625652784000
@@ -5336,7 +5336,7 @@
     "url": "https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/",
     "title": "A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH — Smashing Magazine",
     "tags": [
-      "CSS",
+      "css",
       "colors"
     ],
     "datePublished": 1637797912000
@@ -5353,7 +5353,7 @@
     "url": "https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/",
     "title": "Axiomatic CSS and Lobotomized Owls – A List Apart",
     "tags": [
-      "CSS"
+      "css"
     ],
     "datePublished": 1637832178000
   },
@@ -5447,7 +5447,7 @@
     "url": "https://hue.tools/",
     "title": "hue.tools",
     "tags": [
-      "color",
+      "colors",
       "tool"
     ],
     "datePublished": 1645233747000
