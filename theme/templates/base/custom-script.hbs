@@ -10,18 +10,17 @@
   import graph from '{{assetsPath}}/custom/script/graph.js'
   import tags from '{{assetsPath}}/custom/script/tags.js'
 
-  let linksFilter
-  const tagInUrl = window.location.pathname.match(/tags\/(.+)/)
-  if (tagInUrl) {
-    const tag = tagInUrl[1].replace(/\/$/, '')
-    linksFilter = (link) => link.tags.includes(tag)
+  const urlParts = window.location.pathname.split('/').filter(Boolean)
+  let tag
+  if (urlParts.includes('tags')) {
+    tag = urlParts[1]
   }
-  graph.init(linksFilter)
+  graph.init({ tag })
   tags.init()
   dictionary.ready(() => {
     search.init({
       onReset: () => {
-        graph.init(linksFilter)
+        graph.init({ tag })
       }
     })
   })

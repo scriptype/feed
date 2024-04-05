@@ -85,6 +85,7 @@ const setCurrentPageLink = (list, pageNumber, selectors, classNames) => {
 }
 
 const navigateToPage = (
+  tag,
   pages,
   pageNumber,
   contentContainerSelector,
@@ -131,19 +132,31 @@ const navigateToPage = (
     /*
      * Change pagination buttons
      * */
+    const fixLeadingSlashes = (str) => str.replace(/^\/\//, '/')
+    const urlParts = [window.permalinkPrefix]
+    if (tag) {
+      urlParts.push('tags', tag)
+    }
+    const baseUrl = fixLeadingSlashes(urlParts.filter(Boolean).join('/'))
     const paginationContainer = document.querySelector(paginationContainerSelector)
-    const paginationContainerTemplate = (previousPage, nextPage) => `
-      <div class="pagination-buttons">
-        ${previousPage === 1 ? `
-          <a href="${window.permalinkPrefix}">« Newer</a>
-        ` : `
-          <a href="/page/${previousPage}">« Newer</a>
-        `}
-        ${nextPage ? `
-          <a href="/page/${nextPage}">Older »</a>
-        ` : ''}
-      </div>
-    `
+    const paginationContainerTemplate = (previousPage, nextPage) => {
+      const adjacentPageUrl = (isPrev) => {
+        if (!isPrev) {
+          return fixLeadingSlashes(`${baseUrl}/page/${nextPage}`)
+        }
+        if (previousPage !== 1) {
+          return fixLeadingSlashes(`${baseUrl}/page/${previousPage}`)
+        }
+        return baseUrl
+      }
+
+      return `
+        <div class="pagination-buttons">
+          <a href="${adjacentPageUrl(true)}">« Newer</a>
+          ${nextPage ? `<a href="${adjacentPageUrl()}">Older »</a>` : ''}
+        </div>
+      `
+    }
 
     paginationContainer.innerHTML = paginationContainerTemplate(
       pageNumber ? (pages[pageNumber - 2] && pageNumber - 1) : 2,
@@ -152,7 +165,7 @@ const navigateToPage = (
   })
 }
 
-const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
+const init = ({ selectors, classNames, data, tag, dayScale, pageSize }) => {
   const list = document.querySelector(selectors.list)
   const scrollContainer = document.querySelector(selectors.scrollContainer)
   setListProperties(
@@ -168,6 +181,19 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     .forEach(
       setPageLinkProperties(list, dayScale)
     )
+
+  const pageNumber = document.location.pathname.match(/page\/(\d+)/)
+
+  const links = pageNumber ?
+    pages[pageNumber[1] - 1] :
+    pages[0]
+
+  const state = {
+    links,
+    pageNumber: pageNumber && Number(pageNumber[1])
+  }
+
+  window.history.replaceState(state, '', document.location.href)
 
   new window.ScrollBooster({
     viewport: document.querySelector(selectors.scrollContainer),
@@ -201,19 +227,6 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     }
   })
 
-  const pageNumber = document.location.pathname.match(/page\/(\d+)/)
-
-  const links = pageNumber ?
-    pages[pageNumber[1] - 1] :
-    pages[0]
-
-  const state = {
-    links,
-    pageNumber: pageNumber && Number(pageNumber[1])
-  }
-
-  window.history.replaceState(state, '', document.location.href)
-
   document.querySelector(selectors.scrollContainer).addEventListener('click', (event) => {
     if (!event.target.classList.contains(classNames.link)) {
       return
@@ -236,6 +249,7 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
     )
 
     navigateToPage(
+      tag,
       pages,
       pageNumber && Number(pageNumber[1]),
       selectors.contentContainer,
@@ -272,6 +286,7 @@ const init = ({ selectors, classNames, data, dayScale, pageSize }) => {
         classNames
       )
       navigateToPage(
+        tag,
         pages,
         event.state.pageNumber,
         selectors.contentContainer,

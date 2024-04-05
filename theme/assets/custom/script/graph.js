@@ -3,9 +3,9 @@ import Canvas from './canvas.js'
 import OverlayPagination from './overlay-pagination.js'
 const { min, max } = Math
 
-const init = async (filter = (f => true)) => {
+const init = async ({ tag }) => {
   const posts = await window.posts
-  const data = posts.filter(filter)
+  const data = posts.filter((link) => !tag || link.tags.includes(tag))
   const minDayScale = 0.8
   const maxDayScale = 2
   const dayScale = min(maxDayScale, max(minDayScale, data.length / 200))
@@ -51,6 +51,7 @@ const init = async (filter = (f => true)) => {
       currentLink: 'is-current'
     },
     data,
+    tag,
     dayScale,
     pageSize: 15
   })
