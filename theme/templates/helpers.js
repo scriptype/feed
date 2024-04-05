@@ -25,7 +25,10 @@ module.exports = {
       'video',
       'git',
       'colors',
-      'geography'
+      'geography',
+      'javascript',
+      'css',
+      'security',
     ]
     return this.tags.filter((tag) => featuredTags.includes(tag.tag))
   },
