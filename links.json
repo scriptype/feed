@@ -579,9 +579,10 @@
   },
   {
     "url": "https://codingitwrong.com/2018/05/26/javascript-private-fields-and-object-oriented-design.html",
-    "title": "programming",
+    "title": "JavaScript Private Fields and Object-Oriented Design",
     "tags": [
-      "y"
+      "javascript",
+      "programming"
     ],
     "datePublished": 1535029286000
   },
@@ -983,7 +984,8 @@
     "title": "React Today and Tomorrow and 90% Cleaner React",
     "tags": [
       "react",
-      "reactconf"
+      "reactconf",
+      "video"
     ],
     "datePublished": 1540758279000
   },
@@ -1478,9 +1480,9 @@
     "url": "https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/",
     "title": "Why I've stopped exporting defaults from my JavaScript modules",
     "tags": [
-      "JavaScript",
-      "Modules",
-      "CommonJS"
+      "javascript",
+      "modules",
+      "commonJS"
     ],
     "datePublished": 1548164635000
   },
@@ -2069,10 +2071,9 @@
     "url": "https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread",
     "title": "Learn the Basics of Coding with a Needle and Thread - @ideo",
     "tags": [
-      "coding",
       "generative",
       "art",
-      "creative"
+      "creative coding"
     ],
     "datePublished": 1556876928000
   },
@@ -2113,8 +2114,7 @@
     "tags": [
       "css",
       "html",
-      "semantic",
-      "coding"
+      "semantic coding"
     ],
     "datePublished": 1557782783000
   },
@@ -2123,8 +2123,7 @@
     "title": "Chinese Window Lattice And CSS – @yuanchuan23",
     "tags": [
       "css",
-      "creative",
-      "coding",
+      "creative coding",
       "generative",
       "art"
     ],
@@ -2252,7 +2251,8 @@
       "svelte",
       "react",
       "reactive",
-      "programming"
+      "programming",
+      "video"
     ],
     "datePublished": 1562194689000
   },
@@ -2598,7 +2598,8 @@
       "inclusive",
       "design",
       "diversity",
-      "sociology"
+      "sociology",
+      "video"
     ],
     "datePublished": 1568981498000
   },
@@ -2696,7 +2697,8 @@
       "css",
       "javascript",
       "web",
-      "programming"
+      "programming",
+      "video"
     ],
     "datePublished": 1570049732000
   },
@@ -2852,7 +2854,8 @@
     "tags": [
       "satellites",
       "space",
-      "sky"
+      "sky",
+      "video"
     ],
     "datePublished": 1574089319000
   },
@@ -2873,7 +2876,8 @@
     "tags": [
       "web",
       "accessibility",
-      "tutorial"
+      "tutorial",
+      "video"
     ],
     "datePublished": 1575298765000
   },
@@ -3074,7 +3078,7 @@
     "url": "https://vimeo.com/93206523",
     "title": "The illusion of life",
     "tags": [
-      "vimeo",
+      "video",
       "animation",
       "design",
       "tutorial"
@@ -3100,7 +3104,8 @@
       "simulation",
       "graphics",
       "computer",
-      "science"
+      "science",
+      "video"
     ],
     "datePublished": 1578917930000
   },
@@ -3273,7 +3278,8 @@
     "url": "https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/",
     "title": "Why the GOV.UK Design System team changed the input type for numbers",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "design system"
     ],
     "datePublished": 1582838382000
   },
@@ -3297,7 +3303,8 @@
     "title": "Vue.js: The Documentary",
     "tags": [
       "web",
-      "development"
+      "development",
+      "video"
     ],
     "datePublished": 1583006878000
   },
@@ -3388,7 +3395,8 @@
     "url": "https://manyworlds.space/2017/01/24/a-four-planet-system-in-orbit-directly-imaged-and-remarkable/",
     "title": "A Four Planet System in Orbit, Directly Imaged and Remarkable",
     "tags": [
-      "astronomy"
+      "astronomy",
+      "science"
     ],
     "datePublished": 1584920956000
   },
@@ -3461,7 +3469,8 @@
     "title": "Racing Extinction - Documentary",
     "tags": [
       "environment",
-      "animals"
+      "animals",
+      "video"
     ],
     "datePublished": 1586290389000
   },
@@ -3530,7 +3539,8 @@
     "title": "My robotic basketball hoop won't let you miss",
     "tags": [
       "video",
-      "basketball"
+      "basketball",
+      "video"
     ],
     "datePublished": 1589321624000
   },
@@ -3653,7 +3663,8 @@
     "url": "https://vimeo.com/56480534",
     "title": "Pixillation",
     "tags": [
-      "art"
+      "art",
+      "video"
     ],
     "datePublished": 1590583583000
   },
@@ -3754,7 +3765,8 @@
     "title": "NAH YAPARSIN! - HABERLER: @zaytung, @teyitorg, @LimonHaber",
     "tags": [
       "türkçe",
-      "nah"
+      "nah",
+      "video"
     ],
     "datePublished": 1592772324000
   },
@@ -3832,7 +3844,8 @@
     "url": "https://www.youtube.com/watch?v=s1i-dnAH9Y4",
     "title": "Mechanical Computer (All Parts) - Basic Mechanisms In Fire Control Computers",
     "tags": [
-      "computers"
+      "computers",
+      "video"
     ],
     "datePublished": 1594225883000
   },
@@ -4074,8 +4087,7 @@
     "url": "https://tylerxhobbs.com/essays/2020/flow-fields",
     "title": "Flow Fields",
     "tags": [
-      "creative",
-      "coding",
+      "creative coding",
       "algorithms"
     ],
     "datePublished": 1601846564000
@@ -4085,7 +4097,8 @@
     "title": "The Infinite Pattern That Never Repeats",
     "tags": [
       "geometry",
-      "infinity"
+      "infinity",
+      "video"
     ],
     "datePublished": 1601910829000
   },
@@ -4417,8 +4430,7 @@
     "url": "https://tixy.land",
     "title": "(t,i,x,y) => \"creative code golfing\"",
     "tags": [
-      "creative",
-      "coding"
+      "creative coding"
     ],
     "tweet": {
       "tweetUrl": "https://twitter.com/aemkei/status/1323399877611708416",
@@ -4637,7 +4649,8 @@
     "title": "Did we(b development) lose the right direction?  @stefanjudis",
     "tags": [
       "web",
-      "development"
+      "development",
+      "video"
     ],
     "datePublished": 1610060030000
   },
@@ -4753,7 +4766,8 @@
     "url": "https://www.youtube.com/watch?v=JmCNNHQ86NE",
     "title": "Star-Stabilizing the Entire Sky (spherical distortion) - YouTube",
     "tags": [
-      "astronomy"
+      "astronomy",
+      "video"
     ],
     "datePublished": 1612052106000
   },
@@ -4955,14 +4969,17 @@
     "url": "https://www.youtube.com/watch?v=FXCitlsA7eQ",
     "title": "Extreme Vim Macros for Traditionalist Catholics",
     "tags": [
-      "vim"
+      "vim",
+      "video"
     ],
     "datePublished": 1617726019000
   },
   {
     "url": "https://www.youtube.com/watch?v=X-iSQQgOd1A",
     "title": "Coding Adventure: Ant and Slime Simulations - @SebastianLague",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "datePublished": 1617735268000
   },
   {
@@ -5047,8 +5064,7 @@
     "url": "https://varun.ca/noise/",
     "title": "Noise in Creative Coding | Varun Vachhar",
     "tags": [
-      "creative",
-      "coding"
+      "creative coding"
     ],
     "datePublished": 1620131544000
   },
@@ -5085,8 +5101,7 @@
     "url": "https://ippsketch.com/posts/chromatic-motion-blur/",
     "title": "Chromatic Motion Blur :: i++ Sketch",
     "tags": [
-      "creative",
-      "coding"
+      "creative coding"
     ],
     "datePublished": 1623626861000
   },
@@ -5456,7 +5471,8 @@
     "url": "https://www.youtube.com/watch?v=PHe0bXAIuk0",
     "title": "How The Economic Machine Works by Ray Dalio - YouTube",
     "tags": [
-      "economy"
+      "economy",
+      "video"
     ],
     "datePublished": 1646783892000
   },
@@ -5570,8 +5586,7 @@
     "url": "https://build.washingtonpost.com/",
     "title": "The Washington Post Design System",
     "tags": [
-      "design",
-      "system",
+      "design system",
       "web"
     ],
     "datePublished": 1652452815000
@@ -5932,7 +5947,8 @@
     "title": "Thinking about Ideas as a System: Evaluation of Ideas | by Mikko | Sep, 2022 | Medium",
     "tags": [
       "software",
-      "engineering"
+      "engineering",
+      "systems thinking"
     ],
     "datePublished": 1662606796000
   },
@@ -5965,7 +5981,8 @@
     "url": "https://www.youtube.com/watch?v=7iy0WJwNmv4",
     "title": "Google’s New AI Learned To See In The Dark! 🤖 - YouTube",
     "tags": [
-      "ai"
+      "ai",
+      "video"
     ],
     "datePublished": 1664210699000
   },
@@ -5974,7 +5991,8 @@
     "title": "Could The Universe Be Inside A Black Hole? - YouTube",
     "tags": [
       "physics",
-      "science"
+      "science",
+      "video"
     ],
     "datePublished": 1664568510000
   },
@@ -6091,7 +6109,8 @@
     "url": "https://www.youtube.com/joshschannelurl",
     "title": "Josh's Channel",
     "tags": [
-      "youtube"
+      "youtube",
+      "video"
     ],
     "datePublished": 1667210581000
   },
@@ -6166,7 +6185,9 @@
   {
     "url": "https://en.wikipedia.org/wiki/Systems_theory",
     "title": "Systems theory - Wikipedia",
-    "tags": [],
+    "tags": [
+      "systems"
+    ],
     "datePublished": 1670922620000
   },
   {
@@ -6301,7 +6322,8 @@
     "title": "The Continuity of Splines - YouTube",
     "tags": [
       "graphics",
-      "maths"
+      "maths",
+      "video"
     ],
     "datePublished": 1671625625000
   },
@@ -6651,7 +6673,8 @@
     "url": "https://www.youtube.com/watch?v=Zt8mO_Aqzw8",
     "title": "I'm Done With React - YouTube",
     "tags": [
-      "react"
+      "react",
+      "video"
     ],
     "datePublished": 1684190193000
   },
@@ -6676,8 +6699,7 @@
     "url": "https://www.leemartin.com/proof-of-life",
     "title": "Joy Oladokun: Proof of Life - @leemartin",
     "tags": [
-      "creative",
-      "coding"
+      "creative coding"
     ],
     "datePublished": 1684529805000
   },
@@ -6709,7 +6731,8 @@
     "url": "https://www.youtube.com/watch?v=rY9IL1F9aj8",
     "title": "How Plate Tectonics was Discovered - YouTube",
     "tags": [
-      "geology"
+      "geology",
+      "video"
     ],
     "datePublished": 1684890199000
   },
@@ -6923,8 +6946,8 @@
     "url": "https://github.com/samuelmtimbo/unit",
     "title": "GitHub - samuelmtimbo/unit: Next Generation Visual Programming System",
     "tags": [
-      "visual",
-      "programming"
+      "programming",
+      "visual programming"
     ],
     "datePublished": 1685203299000
   },
@@ -6932,7 +6955,8 @@
     "url": "https://www.youtube.com/watch?v=fP3H75_Xg18",
     "title": "Chaos Theory: The Science Behind the Miracle of Intelligent Life",
     "tags": [
-      "science"
+      "science",
+      "video"
     ],
     "datePublished": 1685223572000
   },
@@ -6951,7 +6975,8 @@
     "url": "https://www.youtube.com/watch?v=FTcjlQuqsyo",
     "title": "Rocks That Form On The Earth's Surface - YouTube",
     "tags": [
-      "geography"
+      "geography",
+      "video"
     ],
     "datePublished": 1685305701000
   },
@@ -6959,7 +6984,8 @@
     "url": "https://www.youtube.com/watch?v=ZSB7JXLbr3U",
     "title": "Rocks That Originate Underground - YouTube",
     "tags": [
-      "geology"
+      "geology",
+      "video"
     ],
     "datePublished": 1685307222000
   },
@@ -6967,7 +6993,8 @@
     "url": "https://www.youtube.com/watch?v=48aX0CIj5Cw",
     "title": "The Beach: A River of Sand - YouTube",
     "tags": [
-      "geography"
+      "geography",
+      "video"
     ],
     "datePublished": 1685309478000
   },
@@ -6975,7 +7002,8 @@
     "url": "https://www.youtube.com/watch?v=Xt8wJXWBTPU",
     "title": "Wind, Storm, and Tsunami Waves - YouTube",
     "tags": [
-      "geography"
+      "geography",
+      "video"
     ],
     "datePublished": 1685314209000
   },
@@ -6983,20 +7011,25 @@
     "url": "https://www.youtube.com/watch?v=FZtEKRGf56I",
     "title": "Rivers: The Work of Running Water - YouTube",
     "tags": [
-      "geography"
+      "geography",
+      "video"
     ],
     "datePublished": 1685315514000
   },
   {
     "url": "https://www.youtube.com/watch?v=ouapjlgEe5s",
     "title": "How Did We Get To The Modern Computer? | Order And Disorder",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "datePublished": 1685490150000
   },
   {
     "url": "https://www.youtube.com/watch?v=i-iVglPrXjE",
     "title": "What Is The Link Between Human Evolution And The Universe?",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "datePublished": 1685494276000
   },
   {
@@ -7004,7 +7037,8 @@
     "title": "How Beaches Become Forests",
     "tags": [
       "geography",
-      "ecology"
+      "ecology",
+      "video"
     ],
     "datePublished": 1685584871000
   },
@@ -7148,7 +7182,8 @@
     "url": "https://www.youtube.com/watch?v=3dPF0TbX5Jc",
     "title": "“Slow Design for an Anxious World” by Jeffrey Zeldman—An Event Apart",
     "tags": [
-      "design"
+      "design",
+      "video"
     ],
     "datePublished": 1689419915000
   },
@@ -7167,7 +7202,8 @@
     "title": "“The Fault, Dear Brutus” by Jeffrey Zeldman—An Event Apart video - YouTube",
     "tags": [
       "web",
-      "career"
+      "career",
+      "video"
     ],
     "datePublished": 1690933641000
   },
@@ -7248,8 +7284,7 @@
     "title": "Refactoring Your Way to a Design System ◆ 24 ways",
     "tags": [
       "web",
-      "design",
-      "system"
+      "design system"
     ],
     "datePublished": 1691839587000
   },
@@ -7259,7 +7294,7 @@
     "tags": [
       "css",
       "grid",
-      "design"
+      "design system"
     ],
     "datePublished": 1691840546000
   },
@@ -7506,7 +7541,8 @@
       "web",
       "design",
       "css",
-      "javascript"
+      "javascript",
+      "video"
     ],
     "datePublished": 1694819031000
   },
@@ -7543,7 +7579,8 @@
     "title": "The beauty of collective intelligence, explained by a developmental biologist | Michael Levin - YouTube",
     "tags": [
       "biology",
-      "systems"
+      "systems",
+      "video"
     ],
     "datePublished": 1694982490000
   },
@@ -7652,14 +7689,17 @@
     "title": "The Layers of the Web - Jeremy Keith - YouTube",
     "tags": [
       "web",
-      "system"
+      "system",
+      "video"
     ],
     "datePublished": 1695348719000
   },
   {
     "url": "https://www.youtube.com/watch?v=vK1tlLOavvM",
     "title": "video, web, accessibility",
-    "tags": [],
+    "tags": [
+      "video"
+    ],
     "datePublished": 1695416385000
   },
   {
@@ -8569,7 +8609,8 @@
     "title": "Neurodiversity Design System",
     "tags": [
       "inclusive design",
-      "web"
+      "web",
+      "design system"
     ],
     "datePublished": 1707770738000
   },
@@ -8950,7 +8991,8 @@
     "tags": [
       "philosophy",
       "nature",
-      "life"
+      "life",
+      "video"
     ],
     "datePublished": 1710295947000
   },
@@ -9078,7 +9120,8 @@
     "url": "https://www.youtube.com/watch?v=R4Ri4ft7bXY",
     "title": "The Good, The Bad, and The Web Components - @zachleat",
     "tags": [
-      "web components"
+      "web components",
+      "video"
     ],
     "datePublished": 1710975535000
   },
@@ -9125,7 +9168,8 @@
     "tags": [
       "matrix",
       "movie",
-      "culture"
+      "culture",
+      "video"
     ],
     "datePublished": 1711072846323
   },
@@ -9135,7 +9179,8 @@
     "tags": [
       "life",
       "design",
-      "software"
+      "software",
+      "video"
     ],
     "datePublished": 1711237651995
   },
@@ -9172,7 +9217,8 @@
     "url": "https://vimeo.com/17091905",
     "title": "Dan Cederholm - Handcrafted CSS",
     "tags": [
-      "css"
+      "css",
+      "video"
     ],
     "datePublished": 1712198467304
   },
