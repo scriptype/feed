@@ -3,7 +3,7 @@
     {{>components/header}}
     {{>components/tags tags=(selectedTags)}}
     <main class="content" {{region "main"}}>
-      <h2 class="tag-header">#{{tag.tag}} <span class="tag-header-post-count">{{tag.posts.length}} links</span></h2>
+      <h1 class="tag-header">#{{tag.tag}} <span class="tag-header-post-count">{{tag.posts.length}} links</span></h1>
       {{>components/graph}}
       {{>components/links}}
     </main>
