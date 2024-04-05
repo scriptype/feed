@@ -1,5 +1,5 @@
 #overlay-pagination-toggle {
-    position: fixed;
+    position: sticky;
     width: var(--content-width);
     text-align: center;
     color: royalblue;
@@ -14,6 +14,7 @@
 }
 
 .js-enhanced #overlay-pagination-toggle {
+    position: absolute;
     bottom: 200vh;
     z-index: 1;
     font-size: 0;
@@ -24,13 +25,14 @@
 .js-enhanced #overlay-pagination-toggle:focus {
     font-size: .9em;
     height: 1.5em;
-    top: var(--graph-offset-top);
-    left: var(--graph-offset-left);
+    top: 0;
+    bottom: auto;
+    left: var(--graph-left);
 }
 
 .overlay-pagination {
     display: flex;
-    padding: 2em 0 1em;
+    padding: .5em 0 .5em;
 }
 
 .js-enhanced .overlay-pagination {
@@ -43,7 +45,7 @@
 .overlay-pagination-item {
     --width: max-content;
     width: var(--width);
-    padding: 1em .5em;
+    padding: .75em .5em;
 }
 
 .overlay-pagination-item:has(.is-current) {

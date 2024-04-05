@@ -43,16 +43,14 @@ const setListProperties = (list, scrollContainer, data, dayScale) => {
   const setTogglePosition = () => {
     console.log('fix me')
     scrollContainer.style.setProperty(
-      '--graph-offset-top', scrollContainer.offsetTop + 'px'
-    )
-    scrollContainer.style.setProperty(
-      '--graph-offset-left', scrollContainer.offsetLeft + 'px'
+      '--graph-left', scrollContainer.scrollLeft + 'px'
     )
   }
   window.removeEventListener('resize', setTogglePosition)
   window.removeEventListener('orientationchange', setTogglePosition)
   window.addEventListener('resize', setTogglePosition)
   window.addEventListener('orientationchange', setTogglePosition)
+  scrollContainer.addEventListener('scroll', setTogglePosition)
   setTogglePosition()
   container.setAttribute('open', true)
   toggle.textContent = toggleLabels.clickToClose
@@ -196,7 +194,7 @@ const init = ({ selectors, classNames, data, tag, dayScale, pageSize }) => {
   window.history.replaceState(state, '', document.location.href)
 
   new window.ScrollBooster({
-    viewport: document.querySelector(selectors.scrollContainer),
+    viewport: scrollContainer,
     scrollMode: 'native',
 
     onPointerDown(state, event) {
