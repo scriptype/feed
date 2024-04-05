@@ -1,10 +1,10 @@
 const { readFile } = require('fs/promises')
 const path = require('path')
-const { last } = require('./helpers')
-const publish = require('./publish')
+const { last } = require('../helpers')
+const publish = require('../publish')
 
 const publishLatestLink = async () => {
-  const linksPath = path.join(__dirname, '..', 'links.json')
+  const linksPath = path.join(__dirname, '..', '..', 'links.json')
   let linksJSON
   try {
     linksJSON = await readFile(linksPath, { encoding: 'utf-8' })
