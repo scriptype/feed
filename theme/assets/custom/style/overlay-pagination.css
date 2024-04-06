@@ -48,13 +48,16 @@
     padding: .75em .5em;
 }
 
+.js-enhanced .overlay-pagination-item {
+    padding: 0;
+}
+
 .overlay-pagination-item:has(.is-current) {
     background: var(--tag-badge-color);
     border-radius: .8em;
 }
 
-.js-enhanced .overlay-pagination-item {
-    padding: 0;
+.js-enhanced .overlay-pagination-item:has(.is-current) {
     border-radius: 0;
     background: none;
 }
