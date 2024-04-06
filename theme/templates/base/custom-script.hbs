@@ -1,7 +1,3 @@
-{{#if (hasCustomScript)}}
-<script type="module" src="{{assetsPath}}/custom/script.js"></script>
-{{/if}}
-
 {{#if (not (isTagsPage))}}
 <script src="{{assetsPath}}/custom/script/vendor/scrollbooster.min.js"></script>
 <script type="module">
@@ -29,4 +25,8 @@
   })
   document.body.classList.add('js-enhanced')
 </script>
+{{/if}}
+
+{{#if (hasCustomScript)}}
+<script type="module" src="{{assetsPath}}/custom/script.js"></script>
 {{/if}}

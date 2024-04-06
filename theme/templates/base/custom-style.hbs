@@ -1,11 +1,3 @@
-{{#if (hasThemeSettings)}}
-<link rel="stylesheet" href="{{assetsPath}}/custom/theme-settings.css">
-{{/if}}
-
-{{#if (hasCustomStyle)}}
-<link rel="stylesheet" href="{{assetsPath}}/custom/style.css">
-{{/if}}
-
 {{#if (isHomePage)}}
 <link rel="stylesheet" href="{{assetsPath}}/custom/style/homepage.css">
 {{/if}}
@@ -20,4 +12,12 @@
 
 {{#if (isStartMode)}}
 <link rel="stylesheet" href="{{assetsPath}}/custom/style/debug.css">
+{{/if}}
+
+{{#if (hasThemeSettings)}}
+<link rel="stylesheet" href="{{assetsPath}}/custom/theme-settings.css">
+{{/if}}
+
+{{#if (hasCustomStyle)}}
+<link rel="stylesheet" href="{{assetsPath}}/custom/style.css">
 {{/if}}
