@@ -68,7 +68,7 @@ export default (options) => {
       ctx.lineCap = 'round'
       ctx.lineWidth = lineWidth
       ctx.lineTo(x, y)
-      ctx.strokeStyle = gradient(progress).mix('white', 0.66)
+      ctx.strokeStyle = gradient(progress)
       ctx.stroke()
       ctx.closePath()
       ctx.beginPath()

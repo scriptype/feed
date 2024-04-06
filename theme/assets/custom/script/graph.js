@@ -24,8 +24,8 @@ const init = async ({ tag }) => {
       left: 0
     },
     colors: [
-      new Color('#fd5'),
-      new Color('navy'),
+      new Color('#ffeaac'),
+      new Color('#a6a6e0'),
     ],
   })
 
