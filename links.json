@@ -574,7 +574,10 @@
   {
     "url": "https://80000hours.org/podcast/episodes/aaron-hamlin-voting-reform/",
     "title": "Politics is so much worse because we use an atrocious 18th century voting system. Aaron Hamlin has a viable plan to fix it.",
-    "tags": [],
+    "tags": [
+      "politics",
+      "podcast"
+    ],
     "datePublished": 1534928505000
   },
   {
@@ -7953,7 +7956,8 @@
     "tags": [
       "ux",
       "design",
-      "open source"
+      "open source",
+      "podcast"
     ],
     "datePublished": 1698367609000
   },
@@ -8153,7 +8157,8 @@
     "url": "https://www.tpgi.com/digital-accessibility-podcasts/",
     "title": "Digital Accessibility Podcasts",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "podcast"
     ],
     "datePublished": 1700103272000
   },
@@ -8243,7 +8248,8 @@
     "tags": [
       "information architecture",
       "ux",
-      "strategy"
+      "strategy",
+      "podcast"
     ],
     "datePublished": 1700791351000
   },
@@ -8269,7 +8275,8 @@
     "tags": [
       "information architecture",
       "semantics",
-      "language"
+      "language",
+      "podcast"
     ],
     "datePublished": 1701047128000
   },
@@ -8287,7 +8294,8 @@
     "title": "Devine Lu Linvega • Orca | Future of Coding",
     "tags": [
       "music",
-      "visual programming"
+      "visual programming",
+      "podcast"
     ],
     "datePublished": 1701134631000
   },
@@ -8821,7 +8829,7 @@
     "url": "https://podnews.net/",
     "title": "Podnews podcasting news",
     "tags": [
-      "podcasts"
+      "podcast"
     ],
     "datePublished": 1709667475000
   },
@@ -9104,7 +9112,8 @@
     "title": "localfirst.fm - A podcast about local-first software development.",
     "tags": [
       "local-first",
-      "software"
+      "software",
+      "podcast"
     ],
     "datePublished": 1710873196000
   },
