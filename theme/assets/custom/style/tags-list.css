@@ -111,17 +111,24 @@
         position: absolute;
         right: 1em;
         bottom: 1em;
-        width: 2.5em;
+        width: 3.5em;
         min-width: auto;
         margin: 0;
         text-indent: -2000vw;
         aspect-ratio: 1;
         border-radius: 50%;
         cursor: pointer;
+        opacity: 1;
         background:
             radial-gradient(circle at 80% 90%, #a93700 -150%, transparent 75%),
             radial-gradient(circle at 30% 30%, #fafae5, #ffea41 30%);
         animation: bounce var(--animation-duration) var(--bounce-easing) forwards;
+    }
+
+    .tags-list-toggle-label,
+    .tags-list-toggle-label::before,
+    .tags-list-toggle-label::after {
+        z-index: 1;
     }
 
     @keyframes bounce {
@@ -133,15 +140,19 @@
         }
     }
 
+    .tags-list-toggle-label::before,
     .tags-list-toggle-label::after {
         content: "";
         display: inline-block;
-        right: 3.5em;
-        bottom: .75em;
-        width: 1.33em;
         aspect-ratio: 1;
         border-radius: 50%;
         position: absolute;
+    }
+
+    .tags-list-toggle-label::after {
+        right: 3.8em;
+        bottom: 1.05em;
+        width: 1.33em;
         background:
             radial-gradient(circle at 80% 90%, #710000 -60%, transparent 80%),
             radial-gradient(circle at 30% 20%, #ff7a7a, #e21207 40%);
@@ -149,14 +160,9 @@
     }
 
     .tags-list-toggle-label::before {
-        content: "";
-        display: inline-block;
-        right: 2.7em;
-        bottom: 2.45em;
+        right: 3.3em;
+        bottom: 2.75em;
         width: 0.73em;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        position: absolute;
         background:
             radial-gradient(circle at 80% 90%, #1e0071 -60%, transparent 80%),
             radial-gradient(circle at 30% 20%, #7e7aff, #4b07e2 40%);
