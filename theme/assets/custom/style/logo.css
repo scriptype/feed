@@ -57,6 +57,14 @@
 }
 
 .logo {
+    --color: #e21207;
     max-width: 100%;
     border-radius: inherit;
+    transform:
+        scale(0.756)
+        translate(.5%, -58.125%);
+    height: 2200px;
+    overflow: visible;
+    stroke: var(--color);
+    stroke-width: 1.5px;
 }
