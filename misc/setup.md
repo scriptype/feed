@@ -101,7 +101,7 @@ It will result in a retweet on Twitter, with the quote you entered. Elsewhere th
 <img width="612" alt="retweetable link on twitter" src="https://github.com/scriptype/feed/assets/5516876/63f376c5-8ef9-4f6c-bee8-4ec553e29399">
 
 Previously, feed was able to fetch the link in a tweet and share _that_ link on Tumblr and static site.
-But, with the current free plan, it's not possible any more. Also, the title can't be extracted from a tweet any more.
+But, with the Twitter's current free API it's not possible any more. Similarly, the title can't be extracted from a tweet any more.
 
 ***
 
