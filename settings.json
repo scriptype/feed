@@ -2,6 +2,7 @@
   "theme": "zen",
   "url": "https://enes.in/feed",
   "title": "Reads Feed",
+  "description": "A collection of links to blog posts, talks and opinions on art, design and technology",
   "permalinkPrefix": "/feed",
   "revisionHistory": "off",
   "exportDirectory": "site"
