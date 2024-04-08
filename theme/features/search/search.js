@@ -38,7 +38,7 @@ const resultsTemplate = (results, query) => {
   const resultsHTML = results.map(resultItemTemplate).join('')
   return `
     <h2 class="feat-search-results-message">
-      "${query}"
+      “${query}”
       <span class="feat-search-results-count">${results.length} links</span>
     </h2>
     ${resultsHTML}

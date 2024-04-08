@@ -65,12 +65,18 @@
 
 .feat-search-results-message {
     font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    word-spacing: 0.05em;
     text-align: center;
 }
 
 .feat-search-results-count {
     display: block;
-    color: #555;
-    font-size: .5em;
     margin-bottom: 1em;
+    color: #333;
+    font-size: .5em;
+    font-weight: initial;
+    word-spacing: initial;
+    letter-spacing: initial;
 }
