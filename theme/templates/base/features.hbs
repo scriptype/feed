@@ -1,7 +1,3 @@
 {{#if (isEnabled "rss")}}
   <link rel="alternate" type="application/rss+xml" title="{{settings.site.title}} Feed" href="{{settings.site.url}}/feed.xml">
 {{/if}}
-
-{{#if (isEnabled "search")}}
-  <link rel="stylesheet" href="{{assetsPath}}/common/search/search.css">
-{{/if}}

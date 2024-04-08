@@ -1,5 +1,10 @@
 import Dictionary from '../dictionary.js'
 
+const stylesheet = document.createElement('link')
+stylesheet.rel = 'stylesheet'
+stylesheet.href = `${window.assetsPath}/common/search/search.css`
+document.head.appendChild(stylesheet)
+
 const times = (n, what) => {
   return [...Array(n).keys()].map(() => what)
 }
@@ -76,7 +81,7 @@ const searchFormTemplate = () => `
           placeholder=""
           name="search" />
       <button class="feat-search-button">
-        <svg class="feat-search-icon">
+        <svg class="feat-search-icon" style="width: 18px; height: 18px;">
             <use xlink:href="#feat-search-icon"></use>
         </svg>
         <span class="feat-search-button-text">
