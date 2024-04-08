@@ -10,6 +10,12 @@ const chunk = (array, size) =>
     })
   }, [])
 
+const truncate = (text, limit, ellipsis) => {
+  return text.length > limit ?
+    `${ text.slice(0, limit).trim() }${ ellipsis ? '...' : '' }` :
+    text
+}
+
 const wait = (duration) => new Promise(r => setTimeout(r, duration))
 
 const DAY = 1000 * 60 * 60 * 24
@@ -119,8 +125,8 @@ const navigateToPage = (
       }, 300)
       linkContainer.style.setProperty('--i', i)
       linkElement.href = link.url
-      linkTitle.textContent = link.title
-      linkUrl.textContent = link.url
+      linkTitle.textContent = truncate(link.title, 70, true)
+      linkUrl.textContent = truncate(link.url, 50, true)
       linkTags.innerHTML = link.tags.map(t => `<li class="link-tag">#${t}</li>`).join('')
       fragment.appendChild(linkContainer)
     })
