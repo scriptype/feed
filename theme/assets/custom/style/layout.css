@@ -1,6 +1,7 @@
 .app {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 190px min-content;
+    justify-content: center;
 }
 
 .header {
@@ -11,6 +12,7 @@
 .tags {
     width: min-content;
     place-self: end;
+    grid-column: 1;
     margin-right: 3em;
 }
 
