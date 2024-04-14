@@ -6,10 +6,13 @@ const findForm = () => query('.feat-search')
 const findInput = () => query('#feat-search')
 
 const loadResources = () => {
-  const stylesheet = document.createElement('link')
-  stylesheet.rel = 'stylesheet'
-  stylesheet.href = `${window.assetsPath}/custom/style/search.css`
-  document.head.appendChild(stylesheet)
+  return new Promise(resolve => {
+    const stylesheet = document.createElement('link')
+    stylesheet.rel = 'stylesheet'
+    stylesheet.href = `${window.assetsPath}/custom/style/search.css`
+    stylesheet.onload = resolve
+    document.head.appendChild(stylesheet)
+  })
 }
 
 const searchIconTemplate = () => `
@@ -72,8 +75,12 @@ const attachEventListeners = ({ searchForm, onSearch, onReset }) => {
   })
 }
 
-const render = ({ onSearch, onReset }) => {
-  loadResources()
+const render = async ({ onSearch, onReset }) => {
+  try {
+    await loadResources()
+  } catch (e) {
+    console.log('failed loading resources for search-form', e)
+  }
   const searchForm = renderSearchForm()
   attachEventListeners({
     searchForm,
