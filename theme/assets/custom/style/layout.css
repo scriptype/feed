@@ -9,6 +9,16 @@
     grid-row: 1;
 }
 
+#search-form-container {
+    height: 2em;
+    margin-bottom: 2em;
+}
+
+.js-enabled #search-form-container {
+    height: auto;
+    margin-bottom: 0;
+}
+
 .tags {
     width: min-content;
     place-self: end;
