@@ -137,9 +137,11 @@ const createController = () => {
     }
 
     if (navigatedFrom.differentPage) {
-      Intro.render(tag ? Intros.tag : Intros.homepage, {
+      const pageIntro = searchQuery ? Intros.search : (tag ? Intros.tag : Intros.homepage)
+      Intro.render(pageIntro, {
+        searchQuery,
         links,
-        tag
+        tag,
       })
       ActivityChart.render({
         mode: Modes.full,
@@ -352,7 +354,7 @@ const createController = () => {
     const links = linkFinder.find(query)
 
     Intro.render(Intros.search, {
-      query,
+      searchQuery: query,
       links
     })
 

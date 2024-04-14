@@ -24,10 +24,10 @@ const tag = ({ tag, links }) => ({
   `
 })
 
-const search = ({ query, links }) => ({
+const search = ({ searchQuery, links }) => ({
   html: `
     <h2 class="feat-search-results-message">
-      “${query}”
+      “${searchQuery}”
       <span class="feat-search-results-count">${links.length} links</span>
     </h2>
   `
