@@ -2,6 +2,21 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 100 normal 16px/1.5 "Playfair Display", times, serif;
+    background: repeating-linear-gradient(
+        60deg,
+        #fcfcfc,
+        #f4f2f0 1px,
+        #fcfcfc 2px,
+        #fcfcfc 3px
+    );
+}
+
 img {
     vertical-align: middle;
 }
@@ -23,15 +38,4 @@ button {
     appearance: none;
     -webkit-appearance: none;
     font: inherit;
-}
-
-body {
-    font: 100 normal 16px/1.5 "Playfair Display", times, serif;
-    background: repeating-linear-gradient(
-        60deg,
-        #fcfcfc,
-        #f4f2f0 1px,
-        #fcfcfc 2px,
-        #fcfcfc 3px
-    )
 }

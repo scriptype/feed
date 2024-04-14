@@ -1,6 +1,8 @@
 <main class="content" {{region "main"}}>
-  <div class="homepage-content">
-    {{> @partial-block }}
+  <div {{region "intro"}}>
+    <div class="homepage-content">
+      {{> @partial-block }}
+    </div>
   </div>
   {{>components/graph}}
   {{>components/links}}

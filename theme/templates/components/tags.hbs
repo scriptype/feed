@@ -4,7 +4,7 @@
     <ol class="tags-list">
       {{#each tags as |tag|}}
         <li class="tags-list-item" style="--i: {{@index}}">
-          <a href="{{tag.permalink}}" class="tags-list-item-link">
+          <a href="{{tag.permalink}}" class="tags-list-item-link" data-tag="{{tag.tag}}">
             <span class="tag-hash">#</span>
             {{tag.tag}}
             <span class="tag-count-badge">{{tag.posts.length}}</span>

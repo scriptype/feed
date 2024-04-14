@@ -1,5 +1,6 @@
 .content {
-    padding: 2em 0 1em;
+    position: relative;
+    padding: 150px 0 1em;
     background: var(--content-bg-color);
     border-radius: 3px;
     border-bottom: 1px solid #eaeaea;
@@ -9,5 +10,40 @@
 @media (max-width: 900px) {
     .content {
         box-shadow: none;
+    }
+}
+
+[data-region-id="intro"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 2em;
+}
+
+[data-region-id="intro"].entering {
+    animation: enter-intro var(--transition-duration) forwards;
+}
+
+[data-region-id="intro"].exiting {
+    animation: exit-intro var(--transition-duration) forwards;
+    animation-timing-function: cubic-bezier(.66,-0.97,.27,1.55);
+}
+
+@keyframes enter-intro {
+    from {
+        opacity: 0;
+        transform: scale(1.025);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(1);
+    }
+}
+
+@keyframes exit-intro {
+    to {
+        opacity: 0;
+        transform: scale(1.05);
     }
 }

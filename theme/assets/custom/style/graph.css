@@ -3,6 +3,28 @@
     overflow: auto;
 }
 
+.graph-container.has-scroll {
+    cursor: grab;
+}
+
+.graph-container.has-scroll.faked-active-state {
+    cursor: grabbing;
+}
+
+.graph-container.exiting {
+    animation: disappear var(--transition-duration) forwards;
+}
+
+@keyframes disappear {
+    99% {
+        transform: scaleY(1);
+    }
+    to {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
 .graph-container:has([open]) {
     margin: 3em 0 0;
 }

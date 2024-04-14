@@ -5,11 +5,16 @@
 .link-container {
     --enter-rotate-x: 30deg;
     --enter-rotate-y: 0deg;
-    --enter-exit-shift-x: 0%;
-    --enter-exit-shift-y: 4%;
-    --enter-exit-scale: .95, .95;
-    --enter-exit-duration: .2s;
-    --enter-exit-stagger: 50ms;
+    --enter-shift-x: 0%;
+    --enter-shift-y: 4%;
+    --enter-scale: .95, .95;
+    --enter-duration: .2s;
+    --enter-stagger: 50ms;
+    --exit-shift-x: 0%;
+    --exit-shift-y: 2%;
+    --exit-scale: .97, .97;
+    --exit-duration: .15s;
+    --exit-stagger: 30ms;
 }
 
 .link-container.entering,
@@ -17,21 +22,21 @@
     transform-origin: top center;
     transform-style: preserve-3d;
     animation-fill-mode: forwards;
-    animation-duration: var(--enter-exit-duration);
-    animation-delay: calc(var(--i) * var(--enter-exit-stagger));
 }
 
 .link-container.entering {
     opacity: 0;
     transform:
         translate(
-            calc(var(--enter-exit-shift-x) * -1),
-            calc(var(--enter-exit-shift-y) * -1)
+            calc(var(--enter-shift-x) * -1),
+            calc(var(--enter-shift-y) * -1)
         )
-        scale(var(--enter-exit-scale))
+        scale(var(--enter-scale))
         rotateX(calc(var(--enter-rotate-x) * -1))
         rotateY(calc(var(--enter-rotate-y) * -1));
     animation-name: link-enter;
+    animation-duration: var(--enter-duration);
+    animation-delay: calc(var(--i) * var(--enter-stagger));
 }
 
 @keyframes link-enter {
@@ -48,16 +53,18 @@
 .link-container.exiting {
     transform-origin: bottom center;
     animation-name: link-exit;
+    animation-duration: var(--exit-duration);
+    animation-delay: calc(var(--i) * var(--exit-stagger));
 }
 
 @keyframes link-exit {
     to {
         transform:
             translate(
-                var(--enter-exit-shift-x),
-                var(--enter-exit-shift-y)
+                var(--exit-shift-x),
+                var(--exit-shift-y)
             )
-            scale(var(--enter-exit-scale));
+            scale(var(--exit-scale));
         opacity: 0;
     }
 }

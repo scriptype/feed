@@ -84,7 +84,13 @@
 
 .js-enhanced .overlay-pagination-link:hover,
 .js-enhanced .overlay-pagination-link:focus-visible {
-    background: #018;
+    background: linear-gradient(
+        to top,
+        #000,
+        #018 30%,
+        #018 70%,
+        #000
+    );
     mix-blend-mode: difference;
 }
 
@@ -102,7 +108,13 @@
     --color-3: blanchedalmond;
     --color-4: lemonchiffon;
     --color-5: #89ffe9;
-    background: var(--color-4);
+    background: linear-gradient(
+        to top,
+        transparent,
+        var(--color-4) 30%,
+        var(--color-4) 70%,
+        transparent
+    );
     mix-blend-mode: multiply;
     box-shadow: 0 0 0 1px #ca33;
 }
