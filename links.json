@@ -16,7 +16,7 @@
       "philosophy",
       "science",
       "art",
-      "wikiwand"
+      "wiki"
     ],
     "datePublished": 1532255602000
   },
@@ -25,8 +25,7 @@
     "title": "\"Introducing Rockstar - a proposal for a Turing-complete programming language in which you can write programs that are also 1980s power ballads.\"",
     "tags": [
       "github",
-      "programming",
-      "language",
+      "programming language",
       "ballad"
     ],
     "datePublished": 1532305832000
@@ -36,7 +35,7 @@
     "title": "Self-organization",
     "tags": [
       "science",
-      "wikiwand"
+      "wiki"
     ],
     "datePublished": 1532348193000
   },
@@ -64,7 +63,6 @@
     "url": "https://lucasmreis.github.io/blog/simple-react-patterns/",
     "title": "Simple React Patterns",
     "tags": [
-      "programming",
       "javascript",
       "react"
     ],
@@ -82,7 +80,6 @@
     "url": "https://medium.cobeisfresh.com/how-redux-can-make-you-a-better-developer-30a094d5e3ec",
     "title": "How Redux Can Make You a Better Developer",
     "tags": [
-      "programming",
       "javascript",
       "redux"
     ],
@@ -114,7 +111,6 @@
     "url": "https://blog.sessionstack.com/how-javascript-works-deep-dive-into-websockets-and-http-2-with-sse-how-to-pick-the-right-path-584e6b8e3bf7",
     "title": "How JavaScript works: Deep dive into WebSockets and HTTP/2 with SSE + how to pick the right path",
     "tags": [
-      "programming",
       "javascript"
     ],
     "datePublished": 1532594635000
@@ -147,8 +143,8 @@
     "title": "Currying is not idiomatic in JavaScript",
     "tags": [
       "javascript",
-      "functional",
-      "programming"
+      "functional programming",
+      "software"
     ],
     "datePublished": 1532875605000
   },
@@ -156,7 +152,7 @@
     "url": "https://monades.roperzh.com/get-to-know-the-actor-model/",
     "title": "Get to know the Actor Model",
     "tags": [
-      "programming"
+      "software"
     ],
     "datePublished": 1532881364000
   },
@@ -219,8 +215,7 @@
     "url": "https://developers.google.com/machine-learning/crash-course/",
     "title": "Machine Learning Crash Course",
     "tags": [
-      "machine",
-      "learning",
+      "machine learning",
       "ai",
       "course"
     ],
@@ -231,8 +226,8 @@
     "title": "Functors & Categories",
     "tags": [
       "javascript",
-      "functional",
-      "programming"
+      "functional programming",
+      "software"
     ],
     "datePublished": 1533221362000
   },
@@ -256,8 +251,7 @@
     "title": "Deploying Pull Requests from Forks with Now + GitHub",
     "tags": [
       "github",
-      "open",
-      "source",
+      "open source",
       "security"
     ],
     "datePublished": 1533397655000
@@ -266,7 +260,7 @@
     "url": "https://dev.to/twhite/what-is-business-logic-1gdf",
     "title": "What Is Business Logic?",
     "tags": [
-      "programming"
+      "software"
     ],
     "datePublished": 1533397655000
   },
@@ -471,8 +465,8 @@
     "url": "https://byorgey.wordpress.com/2018/05/06/conversations-with-a-six-year-old-on-functional-programming/",
     "title": "Conversations with a six-year-old on functional programming",
     "tags": [
-      "functional",
-      "programming"
+      "software",
+      "functional programming"
     ],
     "datePublished": 1534329963000
   },
@@ -521,7 +515,7 @@
     "url": "https://www.wikiwand.com/en/Lamarckism",
     "title": "Lamarckism",
     "tags": [
-      "wikiwand",
+      "wiki",
       "evolution",
       "biology"
     ],
@@ -585,7 +579,7 @@
     "title": "JavaScript Private Fields and Object-Oriented Design",
     "tags": [
       "javascript",
-      "programming"
+      "software"
     ],
     "datePublished": 1535029286000
   },
@@ -641,7 +635,7 @@
     "url": "https://github.com/Droogans/unmaintainable-code",
     "title": "How To Write Unmaintainable Code",
     "tags": [
-      "programming"
+      "software"
     ],
     "datePublished": 1535461641000
   },
@@ -741,10 +735,7 @@
     "url": "https://0fps.net/2012/11/19/conways-game-of-life-for-curved-surfaces-part-1/",
     "title": "Conway’s Game of Life for Curved Surfaces (Part 1)",
     "tags": [
-      "conway",
-      "game",
-      "of",
-      "life"
+      "game of life"
     ],
     "datePublished": 1536931836000
   },
@@ -781,7 +772,8 @@
     "url": "https://adactio.com/journal/14327",
     "title": "Robustness and least power",
     "tags": [
-      "programming",
+      "software",
+      "frontend",
       "html",
       "css",
       "javascript"
@@ -892,8 +884,7 @@
     "title": "A minimal guide to ECMAScript Decorators",
     "tags": [
       "ecmascript",
-      "programming",
-      "language"
+      "programming language"
     ],
     "datePublished": 1539156315000
   },
@@ -901,8 +892,7 @@
     "url": "https://css-tricks.com/one-offs/",
     "title": "One-Offs",
     "tags": [
-      "atomic",
-      "components",
+      "atomic components",
       "design patterns"
     ],
     "datePublished": 1539375623000
@@ -1015,7 +1005,8 @@
     "url": "http://www.onegreenplanet.org/animalsandnature/why-making-an-elephant-paint-is-cruel-not-cute/",
     "title": "Elephant Artists? Here’s Why Making an Elephant Paint is Cruel, Not Cute",
     "tags": [
-      "animal",
+      "animals",
+      "elephants",
       "rights"
     ],
     "datePublished": 1540916834000
@@ -1024,11 +1015,10 @@
     "url": "https://www.theguardian.com/environment/2018/oct/30/humanity-wiped-out-animals-since-1970-major-report-finds",
     "title": "Humanity has wiped out 60% of animal populations since 1970, report finds",
     "tags": [
-      "wildlife",
       "nature",
       "animals",
-      "lifestyle",
-      "climate"
+      "environment",
+      "climate change"
     ],
     "datePublished": 1540939109000
   },
@@ -1118,10 +1108,9 @@
     "title": "Get Better Type Checking in JavaScript with the Maybe Type",
     "tags": [
       "javascript",
-      "maybe",
       "monad",
-      "functional",
-      "programming"
+      "functional programming",
+      "software"
     ],
     "datePublished": 1542104697000
   },
@@ -1130,8 +1119,7 @@
     "title": "Exclusive photos: A giant iceberg breaks off Antarctica",
     "tags": [
       "antarctica",
-      "climate",
-      "warming",
+      "climate change",
       "aerial"
     ],
     "datePublished": 1542189258000
@@ -1261,8 +1249,7 @@
     "url": "https://www.gq.com/story/billionaires-climate-change",
     "title": "Billionaires Are the Leading Cause of Climate Change",
     "tags": [
-      "climate",
-      "change",
+      "climate change",
       "politics"
     ],
     "datePublished": 1544372846000
@@ -1280,8 +1267,7 @@
     "url": "https://earthobservatory.nasa.gov/images/144361/more-glaciers-in-east-antarctica-are-waking-up",
     "title": "More Glaciers in East Antarctica Are Waking Up",
     "tags": [
-      "climate",
-      "change",
+      "climate change",
       "antarctica",
       "glacier"
     ],
@@ -1311,8 +1297,7 @@
     "url": "https://www.technologyreview.com/s/612612/these-incredibly-real-fake-faces-show-how-algorithms-can-now-mess-with-us/",
     "title": "These incredibly realistic fake faces show how algorithms can now mess with us",
     "tags": [
-      "artificial",
-      "intelligence",
+      "ai",
       "fake"
     ],
     "datePublished": 1544842298000
@@ -1463,8 +1448,7 @@
     "url": "https://www.topic.com/giant-mirrors-ocean-whitening-here-s-how-exxon-wanted-to-save-the-planet",
     "title": "Giant Mirrors. Ocean Whitening. Here’s How Exxon Wanted to Save the Planet",
     "tags": [
-      "climate",
-      "change",
+      "climate change",
       "oil"
     ],
     "datePublished": 1547934583000
@@ -1473,8 +1457,6 @@
     "url": "https://www.wikiwand.com/en/Bob_Ross",
     "title": "Bob Ross",
     "tags": [
-      "joy",
-      "of",
       "painting"
     ],
     "datePublished": 1548004898000
@@ -1544,8 +1526,7 @@
     "title": "Yapay sinir ağları",
     "tags": [
       "türkçe",
-      "yapay",
-      "zeka"
+      "yapay zeka"
     ],
     "datePublished": 1548844355000
   },
@@ -1564,9 +1545,8 @@
     "title": "Arctic Weather Plunges into North America",
     "tags": [
       "arctic",
-      "cold",
-      "climate",
-      "change"
+      "geography",
+      "climate"
     ],
     "datePublished": 1548925650000
   },
@@ -1594,8 +1574,7 @@
     "title": "Winners Announced for the Zillow Prize",
     "tags": [
       "ai",
-      "machine",
-      "learning"
+      "machine learning"
     ],
     "datePublished": 1549280706000
   },
@@ -1603,9 +1582,8 @@
     "url": "https://www.theguardian.com/environment/2019/feb/04/a-third-of-himalayan-ice-cap-doomed-finds-shocking-report",
     "title": "A third of Himalayan ice cap doomed, finds report",
     "tags": [
-      "climate",
-      "change",
-      "himalaya"
+      "climate change",
+      "himalayas"
     ],
     "datePublished": 1549326190000
   },
@@ -1686,8 +1664,8 @@
     "url": "https://blog.data.gov.sg/bringing-black-and-white-photos-to-life-using-colourise-sg-435ae5cc5036",
     "title": "Bringing black and white photos to life using Colourise.sg — a deep learning colouriser trained with old Singaporean photos",
     "tags": [
-      "deep",
-      "learning",
+      "machine learning",
+      "deep learning",
       "photography"
     ],
     "datePublished": 1550478298000
@@ -1868,7 +1846,7 @@
     "title": "How termites help rainforests survive climate change",
     "tags": [
       "environment",
-      "climate",
+      "climate change",
       "forest",
       "termite"
     ],
@@ -1880,8 +1858,7 @@
     "tags": [
       "agile",
       "scrum",
-      "software",
-      "development"
+      "software"
     ],
     "datePublished": 1553087498000
   },
@@ -1921,6 +1898,7 @@
     "tags": [
       "nature",
       "plants",
+      "fungus",
       "biology"
     ],
     "datePublished": 1553778039000
@@ -2020,9 +1998,8 @@
     "url": "https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces",
     "title": "More Transparent UI Code with Namespaces - @csswizardry",
     "tags": [
-      "programming",
       "css",
-      "convention",
+      "coding convention",
       "frontend"
     ],
     "datePublished": 1556023239000
@@ -2044,7 +2021,6 @@
     "title": "A productivity tip: Automate first! - @muratcorlu",
     "tags": [
       "software",
-      "development",
       "automation",
       "gitlab"
     ],
@@ -2096,7 +2072,6 @@
     "title": "How to avoid foreclosure on your technical debt",
     "tags": [
       "software",
-      "development",
       "SDLC"
     ],
     "datePublished": 1557312435000
@@ -2106,7 +2081,6 @@
     "title": "What Docs When",
     "tags": [
       "software",
-      "development",
       "learning"
     ],
     "datePublished": 1557735652000
@@ -2222,7 +2196,7 @@
     "tags": [
       "frontend",
       "vue",
-      "opensource",
+      "open source",
       "software"
     ],
     "datePublished": 1561544374000
@@ -2253,8 +2227,7 @@
     "tags": [
       "svelte",
       "react",
-      "reactive",
-      "programming",
+      "reactive programming",
       "video"
     ],
     "datePublished": 1562194689000
@@ -2274,10 +2247,11 @@
     "url": "https://svelte.dev/blog/write-less-code",
     "title": "Write less code",
     "tags": [
-      "programming",
       "svelte",
       "react",
-      "vue"
+      "vue",
+      "javascript",
+      "frontend"
     ],
     "datePublished": 1562260617000
   },
@@ -2367,8 +2341,7 @@
     "title": "When a rewrite isn’t: rebuilding Slack on the desktop",
     "tags": [
       "slack",
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1566238282000
   },
@@ -2388,7 +2361,6 @@
     "tags": [
       "programming",
       "learning",
-      "code",
       "google"
     ],
     "datePublished": 1567690807000
@@ -2409,8 +2381,7 @@
     "title": "Does AI make strong tech companies stronger?",
     "tags": [
       "ai",
-      "ml",
-      "machinelearning",
+      "machine learning",
       "data"
     ],
     "datePublished": 1568041139000
@@ -2433,8 +2404,7 @@
     "title": "World 'gravely' unprepared for effects of climate crisis – report",
     "tags": [
       "environment",
-      "climatechange",
-      "climate"
+      "climate climate"
     ],
     "datePublished": 1568127711000
   },
@@ -2443,7 +2413,7 @@
     "title": "Europeans must face their own role in the destruction of the Amazon",
     "tags": [
       "environment",
-      "climatechange",
+      "climate change",
       "eu",
       "amazon"
     ],
@@ -2454,7 +2424,7 @@
     "title": "Finland to be carbon neutral by 2035. One of the fastest targets ever set",
     "tags": [
       "environment",
-      "climatechange",
+      "climate change",
       "finland"
     ],
     "datePublished": 1568128645000
@@ -2611,8 +2581,7 @@
     "title": "Degreeless.design - Everything I Learned in Design School - @treggify",
     "tags": [
       "design",
-      "learning",
-      "resource"
+      "learning"
     ],
     "datePublished": 1568985251000
   },
@@ -2631,8 +2600,7 @@
     "url": "https://wattenberger.com/blog/react-hooks",
     "title": "Thinking in React Hooks",
     "tags": [
-      "react",
-      "hooks"
+      "react"
     ],
     "datePublished": 1569244801000
   },
@@ -2699,8 +2667,7 @@
       "html",
       "css",
       "javascript",
-      "web",
-      "programming",
+      "frontend",
       "video"
     ],
     "datePublished": 1570049732000
@@ -2742,8 +2709,7 @@
       "apple",
       "software",
       "startup",
-      "indie",
-      "development"
+      "indie"
     ],
     "datePublished": 1571085640000
   },
@@ -2830,7 +2796,7 @@
     "url": "https://www.bloomberg.com/news/features/2019-11-13/microsoft-apocalypse-proofs-open-source-code-in-an-arctic-cave",
     "title": "Open Source Code Will Survive the Apocalypse in an Arctic Cave",
     "tags": [
-      "opensource",
+      "open source",
       "github",
       "linux",
       "software",
@@ -2928,8 +2894,7 @@
     "url": "https://www.nationalgeographic.com/science/2019/12/the-decade-we-finally-woke-up-to-climate-change",
     "title": "The decade we finally woke up to climate change",
     "tags": [
-      "climate",
-      "change",
+      "climate change",
       "science"
     ],
     "datePublished": 1576185400000
@@ -2952,6 +2917,7 @@
       "nature",
       "evolution",
       "crows",
+      "animals",
       "intelligence"
     ],
     "datePublished": 1576764557000
@@ -2982,7 +2948,7 @@
     "tags": [
       "nature",
       "animals",
-      "wolf",
+      "wolves",
       "canada",
       "sea"
     ],
@@ -2992,8 +2958,7 @@
     "url": "https://free-for.dev/",
     "title": "free-for.dev",
     "tags": [
-      "open",
-      "source",
+      "open source",
       "software",
       "tools"
     ],
@@ -3004,7 +2969,6 @@
     "title": "Software development 450 words per minute",
     "tags": [
       "software",
-      "development",
       "accessibility",
       "blindness"
     ],
@@ -3049,11 +3013,9 @@
     "title": "Systems, Mistakes, and the Sea - @robinrendle",
     "tags": [
       "ui",
-      "design",
-      "systems",
+      "design system",
       "frontend",
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1578400948000
   },
@@ -3161,7 +3123,6 @@
     "url": "https://m.signalvnoise.com/basecamp-is-hiring-a-front-end-programmer/",
     "title": "Basecamp is hiring a Programmer",
     "tags": [
-      "programming",
       "jobs",
       "basecamp"
     ],
@@ -3255,7 +3216,7 @@
     "tags": [
       "energy",
       "engineering",
-      "mediterranean"
+      "mediterranean sea"
     ],
     "datePublished": 1581689595000
   },
@@ -3264,6 +3225,7 @@
     "title": "Learning Synths",
     "tags": [
       "synthesizer",
+      "learning",
       "music"
     ],
     "datePublished": 1581710916000
@@ -3305,8 +3267,7 @@
     "url": "https://www.youtube.com/watch?v=OrxmtDw4pVI",
     "title": "Vue.js: The Documentary",
     "tags": [
-      "web",
-      "development",
+      "web development",
       "video"
     ],
     "datePublished": 1583006878000
@@ -3578,7 +3539,8 @@
     "url": "https://www.sciencemag.org/news/2020/04/starving-grasshoppers-how-rising-carbon-dioxide-levels-may-promote-insect-apocalypse",
     "title": "Starving grasshoppers? How rising carbon dioxide levels may promote an ‘insect apocalypse’",
     "tags": [
-      "environment"
+      "environment",
+      "climate change"
     ],
     "datePublished": 1589673180000
   },
@@ -3600,8 +3562,7 @@
     "url": "https://brm.io/game-physics-for-beginners/",
     "title": "Game physics from scratch",
     "tags": [
-      "game",
-      "development"
+      "game development"
     ],
     "datePublished": 1590065626000
   },
@@ -3720,8 +3681,7 @@
     "url": "https://increment.com/frontend/a-frontend-stack-for-video-games/",
     "title": "A frontend stack for video games",
     "tags": [
-      "game",
-      "development",
+      "game development",
       "web"
     ],
     "datePublished": 1592168143000
@@ -3999,8 +3959,7 @@
     "url": "https://ctjs.rocks/",
     "title": "Meet ct.js, your new 2D game editor",
     "tags": [
-      "game",
-      "development"
+      "game development"
     ],
     "datePublished": 1600186887000
   },
@@ -4017,7 +3976,7 @@
     "url": "https://tabloid.vercel.app/",
     "title": "Tabloid: The Clickbait Headline Programming Language",
     "tags": [
-      "programming",
+      "programming language",
       "clickbait"
     ],
     "datePublished": 1600962941000
@@ -4026,8 +3985,7 @@
     "url": "https://www.aleksandra.codes/jira-to-javascript",
     "title": "Developers job is not about writing code - @aleksandrasays",
     "tags": [
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1601168385000
   },
@@ -4035,8 +3993,7 @@
     "url": "https://www.aleksandra.codes/tech-content-consumer",
     "title": "Most tech content is bullshit - @aleksandrasays",
     "tags": [
-      "software",
-      "development"
+      "software"
     ],
     "datePublished": 1601168833000
   },
@@ -4046,7 +4003,7 @@
     "tags": [
       "video",
       "space",
-      "shuttle"
+      "space shuttle"
     ],
     "datePublished": 1601295796000
   },
@@ -4528,8 +4485,7 @@
     "title": "10 Decision Points for a Micro-Frontend Approach",
     "tags": [
       "frontend",
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1606954477000
   },
@@ -4652,7 +4608,7 @@
     "title": "Did we(b development) lose the right direction?  @stefanjudis",
     "tags": [
       "web",
-      "development",
+      "web development",
       "video"
     ],
     "datePublished": 1610060030000
@@ -4723,8 +4679,7 @@
     "url": "https://htmldom.dev/",
     "title": "HTML DOM - Common tasks of managing HTML DOM with vanilla JavaScript",
     "tags": [
-      "web",
-      "development"
+      "web development"
     ],
     "datePublished": 1611323387000
   },
@@ -4809,8 +4764,7 @@
     "url": "https://dev.to/sachagreif/21-bad-front-end-habits-to-drop-in-2021-1698",
     "title": "21 Bad Front-End Habits to Drop in 2021",
     "tags": [
-      "web",
-      "programming"
+      "frontend"
     ],
     "datePublished": 1613070646000
   },
@@ -4833,9 +4787,7 @@
     "url": "https://www.youtube.com/watch?v=FoBYMAla9_8",
     "title": "Massive Attack x Algiers featuring Christiana Figueres",
     "tags": [
-      "video",
-      "covid19",
-      "climate"
+      "video"
     ],
     "datePublished": 1613838112000
   },
@@ -4878,6 +4830,7 @@
     "title": "How Open Source Changed My Life with Max Stoiber - YouTube",
     "tags": [
       "video",
+      "open source",
       "programming"
     ],
     "datePublished": 1616112573000
@@ -5051,7 +5004,8 @@
     "url": "https://climate.nasa.gov/earth-now/#/vitalsign?vitalsign=satellites",
     "title": "Earth Now – Climate Change: Vital Signs of the Planet",
     "tags": [
-      "environment"
+      "environment",
+      "climate change"
     ],
     "datePublished": 1619095956000
   },
@@ -5150,7 +5104,8 @@
     "url": "https://www.theguardian.com/environment/2021/aug/05/climate-crisis-scientists-spot-warning-signs-of-gulf-stream-collapse",
     "title": "Climate crisis: Scientists spot warning signs of Gulf Stream collapse",
     "tags": [
-      "environment"
+      "environment",
+      "climate change"
     ],
     "datePublished": 1628261154000
   },
@@ -5167,8 +5122,7 @@
     "url": "https://twitter.com/florinpop1705/status/1401882160299118594",
     "title": "Ever built an eCommerce website? What have you used to build it?",
     "tags": [
-      "ecommerce",
-      "development"
+      "ecommerce"
     ],
     "tweet": {
       "tweetUrl": "https://twitter.com/florinpop1705/status/1401882160299118594",
@@ -5183,8 +5137,7 @@
     "title": "Webpack for Everyone",
     "tags": [
       "webpack",
-      "frontend",
-      "development"
+      "frontend"
     ],
     "datePublished": 1629654510000
   },
@@ -5192,8 +5145,7 @@
     "url": "https://refactoring.guru/",
     "title": "Refactoring and Design Patterns",
     "tags": [
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1629722516000
   },
@@ -5232,8 +5184,7 @@
     "url": "https://rachsmith.com/i-completely-ignored-the-front-end-development-scene-for-6-months-it-was-fine/",
     "title": "I completely ignored the front end development scene for 6 months. It was fine",
     "tags": [
-      "frontend",
-      "development"
+      "frontend"
     ],
     "datePublished": 1630960271000
   },
@@ -5257,8 +5208,7 @@
     "url": "https://www.bitsnbites.eu/a-tidy-linear-git-history/",
     "title": "A tidy, linear Git history – Bits'n'Bites",
     "tags": [
-      "software",
-      "development"
+      "software"
     ],
     "datePublished": 1631146640000
   },
@@ -5319,9 +5269,7 @@
     "title": "How Big Tech Runs Tech Projects and the Curious Absence of Scrum - by Gergely Orosz - The Pragmatic Engineer",
     "tags": [
       "software",
-      "engineering",
-      "project",
-      "management",
+      "project management",
       "scrum"
     ],
     "datePublished": 1632693718000
@@ -5346,7 +5294,7 @@
     "url": "https://medium.com/art-technology/how-much-does-an-ad-impression-emit-carbon-d31daea57184",
     "title": "How Much Does an Ad Impression Emit Carbon? | by Mikko | Art & Technology | Nov, 2021 | Medium",
     "tags": [
-      "climate"
+      "environment"
     ],
     "datePublished": 1636390058000
   },
@@ -5417,8 +5365,7 @@
     "url": "https://www.jackfranklin.co.uk/blog/check-in-your-node-dependencies/",
     "title": "Why you should check-in your node dependencies - @jack_franklin",
     "tags": [
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1640281851000
   },
@@ -5498,8 +5445,7 @@
     "url": "https://shaderpark.com/",
     "title": "Shader Park",
     "tags": [
-      "graphics",
-      "programming"
+      "graphics programming"
     ],
     "datePublished": 1647872374000
   },
@@ -5549,9 +5495,8 @@
     "url": "https://polypane.app/",
     "title": "Polypane, The browser for ambitious developers",
     "tags": [
-      "web",
       "browser",
-      "development"
+      "web development"
     ],
     "datePublished": 1650980635000
   },
@@ -5711,8 +5656,7 @@
     "url": "https://medium.com/@mlrawlings/maybe-you-dont-need-that-spa-f2c659bc7fec",
     "title": "Maybe you don’t need that SPA",
     "tags": [
-      "web",
-      "application",
+      "web application",
       "spa",
       "frontend"
     ],
@@ -5769,8 +5713,7 @@
     "url": "https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/",
     "title": "Internet Explorer 11 has retired and is officially out of support",
     "tags": [
-      "internet",
-      "explorer",
+      "internet explorer",
       "microsoft"
     ],
     "datePublished": 1655374403000
@@ -5779,8 +5722,7 @@
     "url": "https://www.internetingishard.com/",
     "title": "Interneting Is Hard | Web Development Tutorials For Complete Beginners",
     "tags": [
-      "web",
-      "development",
+      "web development",
       "learning"
     ],
     "datePublished": 1655426867000
@@ -5897,8 +5839,7 @@
     "url": "https://mtlynch.io/tinypilot-redesign/",
     "title": "I Regret my $46k Website Redesign",
     "tags": [
-      "web",
-      "development"
+      "web development"
     ],
     "datePublished": 1658419475000
   },
@@ -5940,8 +5881,7 @@
     "url": "https://mikkokotila.medium.com/the-three-fundamental-principles-of-software-projects-3e798810083d",
     "title": "The Three Fundamental Principles of Software Projects | by Mikko | Medium",
     "tags": [
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1661527153000
   },
@@ -5950,7 +5890,6 @@
     "title": "Thinking about Ideas as a System: Evaluation of Ideas | by Mikko | Sep, 2022 | Medium",
     "tags": [
       "software",
-      "engineering",
       "systems thinking"
     ],
     "datePublished": 1662606796000
@@ -6130,7 +6069,7 @@
     "title": "Scripts to Rule Them All | The GitHub Blog",
     "tags": [
       "software",
-      "development"
+      "automation"
     ],
     "datePublished": 1668112227000
   },
@@ -6163,8 +6102,7 @@
     "url": "https://blocks.githubnext.com/",
     "title": "GitHub Blocks",
     "tags": [
-      "software",
-      "development"
+      "software"
     ],
     "datePublished": 1670518435000
   },
@@ -6219,9 +6157,7 @@
     "url": "https://oimo.io/works/life/",
     "title": "Life Universe",
     "tags": [
-      "game",
-      "of",
-      "life"
+      "game of life"
     ],
     "datePublished": 1671000046000
   },
@@ -6268,8 +6204,7 @@
     "url": "https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38",
     "title": "From idea to product and beyond",
     "tags": [
-      "product",
-      "development"
+      "product"
     ],
     "datePublished": 1671046011000
   },
@@ -6434,7 +6369,8 @@
     "title": "‹div›RIOTS",
     "tags": [
       "design",
-      "development"
+      "frontend",
+      "web development"
     ],
     "datePublished": 1674584384000
   },
@@ -6597,8 +6533,7 @@
     "url": "https://github.com/readme/guides",
     "title": "Guides · The ReadME Project · GitHub",
     "tags": [
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1679089782000
   },
@@ -6613,6 +6548,7 @@
     "title": "Erosion patterns in a sediment layer",
     "tags": [
       "science",
+      "geography",
       "nature"
     ],
     "datePublished": 1682380812000
@@ -7150,8 +7086,7 @@
     "title": "How to Become a Good Backend Engineer (Fundamentals)",
     "tags": [
       "backend",
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1686442047000
   },
@@ -7410,7 +7345,7 @@
     "tags": [
       "video",
       "astrophotography",
-      "diy"
+      "DIY"
     ],
     "datePublished": 1693331008000
   },
@@ -7438,7 +7373,7 @@
     "tags": [
       "web",
       "design",
-      "development",
+      "web development",
       "book"
     ],
     "datePublished": 1693866869000
@@ -7496,8 +7431,7 @@
     "tags": [
       "computer",
       "science",
-      "software",
-      "engineering"
+      "software"
     ],
     "datePublished": 1694371214000
   },
@@ -7582,6 +7516,7 @@
     "title": "The beauty of collective intelligence, explained by a developmental biologist | Michael Levin - YouTube",
     "tags": [
       "biology",
+      "intelligence",
       "systems",
       "video"
     ],
@@ -7692,7 +7627,7 @@
     "title": "The Layers of the Web - Jeremy Keith - YouTube",
     "tags": [
       "web",
-      "system",
+      "systems",
       "video"
     ],
     "datePublished": 1695348719000
@@ -8103,7 +8038,7 @@
     "tags": [
       "web",
       "design",
-      "development"
+      "web development"
     ],
     "datePublished": 1698975820000
   },
@@ -8111,8 +8046,7 @@
     "url": "https://adactio.com/journal/20442",
     "title": "Journal—Multi-page web apps by @adactio",
     "tags": [
-      "web",
-      "development"
+      "web development"
     ],
     "datePublished": 1699118335000
   },
@@ -8168,7 +8102,7 @@
     "tags": [
       "web",
       "design",
-      "development"
+      "web development"
     ],
     "datePublished": 1700447890000
   },
@@ -8284,7 +8218,8 @@
     "url": "https://www.factmag.com/2019/04/09/streaming-music-emissions-study/",
     "title": "Streaming music is driving up harmful emissions, according to study",
     "tags": [
-      "climate",
+      "environment",
+      "climate change",
       "music"
     ],
     "datePublished": 1701133690000
@@ -9091,6 +9026,7 @@
     "title": "Local-First Web Development",
     "tags": [
       "web",
+      "web development",
       "local-first"
     ],
     "datePublished": 1710871590000
@@ -9255,7 +9191,7 @@
     "url": "https://www.kristen-foster-marks.com/post/on-the-need-for-confidence-honesty-integrity-in-software-development",
     "title": "Please Don’t Fake It Till You Make It: On the Need for Confidence, Honesty, & Integrity in Software Development",
     "tags": [
-      "software development"
+      "software"
     ],
     "datePublished": 1712620717666
   },
