@@ -44,8 +44,8 @@
     "title": "Ask HN: Is Meteor.js still a thing?",
     "tags": [
       "meteor",
-      "nodejs",
-      "hackernews"
+      "node.js",
+      "hacker news"
     ],
     "datePublished": 1532360501000
   },
@@ -178,8 +178,8 @@
     "url": "http://recodeproject.com/",
     "title": "THE RECODE PROJECT",
     "tags": [
-      "generative",
-      "art"
+      "art",
+      "generative art"
     ],
     "datePublished": 1533025586000
   },
@@ -480,8 +480,7 @@
     "url": "https://www.infoq.com/news/2009/08/enabling-lrm",
     "title": "Enabling the Last Responsible Moment in Deployment",
     "tags": [
-      "continuous",
-      "integration"
+      "software"
     ],
     "datePublished": 1534429749000
   },
@@ -957,8 +956,8 @@
     "url": "https://github.com/mattdesl/canvas-sketch",
     "title": "canvas-sketch | A framework for making generative artwork in JavaScript and the browser.",
     "tags": [
-      "generative",
       "art",
+      "generative art",
       "javascript"
     ],
     "datePublished": 1540509311000
@@ -967,8 +966,7 @@
     "url": "https://reactjs.org/docs/hooks-intro.html",
     "title": "Introducing Hooks",
     "tags": [
-      "react",
-      "hooks"
+      "react"
     ],
     "datePublished": 1540572519000
   },
@@ -1007,7 +1005,7 @@
     "tags": [
       "animals",
       "elephants",
-      "rights"
+      "animal rights"
     ],
     "datePublished": 1540916834000
   },
@@ -1063,8 +1061,8 @@
     "title": "Winter War",
     "tags": [
       "WWII",
-      "Finland",
-      "USSR",
+      "finland",
+      "soviets",
       "war",
       "history"
     ],
@@ -1074,10 +1072,9 @@
     "url": "https://www.theguardian.com/artanddesign/2018/oct/30/ara-guler-obituary",
     "title": "Ara Güler obituary",
     "tags": [
-      "ara",
-      "güler",
+      "ara güler",
       "photography",
-      "bio",
+      "biography",
       "istanbul"
     ],
     "datePublished": 1541416743000
@@ -1205,8 +1202,7 @@
     "title": "\"React’ın Vizyonu ve Hooks\" by @eserozvataf",
     "tags": [
       "türkçe",
-      "react",
-      "hooks"
+      "react"
     ],
     "datePublished": 1544010363000
   },
@@ -1408,7 +1404,6 @@
     "url": "https://www.wikiwand.com/en/Pilish",
     "title": "Pilish",
     "tags": [
-      "constrained",
       "writing",
       "math",
       "pi"
@@ -1497,8 +1492,8 @@
     "url": "https://www.newscientist.com/article/2191814-we-may-finally-know-what-causes-alzheimers-and-how-to-stop-it/",
     "title": "We may finally know what causes Alzheimer’s – and how to stop it",
     "tags": [
-      "alzheimers",
-      "disease",
+      "alzheimer's disease",
+      "health",
       "brain"
     ],
     "datePublished": 1548601279000
@@ -1622,8 +1617,7 @@
     "title": "Finland's basic income experiment hits the halfway mark",
     "tags": [
       "finland",
-      "social",
-      "security",
+      "social security",
       "income"
     ],
     "datePublished": 1549886428000
@@ -1770,7 +1764,7 @@
     "url": "https://en.wikipedia.org/wiki/Ableism",
     "title": "Ableism",
     "tags": [
-      "discrimination",
+      "social injustice",
       "anapirophobia",
       "disability"
     ],
@@ -1783,7 +1777,7 @@
       "türkçe",
       "moonstar",
       "sözlük",
-      "adamasmaca"
+      "adam asmaca"
     ],
     "datePublished": 1551950638000
   },
@@ -1803,9 +1797,7 @@
     "url": "https://dadjokesare.cool/",
     "title": "Dad Jokes Are Cool!",
     "tags": [
-      "dad",
-      "jokes",
-      "pun"
+      "dad jokes"
     ],
     "datePublished": 1552407758000
   },
@@ -1826,7 +1818,7 @@
     "tags": [
       "science",
       "physics",
-      "feynman"
+      "richard feynman"
     ],
     "datePublished": 1552922409000
   },
@@ -1957,8 +1949,8 @@
     "title": "Rocking JS data structures! - @areknawo",
     "tags": [
       "javascript",
-      "data",
-      "structures",
+      "data structures",
+      "software",
       "es6"
     ],
     "datePublished": 1555335762000
@@ -2009,8 +2001,7 @@
     "title": "Bir beka sorunu olarak beyin göçü… Türkiye ‘aklını’ neden kaybediyor? Gidenler ve gitmek için uğraşanlar anlattı",
     "tags": [
       "türkçe",
-      "beyin",
-      "göçü",
+      "beyin göçü",
       "akademi",
       "bilişim"
     ],
@@ -2050,8 +2041,8 @@
     "url": "https://www.ideo.com/blog/learn-the-basics-of-code-with-a-needle-and-thread",
     "title": "Learn the Basics of Coding with a Needle and Thread - @ideo",
     "tags": [
-      "generative",
       "art",
+      "generative art",
       "creative coding"
     ],
     "datePublished": 1556876928000
@@ -2101,8 +2092,8 @@
     "tags": [
       "css",
       "creative coding",
-      "generative",
-      "art"
+      "art",
+      "generative art"
     ],
     "datePublished": 1557927781000
   },
@@ -2121,8 +2112,8 @@
     "url": "https://inconvergent.net/2019/a-tangle-of-webs/",
     "title": "A Tangle of Webs - @inconvergent",
     "tags": [
-      "generative",
       "art",
+      "generative art",
       "graph",
       "algorithm"
     ],
@@ -2320,7 +2311,6 @@
     "title": "5 Tips to Help You Avoid React Hooks Pitfalls",
     "tags": [
       "react",
-      "hooks",
       "tutorial"
     ],
     "datePublished": 1565877918000
@@ -2404,7 +2394,7 @@
     "title": "World 'gravely' unprepared for effects of climate crisis – report",
     "tags": [
       "environment",
-      "climate climate"
+      "climate change"
     ],
     "datePublished": 1568127711000
   },
@@ -2568,8 +2558,7 @@
     "title": "How Privilege Defines Performance, Tatiana Mac @ #PerfMatters Conference 2019",
     "tags": [
       "accessibility",
-      "inclusive",
-      "design",
+      "inclusive design",
       "diversity",
       "sociology",
       "video"
@@ -2621,8 +2610,8 @@
     "tags": [
       "finland",
       "depression",
-      "mental",
-      "health",
+      "suicide",
+      "mental health",
       "healthcare"
     ],
     "datePublished": 1569493418000
@@ -2676,8 +2665,7 @@
     "url": "https://kubrick.life",
     "title": "Work and life of Stanley Kubrick",
     "tags": [
-      "stanley",
-      "kubrick",
+      "stanley kubrick",
       "biography"
     ],
     "datePublished": 1570566372000
@@ -2728,8 +2716,7 @@
     "title": "HTMHell - Markup from hell",
     "tags": [
       "html",
-      "semantic",
-      "markup"
+      "semantic coding"
     ],
     "datePublished": 1571848465000
   },
@@ -2769,7 +2756,7 @@
       "marketing",
       "economics",
       "advertising",
-      "bigdata"
+      "big data"
     ],
     "datePublished": 1573503521000
   },
@@ -2874,8 +2861,7 @@
     "title": "The business case for inclusive design: The Big Hack study findings",
     "tags": [
       "accessibility",
-      "inclusive",
-      "design"
+      "inclusive design"
     ],
     "datePublished": 1576096584000
   },
@@ -2903,10 +2889,8 @@
     "url": "https://neal.fun/dark-patterns/",
     "title": "Dark Patterns @nealagarwal",
     "tags": [
-      "web",
-      "dark",
-      "pattern",
-      "design"
+      "dark patterns",
+      "web design"
     ],
     "datePublished": 1576249624000
   },
@@ -3024,7 +3008,7 @@
     "title": "Govt corrects inaccurate reports on Finnish PM's alleged 4-day work week",
     "tags": [
       "finland",
-      "fakenews"
+      "fake news"
     ],
     "datePublished": 1578412958000
   },
@@ -3054,8 +3038,8 @@
     "url": "https://kanocomputing.ghost.io/my-thoughts-on-very-low-resolution/",
     "title": "My Thoughts on Very Low Resolution - @saint11",
     "tags": [
-      "pixelart",
-      "lowres",
+      "pixel-art",
+      "low-res",
       "graphic",
       "design",
       "animation"
@@ -3103,8 +3087,7 @@
       "crash",
       "investigation",
       "amsterdam",
-      "turkishairlines",
-      "thy"
+      "turkish airlines"
     ],
     "datePublished": 1579704474000
   },
@@ -3833,8 +3816,7 @@
     "url": "https://audiomass.co/",
     "title": "AudioMass - Audio Editor in Browser",
     "tags": [
-      "audio",
-      "editor",
+      "audio editor",
       "tool"
     ],
     "datePublished": 1594369244000
@@ -4117,8 +4099,8 @@
     "url": "https://sitejs.org/",
     "title": "Site.js: Small Web construction set.",
     "tags": [
-      "website",
-      "generator"
+      "web",
+      "website generator"
     ],
     "datePublished": 1602890357000
   },
@@ -4950,8 +4932,8 @@
     "url": "https://replit.com/kaboom",
     "title": "Kaboom!! - Replit",
     "tags": [
-      "game",
-      "engine"
+      "game engine",
+      "game development"
     ],
     "datePublished": 1618076985000
   },
@@ -5328,8 +5310,8 @@
     "title": "Creating Generative Patterns with The CSS Paint API - CSS-Tricks",
     "tags": [
       "css",
-      "generative",
-      "art"
+      "art",
+      "generative art"
     ],
     "datePublished": 1638826274000
   },
@@ -5812,7 +5794,7 @@
     "url": "https://pixelarticons.com/",
     "title": "Pixelarticons - Beautiful open-source pixel-art icons.",
     "tags": [
-      "pixelart",
+      "pixel-art",
       "icons"
     ],
     "datePublished": 1656441535000
@@ -5949,9 +5931,9 @@
   },
   {
     "url": "https://codepen.io/meodai/pen/xyqoEO",
-    "title": "CodePen Home",
+    "title": "Experimental Gradient Editor",
     "tags": [
-      "Experimental Gradient Editor"
+      "codepen"
     ],
     "datePublished": 1664828403000
   },
@@ -5959,7 +5941,7 @@
     "url": "https://bubble.io/",
     "title": "The best way to build web apps without code | Bubble",
     "tags": [
-      "nocode"
+      "no code"
     ],
     "datePublished": 1664831903000
   },
@@ -6051,7 +6033,6 @@
     "url": "https://www.youtube.com/joshschannelurl",
     "title": "Josh's Channel",
     "tags": [
-      "youtube",
       "video"
     ],
     "datePublished": 1667210581000
@@ -7174,8 +7155,7 @@
     "url": "https://world.hey.com/dhh/et-tu-zoom-b90a0a0a",
     "title": "Et tu, Zoom?",
     "tags": [
-      "remote",
-      "work"
+      "remote work"
     ],
     "datePublished": 1691447594000
   },
@@ -7184,8 +7164,8 @@
     "title": "Front-End Developers Are Information Architects Too ◆ 24 ways",
     "tags": [
       "web",
-      "information",
-      "architecture",
+      "frontend",
+      "information architecture",
       "accessibility"
     ],
     "datePublished": 1691464734000
@@ -7282,7 +7262,7 @@
     "url": "https://en.wikipedia.org/wiki/Keynesian_beauty_contest",
     "title": "Keynesian beauty contest - Wikipedia",
     "tags": [
-      "mathematics"
+      "math"
     ],
     "datePublished": 1692311878000
   },
@@ -7419,9 +7399,9 @@
     "tags": [
       "web",
       "design",
+      "inclusive design",
       "video",
-      "ux",
-      "inclusive"
+      "ux"
     ],
     "datePublished": 1694041548000
   },
@@ -7464,9 +7444,7 @@
     "url": "https://inclusive.microsoft.design/",
     "title": "Microsoft Inclusive Design",
     "tags": [
-      "inclusive",
-      "web",
-      "design",
+      "inclusive design",
       "accessibility"
     ],
     "datePublished": 1694809695000
@@ -7496,8 +7474,9 @@
     "url": "https://inclusive-components.design/",
     "title": "Inclusive Components",
     "tags": [
-      "inclusive",
+      "web",
       "design",
+      "inclusive design",
       "accessibility",
       "frontend"
     ],
@@ -7728,8 +7707,8 @@
     "url": "https://inclusive.microsoft.design/tools-and-activities/Inclusive101Guidebook.pdf",
     "title": "Microsoft Inclusive Design Guidebook",
     "tags": [
-      "inclusive",
       "design",
+      "inclusive design",
       "accessibility"
     ],
     "datePublished": 1696449953000
@@ -7738,8 +7717,8 @@
     "url": "https://inclusive.microsoft.design/tools-and-activities/RespectingFocus.pdf",
     "title": "Respecting Focus: A Behavior Guide for Intelligent Systems",
     "tags": [
-      "inclusive",
       "design",
+      "inclusive design",
       "ux"
     ],
     "datePublished": 1696452103000
@@ -7928,6 +7907,7 @@
     "url": "https://exclusive-design.vasilis.nl/add-nonsense/",
     "title": "Add nonsense | Exclusive design",
     "tags": [
+      "design",
       "inclusive design",
       "accessibility"
     ],
@@ -8303,7 +8283,6 @@
     "url": "https://yewtu.be/watch?v=9TJuOwy4aGA",
     "title": "Weathering Software Winter - Handmade Seattle 2022",
     "tags": [
-      "computing",
       "software",
       "permacomputing"
     ],
@@ -8552,7 +8531,6 @@
     "title": "Neurodiversity Design System",
     "tags": [
       "inclusive design",
-      "web",
       "design system"
     ],
     "datePublished": 1707770738000
@@ -8944,8 +8922,8 @@
     "title": "Magic Ink: Information Software and the Graphical Interface - @worrydream",
     "tags": [
       "software",
-      "user interface",
-      "user experience",
+      "ui",
+      "ux",
       "design"
     ],
     "datePublished": 1710637720000
@@ -9008,8 +8986,7 @@
     "tags": [
       "web",
       "html",
-      "css",
-      "zen"
+      "css"
     ],
     "datePublished": 1710656927000
   },
@@ -9035,7 +9012,6 @@
     "url": "https://martin.kleppmann.com/2021/04/14/goodbye-gpl.html",
     "title": "It's time to say goodbye to the GPL",
     "tags": [
-      "foss",
       "software",
       "open source",
       "licence",
