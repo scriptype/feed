@@ -34,19 +34,6 @@ const getPageLinks = ({ links, pages, pageNumber, linksPerPage = 15 }) => {
     _pages[0]
 }
 
-const logState = (msg, { tag, links, pageNumber, searchQuery }) => {
-  if (!debug) {
-    return
-  }
-  console.log(
-    `ctl.${msg}`,
-    'tag', tag,
-    'links', links.length,
-    'pageNumber', pageNumber,
-    'searchQuery', searchQuery
-  )
-}
-
 const createController = () => {
   let state = {}
   let linkFinder = null
@@ -99,10 +86,9 @@ const createController = () => {
       pageNumber,
       searchQuery
     }
-    logState('start', state)
 
-    Dictionary.ready(() => {
-      SearchForm.render({
+    Dictionary.ready(async () => {
+      await SearchForm.render({
         onSearch: (payload) => {
           onSearch(payload)
           state.searchQuery = payload.query
@@ -116,7 +102,7 @@ const createController = () => {
       }
     })
 
-    Router.start(state, navigateBack)
+    Router.start(state, navigateBack, { debug })
   }
 
   const navigateBack = async (event) => {
@@ -129,6 +115,12 @@ const createController = () => {
     const navigatedFrom = {
       differentPage: state.searchQuery || state.tag !== tag
     }
+    state = {
+      tag,
+      links,
+      pageNumber,
+      searchQuery
+    }
 
     if (tag) {
       Resources.tag.load()
@@ -136,9 +128,14 @@ const createController = () => {
       Resources.homepage.load()
     }
 
+    if (searchQuery) {
+      return onSearch({ query: searchQuery })
+    } else {
+      SearchForm.setInputValue('')
+    }
+
     if (navigatedFrom.differentPage) {
-      const pageIntro = searchQuery ? Intros.search : (tag ? Intros.tag : Intros.homepage)
-      Intro.render(pageIntro, {
+      Intro.render(tag ? Intros.tag : Intros.homepage, {
         searchQuery,
         links,
         tag,
@@ -173,20 +170,6 @@ const createController = () => {
       onPaginate: navigatePage
     })
 
-    state = {
-      tag,
-      links,
-      pageNumber,
-      searchQuery
-    }
-    logState('navigateBack', state)
-
-    if (searchQuery) {
-      onSearch({ query: searchQuery })
-    } else {
-      SearchForm.setInputValue('')
-    }
-
     scrollToTop()
   }
 
@@ -219,7 +202,6 @@ const createController = () => {
       pageNumber,
       searchQuery: ''
     }
-    logState('navigatePage', state)
 
     if (paginationType !== 'ActivityChart') {
       scrollToTop()
@@ -282,7 +264,6 @@ const createController = () => {
       pageNumber: 0,
       searchQuery: ''
     }
-    logState('navigateHomepage', state)
 
     scrollToTop()
 
@@ -306,7 +287,7 @@ const createController = () => {
 
     SearchForm.setInputValue('')
 
-    if (navigatedFrom.differentPage || state.pageNumber > 0) {
+    if (navigatedFrom.differentPage || navigatedFrom.pagination) {
       if (navigatedFrom.differentPage) {
         ActivityChart.render({
           mode: Modes.full,
@@ -343,7 +324,6 @@ const createController = () => {
       pageNumber: 0,
       searchQuery: ''
     }
-    logState('navigateTagPage', state)
 
     scrollToTop()
 
