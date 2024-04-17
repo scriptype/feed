@@ -67,12 +67,11 @@ Run `./add` in the root of the project.
 This will ask:
 - Url
 - Title
+- Retweet quote (if link is a tweet)
 - Tags
+- Whether to publish now
 
-Shortly after answering these questions, it will:
-- Tweet the link on Twitter
-- Share the link as a link post on Tumblr
-- If you choose to publish now, changes will be pushed to GitHub, triggering the workflows for social sharing and deploying to GitHub Pages.
+If you choose to publish now, changes will be pushed to GitHub, triggering the workflows for social sharing and deploying to GitHub Pages.
 
 And let's see the results.
 
