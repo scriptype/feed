@@ -8,7 +8,7 @@
 
 ## The website
 
-The website is built with the timeless SSG + CMS [Writ-CMS](https://github.com/scriptype/writ-cms).
+The website is built with my static site generator [Writ-CMS](https://github.com/scriptype/writ-cms).
 
 &nbsp;
 
