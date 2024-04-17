@@ -2,14 +2,15 @@
 
 <p align="center">My collection of links to blog posts, talks and opinions on art, design and technology.</p>
 <p align="center"><a href="https://enes.in/feed">Website</a> | <a href="https://enes.in/feed/feed.xml">RSS</a> | <a href="https://twitter.com/reads_feed">Twitter</a> | <a href="https://readsfeed.tumblr.com">Tumblr</a></p>
+<p align="center"><a href="misc/setup.md">Set up your own POSSE feed</a></p>
 
-## Set it up for yourself
-
-[Set up your own POSSE feed](misc/setup.md)
+&nbsp;
 
 ## The website
 
 The website is built with the timeless SSG + CMS [Writ-CMS](https://github.com/scriptype/writ-cms).
+
+&nbsp;
 
 ### Features
 
@@ -20,17 +21,21 @@ The website is built with the timeless SSG + CMS [Writ-CMS](https://github.com/s
 - Tag pages
 - Check the lighthouse scores below
 
-<img width="834" alt="image" src="https://github.com/scriptype/feed/assets/5516876/30ea4db1-10ad-40d2-a460-08a79d146fba">
+<img width="600" alt="image" src="https://github.com/scriptype/feed/assets/5516876/30ea4db1-10ad-40d2-a460-08a79d146fba">
+
+&nbsp;
 
 ### Lighthouse scores
 
 #### Desktop
 
-<img width="551" alt="Lighthouse scores on desktop. Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100" src="https://github.com/scriptype/feed/assets/5516876/8fa27817-1b4d-4430-b800-598ecbf55897">
+<img width="300" alt="Lighthouse scores on desktop. Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100" src="https://github.com/scriptype/feed/assets/5516876/8fa27817-1b4d-4430-b800-598ecbf55897">
+
+&nbsp;
 
 #### Mobile
 
-<img width="556" alt="Lighthouse scores on mobile. Performance: 97, Accessibility: 100, Best Practices: 100, SEO: 93" src="https://github.com/scriptype/feed/assets/5516876/a0160fd2-a720-4181-aabb-951002d70e0f">
+<img width="300" alt="Lighthouse scores on mobile. Performance: 97, Accessibility: 100, Best Practices: 100, SEO: 93" src="https://github.com/scriptype/feed/assets/5516876/a0160fd2-a720-4181-aabb-951002d70e0f">
 
 
 ## Licence
