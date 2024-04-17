@@ -2,6 +2,7 @@ import Modes from '../modes.js'
 import ViewResources from '../view-resources.js'
 import Intros from '../intros.js'
 import Intro from '../components/intro.js'
+import Header from '../components/header.js'
 import SearchForm from '../components/search-form.js'
 import ActivityChart from '../components/activity-chart.js'
 import Pagination from '../components/pagination.js'
@@ -62,6 +63,8 @@ const render = ({
   if (navigatedFrom.pagination !== 'ActivityChart') {
     scrollToTop()
   }
+
+  Header.blur()
 }
 
 export default {

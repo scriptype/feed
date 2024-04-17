@@ -9,6 +9,11 @@ const render = ({ onClickLogo }) => {
   })
 }
 
+const blurLogo = () => {
+  findLogo().blur()
+}
+
 export default {
-  render
+  render,
+  blur: blurLogo
 }
