@@ -16,7 +16,7 @@ The website is built with my static site generator [Writ-CMS](https://github.com
 
 - Pogressively enhanced SPA (pure CSS + JS) based on statically generated html
 - RSS feed
-- Search with RegExp support
+- JSON Search with RegExp support
 - Paginated activity graph
 - Tag pages
 - Check the lighthouse scores below
