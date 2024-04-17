@@ -25,11 +25,8 @@ module.exports = {
   },
 
   featuredTags() {
-    const allTags = this.tags
     const { featuredTags } = this.settings
-    return featuredTags.map(featured => {
-      return allTags.find(({ tag }) => tag === featured)
-    })
+    return this.tags.filter((tag) => featuredTags.includes(tag.tag))
   },
 
   tagImportance(allTags, tag) {
