@@ -1,3 +1,5 @@
+&nbsp;
+
 <p align="center"><img src="theme/assets/logo.svg" style="width: 360px;" alt="Reads Feed"></p>
 
 <p align="center">My collection of links to blog posts, talks and opinions on art, design and technology.</p>
