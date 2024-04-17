@@ -38,8 +38,10 @@ const renderCanvas = ({ data, dayScale, startDate }) => {
   if (existingCanvas) {
     existingCanvas.remove()
   }
-  const $canvas = canvas.draw()
-  canvasContainer.prepend($canvas)
+  if (data.length) {
+    const $canvas = canvas.draw()
+    canvasContainer.prepend($canvas)
+  }
 }
 
 const rerender = () => {

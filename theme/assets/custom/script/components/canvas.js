@@ -39,7 +39,8 @@ export default (options) => {
       tallestPoint = max(tallestPoint, heightMap[dataPoint])
     }
     const timeElapsedUntilNow = Date.now() - data[data.length - 1]
-    const lastDataPoint = floor((timeElapsedUntilNow * 2) / timeResolution)
+    const imaginaryDataPoint = timeElapsedUntilNow * Math.max(1.15, Math.min(50, 20 / data.length))
+    const lastDataPoint = floor(imaginaryDataPoint / timeResolution)
     heightMap[lastDataPoint] = heightMap[lastDataPoint] || 0
     for (let i = 0; i < heightMap.length; i++) {
       heightMap[i] = heightMap[i] || 0
