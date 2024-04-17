@@ -1096,7 +1096,8 @@
     "title": "Web Components in 2018",
     "tags": [
       "web",
-      "components"
+      "frontend",
+      "web components"
     ],
     "datePublished": 1541940629000
   },
@@ -2228,7 +2229,8 @@
     "title": "Why I don't use web components",
     "tags": [
       "web",
-      "components",
+      "frontend",
+      "web components",
       "javascript",
       "dom"
     ],
