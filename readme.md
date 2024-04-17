@@ -1,6 +1,4 @@
-<p align="center"><img src="theme/assets/logo.svg" style="width: 360px;" alt="Reads feed logo"></p>
-
-# Reads Feed
+<p align="center"><img src="theme/assets/logo.svg" style="width: 360px;" alt="Reads Feed"></p>
 
 My collection of links to blog posts, talks and opinions on art, design and technology.
 
