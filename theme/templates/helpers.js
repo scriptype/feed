@@ -1,10 +1,27 @@
 module.exports = {
-  serialize(obj) {
-    return JSON.stringify(obj)
+  pageTitle() {
+    if (this.page === 'post') {
+      return `${this.post.title} / ${this.settings.site.title}`
+    }
+    if (this.page === 'subpage') {
+      return `${this.subpage.title} / ${this.settings.site.title}`
+    }
+    if (this.page === 'category') {
+      return `${this.category.name} / ${this.settings.site.title}`
+    }
+    if (this.page === 'tag') {
+      return `#${this.tag.tag} / ${this.settings.site.title}`
+    }
+    if (this.page === 'homepage' && this.homepage.title) {
+      return `${this.homepage.title} / ${this.settings.site.title}`
+    }
+    return `${this.settings.site.title}`
   },
 
-  pluck(arr, fieldName) {
-    return arr.map((obj) => obj[fieldName])
+  assetsPath() {
+    const { permalinkPrefix, assetsDirectory } = this.settings
+    const prefix = permalinkPrefix === '/' ? '' : permalinkPrefix
+    return prefix + '/' + assetsDirectory
   },
 
   featuredTags() {
@@ -27,6 +44,14 @@ module.exports = {
 
   region(name) {
     return ` data-region-id="${name}" `
+  },
+
+  serialize(obj) {
+    return JSON.stringify(obj)
+  },
+
+  pluck(arr, fieldName) {
+    return arr.map((obj) => obj[fieldName])
   },
 
   seeMore() {
@@ -61,31 +86,6 @@ module.exports = {
 
   filterPostsByType(type) {
     return this.posts.filter(p => p.type === type)
-  },
-
-  assetsPath() {
-    const { permalinkPrefix, assetsDirectory } = this.settings
-    const prefix = permalinkPrefix === '/' ? '' : permalinkPrefix
-    return prefix + '/' + assetsDirectory
-  },
-
-  pageTitle() {
-    if (this.page === 'post') {
-      return `${this.post.title} / ${this.settings.site.title}`
-    }
-    if (this.page === 'subpage') {
-      return `${this.subpage.title} / ${this.settings.site.title}`
-    }
-    if (this.page === 'category') {
-      return `${this.category.name} / ${this.settings.site.title}`
-    }
-    if (this.page === 'tag') {
-      return `#${this.tag.tag} / ${this.settings.site.title}`
-    }
-    if (this.page === 'homepage' && this.homepage.title) {
-      return `${this.homepage.title} / ${this.settings.site.title}`
-    }
-    return `${this.settings.site.title}`
   },
 
   is(value1, value2) {
