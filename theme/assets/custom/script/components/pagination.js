@@ -90,7 +90,7 @@ const softRender = ({ tag, onPaginate }) => {
 }
 
 const fullRender = ({ tag, pageNumber, totalPages, onPaginate }) => {
-  const pageNumbers = getPageNumbers(pageNumber || 0, totalPages)
+  const pageNumbers = getPageNumbers(pageNumber || 1, totalPages)
 
   const linksContainer = renderLinks({
     tag,

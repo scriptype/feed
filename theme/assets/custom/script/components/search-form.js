@@ -81,11 +81,16 @@ const render = async ({ onSearch, onReset }) => {
   } catch (e) {
     console.log('failed loading resources for search-form', e)
   }
-  const searchForm = renderSearchForm()
-  attachEventListeners({
-    searchForm,
-    onSearch,
-    onReset
+  return new Promise(resolve => {
+    Dictionary.ready(async () => {
+      const searchForm = renderSearchForm()
+      attachEventListeners({
+        searchForm,
+        onSearch,
+        onReset
+      })
+      resolve(searchForm)
+    })
   })
 }
 

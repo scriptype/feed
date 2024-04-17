@@ -106,3 +106,15 @@ export const getSearchQueryFromUrl = () => {
 export const scrollToTop = () => {
   document.documentElement.scrollTop = 0
 }
+
+export const getPages = ({ links, linksPerPage = 15 }) => {
+  return chunk(links, linksPerPage)
+}
+
+export const getPageLinks = ({ links, pages, pageNumber, linksPerPage = 15 }) => {
+  const _pages = pages || getPages({ links, linksPerPage })
+
+  return pageNumber > 1 ?
+    _pages[pageNumber - 1] :
+    _pages[0]
+}

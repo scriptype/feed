@@ -1,38 +1,10 @@
-import Dictionary from '../../common/dictionary.js'
 import Finder from './finder.js'
-import Resources from './resources.js'
-import Modes from './modes.js'
-import Intros from './intros.js'
-import Header from './components/header.js'
-import SearchForm from './components/search-form.js'
-import Intro from './components/intro.js'
-import TagsList from './components/tags-list.js'
-import ActivityChart from './components/activity-chart.js'
-import Pagination from './components/pagination.js'
-import Content from './components/content.js'
+import * as Views from './views/index.js'
 import Links from './links.js'
 import Router from './router.js'
-import {
-  chunk,
-  getTagFromUrl,
-  getPageNumberFromUrl,
-  getSearchQueryFromUrl,
-  scrollToTop
-} from './helpers.js'
+import { getTagFromUrl, getPageNumberFromUrl, getSearchQueryFromUrl } from './helpers.js'
 
 const debug = false
-
-const getPages = ({ links, linksPerPage = 15 }) => {
-  return chunk(links, linksPerPage)
-}
-
-const getPageLinks = ({ links, pages, pageNumber, linksPerPage = 15 }) => {
-  const _pages = pages || getPages({ links, linksPerPage })
-
-  return pageNumber > 1 ?
-    _pages[pageNumber - 1] :
-    _pages[0]
-}
 
 const createController = () => {
   let state = {}
@@ -43,14 +15,6 @@ const createController = () => {
 
     Links.fetch('posts.min.json')
 
-    Header.render({
-      onClickLogo: navigateHomepage
-    })
-
-    TagsList.render({
-      onClickTag: navigateTagPage
-    })
-
     linkFinder = new Finder({
       entries: await Links.all()
     })
@@ -59,26 +23,6 @@ const createController = () => {
     const tag = getTagFromUrl()
     const pageNumber = getPageNumberFromUrl()
     const links = tag ? await Links.findByTag(tag) : await Links.all()
-    const pages = getPages({ links })
-
-    ActivityChart.render({
-      mode: Modes.hydration,
-      tag,
-      links,
-      pages,
-      pageNumber,
-      onPaginate: (payload) => navigatePage({
-        ...payload,
-        tag,
-        paginationType: 'ActivityChart'
-      })
-    })
-
-    Pagination.render({
-      mode: Modes.hydration,
-      tag,
-      onPaginate: navigatePage
-    })
 
     state = {
       tag,
@@ -87,20 +31,24 @@ const createController = () => {
       searchQuery
     }
 
-    Dictionary.ready(async () => {
-      await SearchForm.render({
-        onSearch: (payload) => {
-          onSearch(payload)
-          state.searchQuery = payload.query
-          Router.search(state)
-        },
-        onReset: onResetSearch
-      })
-
-      if (searchQuery) {
-        onSearch({ query: searchQuery })
-      }
+    await Views.Start.render({
+      onClickLogo: navigateHomepage,
+      onClickTag: navigateTagPage,
+      onPaginate: navigatePage,
+      onSearch: (payload) => {
+        onSearch(payload)
+        state.searchQuery = payload.query
+        Router.search(state)
+      },
+      onResetSearch,
+      tag,
+      links,
+      pageNumber
     })
+
+    if (searchQuery) {
+      onSearch({ query: searchQuery })
+    }
 
     Router.start(state, navigateBack, { debug })
   }
@@ -111,7 +59,6 @@ const createController = () => {
       return
     }
     const { links, pageNumber, tag, searchQuery } = event.state
-    const pages = getPages({ links })
     const navigatedFrom = {
       differentPage: state.searchQuery || state.tag !== tag
     }
@@ -122,79 +69,33 @@ const createController = () => {
       searchQuery
     }
 
-    if (tag) {
-      Resources.tag.load()
-    } else {
-      Resources.homepage.load()
-    }
-
     if (searchQuery) {
       return onSearch({ query: searchQuery })
-    } else {
-      SearchForm.setInputValue('')
     }
 
-    if (navigatedFrom.differentPage) {
-      Intro.render(tag ? Intros.tag : Intros.homepage, {
-        searchQuery,
-        links,
-        tag,
-      })
-      ActivityChart.render({
-        mode: Modes.full,
+    if (tag) {
+      return Views.Tag.render({
         tag,
         links,
-        pages,
         pageNumber,
-        onPaginate: (payload) => navigatePage({
-          ...payload,
-          tag,
-          paginationType: 'ActivityChart'
-        })
-      })
-    } else {
-      ActivityChart.updateCurrentPage({
-        pageNumber
+        navigatedFrom,
+        onPaginate: navigatePage
       })
     }
 
-    Content.render({
-      links: getPageLinks({ pages, pageNumber })
-    })
-
-    Pagination.render({
-      mode: Modes.full,
-      tag,
+    return Views.Homepage.render({
+      links,
       pageNumber,
-      totalPages: pages.length,
+      navigatedFrom,
       onPaginate: navigatePage
     })
-
-    scrollToTop()
   }
 
   const navigatePage = async ({ tag, pageNumber, paginationType }) => {
     const links = await Links.findByTag(tag)
-    const pages = getPages({ links })
-    const pageLinks = getPageLinks({ pages, pageNumber })
-
-    SearchForm.setInputValue('')
-
-    ActivityChart.updateCurrentPage({
-      pageNumber
-    })
-
-    Content.render({
-      links: pageLinks
-    })
-
-    Pagination.render({
-      mode: Modes.full,
-      tag,
-      pageNumber,
-      totalPages: pages.length,
-      onPaginate: navigatePage
-    })
+    const navigatedFrom = {
+      pagination: paginationType || true
+    }
 
     state = {
       tag,
@@ -203,60 +104,33 @@ const createController = () => {
       searchQuery: ''
     }
 
-    if (paginationType !== 'ActivityChart') {
-      scrollToTop()
+    if (tag) {
+      Views.Tag.render({
+        tag,
+        links,
+        pageNumber,
+        navigatedFrom,
+        onPaginate: navigatePage
+      })
+
+      return Router.tag(state)
     }
 
-    if (tag) {
-      Router.tag(state)
-    } else {
-      Router.homepage(state)
-    }
+    Views.Homepage.render({
+      links,
+      pageNumber,
+      navigatedFrom,
+      onPaginate: navigatePage
+    })
+
+    Router.homepage(state)
   }
 
   const navigateHomepage = async ()  => {
     const links = await Links.all()
-    const pages = getPages({ links })
     const navigatedFrom = {
       differentPage: state.searchQuery || state.tag,
       pagination: state.pageNumber > 0
-    }
-
-    Resources.homepage.load()
-
-    Intro.render(Intros.homepage, {
-      links
-    })
-
-    SearchForm.setInputValue('')
-
-    if (navigatedFrom.differentPage || navigatedFrom.pagination) {
-      if (navigatedFrom.differentPage) {
-        ActivityChart.render({
-          mode: Modes.full,
-          links,
-          pages,
-          onPaginate: (payload) => navigatePage({
-            ...payload,
-            paginationType: 'ActivityChart'
-          })
-        })
-      } else {
-        ActivityChart.updateCurrentPage({
-          pageNumber: 0
-        })
-      }
-
-      Content.render({
-        links: pages[0]
-      })
-
-      Pagination.render({
-        mode: Modes.full,
-        pageNumber: 0,
-        totalPages: pages.length,
-        onPaginate: navigatePage
-      })
     }
 
     state = {
@@ -265,59 +139,22 @@ const createController = () => {
       searchQuery: ''
     }
 
-    scrollToTop()
+    Views.Homepage.render({
+      links,
+      pageNumber: 0,
+      navigatedFrom,
+      onPaginate: navigatePage
+    })
 
     Router.homepage(state)
   }
 
   const navigateTagPage = async ({ tag } = {})  => {
     const links = await Links.findByTag(tag)
-    const pages = getPages({ links })
     const navigatedFrom = {
       differentPage: state.searchQuery || state.tag !== tag,
       pagination: state.pageNumber > 0
     }
-
-    Resources.tag.load()
-
-    Intro.render(Intros.tag, {
-      links,
-      tag
-    })
-
-    SearchForm.setInputValue('')
-
-    if (navigatedFrom.differentPage || navigatedFrom.pagination) {
-      if (navigatedFrom.differentPage) {
-        ActivityChart.render({
-          mode: Modes.full,
-          tag,
-          links,
-          pages,
-          onPaginate: (payload) => navigatePage({
-            ...payload,
-            tag,
-            paginationType: 'ActivityChart'
-          })
-        })
-      } else {
-        ActivityChart.updateCurrentPage({
-          pageNumber: 0
-        })
-      }
-
-      Content.render({
-        links: pages[0]
-      })
-
-      Pagination.render({
-        mode: Modes.full,
-        pageNumber: 0,
-        totalPages: pages.length,
-        onPaginate: navigatePage
-      })
-    }
-
     state = {
       tag,
       links,
@@ -325,7 +162,13 @@ const createController = () => {
       searchQuery: ''
     }
 
-    scrollToTop()
+    Views.Tag.render({
+      tag,
+      links,
+      pageNumber: 0,
+      navigatedFrom,
+      onPaginate: navigatePage
+    })
 
     Router.tag(state)
   }
@@ -333,72 +176,42 @@ const createController = () => {
   const onSearch = ({ query }) => {
     const links = linkFinder.find(query)
 
-    Intro.render(Intros.search, {
-      searchQuery: query,
-      links
-    })
-
-    SearchForm.setInputValue(query)
-
-    Content.render({
-      links
-    })
-
-    ActivityChart.render({
-      readonly: true,
-      mode: Modes.full,
+    Views.Search.render({
       links,
-      pages: [links]
+      searchQuery: query
     })
-
-    Pagination.remove()
   }
 
   const onResetSearch = async () => {
     const tag = getTagFromUrl()
     const pageNumber = getPageNumberFromUrl()
     const links = tag ? await Links.findByTag(tag) : await Links.all()
-    const pages = getPages({ links })
+    const navigatedFrom = {
+      differentPage: false,
+      pagination: false
+    }
+    state.searchQuery = ''
 
-    const intro = tag ? Intros.tag : Intros.homepage
-    Intro.render(intro, {
-      links,
-      tag
-    })
-
-    ActivityChart.render({
-      mode: Modes.full,
-      tag,
-      links,
-      pages,
-      onPaginate: (payload) => navigatePage({
-        ...payload,
+    if (tag) {
+      Views.Tag.render({
         tag,
-        paginationType: 'ActivityChart'
+        links,
+        pageNumber,
+        navigatedFrom,
+        onPaginate: navigatePage
       })
-    })
 
-    ActivityChart.updateCurrentPage({
-      pageNumber
-    })
+      return Router.tag(state)
+    }
 
-    Content.render({
-      links: getPageLinks({ pages, pageNumber })
-    })
-
-    Pagination.render({
-      mode: Modes.full,
+    Views.Homepage.render({
+      links,
       pageNumber,
-      totalPages: pages.length,
+      navigatedFrom,
       onPaginate: navigatePage
     })
 
-    state.searchQuery = ''
-    if (tag) {
-      Router.tag(state)
-    } else {
-      Router.homepage(state)
-    }
+    return Router.homepage(state)
   }
 
   return {
