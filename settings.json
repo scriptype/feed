@@ -5,5 +5,27 @@
   "description": "A collection of links to blog posts, talks and opinions on art, design and technology",
   "permalinkPrefix": "/feed",
   "revisionHistory": "off",
-  "exportDirectory": "site"
+  "exportDirectory": "site",
+  "featuredTags": [
+    "web",
+    "software",
+    "design",
+    "accessibility",
+    "ux",
+    "ai",
+    "art",
+    "science",
+    "environment",
+    "nature",
+    "philosophy",
+    "life",
+    "privacy",
+    "video",
+    "git",
+    "colors",
+    "geography",
+    "javascript",
+    "css",
+    "security"
+  ]
 }

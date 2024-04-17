@@ -7,30 +7,12 @@ module.exports = {
     return arr.map((obj) => obj[fieldName])
   },
 
-  selectedTags() {
-    const featuredTags = [
-      'web',
-      'software',
-      'design',
-      'accessibility',
-      'ux',
-      'ai',
-      'art',
-      'science',
-      'environment',
-      'nature',
-      'philosophy',
-      'life',
-      'privacy',
-      'video',
-      'git',
-      'colors',
-      'geography',
-      'javascript',
-      'css',
-      'security',
-    ]
-    return this.tags.filter((tag) => featuredTags.includes(tag.tag))
+  featuredTags() {
+    const allTags = this.tags
+    const { featuredTags } = this.settings
+    return featuredTags.map(featured => {
+      return allTags.find(({ tag }) => tag === featured)
+    })
   },
 
   tagImportance(allTags, tag) {
