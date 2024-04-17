@@ -19,7 +19,8 @@ const findByTag = async (tag) => {
 
 const search = async (query) => {
   finderInstance = finderInstance || new Finder({
-    entries: await links
+    entries: await links,
+    searchIn: ['title', 'tags', 'url']
   })
 
   return finderInstance.find(query)
