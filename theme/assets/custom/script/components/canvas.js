@@ -18,13 +18,12 @@ export default (options) => {
     colors,
     lineWidth,
     padding,
+    startDate,
     yearMarkPosition,
     yearMarkFont
   } = options
 
-  const firstDataPoint = data[data.length - 1]
-  const firstDate = new Date(firstDataPoint)
-  const totalDaysElapsed = (Date.now() - firstDate) / DAY
+  const totalDaysElapsed = (Date.now() - startDate) / DAY
   const width = totalDaysElapsed * dayScale
   const outlierScale = 0.8
   const innerWidth = width - (padding.left + padding.right)
@@ -78,11 +77,10 @@ export default (options) => {
   }
 
   const drawYearMarks = ({ ctx }) => {
-    const startDate = new Date(firstDataPoint)
     let firstVisibleYear = startDate.getFullYear() + 1
     const firstVisibleYearDate = new Date(0)
     firstVisibleYearDate.setYear(firstVisibleYear)
-    const timeToFirstYear = firstVisibleYearDate - firstDataPoint
+    const timeToFirstYear = firstVisibleYearDate - startDate
     const startOffset = timeToFirstYear / DAY * dayScale
     const yearLength = floor(365 * dayScale)
     ctx.font = yearMarkFont
