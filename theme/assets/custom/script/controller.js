@@ -1,4 +1,3 @@
-import Finder from './finder.js'
 import * as Views from './views/index.js'
 import Links from './links.js'
 import Router from './router.js'
@@ -8,16 +7,11 @@ const debug = false
 
 const createController = () => {
   let state = {}
-  let linkFinder = null
 
   const start = async () => {
     document.body.classList.add('js-enhanced')
 
     Links.fetch('posts.min.json')
-
-    linkFinder = new Finder({
-      entries: await Links.all()
-    })
 
     const searchQuery = getSearchQueryFromUrl()
     const tag = getTagFromUrl()
@@ -173,8 +167,8 @@ const createController = () => {
     Router.tag(state)
   }
 
-  const onSearch = ({ query }) => {
-    const links = linkFinder.find(query)
+  const onSearch = async ({ query }) => {
+    const links = await Links.search(query)
 
     Views.Search.render({
       links,
