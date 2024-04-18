@@ -14,7 +14,9 @@ const all = async () => {
 }
 
 const findByTag = async (tag) => {
-  return (await links).filter((link) => !tag || link.tags.includes(tag))
+  return (await links).filter((link) => {
+    return !tag || link.tags.some(t => t.tag.includes(tag))
+  })
 }
 
 const search = async (query) => {

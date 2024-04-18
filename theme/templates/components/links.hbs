@@ -1,20 +1,18 @@
 <div class="links" id="links" tabindex="-1">
   {{#each posts as |link|}}
-    <div class="link-container entering" style="--i: {{@index}}">
-      <a class="link" target="_blank" href="{{link.url}}">
-        <span class="link-title">{{truncate link.title 70 true}}</span>
-        <span class="link-url">{{truncate link.url 50 true}}</span>
-        <ul class="link-tags">
-        {{#each link.tags as |tag|}}
-          {{#if tag.tag}}
-            <li class="link-tag">#{{tag.tag}}</li>
-          {{else}}
-            <li class="link-tag">#{{tag}}</li>
-          {{/if}}
-        {{/each}}
-        </ul>
+    <section class="link entering" style="--i: {{@index}}">
+      <a target="_blank" href="{{link.url}}" class="link-title">
+        <h2>{{link.title}}</h2>
       </a>
-    </div>
+      <span class="link-url">{{link.url}}</span>
+      <ul class="link-tags" aria-label="tags">
+      {{#each link.tags as |tag|}}
+        <li class="link-tag-container">
+          <a class="link-tag" href="{{tag.permalink}}">#{{tag.tag}}</a>
+        </li>
+      {{/each}}
+      </ul>
+    </section>
   {{/each}}
 </div>
 {{#with pagination}}

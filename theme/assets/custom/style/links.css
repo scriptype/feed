@@ -2,7 +2,7 @@
     perspective: 500vh;
 }
 
-.link-container {
+.link {
     --enter-rotate-x: 30deg;
     --enter-rotate-y: 0deg;
     --enter-shift-x: 0%;
@@ -15,16 +15,40 @@
     --exit-scale: .97, .97;
     --exit-duration: .15s;
     --exit-stagger: 30ms;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .8em 2em 1.1em;
+    font-size: 1.8em;
+    font-weight: 100;
+    transition: all .3s;
 }
 
-.link-container.entering,
-.link-container.exiting {
+@media (max-width: 640px) {
+    .link {
+        padding: .7em 1em 1em;
+    }
+}
+
+.link:hover,
+.link:focus-within {
+    background: #f4f4f4;
+}
+
+.link:active {
+    background: #e8e8e8;
+    box-shadow: none;
+}
+
+.link.entering,
+.link.exiting {
     transform-origin: top center;
     transform-style: preserve-3d;
     animation-fill-mode: forwards;
 }
 
-.link-container.entering {
+.link.entering {
     opacity: 0;
     transform:
         translate(
@@ -50,7 +74,7 @@
     }
 }
 
-.link-container.exiting {
+.link.exiting {
     transform-origin: bottom center;
     animation-name: link-exit;
     animation-duration: var(--exit-duration);
@@ -69,32 +93,16 @@
     }
 }
 
-.link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: .8em 2em 1.1em;
-    font-size: 1.8em;
-    font-weight: 100;
-    text-decoration: none;
+.link-title {
     color: #333;
-    transition: all .3s;
+    text-decoration: none;
 }
 
-@media (max-width: 640px) {
-    .link {
-        padding: .7em 1em 1em;
-    }
-}
-
-.link:hover,
-.link:focus {
-    background: #f4f4f4;
-}
-
-.link:active {
-    background: #e8e8e8;
-    box-shadow: none;
+.link-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
 }
 
 .link-title {
@@ -117,10 +125,26 @@
     margin-bottom: -.2em;
 }
 
-.link-tag {
+.link-tag-container {
     font-size: 0.45em;
-    margin: 0.3em .5em .25em 0;
-    text-transform: uppercase;
+    margin-top: 0.3em;
+    margin-bottom: 0.25em;
+}
+
+.link-tag {
+    position: relative;
+    padding: 0.3em .5em .25em 0;
     letter-spacing: .07em;
+    text-transform: uppercase;
+    text-decoration: none;
     color: #666;
+    box-shadow: 1px 20px 0 -15px #aaaa;
+    transition: all .3s;
+}
+
+.link-tag:hover,
+.link-tag:focus {
+    color: #000;
+    box-shadow: 1px 11.5px 0 -10px #666;
+    text-shadow: 0 0 1px #0005;
 }

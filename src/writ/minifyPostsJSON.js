@@ -12,7 +12,7 @@ const minify = async ({ exportDirectory }) => {
   const minifiedPostsJSON = postsJSON.map(post => ({
     title: post.title,
     datePublished: post.datePublished,
-    tags: post.tags.map(tag => tag.tag),
+    tags: post.tags,
     url: post.url
   }))
 

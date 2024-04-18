@@ -1,3 +1,4 @@
+import Modes from '../modes.js'
 import { query, queryAll, truncate, transition } from '../helpers.js'
 
 const TITLE_CHARS_MAX = 70
@@ -5,22 +6,41 @@ const URL_CHARS_MAX = 50
 const ENTER_CLASS = 'entering'
 const EXIT_CLASS = 'exiting'
 const findContainer = () => query('.links')
-const findLinkContainers = (container) => queryAll('.link-container', container)
-const findLinkElement = (linkContainer) => query('.link', linkContainer)
+const findLinkElements = () => queryAll('.link')
 const findLinkTitle = (linkElement) => query('.link-title', linkElement)
 const findLinkUrl = (linkElement) => query('.link-url', linkElement)
 const findLinkTags = (linkElement) => query('.link-tags', linkElement)
-const linkTagTemplate = (tag) => `<li class="link-tag">#${tag}</li>`
+
 let sampleLinkContainer = null
 
-const exitCurrentLinks = (container) => {
+const linkTitleInnerHTMLTemplate = (link) => {
+  return `<h2>${truncate(link.title, TITLE_CHARS_MAX, true)}</h2>`
+}
+
+const linkTitleTemplate = (link) => {
+  return `
+    <a target="_blank" href="${link.url}" class="link-title">
+      ${linkTitleInnerHTMLTemplate(link)}
+    </a>
+  `
+}
+
+const linkTagTemplate = ({ tag, permalink }) => {
+  return `
+    <li class="link-tag-container">
+      <a class="link-tag" href="${permalink}">#${tag}</a>
+    </li>
+  `
+}
+
+const exitCurrentLinks = () => {
   return Promise.all(
-    Array.from(findLinkContainers(container)).map(linkContainer => {
-      if (linkContainer.classList.contains(ENTER_CLASS)) {
-        linkContainer.classList.remove(ENTER_CLASS)
+    Array.from(findLinkElements()).map(linkElement => {
+      if (linkElement.classList.contains(ENTER_CLASS)) {
+        linkElement.classList.remove(ENTER_CLASS)
       }
       return transition({
-        target: linkContainer,
+        target: linkElement,
         className: EXIT_CLASS,
         duration: 250
       })
@@ -28,36 +48,51 @@ const exitCurrentLinks = (container) => {
   )
 }
 
-const enterNewLinks = (container, links) => {
+const enterNewLinks = (links) => {
+  const container = findContainer()
   const fragment = document.createDocumentFragment()
   links.forEach((link, i) => {
-    const linkContainer = sampleLinkContainer.cloneNode(true)
-    linkContainer.classList.remove(EXIT_CLASS)
+    const linkElement = sampleLinkContainer.cloneNode(true)
+    linkElement.classList.remove(EXIT_CLASS)
     transition({
-      target: linkContainer,
+      target: linkElement,
       className: ENTER_CLASS,
       duration: 300
     })
-    linkContainer.style.setProperty('--i', i)
-    const linkElement = findLinkElement(linkContainer)
+    linkElement.style.setProperty('--i', i)
     const linkTitle = findLinkTitle(linkElement)
     const linkUrl = findLinkUrl(linkElement)
     const linkTags = findLinkTags(linkElement)
     linkElement.href = link.url
-    linkTitle.textContent = truncate(link.title, TITLE_CHARS_MAX, true)
+    linkTitle.innerHTML = linkTitleTemplate(link)
+    linkTitle.title = link.title
     linkUrl.textContent = truncate(link.url, URL_CHARS_MAX, true)
     linkTags.innerHTML = link.tags.map(linkTagTemplate).join('')
-    fragment.appendChild(linkContainer)
+    fragment.appendChild(linkElement)
   })
   container.innerHTML = ''
   container.appendChild(fragment)
 }
 
-const render = async ({ links }) => {
-  const container = findContainer()
-  sampleLinkContainer = (sampleLinkContainer || findLinkContainers(container)[0]).cloneNode(true)
-  await exitCurrentLinks(container)
-  enterNewLinks(container, links)
+const hydrate = (links) => {
+  findLinkElements().forEach((linkElement, i) => {
+    const link = links[i]
+    const linkTitle = findLinkTitle(linkElement)
+    linkTitle.innerHTML = linkTitleTemplate(link)
+    linkTitle.title = link.title
+
+    const linkUrl = findLinkUrl(linkElement)
+    linkUrl.textContent = truncate(link.url, URL_CHARS_MAX, true)
+  })
+}
+
+const render = async ({ mode, links }) => {
+  if (mode === Modes.hydration) {
+    return hydrate(links)
+  }
+  sampleLinkContainer = (sampleLinkContainer || findLinkElements()[0]).cloneNode(true)
+  await exitCurrentLinks()
+  enterNewLinks(links)
 }
 
 export default {

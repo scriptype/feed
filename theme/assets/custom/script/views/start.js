@@ -39,6 +39,11 @@ const render = async ({
     })
   })
 
+  Content.render({
+    mode: Modes.hydration,
+    links
+  })
+
   Pagination.render({
     mode: Modes.hydration,
     tag,
