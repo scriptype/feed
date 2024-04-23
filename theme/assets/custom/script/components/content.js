@@ -19,7 +19,7 @@ const linkTitleInnerHTMLTemplate = (link) => {
 
 const linkTitleTemplate = (link) => {
   return `
-    <a target="_blank" href="${link.url}" class="link-title">
+    <a target="_blank" href="${link.url}" class="link-title" title="${link.title}">
       ${linkTitleInnerHTMLTemplate(link)}
     </a>
   `
@@ -63,9 +63,7 @@ const enterNewLinks = (links) => {
     const linkTitle = findLinkTitle(linkElement)
     const linkUrl = findLinkUrl(linkElement)
     const linkTags = findLinkTags(linkElement)
-    linkElement.href = link.url
-    linkTitle.innerHTML = linkTitleTemplate(link)
-    linkTitle.title = link.title
+    linkTitle.outerHTML = linkTitleTemplate(link)
     linkUrl.textContent = truncate(link.url, URL_CHARS_MAX, true)
     linkTags.innerHTML = link.tags.map(linkTagTemplate).join('')
     fragment.appendChild(linkElement)
