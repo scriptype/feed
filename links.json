@@ -9406,5 +9406,17 @@
       "web"
     ],
     "datePublished": 1713998562176
+  },
+  {
+    "url": "https://lea.codes/posts/2023-06-04-webgl-shaders-tutorial/",
+    "title": "WebGL Shaders Tutorial | Lea's Blog",
+    "tags": [
+      "web",
+      "webgl",
+      "shaders",
+      "learning",
+      "tutorial"
+    ],
+    "datePublished": 1714214022155
   }
 ]
