@@ -22,7 +22,13 @@ const findByTag = async (tag) => {
 const search = async (query) => {
   finderInstance = finderInstance || new Finder({
     entries: await links,
-    searchIn: ['title', 'tags', 'url']
+    searchIn() {
+      return [
+        this.title,
+        this.url,
+        this.tags.map(({ tag }) => tag).join(' ')
+      ]
+    }
   })
 
   return finderInstance.find(query)

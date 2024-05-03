@@ -1,24 +1,15 @@
 export default class Finder {
   constructor({ entries, searchIn }) {
     this.entries = entries
-    this.indexFields = searchIn
+    this.itemIndexFn = searchIn
     this.index = this.makeIndex()
   }
 
   makeIndex() {
-    return this.entries.map((entry, index) => {
-      const content = this.indexFields.map(field => {
-        const fieldValue = entry[field]
-        if (Array.isArray(entry[field])) {
-          return fieldValue.join(' ')
-        }
-        return fieldValue
-      }).join('\n')
-      return {
-        content,
-        index
-      }
-    })
+    return this.entries.map((entry, index) => ({
+      content: this.itemIndexFn.call(entry).join('\n'),
+      index
+    }))
   }
 
   find(query) {
