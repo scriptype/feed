@@ -8,7 +8,7 @@ import SearchForm from '../components/search-form.js'
 import ActivityChart from '../components/activity-chart.js'
 import Pagination from '../components/pagination.js'
 import Content from '../components/content.js'
-import { scrollToTop, getPages } from '../helpers.js'
+import { scrollToTop, getPages, getPageLinks } from '../helpers.js'
 
 const render = async ({
   onClickLogo,
@@ -21,6 +21,7 @@ const render = async ({
   pageNumber
 }) => {
   const pages = getPages({ links })
+  const pageLinks = getPageLinks({ pages, pageNumber })
 
   Header.render({ onClickLogo })
 
@@ -41,7 +42,7 @@ const render = async ({
 
   Content.render({
     mode: Modes.hydration,
-    links
+    links: pageLinks
   })
 
   Pagination.render({
