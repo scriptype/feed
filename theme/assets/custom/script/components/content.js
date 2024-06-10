@@ -76,8 +76,7 @@ const hydrate = (links) => {
   findLinkElements().forEach((linkElement, i) => {
     const link = links[i]
     const linkTitle = findLinkTitle(linkElement)
-    linkTitle.innerHTML = linkTitleTemplate(link)
-    linkTitle.title = link.title
+    linkTitle.outerHTML = linkTitleTemplate(link)
 
     const linkUrl = findLinkUrl(linkElement)
     linkUrl.textContent = truncate(link.url, URL_CHARS_MAX, true)

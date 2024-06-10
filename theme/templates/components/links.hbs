@@ -1,7 +1,7 @@
 <div class="links" id="links" tabindex="-1">
   {{#each posts as |link|}}
     <section class="link entering" style="--i: {{@index}}">
-      <a target="_blank" href="{{link.url}}" class="link-title">
+      <a target="_blank" href="{{link.url}}" class="link-title" title="{{link.title}}">
         <h2>{{link.title}}</h2>
       </a>
       <span class="link-url">{{link.url}}</span>
