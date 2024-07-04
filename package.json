@@ -11,7 +11,7 @@
     "lodash": "^4.17.11",
     "tumblr.js": "^2.0.2",
     "twitter-api-v2": "^1.14.3",
-    "writ-cms": "github:scriptype/writ-cms#v0.29.1"
+    "writ-cms": "github:scriptype/writ-cms#v0.29.2"
   },
   "scripts": {
     "start": "node ./src/scripts/start",

@@ -5,6 +5,7 @@
   "description": "A collection of links to blog posts, talks and opinions on art, design and technology",
   "permalinkPrefix": "/feed",
   "revisionHistory": "off",
+  "rss": "on",
   "exportDirectory": "site",
   "featuredTags": [
     "web",
