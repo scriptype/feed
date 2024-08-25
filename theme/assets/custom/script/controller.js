@@ -86,7 +86,7 @@ const createController = () => {
   }
 
   const navigatePage = async ({ tag, pageNumber, paginationType }) => {
-    const links = await Links.findByTag(tag)
+    const links = tag ? await Links.findByTag(tag) : await Links.all()
     const navigatedFrom = {
       pagination: paginationType || true
     }
