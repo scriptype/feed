@@ -65,7 +65,7 @@
     text-decoration-thickness: 0.04em;
     text-underline-offset: 0.1em;
     text-decoration-color: #999;
-    color: inherit;
+    color: var(--tag-link-color);
 }
 
 .tag-hash {
@@ -89,7 +89,7 @@
     letter-spacing: -.04em;
     border-radius: 0.8em;
     background: var(--tag-badge-color);
-    color: #96433f;
+    color: var(--tag-badge-number-color);
 }
 
 @media (max-width: 900px) {

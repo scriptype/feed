@@ -1,12 +1,113 @@
 :root {
+    --bg: repeating-linear-gradient(
+        60deg,
+        #fcfcfc,
+        #f4f2f0 1px,
+        #fcfcfc 2px,
+        #fcfcfc 3px
+    );
+    --fg: black;
     --primary-color: #e21207;
-    --content-width: 640px;
+    --footer-fg: #555;
+
+    --link-color: #333;
+    --link-hover-bg: #f4f4f4;
+    --link-count-color: #333;
+    --link-tag-color: #555;
+    --link-tag-hover-color: #000;
+    --link-tag-hover-stroke-color: #0005;
+
+    --tag-link-color: inherit;
     --tag-badge-color: #ffe633;
+    --tag-badge-number-color: #96433f;
+    --header-perspective: auto;
+
+    --logo-bg: #fff;
+    --logo-fg: var(--primary-color);
+    --logo-box-shadow: auto;
+
+    --logo-hover-bg: #fafafa;
+    --logo-hover-transform: scale(.85, .85);
+    --logo-hover-box-shadow: auto;
+
+    --search-input-border-color: #c8c8c8;
+    --search-input-bg: auto;
+    --search-input-color: auto;
+    --search-input-label-color: #444;
+
+    --chart-hover-page-bg: linear-gradient(
+        to top,
+        #000,
+        #018 30%,
+        #018 70%,
+        #000
+    );
+    --chart-hover-blend: difference;
+    --chart-active-page: lemonchiffon;
     --content-bg-color: #fff;
+    --content-border-color: #eaeaea;
+    --content-width: 640px;
     --bounce-easing: linear(
         0, 0.004, 0.016, 0.035, 0.063 9.1%, 0.141, 0.25, 0.391, 0.563, 0.765, 1,
         0.891, 0.813 45.5%, 0.785, 0.766, 0.754, 0.75, 0.754, 0.766, 0.785, 0.813 63.6%, 0.891, 1 72.7%,
         0.973, 0.953, 0.941, 0.938, 0.941, 0.953, 0.973, 1,
         0.988, 0.984, 0.988, 1
     );
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #181a1f;
+        --fg: #ddd;
+        --primary-color: #cc6eab;
+        --footer-fg: inherit;
+
+        --link-color: inherit;
+        --link-hover-bg: #fff1;
+        --link-count-color: #bbb;
+        --link-tag-color: inherit;
+        --link-tag-hover-color: #fff;
+        --link-tag-hover-stroke-color: #fff5;
+
+        --tag-link-color: #edf;
+        --tag-badge-color: #7b2f56;
+        --tag-badge-number-color: #edfd;
+        --header-perspective: 400px;
+
+        --logo-bg: transparent;
+        --logo-fg: #fdf;
+        --logo-box-shadow:
+            0 0 4vmin #FFC0CB99,
+            0 .2vmin 2vmin .5vmin #EE82EE99,
+            0 -.5vmin 2vmin #0ff9;
+        --logo-hover-shine-opacity: 0;
+
+        --logo-hover-bg: transparent;
+        --logo-hover-transform:
+            scale(.75, .75)
+            rotateY(10deg)
+            rotateX(-10deg);
+        --logo-hover-box-shadow:
+            0 0 4vmin #FFC0CB99,
+            0 .2vmin 2vmin .5vmin #EE82EE99,
+            0 -.5vmin 3vmin #0ff9;
+        --logo-hover-shine-opacity: .15;
+
+        --search-input-border-color: #484828;
+        --search-input-bg: #0002;
+        --search-input-color: white;
+        --search-input-label-color: #aaa;
+
+        --chart-hover-page-bg: linear-gradient(
+            to top,
+            transparent,
+            #4a235f 30%,
+            #4a235f 70%,
+            transparent
+        );
+        --chart-hover-blend: lighten;
+        --chart-active-page: violet;
+        --content-bg-color: #6551;
+        --content-border-color: #111;
+    }
 }

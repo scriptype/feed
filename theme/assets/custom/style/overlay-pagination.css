@@ -84,14 +84,8 @@
 
 .js-enhanced .overlay-pagination-link:hover,
 .js-enhanced .overlay-pagination-link:focus-visible {
-    background: linear-gradient(
-        to top,
-        #000,
-        #018 30%,
-        #018 70%,
-        #000
-    );
-    mix-blend-mode: difference;
+    background: var(--chart-hover-page-bg);
+    mix-blend-mode: var(--chart-hover-blend);
 }
 
 .overlay-pagination-link.faked-active-state {
@@ -103,16 +97,11 @@
 }
 
 .js-enhanced .overlay-pagination-link.is-current {
-    --color-1: aquamarine;
-    --color-2: paleturquoise;
-    --color-3: blanchedalmond;
-    --color-4: lemonchiffon;
-    --color-5: #89ffe9;
     background: linear-gradient(
         to top,
         transparent,
-        var(--color-4) 30%,
-        var(--color-4) 70%,
+        var(--chart-active-page) 30%,
+        var(--chart-active-page) 70%,
         transparent
     );
     mix-blend-mode: multiply;

@@ -3,7 +3,7 @@
     padding: 150px 0 1em;
     background: var(--content-bg-color);
     border-radius: 3px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--content-border-color);
     box-shadow: -0.6em 0 2em #00000009;
 }
 

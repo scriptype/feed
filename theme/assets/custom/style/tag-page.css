@@ -10,7 +10,7 @@
 
 .tag-header-post-count {
     display: block;
-    color: #333;
+    color: var(--link-count-color);
     font-size: .5em;
     font-weight: initial;
     word-spacing: initial;

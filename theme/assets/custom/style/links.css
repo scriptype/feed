@@ -33,7 +33,7 @@
 
 .link:hover,
 .link:focus-within {
-    background: #f4f4f4;
+    background: var(--link-hover-bg);
 }
 
 .link:active {
@@ -94,7 +94,7 @@
 }
 
 .link-title {
-    color: #333;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -137,14 +137,14 @@
     letter-spacing: .07em;
     text-transform: uppercase;
     text-decoration: none;
-    color: #666;
+    color: var(--link-tag-color);
     box-shadow: 1px 20px 0 -15px #aaaa;
     transition: all .3s;
 }
 
 .link-tag:hover,
 .link-tag:focus {
-    color: #000;
-    box-shadow: 1px 11.5px 0 -10px #666;
-    text-shadow: 0 0 1px #0005;
+    color: var(--link-tag-hover-color);
+    box-shadow: 1px 11.5px 0 -10px currentColor;
+    text-shadow: 0 0 1px var(--link-tag-hover-stroke-color);
 }

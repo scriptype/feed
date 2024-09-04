@@ -11,6 +11,16 @@ const findScrollContainer = () => query('.graph-container')
 const findCanvasContainer = () => query('.canvas-container')
 const findCanvas = (container) => query('canvas', container)
 
+const darkMode = window.matchMedia("(prefers-color-scheme:dark)").matches
+
+const colors = darkMode ? [
+    new Color('#a6a6e0'),
+    new Color('#ffeaac')
+  ] : [
+    new Color('#ffeaac'),
+    new Color('#a6a6e0')
+  ]
+
 const renderCanvas = ({ data, dayScale, startDate }) => {
   const canvas = Canvas({
     height: 260,
@@ -27,10 +37,7 @@ const renderCanvas = ({ data, dayScale, startDate }) => {
       bottom: 80,
       left: 0
     },
-    colors: [
-      new Color('#ffeaac'),
-      new Color('#a6a6e0'),
-    ],
+    colors
   })
 
   const canvasContainer = findCanvasContainer()
