@@ -216,7 +216,7 @@
 @media (prefers-color-scheme: dark) {
     .tags-list-item,
     .tag-count-badge {
-        transition: all .4s var(--logo-bezier);
+        transition: all .4s;
     }
 
     .header:has(.logo-container:hover, .logo-container:focus-within) ~ .tags .tags-list-item {
