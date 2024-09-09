@@ -7,7 +7,7 @@
     border-bottom: 1px solid #ddd;
     overflow: hidden;
     transform: scale(.75, .75);
-    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all .4s var(--logo-bezier);
     box-shadow: var(--logo-box-shadow);
 }
 
@@ -61,6 +61,7 @@
 
 .logo {
     --color: var(--logo-fg);
+    position: absolute;
     max-width: 100%;
     border-radius: inherit;
     transform:
@@ -70,4 +71,73 @@
     overflow: visible;
     stroke: var(--color);
     stroke-width: 1.5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo-container {
+        perspective: 500px;
+    }
+
+    .shine {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        width: 105%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform-origin: center 60%;
+        translate: -50% 5%;
+        clip-path: polygon( 0 50%, 100% 50%, 100% 100%, 0 100%);
+        background: linear-gradient(
+            to bottom,
+            transparent 40%,
+            #fdee
+        );
+        background-size: 100% 300%;
+        background-position: top center;
+    }
+
+    .logo-container:hover,
+    .logo-container:focus {
+        background: var(--logo-hover-bg);
+        transform: scale(.75, .75);
+        box-shadow: var(--logo-box-shadow);
+        transform-style: preserve-3d;
+        border-bottom: 30px solid #fed;
+    }
+
+    .logo-container:hover .shine,
+    .logo-container:focus .shine {
+        transform: none;
+        opacity: 1;
+        rotate: x 45deg;
+        background-position: center 30%;
+    }
+
+    .logo-container:active .shine {
+        transform: none;
+    }
+
+    .logo-bottom-part {
+        transform-style: preserve-3d;
+        transform-origin: 0% center;
+        transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    :nth-child(1 of .logo) .logo-bottom-part {
+        opacity: 0;
+    }
+
+    :nth-child(2 of .logo) .logo-top-part {
+        opacity: 0;
+    }
+
+    .logo-container:hover :nth-child(2 of .logo) .logo-bottom-part,
+    .logo-container:focus :nth-child(2 of .logo) .logo-bottom-part {
+        background: var(--logo-hover-bg);
+        /*transform: var(--logo-hover-transform);*/
+        /*box-shadow: var(--logo-hover-box-shadow);*/
+        rotate: x 45deg;
+        border-bottom: 30px solid #fed;
+    }
 }

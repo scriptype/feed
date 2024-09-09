@@ -30,6 +30,7 @@
 }
 
 .tags-list {
+    --number-of-items: 22;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -209,5 +210,30 @@
         height: 30vh;
         width: 100%;
         pointer-events: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .tags-list-item,
+    .tag-count-badge {
+        transition: all .4s var(--logo-bezier);
+    }
+
+    .header:has(.logo-container:hover) ~ .tags .tags-list-item {
+        --proximity: calc(1 - var(--i) / var(--number-of-items));
+        text-shadow:
+            .25dvmin calc(2.5dvmin - var(--proximity) * 1.2dvmin)
+            calc(1.75dvmin - var(--proximity) * 1dvmin)
+            rgba(0, 0, 0, var(--proximity)),
+            -.1dvmin -.1dvmin .2dvmin
+                hsla(30, 100%, 60%,
+                    calc(var(--proximity) * var(--proximity) - .25)
+                );
+    }
+
+    .header:has(.logo-container:hover) ~ .tags .tag-count-badge {
+        box-shadow:
+            inset .1dvmin .3dvmin .3dvmin #fed3,
+            inset -.1dvmin -.3dvmin .3dvmin #3213;
     }
 }

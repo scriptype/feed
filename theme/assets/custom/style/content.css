@@ -47,3 +47,26 @@
         transform: scale(1.05);
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .content::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2dvmin;
+      height: 50dvmin;
+      translate: 0 0;
+      background: radial-gradient(
+          ellipse 10% 50% at left center,
+          #fdd3,
+          transparent
+        );
+      opacity: 0;
+      transition: all .4s var(--logo-bezier);
+    }
+
+    .header:has(.logo-container:hover) ~ .content::after {
+      opacity: 1;
+    }
+}

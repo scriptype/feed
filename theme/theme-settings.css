@@ -10,6 +10,8 @@
     --primary-color: #e21207;
     --footer-fg: #555;
 
+    --logo-bezier: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
     --link-color: #333;
     --link-hover-bg: #f4f4f4;
     --link-count-color: #333;
@@ -69,17 +71,17 @@
         --link-tag-hover-color: #fff;
         --link-tag-hover-stroke-color: #fff5;
 
-        --tag-link-color: #edf;
+        --tag-link-color: inherit;
         --tag-badge-color: #7b2f56;
         --tag-badge-number-color: #edfd;
         --header-perspective: 400px;
 
         --logo-bg: transparent;
-        --logo-fg: #fdf;
+        --logo-fg: #ffe5dd;
         --logo-box-shadow:
-            0 0 4vmin #FFC0CB99,
-            0 .2vmin 2vmin .5vmin #EE82EE99,
-            0 -.5vmin 2vmin #0ff9;
+            0 0 4vmin #ffe5dd44,
+            0 .2vmin 2vmin .5vmin #ffe5dd77,
+            0 -.5vmin 2vmin #a6f7;
         --logo-hover-shine-opacity: 0;
 
         --logo-hover-bg: transparent;
@@ -88,12 +90,12 @@
             rotateY(10deg)
             rotateX(-10deg);
         --logo-hover-box-shadow:
-            0 0 4vmin #FFC0CB99,
-            0 .2vmin 2vmin .5vmin #EE82EE99,
-            0 -.5vmin 3vmin #0ff9;
+            0 0 4vmin #ffe5dd99,
+            0 .2vmin 2vmin .5vmin #ffe5dd99,
+            0 -.5vmin 3vmin #a6f8;
         --logo-hover-shine-opacity: .15;
 
-        --search-input-border-color: #484828;
+        --search-input-border-color: #383828;
         --search-input-bg: #0002;
         --search-input-color: white;
         --search-input-label-color: #aaa;

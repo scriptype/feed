@@ -82,3 +82,15 @@
     word-spacing: initial;
     letter-spacing: initial;
 }
+
+@media (prefers-color-scheme: dark) {
+    .feat-search-input {
+        transition: all .4s var(--logo-bezier);
+    }
+
+    .logo-container:hover + #search-form-container .feat-search-input {
+        border-bottom-color: #685852;
+        border-top-color: #383832;
+        box-shadow: inset 0 .75dvmin 2dvmin #0009;
+    }
+}
