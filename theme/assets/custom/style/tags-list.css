@@ -219,7 +219,7 @@
         transition: all .4s var(--logo-bezier);
     }
 
-    .header:has(.logo-container:hover) ~ .tags .tags-list-item {
+    .header:has(.logo-container:hover, .logo-container:focus-within) ~ .tags .tags-list-item {
         --proximity: calc(1 - var(--i) / var(--number-of-items));
         text-shadow:
             .25dvmin calc(2.5dvmin - var(--proximity) * 1.2dvmin)
@@ -231,7 +231,7 @@
                 );
     }
 
-    .header:has(.logo-container:hover) ~ .tags .tag-count-badge {
+    .header:has(.logo-container:hover, .logo-container:focus-within) ~ .tags .tag-count-badge {
         box-shadow:
             inset .1dvmin .3dvmin .3dvmin #fed3,
             inset -.1dvmin -.3dvmin .3dvmin #3213;

@@ -135,8 +135,6 @@
     .logo-container:hover :nth-child(2 of .logo) .logo-bottom-part,
     .logo-container:focus :nth-child(2 of .logo) .logo-bottom-part {
         background: var(--logo-hover-bg);
-        /*transform: var(--logo-hover-transform);*/
-        /*box-shadow: var(--logo-hover-box-shadow);*/
         rotate: x 45deg;
         border-bottom: 30px solid #fed;
     }
