@@ -103,8 +103,8 @@
         --chart-hover-page-bg: linear-gradient(
             to top,
             transparent,
-            #4a235f 30%,
-            #4a235f 70%,
+            #4a234f 30%,
+            #4a234f 70%,
             transparent
         );
         --chart-hover-blend: lighten;
