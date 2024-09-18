@@ -9733,5 +9733,15 @@
       "creative coding"
     ],
     "datePublished": 1726671158960
+  },
+  {
+    "url": "https://www.zachleat.com/web/comprehensive-webfonts/",
+    "title": "A Comprehensive Guide to Font Loading Strategies",
+    "tags": [
+      "web",
+      "fonts",
+      "performance optimizations"
+    ],
+    "datePublished": 1726673768323
   }
 ]
