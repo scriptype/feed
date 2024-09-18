@@ -9724,5 +9724,14 @@
       "11ty"
     ],
     "datePublished": 1726595595438
+  },
+  {
+    "url": "https://tomjhinton.github.io/automaton/",
+    "title": "Automaton",
+    "tags": [
+      "webgl",
+      "creative coding"
+    ],
+    "datePublished": 1726671158960
   }
 ]
