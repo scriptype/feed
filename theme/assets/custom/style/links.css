@@ -37,7 +37,7 @@
 }
 
 .link:active {
-    background: #e8e8e8;
+    background: var(--link-active-bg);
     box-shadow: none;
 }
 
