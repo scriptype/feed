@@ -50,6 +50,20 @@
     --content-bg-color: #fff;
     --content-border-color: #eaeaea;
     --content-width: 640px;
+
+    --tags-list-sphere-1-bg:
+        radial-gradient(circle at 80% 90%, #a93700 -150%, transparent 75%),
+        radial-gradient(circle at 30% 30%, #fafae5, #ffea41 30%);
+    --tags-list-sphere-1-glow: none;
+    --tags-list-sphere-2-bg:
+        radial-gradient(circle at 80% 90%, #1e0071 -60%, transparent 80%),
+        radial-gradient(circle at 30% 20%, #7e7aff, #4b07e2 40%);
+    --tags-list-sphere-2-glow: none;
+    --tags-list-sphere-3-bg:
+        radial-gradient(circle at 80% 90%, #710000 -60%, transparent 80%),
+        radial-gradient(circle at 30% 20%, #ff7a7a, #e21207 40%);
+    --tags-list-sphere-3-glow: none;
+
     --bounce-easing: linear(
         0, 0.004, 0.016, 0.035, 0.063 9.1%, 0.141, 0.25, 0.391, 0.563, 0.765, 1,
         0.891, 0.813 45.5%, 0.785, 0.766, 0.754, 0.75, 0.754, 0.766, 0.785, 0.813 63.6%, 0.891, 1 72.7%,
@@ -113,5 +127,15 @@
         --chart-active-page: violet;
         --content-bg-color: rgb(29, 30, 35);
         --content-border-color: #111;
+
+        --tags-list-sphere-1-bg: #b59a33;
+        --tags-list-sphere-1-glow:
+            inset 0 0 1.5em 0em palegoldenrod, 0 0 1em 0em #fff;
+        --tags-list-sphere-2-bg: darkslategray;
+        --tags-list-sphere-2-glow:
+            inset -.15em -.08em .2em 0em #87ebb7, 0 0 1em 0em #fffa;
+        --tags-list-sphere-3-bg: darkslateblue;
+        --tags-list-sphere-3-glow:
+            inset -.3em 0 .35em 0em #db7070, 0 0 1em 0em #fffa
     }
 }
