@@ -197,13 +197,32 @@
     }
 
     .tags-list::before {
+        --scroll: var(--tags-list-scroll-1, 0);
+        content: "Topics";
         top: 0;
         z-index: 1;
+        display: block;
+        padding-top: 15vh;
+        font-size: calc(2em - var(--scroll) * 3em);
+        font-weight: bold;
+        letter-spacing: -.03em;
+        text-align: center;
+        text-shadow:
+            0 calc(var(--scroll) * -10em)
+            calc(var(--scroll) * 3em)
+            rgba(
+                var(--primary-color-r),
+                var(--primary-color-g),
+                var(--primary-color-b),
+                calc(1 - var(--scroll) * 10)
+            );
+        color: transparent;
         background: radial-gradient(
-            ellipse 100% 100% at center 10%,
+            ellipse 100% 100% at center 5%,
             var(--content-bg-color) 20%,
             transparent
         );
+        transform: translateZ(0);
     }
 
     .tags-list::after {

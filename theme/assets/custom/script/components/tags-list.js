@@ -1,5 +1,7 @@
 import { query, queryAll } from '../helpers.js'
 
+import { reportScroll } from "../vendor/kicss.js"
+
 const TAG_LINK_CLASS = 'tags-list-item-link'
 const findOutsideRegions = () => queryAll('header.header, main.content, footer.footer')
 const findContainer = () => query('.tags-list-container')
@@ -95,10 +97,18 @@ const attachResizeHandler = () => {
   window.addEventListener('orientationchange', autoExpand)
 }
 
+const attachScrollHandler = () => {
+  const container = findContainer()
+  const list = findList(container)
+  list.addEventListener('scroll', reportScroll('--tags-list-scroll'))
+}
+
+
 const render = ({ onClickTag }) => {
   attachToggleClickHandler()
   attachTagClickHandler(onClickTag)
   attachResizeHandler()
+  attachScrollHandler()
   autoExpand()
 }
 

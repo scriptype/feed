@@ -7,7 +7,14 @@
         #fcfcfc 3px
     );
     --fg: black;
-    --primary-color: #e21207;
+    --primary-color-r: 207;
+    --primary-color-g: 49;
+    --primary-color-b: 33;
+    --primary-color: rgb(
+        var(--primary-color-r),
+        var(--primary-color-g),
+        var(--primary-color-b)
+    );
     --footer-fg: #555;
 
     --logo-bezier: cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -76,7 +83,14 @@
     :root {
         --bg: #181a1f;
         --fg: #ddd;
-        --primary-color: #cc6eab;
+        --primary-color-r: 191;
+        --primary-color-g: 115;
+        --primary-color-b: 168;
+        --primary-color: rgb(
+            var(--primary-color-r),
+            var(--primary-color-g),
+            var(--primary-color-b)
+        );
         --footer-fg: inherit;
 
         --link-color: inherit;
