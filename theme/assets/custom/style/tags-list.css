@@ -128,7 +128,7 @@
     .tags-list-toggle-label,
     .tags-list-toggle-label::before,
     .tags-list-toggle-label::after {
-        z-index: 1;
+        z-index: 2;
     }
 
     @keyframes bounce {
@@ -171,47 +171,52 @@
     .tags-list-toggle[open] .tags-list-toggle-label::after {}
     .tags-list-toggle[open] .tags-list-toggle-label::before {}
 
+    /*
+     * For some reason, mobile safari eats up a chunk from top padding.
+     * Increase padding-top, and move top fader-gradient lower
+     * It looks slightly agressive on responsive emulator, but fine on phone.
+     * */
     .tags-list {
         background: var(--content-bg-color);
-        flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: center;
         gap: 2em;
         height: 100vh;
+        padding: 30vh 0 15vh;
         overflow: auto;
         flex-wrap: nowrap;
-        padding-bottom: 4em;
     }
 
-    .tags-list::after {
+    .tags-list::after,
+    .tags-list::before {
         content: "";
         position: absolute;
-        top: 0;
         width: 100%;
         height: 30%;
         pointer-events: none;
+    }
+
+    .tags-list::before {
+        top: 0;
+        z-index: 1;
         background: radial-gradient(
-            circle at center top,
-            #fff,
-            transparent
-        );
-        background: radial-gradient(
-            ellipse 100% 100% at center -20%,
+            ellipse 100% 100% at center 10%,
             var(--content-bg-color) 20%,
             transparent
-        )
+        );
+    }
+
+    .tags-list::after {
+        bottom: 0;
+        background: radial-gradient(
+            ellipse 100% 100% at center 120%,
+            var(--content-bg-color) 20%,
+            transparent
+        );
     }
 
     .tags-list-item {
         font-size: 1.6em;
-    }
-
-    .tags-list-item:last-child::before {
-        content: "";
-        display: block;
-        height: 30vh;
-        width: 100%;
-        pointer-events: none;
     }
 }
 
