@@ -202,13 +202,13 @@
         top: 0;
         z-index: 1;
         display: block;
-        padding-top: 15vh;
+        padding-top: 12.5vh;
         font-size: calc(2em - var(--scroll) * 3em);
         font-weight: bold;
         letter-spacing: -.03em;
         text-align: center;
         text-shadow:
-            0 calc(var(--scroll) * -10em)
+            0 calc(1em + var(--scroll) * -15em)
             calc(var(--scroll) * 3em)
             rgba(
                 var(--primary-color-r),
