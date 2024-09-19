@@ -198,6 +198,11 @@
             #fff,
             transparent
         );
+        background: radial-gradient(
+            ellipse 100% 100% at center -20%,
+            var(--content-bg-color) 20%,
+            transparent
+        )
     }
 
     .tags-list-item {

@@ -111,7 +111,7 @@
         );
         --chart-hover-blend: lighten;
         --chart-active-page: violet;
-        --content-bg-color: #6551;
+        --content-bg-color: rgb(29, 30, 35);
         --content-border-color: #111;
     }
 }
