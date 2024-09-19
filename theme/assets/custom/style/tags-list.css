@@ -181,8 +181,8 @@
         justify-content: flex-start;
         align-items: center;
         gap: 2em;
-        height: 100vh;
-        padding: 30vh 0 15vh;
+        height: 100dvh;
+        padding: 10em 0 8em;
         overflow: auto;
         flex-wrap: nowrap;
     }
@@ -202,13 +202,13 @@
         top: 0;
         z-index: 1;
         display: block;
-        padding-top: 12.5vh;
+        padding-top: 5dvh;
         font-size: calc(2em - var(--scroll) * 3em);
         font-weight: bold;
         letter-spacing: -.03em;
         text-align: center;
         text-shadow:
-            0 calc(1em + var(--scroll) * -15em)
+            0 calc(1em + var(--scroll) * -20em)
             calc(var(--scroll) * 3em)
             rgba(
                 var(--primary-color-r),
@@ -218,7 +218,7 @@
             );
         color: transparent;
         background: radial-gradient(
-            ellipse 100% 100% at center 5%,
+            ellipse 100% 100% at center -20%,
             var(--content-bg-color) 20%,
             transparent
         );
