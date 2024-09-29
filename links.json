@@ -9790,5 +9790,15 @@
       "webrtc"
     ],
     "datePublished": 1727161262042
+  },
+  {
+    "url": "https://chriskirknielsen.com/blog/my-under-engineered-way-to-avoid-a-flash-of-inaccurate-color-theme",
+    "title": "My under-engineered way to avoid a Flash of inAccurate coloR Theme (FART)",
+    "tags": [
+      "web",
+      "design",
+      "css"
+    ],
+    "datePublished": 1727596671797
   }
 ]
