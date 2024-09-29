@@ -82,7 +82,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #181a1f;
-        --fg: #ddd;
+        --fg: #cccac8;
         --primary-color-r: 191;
         --primary-color-g: 115;
         --primary-color-b: 168;
