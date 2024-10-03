@@ -9826,5 +9826,14 @@
       "software"
     ],
     "datePublished": 1727995228366
+  },
+  {
+    "url": "https://exercism.org/",
+    "title": "Exercism",
+    "tags": [
+      "programming",
+      "learning"
+    ],
+    "datePublished": 1727999345804
   }
 ]
