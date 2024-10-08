@@ -18,6 +18,13 @@ module.exports = {
     return `${this.settings.site.title}`
   },
 
+  pageDescription() {
+    if (this.page === 'tags') {
+      return 'What have I been up to since 2018?'
+    }
+    return this.settings.site.description
+  },
+
   assetsPath() {
     const { permalinkPrefix, assetsDirectory } = this.settings
     const prefix = permalinkPrefix === '/' ? '' : permalinkPrefix
