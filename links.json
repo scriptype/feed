@@ -9856,5 +9856,13 @@
       "design"
     ],
     "datePublished": 1728072122604
+  },
+  {
+    "url": "https://developer.chrome.com/docs/css-ui/animate-to-height-auto",
+    "title": "Animate to height: auto; (and other intrinsic sizing keywords) in CSS",
+    "tags": [
+      "css"
+    ],
+    "datePublished": 1728476277774
   }
 ]
