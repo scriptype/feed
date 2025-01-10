@@ -9985,5 +9985,15 @@
       "lorem ipsum"
     ],
     "datePublished": 1736017473674
+  },
+  {
+    "url": "https://github.com/Heydon/principles-of-web-accessibility",
+    "title": "How to approach accessible web interface design",
+    "tags": [
+      "web",
+      "design",
+      "accessibility"
+    ],
+    "datePublished": 1736538932280
   }
 ]
