@@ -10027,7 +10027,7 @@
     "datePublished": 1739413104309
   },
   {
-    "url":  "https://liveblocks.io/blog/which-rich-text-editor-framework-should-you-choose-in-2025",
+    "url": "https://liveblocks.io/blog/which-rich-text-editor-framework-should-you-choose-in-2025",
     "title": "Which rich text editor framework should you choose in 2025?",
     "tags": [
       "web development",
@@ -10035,5 +10035,15 @@
       "wysiwyg"
     ],
     "datePublished": 1739553709716
+  },
+  {
+    "url": "https://dfrlbook.com",
+    "title": "Design for Real Life",
+    "tags": [
+      "ux",
+      "design",
+      "book"
+    ],
+    "datePublished": 1739850888739
   }
 ]
