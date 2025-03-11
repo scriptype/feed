@@ -10095,5 +10095,15 @@
       "information architecture"
     ],
     "datePublished": 1741696304475
+  },
+  {
+    "url": "https://www.lullabot.com/articles/inline-editing-and-the-cost-of-leaky-abstractions",
+    "title": "Inline Editing and the Cost of Leaky Abstractions",
+    "tags": [
+      "web",
+      "cms",
+      "ux"
+    ],
+    "datePublished": 1741700122446
   }
 ]
