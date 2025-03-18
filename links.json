@@ -10115,5 +10115,16 @@
       "information architecture"
     ],
     "datePublished": 1741700351600
+  },
+  {
+    "url": "https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility",
+    "title": "Improving rendering performance with CSS content-visibility | Read the Tea Leaves",
+    "tags": [
+      "web",
+      "css",
+      "frontend",
+      "performance"
+    ],
+    "datePublished": 1742313827032
   }
 ]
