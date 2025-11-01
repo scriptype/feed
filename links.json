@@ -10194,5 +10194,15 @@
       "nature"
     ],
     "datePublished": 1754297996504
+  },
+  {
+    "url": "https://blog.mozilla.ai/3w-for-in-browser-ai-webllm-wasm-webworkers/",
+    "title": "3W for In-Browser AI: WebLLM + WASM + WebWorkers - @hwclass",
+    "tags": [
+      "web",
+      "ai",
+      "software"
+    ],
+    "datePublished": 1762025077076
   }
 ]
