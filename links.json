@@ -10319,5 +10319,16 @@
       "software"
     ],
     "datePublished": 1777676388287
+  },
+  {
+    "url": "https://paulmakeswebsites.com/writing/shadcn-radio-button/",
+    "title": "The Incredible Overcomplexity of the Shadcn Radio Button",
+    "tags": [
+      "frontend",
+      "react",
+      "css",
+      "accessibility"
+    ],
+    "datePublished": 1777774089105
   }
 ]
