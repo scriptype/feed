@@ -16,7 +16,7 @@ The website is built with my static site generator [Writ-CMS](https://github.com
 
 ### Features
 
-- Pogressively enhanced SPA (pure CSS + JS) based on statically generated html
+- Progressively enhanced SPA (pure CSS + JS) based on statically generated html
 - RSS feed
 - JSON Search with RegExp support
 - Paginated activity graph
