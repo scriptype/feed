@@ -105,5 +105,3 @@ But, with the Twitter's current free API it's not possible any more. Similarly, 
 ***
 
 I hope my instructions are clear and helpful. If you get stuck, you can always open an issue or contact me and I'll be happily helping you ✌️
-
-If you find this project helpful, please consider [supporting me](https://github.com/sponsors/scriptype) 💛
